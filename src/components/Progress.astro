@@ -1,0 +1,64 @@
+---
+// Progress / Nutrition Chart Section
+const days = [
+  { label: 'MON', protein: 40, carbs: 30, fat: 15 },
+  { label: 'TUE', protein: 55, carbs: 25, fat: 10 },
+  { label: 'WED', protein: 45, carbs: 35, fat: 15 },
+  { label: 'THU', protein: 60, carbs: 20, fat: 12 },
+  { label: 'FRI', protein: 35, carbs: 40, fat: 18 },
+  { label: 'SAT', protein: 50, carbs: 20, fat: 10 },
+  { label: 'SUN', protein: 42, carbs: 30, fat: 14 },
+];
+
+const macros = [
+  { label: 'Protein', goal: '120g', colorClass: 'bg-chart-protein' },
+  { label: 'Carbs',   goal: '250g', colorClass: 'bg-chart-carbs'   },
+  { label: 'Fat',     goal: '70g',  colorClass: 'bg-chart-fat'     },
+];
+---
+
+<section class="py-24 px-6 lg:px-20" id="progress">
+  <div class="mx-auto max-w-7xl">
+    <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+      <!-- Left: Copy -->
+      <div class="lg:w-1/2 space-y-6">
+        <h2 class="text-4xl font-bold tracking-tight">Visualize Your Health Journey</h2>
+        <p class="text-lg text-slate-600">
+          Get deep insights into your eating habits. Our colorful charts help you maintain a balanced diet effortlessly.
+        </p>
+        <div class="grid grid-cols-3 gap-4 py-6">
+          {macros.map((m) => (
+            <div class="space-y-1">
+              <div class={`h-2 w-12 rounded-full ${m.colorClass}`}></div>
+              <p class="text-sm font-bold">{m.label}</p>
+              <p class="text-xs text-slate-500">Goal: {m.goal}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: Chart -->
+      <div class="lg:w-1/2">
+        <div class="rounded-lg bg-white p-8 shadow-2xl shadow-primary/10">
+          <div class="mb-8 flex items-center justify-between">
+            <h3 class="text-lg font-bold">Weekly Nutrition</h3>
+            <div class="text-sm font-medium text-slate-500">Mon 12 – Sun 18</div>
+          </div>
+
+          <div class="flex h-64 items-end justify-between gap-4">
+            {days.map((day) => (
+              <div class="flex flex-1 flex-col gap-1">
+                <div class="flex h-full flex-col justify-end gap-1">
+                  <div class="w-full bg-chart-protein rounded-t-full" style={`height: ${day.protein}%`}></div>
+                  <div class="w-full bg-chart-carbs"                  style={`height: ${day.carbs}%`}></div>
+                  <div class="w-full bg-chart-fat    rounded-b-full"  style={`height: ${day.fat}%`}></div>
+                </div>
+                <span class="text-[10px] text-center font-bold text-slate-400">{day.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

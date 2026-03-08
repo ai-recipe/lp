@@ -1,0 +1,93 @@
+---
+// Footer Component
+const productLinks = [
+  { href: '#features', label: 'Features' },
+  { href: '#pricing',  label: 'Pricing'  },
+  { href: '#',         label: 'Success Stories' },
+  { href: '#',         label: 'Help Center' },
+];
+---
+
+<footer class="border-t border-slate-100 bg-white px-6 py-16 lg:px-20">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+      <!-- Brand -->
+      <div class="col-span-1 lg:col-span-2 space-y-6">
+        <div class="flex items-center gap-2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+            <span class="material-symbols-outlined text-sm">restaurant</span>
+          </div>
+          <h2 class="text-lg font-bold tracking-tight">SlayCal</h2>
+        </div>
+        <p class="max-w-sm text-slate-500">
+          Your intelligent kitchen assistant for healthier, smarter, and more creative cooking every day.
+        </p>
+
+        <!-- App Store Badges -->
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-700 transition-all"
+            aria-label="Download on the App Store"
+          >
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="text-[9px] opacity-75">Download on the</span>
+              <span class="text-sm font-bold">App Store</span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-white hover:bg-accent transition-all"
+            aria-label="Get it on Google Play"
+          >
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="text-[9px] opacity-75">Get it on</span>
+              <span class="text-sm font-bold">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Product links -->
+      <div>
+        <h4 class="mb-6 font-bold uppercase tracking-wider text-xs">Product</h4>
+        <ul class="space-y-4 text-sm text-slate-500">
+          {productLinks.map((link) => (
+            <li>
+              <a class="hover:text-primary transition-colors" href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Language -->
+      <div>
+        <h4 class="mb-6 font-bold uppercase tracking-wider text-xs">Language</h4>
+        <div class="flex flex-col gap-3">
+          <a class="flex items-center gap-2 text-sm text-primary font-bold" href="#">
+            <span class="material-symbols-outlined text-lg">language</span>
+            English (US)
+          </a>
+          <a class="flex items-center gap-2 text-sm text-slate-500 hover:text-primary transition-colors" href="#">
+            <span class="material-symbols-outlined text-lg opacity-0">language</span>
+            Türkçe (TR)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-slate-400">© 2025 SlayCal. All rights reserved.</p>
+      <div class="flex gap-6 text-xs text-slate-400">
+        <a class="hover:text-slate-600" href="#">Privacy Policy</a>
+        <a class="hover:text-slate-600" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

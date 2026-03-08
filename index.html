@@ -1,0 +1,693 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#f5984d",
+              accent: "#f39849",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221810",
+              "chart-protein": "#5C8CE4",
+              "chart-carbs": "#27AE60",
+              "chart-fat": "#E2B15B",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "1.5rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .blob-bg {
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(245, 152, 77, 0.1) 0%,
+          rgba(248, 247, 246, 0) 70%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased"
+  >
+    <!-- Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-6 py-4 lg:px-20"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white"
+          >
+            <span class="material-symbols-outlined">restaurant</span>
+          </div>
+          <h2 class="text-xl font-bold tracking-tight text-slate-900">
+            RecipeTrack
+          </h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#features"
+            >Features</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#pricing"
+            >Pricing</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#progress"
+            >Progress</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center bg-primary/10 rounded-full px-1 py-1">
+            <button
+              class="px-3 py-1 text-xs font-bold rounded-full bg-primary text-white"
+            >
+              EN
+            </button>
+            <button
+              class="px-3 py-1 text-xs font-medium text-slate-600 hover:text-primary transition-colors"
+            >
+              TR
+            </button>
+          </div>
+          <button
+            class="hidden sm:flex px-6 py-2 rounded-full border border-primary/20 text-sm font-bold hover:bg-primary/5 transition-all"
+          >
+            Login
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative overflow-hidden px-6 pt-16 pb-24 lg:px-20 lg:pt-32"
+      >
+        <div
+          class="blob-bg absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="blob-bg absolute top-1/2 -right-24 h-96 w-96 rounded-full blur-3xl"
+        ></div>
+        <div class="mx-auto max-w-7xl">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+            <div class="flex flex-col gap-8">
+              <div class="space-y-4">
+                <h1
+                  class="text-5xl font-bold leading-tight tracking-tight lg:text-7xl"
+                >
+                  Create <span class="text-accent italic">Magic</span> in the
+                  Kitchen
+                </h1>
+                <p class="text-lg text-slate-600 lg:text-xl max-w-lg">
+                  Turn fridge ingredients into gourmet recipes with your AI
+                  chef. Professional cooking, simplified for your home.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="px-8 py-4 rounded-full bg-primary text-white font-bold text-lg shadow-xl shadow-primary/30 hover:translate-y-[-2px] transition-all"
+                >
+                  Get Started Free
+                </button>
+                <button
+                  class="px-8 py-4 rounded-full border-2 border-primary/20 font-bold text-lg hover:bg-primary/5 transition-all"
+                >
+                  View Demo
+                </button>
+              </div>
+              <div class="flex items-center gap-4 text-sm text-slate-500">
+                <div class="flex -space-x-2">
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-200"
+                    data-alt="User avatar 1"
+                  ></div>
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-300"
+                    data-alt="User avatar 2"
+                  ></div>
+                  <div
+                    class="h-8 w-8 rounded-full border-2 border-white bg-slate-400"
+                    data-alt="User avatar 3"
+                  ></div>
+                </div>
+                <p>Joined by 10k+ home chefs this month</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="aspect-square w-full rounded-xl bg-slate-200 shadow-2xl overflow-hidden"
+                data-alt="Modern kitchen with fresh vegetables and tablet showing recipe"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCklNBEpr1TcG-Sno0kNXMpwo2TCJYT0ZmLsRpd4wKCIAhxEhvgw6-hrOuqbssTmuEKkKUVUCDGuG2Y4gCxA1F2JEbX8zC6Rv6P4PgwZfJ_IR8V8ws3jZDLPJj8iU7-Yp9OsYmCvt0nL6JRPB8g-Iy3VDwfHmy0zkWfqDLZlZrifJcsKFEp7STTEi0lSaBbsNmg2sI0woYVCq4Dq0oaK1rP7FRMpG4VWgcvw7QddSTf9hlSkwMYfQ_vDmsymsc4Wt27cIGWC2j6_-U&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                ></div>
+              </div>
+              <div
+                class="absolute -bottom-6 -left-6 rounded-lg bg-white p-6 shadow-xl lg:p-8"
+              >
+                <div class="flex items-center gap-4">
+                  <div class="rounded-full bg-green-100 p-2 text-green-600">
+                    <span class="material-symbols-outlined">auto_awesome</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold">AI Suggested</p>
+                    <p class="text-xs text-slate-500">Lemon Garlic Salmon</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section class="bg-white/50 py-24 px-6 lg:px-20" id="features">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-16 text-center">
+            <h2 class="text-3xl font-bold tracking-tight lg:text-4xl">
+              Smart tools for modern cooking
+            </h2>
+            <p class="mt-4 text-slate-600">
+              Our AI understands your food as well as you do.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Feature 1 -->
+            <div
+              class="group flex flex-col gap-6 rounded-lg border border-slate-100 bg-white p-8 transition-all hover:shadow-xl hover:shadow-primary/5"
+            >
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform group-hover:scale-110"
+              >
+                <span class="material-symbols-outlined text-3xl">cooking</span>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">Scan to Recipe</h3>
+                <p class="text-slate-600 leading-relaxed">
+                  Take a photo of your fridge or pantry, and our AI instantly
+                  suggests chef-quality recipes based on what you have.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div
+              class="group flex flex-col gap-6 rounded-lg border border-slate-100 bg-white p-8 transition-all hover:shadow-xl hover:shadow-primary/5"
+            >
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform group-hover:scale-110"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >photo_camera</span
+                >
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">Scan to Nutrition</h3>
+                <p class="text-slate-600 leading-relaxed">
+                  Scan any meal to instantly calculate calories, macros, and
+                  vitamins. No more manual data entry.
+                </p>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div
+              class="group flex flex-col gap-6 rounded-lg border border-slate-100 bg-white p-8 transition-all hover:shadow-xl hover:shadow-primary/5"
+            >
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform group-hover:scale-110"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >analytics</span
+                >
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold">Track &amp; Grow</h3>
+                <p class="text-slate-600 leading-relaxed">
+                  Log meals and water intake with a single tap. Watch your
+                  progress through beautiful, intuitive analytics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Progress Section -->
+      <section class="py-24 px-6 lg:px-20" id="progress">
+        <div class="mx-auto max-w-7xl">
+          <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+            <div class="lg:w-1/2 space-y-6">
+              <h2 class="text-4xl font-bold tracking-tight">
+                Visualize Your Health Journey
+              </h2>
+              <p class="text-lg text-slate-600">
+                Get deep insights into your eating habits. Our colorful charts
+                help you maintain a balanced diet effortlessly.
+              </p>
+              <div class="grid grid-cols-3 gap-4 py-6">
+                <div class="space-y-1">
+                  <div class="h-2 w-12 rounded-full bg-chart-protein"></div>
+                  <p class="text-sm font-bold">Protein</p>
+                  <p class="text-xs text-slate-500">Goal: 120g</p>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-2 w-12 rounded-full bg-chart-carbs"></div>
+                  <p class="text-sm font-bold">Carbs</p>
+                  <p class="text-xs text-slate-500">Goal: 250g</p>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-2 w-12 rounded-full bg-chart-fat"></div>
+                  <p class="text-sm font-bold">Fat</p>
+                  <p class="text-xs text-slate-500">Goal: 70g</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/2">
+              <div class="rounded-lg bg-white p-8 shadow-2xl shadow-primary/10">
+                <div class="mb-8 flex items-center justify-between">
+                  <h3 class="text-lg font-bold">Weekly Nutrition</h3>
+                  <div class="text-sm font-medium text-slate-500">
+                    Mon 12 - Sun 18
+                  </div>
+                </div>
+                <div class="flex h-64 items-end justify-between gap-4">
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 40%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 30%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 15%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >MON</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 55%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 25%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 10%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >TUE</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 45%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 35%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 15%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >WED</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 60%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 20%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 12%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >THU</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 35%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 40%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 18%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >FRI</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 50%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 20%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 10%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >SAT</span
+                    >
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <div class="flex h-full flex-col justify-end gap-1">
+                      <div
+                        class="w-full bg-chart-protein rounded-t-full"
+                        style="height: 42%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-carbs"
+                        style="height: 30%"
+                      ></div>
+                      <div
+                        class="w-full bg-chart-fat rounded-b-full"
+                        style="height: 14%"
+                      ></div>
+                    </div>
+                    <span
+                      class="text-[10px] text-center font-bold text-slate-400"
+                      >SUN</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing Section -->
+      <section class="bg-primary/5 py-24 px-6 lg:px-20" id="pricing">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-16 text-center">
+            <h2 class="text-3xl font-bold tracking-tight lg:text-4xl">
+              Chef AI Premium
+            </h2>
+            <p class="mt-4 text-slate-600">
+              Elevate your culinary skills with advanced AI tools.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <!-- Monthly -->
+            <div
+              class="flex flex-col rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-xl"
+            >
+              <div class="mb-8">
+                <h3 class="text-xl font-bold">Monthly</h3>
+                <div class="mt-4 flex items-baseline gap-1">
+                  <span class="text-4xl font-bold">$9.99</span>
+                  <span class="text-slate-500">/mo</span>
+                </div>
+              </div>
+              <ul class="mb-8 flex-1 space-y-4">
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Unlimited AI Scans</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Full Macro Analytics</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Ad-free experience</span>
+                </li>
+              </ul>
+              <button
+                class="w-full py-4 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all"
+              >
+                Choose Plan
+              </button>
+            </div>
+            <!-- Yearly -->
+            <div
+              class="relative flex flex-col rounded-lg bg-white p-8 shadow-xl ring-2 ring-primary"
+            >
+              <div
+                class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-white"
+              >
+                MOST POPULAR
+              </div>
+              <div class="mb-8">
+                <h3 class="text-xl font-bold">Yearly</h3>
+                <div class="mt-4 flex items-baseline gap-1">
+                  <span class="text-4xl font-bold">$79.99</span>
+                  <span class="text-slate-500">/yr</span>
+                </div>
+                <p class="mt-2 text-xs font-bold text-primary">
+                  Save 33% per year
+                </p>
+              </div>
+              <ul class="mb-8 flex-1 space-y-4">
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Everything in Monthly</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Priority AI Processing</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Early access to new features</span>
+                </li>
+              </ul>
+              <button
+                class="w-full py-4 rounded-full bg-primary text-white font-bold shadow-lg shadow-primary/30 transition-all hover:scale-105"
+              >
+                Get Started
+              </button>
+            </div>
+            <!-- Lifetime -->
+            <div
+              class="flex flex-col rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-xl"
+            >
+              <div class="mb-8">
+                <h3 class="text-xl font-bold">Lifetime</h3>
+                <div class="mt-4 flex items-baseline gap-1">
+                  <span class="text-4xl font-bold">$199</span>
+                  <span class="text-slate-500">once</span>
+                </div>
+              </div>
+              <ul class="mb-8 flex-1 space-y-4">
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>All Premium Features Forever</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>VIP Customer Support</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm">
+                  <span class="material-symbols-outlined text-green-500 text-lg"
+                    >check_circle</span
+                  >
+                  <span>Personalized AI Coaching</span>
+                </li>
+              </ul>
+              <button
+                class="w-full py-4 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all"
+              >
+                Buy Once
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 bg-white px-6 py-16 lg:px-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+          <div class="col-span-1 lg:col-span-2 space-y-6">
+            <div class="flex items-center gap-2">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >restaurant</span
+                >
+              </div>
+              <h2 class="text-lg font-bold tracking-tight">RecipeTrack</h2>
+            </div>
+            <p class="max-w-sm text-slate-500">
+              Your intelligent kitchen assistant for healthier, smarter, and
+              more creative cooking every day.
+            </p>
+            <div class="flex gap-4">
+              <button
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined">public</span>
+              </button>
+              <button
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-primary hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined">share</span>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h4 class="mb-6 font-bold uppercase tracking-wider text-xs">
+              Product
+            </h4>
+            <ul class="space-y-4 text-sm text-slate-500">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-6 font-bold uppercase tracking-wider text-xs">
+              Language
+            </h4>
+            <div class="flex flex-col gap-3">
+              <a
+                class="flex items-center gap-2 text-sm text-primary font-bold"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg">language</span>
+                English (US)
+              </a>
+              <a
+                class="flex items-center gap-2 text-sm text-slate-500 hover:text-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg opacity-0"
+                  >language</span
+                >
+                Türkçe (TR)
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-16 border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-xs text-slate-400">
+            © 2024 RecipeTrack AI. All culinary rights reserved.
+          </p>
+          <div class="flex gap-6 text-xs text-slate-400">
+            <a class="hover:text-slate-600" href="#">Privacy Policy</a>
+            <a class="hover:text-slate-600" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
