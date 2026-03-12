@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/sahin/Desktop/slaycallp/src -type f -name \"*.astro\" -o -name \"*.ts\" -o -name \"*.js\" -o -name \"*.tsx\" -o -name \"*.jsx\" 2>/dev/null | grep -v node_modules)",
+      "Bash(npm run:*)",
+      "Bash(grep \"^export const\" /Users/sahin/Desktop/slaycallp/src/i18n/*.ts)",
+      "Bash(ls -la /Users/sahin/Desktop/slaycallp/src/i18n/*.ts)",
+      "Bash(for file:*)",
+      "Bash(do echo:*)"
+    ]
+  }
+}

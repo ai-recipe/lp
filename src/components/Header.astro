@@ -1,22 +1,49 @@
 ---
-// Header / Navigation component
+import type { Translations } from '../i18n/translations';
+
+interface Props {
+  t: Translations;
+  lang?: string;
+}
+
+const { t, lang = 'en' } = Astro.props;
+const { nav } = t;
+const logoHref = lang === 'en' ? '/' : `/${lang}/`;
+
+const languages = [
+  { code: 'en', label: 'English', href: '/' },
+  { code: 'es', label: 'Español', href: '/es/' },
+  { code: 'fr', label: 'Français', href: '/fr/' },
+  { code: 'de', label: 'Deutsch', href: '/de/' },
+  { code: 'pt-br', label: 'Português', href: '/pt-br/' },
+  { code: 'ru', label: 'Русский', href: '/ru/' },
+  { code: 'ja', label: '日本語', href: '/ja/' },
+  { code: 'ko', label: '한국어', href: '/ko/' },
+  { code: 'it', label: 'Italiano', href: '/it/' },
+  { code: 'tr', label: 'Türkçe', href: '/tr/' },
+];
+
+const currentLangLabel = languages.find(l => l.code === lang)?.label || 'Language';
 ---
 
 <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-6 py-4 lg:px-20">
   <div class="mx-auto flex max-w-7xl items-center justify-between">
     <!-- Logo -->
-    <div class="flex items-center gap-2">
-      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
-        <span class="material-symbols-outlined">restaurant</span>
+    <a href={logoHref} class="flex items-center gap-2 group" aria-label="SlayCal – Home">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined text-xl">local_dining</span>
       </div>
-      <h2 class="text-xl font-bold tracking-tight text-slate-900">SlayCal</h2>
-    </div>
+      <span class="text-xl font-bold tracking-tight text-slate-900">SlayCal</span>
+    </a>
 
     <!-- Nav -->
-    <nav class="hidden md:flex items-center gap-8">
-      <a class="text-sm font-medium hover:text-primary transition-colors" href="#features">Features</a>
-      <a class="text-sm font-medium hover:text-primary transition-colors" href="#pricing">Pricing</a>
-      <a class="text-sm font-medium hover:text-primary transition-colors" href="#progress">Progress</a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+      <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#features">{nav.features}</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#how-it-works">
+        {lang === 'tr' ? 'Nasıl Çalışır' : 'How It Works'}
+      </a>
+      <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#pricing">{nav.pricing}</a>
+      <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#progress">{nav.progress}</a>
     </nav>
 
     <!-- CTA: App Store links -->
@@ -25,24 +52,59 @@
       <a
         href="#"
         class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900 text-white text-xs font-semibold hover:bg-slate-700 transition-all"
-        aria-label="Download on the App Store"
+        aria-label={`${nav.download_ios_sub} ${nav.store_ios}`}
       >
-        <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-4 h-4 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
         </svg>
-        <span>App Store</span>
+        <span>{nav.store_ios}</span>
       </a>
       <!-- Google Play -->
       <a
         href="#"
         class="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white text-xs font-semibold shadow-lg shadow-primary/20 hover:scale-105 transition-all"
-        aria-label="Get it on Google Play"
+        aria-label={`${nav.download_android_sub} ${nav.store_android}`}
       >
-        <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-4 h-4 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/>
         </svg>
-        <span>Google Play</span>
+        <span>{nav.store_android}</span>
       </a>
+
+      <!-- Language Dropdown -->
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1.5 px-3 py-2 rounded-full border border-slate-200 text-xs font-medium text-slate-600 hover:text-primary hover:border-primary/30 transition-all"
+          aria-label="Select language"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined text-base leading-none">language</span>
+          <span class="hidden sm:inline">{currentLangLabel}</span>
+          <span class="material-symbols-outlined text-sm leading-none">expand_more</span>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div class="absolute right-0 mt-1 w-48 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            {languages.map((l) => (
+              <a
+                href={l.href}
+                class={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                  lang === l.code
+                    ? 'bg-primary/10 text-primary font-medium'
+                    : 'text-slate-700 hover:bg-slate-50'
+                }`}
+              >
+                <span>{l.label}</span>
+                {lang === l.code && (
+                  <span class="ml-auto material-symbols-outlined text-base">check</span>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>

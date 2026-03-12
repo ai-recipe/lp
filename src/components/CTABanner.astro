@@ -1,0 +1,79 @@
+---
+import type { Translations } from '../i18n/translations';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+const { cta_banner, nav } = t;
+---
+
+<section class="relative overflow-hidden py-24 px-6 lg:px-20" aria-labelledby="cta-title">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary via-accent to-amber-400 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-4xl text-center">
+    <div class="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 mb-6">
+      <span class="material-symbols-outlined text-white text-base leading-none">rocket_launch</span>
+      <span class="text-sm font-semibold text-white">Free to download</span>
+    </div>
+
+    <h2 id="cta-title" class="text-4xl font-bold text-white lg:text-5xl leading-tight">
+      {cta_banner.title}
+    </h2>
+    <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">
+      {cta_banner.subtitle}
+    </p>
+
+    <!-- Download buttons -->
+    <div class="mt-10 flex flex-wrap justify-center gap-4" role="group" aria-label="Download SlayCal">
+      <!-- App Store -->
+      <a
+        href="#"
+        class="flex items-center gap-3 px-7 py-4 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        aria-label={cta_banner.download_ios}
+      >
+        <svg class="w-7 h-7 fill-slate-900 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="flex flex-col leading-tight text-left">
+          <span class="text-[10px] font-medium opacity-70">{nav.download_ios_sub}</span>
+          <span class="text-base">{nav.store_ios}</span>
+        </div>
+      </a>
+
+      <!-- Google Play -->
+      <a
+        href="#"
+        class="flex items-center gap-3 px-7 py-4 rounded-2xl bg-white/10 border-2 border-white/30 text-white font-bold hover:bg-white/20 transition-all shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        aria-label={cta_banner.download_android}
+      >
+        <svg class="w-7 h-7 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/>
+        </svg>
+        <div class="flex flex-col leading-tight text-left">
+          <span class="text-[10px] font-medium opacity-70">{nav.download_android_sub}</span>
+          <span class="text-base">{nav.store_android}</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Mini feature highlights -->
+    <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-white/70">
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">check_circle</span>
+        {nav.store_ios === 'App Store' ? 'Free download' : 'Ücretsiz indirme'}
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">check_circle</span>
+        {nav.store_ios === 'App Store' ? '500 free AI credits' : '500 ücretsiz yapay zeka kredisi'}
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">check_circle</span>
+        {nav.store_ios === 'App Store' ? 'No credit card needed' : 'Kredi kartı gerekmez'}
+      </span>
+    </div>
+  </div>
+</section>

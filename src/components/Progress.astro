@@ -1,59 +1,115 @@
 ---
-// Progress / Nutrition Chart Section
-const days = [
-  { label: 'MON', protein: 40, carbs: 30, fat: 15 },
-  { label: 'TUE', protein: 55, carbs: 25, fat: 10 },
-  { label: 'WED', protein: 45, carbs: 35, fat: 15 },
-  { label: 'THU', protein: 60, carbs: 20, fat: 12 },
-  { label: 'FRI', protein: 35, carbs: 40, fat: 18 },
-  { label: 'SAT', protein: 50, carbs: 20, fat: 10 },
-  { label: 'SUN', protein: 42, carbs: 30, fat: 14 },
+import type { Translations } from '../i18n/translations';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+const { progress } = t;
+
+const chartData = [
+  { protein: 40, carbs: 30, fat: 15 },
+  { protein: 55, carbs: 25, fat: 10 },
+  { protein: 45, carbs: 35, fat: 15 },
+  { protein: 60, carbs: 20, fat: 12 },
+  { protein: 35, carbs: 40, fat: 18 },
+  { protein: 50, carbs: 20, fat: 10 },
+  { protein: 42, carbs: 30, fat: 14 },
 ];
 
-const macros = [
-  { label: 'Protein', goal: '120g', colorClass: 'bg-chart-protein' },
-  { label: 'Carbs',   goal: '250g', colorClass: 'bg-chart-carbs'   },
-  { label: 'Fat',     goal: '70g',  colorClass: 'bg-chart-fat'     },
-];
+const macroColors = ['bg-chart-protein', 'bg-chart-carbs', 'bg-chart-fat'];
+const macroTextColors = ['text-chart-protein', 'text-chart-carbs', 'text-chart-fat'];
 ---
 
-<section class="py-24 px-6 lg:px-20" id="progress">
+<section class="py-24 px-6 lg:px-20 bg-white/50" id="progress" aria-labelledby="progress-title">
   <div class="mx-auto max-w-7xl">
     <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
+
       <!-- Left: Copy -->
-      <div class="lg:w-1/2 space-y-6">
-        <h2 class="text-4xl font-bold tracking-tight">Visualize Your Health Journey</h2>
-        <p class="text-lg text-slate-600">
-          Get deep insights into your eating habits. Our colorful charts help you maintain a balanced diet effortlessly.
-        </p>
-        <div class="grid grid-cols-3 gap-4 py-6">
-          {macros.map((m) => (
-            <div class="space-y-1">
-              <div class={`h-2 w-12 rounded-full ${m.colorClass}`}></div>
-              <p class="text-sm font-bold">{m.label}</p>
-              <p class="text-xs text-slate-500">Goal: {m.goal}</p>
+      <div class="lg:w-1/2 space-y-8">
+        <div>
+          <span class="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary mb-4">
+            {progress.section_label}
+          </span>
+          <h2 id="progress-title" class="text-4xl font-bold tracking-tight leading-tight">
+            {progress.title}
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            {progress.subtitle}
+          </p>
+        </div>
+
+        <!-- Macro legend -->
+        <div class="grid grid-cols-3 gap-4">
+          {progress.macros.map((m, i) => (
+            <div class="space-y-2 p-4 rounded-xl bg-white border border-slate-100 shadow-sm">
+              <div class={`h-2 w-10 rounded-full ${macroColors[i]}`}></div>
+              <p class={`text-sm font-bold ${macroTextColors[i]}`}>{m.label}</p>
+              <p class="text-xs text-slate-500">{progress.macro_goal_label} <span class="font-semibold text-slate-700">{m.goal}</span></p>
             </div>
           ))}
         </div>
+
+        <!-- Stat callouts -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-xl bg-primary/5 border border-primary/10 p-4">
+            <p class="text-2xl font-bold text-primary">BMI</p>
+            <p class="text-sm text-slate-600 mt-1">
+              {progress.macro_goal_label.includes('Goal') ? 'Real-time BMI tracking with color-coded health status' : 'Gerçek zamanlı VKİ takibi ve renk kodlu sağlık durumu'}
+            </p>
+          </div>
+          <div class="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
+            <p class="text-2xl font-bold text-emerald-600">32d</p>
+            <p class="text-sm text-slate-600 mt-1">
+              {progress.macro_goal_label.includes('Goal') ? 'Browse 32 days of nutrition history' : '32 günlük beslenme geçmişi'}
+            </p>
+          </div>
+        </div>
       </div>
 
-      <!-- Right: Chart -->
+      <!-- Right: Chart card -->
       <div class="lg:w-1/2">
-        <div class="rounded-lg bg-white p-8 shadow-2xl shadow-primary/10">
+        <div class="rounded-2xl bg-white p-8 shadow-2xl shadow-primary/10 border border-slate-100">
           <div class="mb-8 flex items-center justify-between">
-            <h3 class="text-lg font-bold">Weekly Nutrition</h3>
-            <div class="text-sm font-medium text-slate-500">Mon 12 – Sun 18</div>
+            <h3 class="text-lg font-bold">{progress.chart_title}</h3>
+            <div class="text-xs font-medium text-slate-400 bg-slate-50 px-3 py-1 rounded-full">
+              {progress.chart_range}
+            </div>
           </div>
 
-          <div class="flex h-64 items-end justify-between gap-4">
-            {days.map((day) => (
-              <div class="flex flex-1 flex-col gap-1">
-                <div class="flex h-full flex-col justify-end gap-1">
-                  <div class="w-full bg-chart-protein rounded-t-full" style={`height: ${day.protein}%`}></div>
-                  <div class="w-full bg-chart-carbs"                  style={`height: ${day.carbs}%`}></div>
-                  <div class="w-full bg-chart-fat    rounded-b-full"  style={`height: ${day.fat}%`}></div>
+          <!-- Stacked bar chart -->
+          <div class="flex h-56 items-end justify-between gap-2" role="img" aria-label="Weekly nutrition stacked bar chart">
+            {chartData.map((day, i) => (
+              <div class="flex flex-1 flex-col gap-0.5">
+                <div class="flex h-full flex-col justify-end gap-0.5">
+                  <div
+                    class="w-full bg-chart-protein rounded-t-md transition-all"
+                    style={`height: ${day.protein}%`}
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="w-full bg-chart-carbs"
+                    style={`height: ${day.carbs}%`}
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="w-full bg-chart-fat rounded-b-md"
+                    style={`height: ${day.fat}%`}
+                    aria-hidden="true"
+                  ></div>
                 </div>
-                <span class="text-[10px] text-center font-bold text-slate-400">{day.label}</span>
+                <span class="text-[10px] text-center font-bold text-slate-400 mt-1">{progress.days[i]}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- Chart legend -->
+          <div class="mt-6 flex gap-4 flex-wrap">
+            {progress.macros.map((m, i) => (
+              <div class="flex items-center gap-1.5">
+                <div class={`h-2.5 w-2.5 rounded-sm ${macroColors[i]}`}></div>
+                <span class="text-xs text-slate-500">{m.label}</span>
               </div>
             ))}
           </div>

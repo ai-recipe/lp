@@ -1,0 +1,56 @@
+---
+import type { Translations } from '../i18n/translations';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+const { how_it_works } = t;
+
+const stepIcons = ['photo_camera', 'psychology', 'trending_up'];
+const stepColors = [
+  { bg: 'bg-primary/10', text: 'text-primary', line: 'bg-primary/20' },
+  { bg: 'bg-emerald-100',  text: 'text-emerald-600', line: 'bg-emerald-200' },
+  { bg: 'bg-blue-100',     text: 'text-blue-600',    line: 'bg-blue-200'   },
+];
+---
+
+<section class="py-24 px-6 lg:px-20" id="how-it-works" aria-labelledby="hiw-title">
+  <div class="mx-auto max-w-7xl">
+
+    <!-- Section header -->
+    <div class="mb-16 text-center max-w-2xl mx-auto">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary mb-4">
+        {how_it_works.section_label}
+      </span>
+      <h2 id="hiw-title" class="text-3xl font-bold tracking-tight lg:text-4xl">
+        {how_it_works.title}
+      </h2>
+      <p class="mt-4 text-slate-600 text-lg">{how_it_works.subtitle}</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 relative">
+
+      {how_it_works.steps.map((step, i) => (
+        <div class="flex flex-col items-center text-center gap-5 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
+          <!-- Number badge -->
+          <div class="relative">
+            <div class={`flex h-16 w-16 items-center justify-center rounded-2xl ${stepColors[i].bg}`}>
+              <span class={`material-symbols-outlined text-3xl ${stepColors[i].text}`}>{stepIcons[i]}</span>
+            </div>
+            <span class="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white text-[10px] font-bold">
+              {step.number}
+            </span>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-lg font-bold text-slate-900">{step.title}</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

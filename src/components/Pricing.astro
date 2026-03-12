@@ -1,77 +1,91 @@
 ---
-// Pricing Section
-const plans = [
-  {
-    name: 'Monthly',
-    price: '$9.99',
-    period: '/mo',
-    popular: false,
-    features: ['Unlimited AI Scans', 'Full Macro Analytics', 'Ad-free experience'],
-    ctaLabel: 'Choose Plan',
-    ctaClass: 'w-full py-4 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all',
-    cardClass: 'flex flex-col rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-xl',
-  },
-  {
-    name: 'Yearly',
-    price: '$79.99',
-    period: '/yr',
-    popular: true,
-    badge: 'MOST POPULAR',
-    note: 'Save 33% per year',
-    features: ['Everything in Monthly', 'Priority AI Processing', 'Early access to new features'],
-    ctaLabel: 'Get Started',
-    ctaClass: 'w-full py-4 rounded-full bg-primary text-white font-bold shadow-lg shadow-primary/30 transition-all hover:scale-105',
-    cardClass: 'relative flex flex-col rounded-lg bg-white p-8 shadow-xl ring-2 ring-primary',
-  },
-  {
-    name: 'Lifetime',
-    price: '$199',
-    period: 'once',
-    popular: false,
-    features: ['All Premium Features Forever', 'VIP Customer Support', 'Personalized AI Coaching'],
-    ctaLabel: 'Buy Once',
-    ctaClass: 'w-full py-4 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all',
-    cardClass: 'flex flex-col rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-xl',
-  },
-];
+import type { Translations } from '../i18n/translations';
+
+interface Props {
+  t: Translations;
+}
+
+const { t } = Astro.props;
+const { pricing } = t;
 ---
 
-<section class="bg-primary/5 py-24 px-6 lg:px-20" id="pricing">
+<section class="bg-primary/5 py-24 px-6 lg:px-20" id="pricing" aria-labelledby="pricing-title">
   <div class="mx-auto max-w-7xl">
-    <div class="mb-16 text-center">
-      <h2 class="text-3xl font-bold tracking-tight lg:text-4xl">Chef AI Premium</h2>
-      <p class="mt-4 text-slate-600">Elevate your culinary skills with advanced AI tools.</p>
+
+    <!-- Section header -->
+    <div class="mb-16 text-center max-w-2xl mx-auto">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary mb-4">
+        {pricing.section_label}
+      </span>
+      <h2 id="pricing-title" class="text-3xl font-bold tracking-tight lg:text-4xl">
+        {pricing.title}
+      </h2>
+      <p class="mt-4 text-slate-600 text-lg">{pricing.subtitle}</p>
+      <p class="mt-2 text-sm text-primary font-semibold">
+        <span class="material-symbols-outlined text-base align-middle mr-1">card_giftcard</span>
+        {pricing.free_credits_note}
+      </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-      {plans.map((plan) => (
-        <div class={plan.cardClass}>
+    <!-- Pricing cards -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+      {pricing.plans.map((plan) => (
+        <div class:list={[
+          'relative flex flex-col rounded-2xl p-8 transition-all duration-300',
+          plan.popular
+            ? 'bg-white shadow-2xl shadow-primary/20 ring-2 ring-primary scale-105'
+            : 'bg-white shadow-sm hover:shadow-xl border border-slate-100',
+        ]}>
           {plan.popular && (
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-white">
-              {plan.badge}
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-5 py-1.5 text-xs font-bold text-white shadow-lg shadow-primary/30 whitespace-nowrap">
+              {pricing.most_popular_badge}
             </div>
           )}
+
+          <!-- Plan name & price -->
           <div class="mb-8">
-            <h3 class="text-xl font-bold">{plan.name}</h3>
+            <h3 class="text-xl font-bold text-slate-900">{plan.name}</h3>
             <div class="mt-4 flex items-baseline gap-1">
-              <span class="text-4xl font-bold">{plan.price}</span>
-              <span class="text-slate-500">{plan.period}</span>
+              <span class="text-5xl font-bold text-slate-900">{plan.price}</span>
+              <span class="text-slate-400 text-sm">{plan.period}</span>
             </div>
-            {plan.note && (
-              <p class="mt-2 text-xs font-bold text-primary">{plan.note}</p>
+            {plan.save_note && (
+              <p class="mt-2 text-sm font-bold text-primary">{plan.save_note}</p>
             )}
           </div>
-          <ul class="mb-8 flex-1 space-y-4">
+
+          <!-- Features list -->
+          <ul class="mb-8 flex-1 space-y-3" aria-label={`${plan.name} plan features`}>
             {plan.features.map((feat) => (
-              <li class="flex items-center gap-3 text-sm">
-                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                <span>{feat}</span>
+              <li class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-green-500 text-lg shrink-0 mt-0.5">check_circle</span>
+                <span class="text-slate-700">{feat}</span>
               </li>
             ))}
           </ul>
-          <button class={plan.ctaClass}>{plan.ctaLabel}</button>
+
+          <!-- CTA -->
+          <a
+            href="#"
+            class:list={[
+              'block w-full py-4 rounded-full text-center font-bold text-sm transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+              plan.popular
+                ? 'bg-primary text-white shadow-lg shadow-primary/30 hover:scale-105 hover:bg-accent focus-visible:outline-primary'
+                : 'border-2 border-slate-200 text-slate-900 hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-slate-900',
+            ]}
+          >
+            {plan.cta}
+          </a>
         </div>
       ))}
     </div>
+
+    <!-- Trust note -->
+    <p class="mt-12 text-center text-sm text-slate-400">
+      <span class="material-symbols-outlined text-base align-middle mr-1">security</span>
+      {pricing.section_label === 'Pricing'
+        ? 'Cancel anytime · Secure payment · No hidden fees'
+        : 'İstediğin zaman iptal et · Güvenli ödeme · Gizli ücret yok'}
+    </p>
   </div>
 </section>
