@@ -147,5 +147,50 @@ const jsonLd = JSON.stringify({
   </head>
   <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
     <slot />
+
+    <script is:inline define:vars={{ lang }}>
+      // Pass server-side props to client-side bundled scripts
+      window._slaycal_lang = lang;
+    </script>
+
+    <script>
+      import { initAnalytics, logAnalyticsEvent, AnalyticsEvents } from '../lib/analytics';
+
+      async function setup() {
+        // 1. Init Analytics (Browser only, safe for SSR)
+        await initAnalytics();
+
+        // 2. Log Page Context once per load
+        const lang = (window as any)._slaycal_lang || document.documentElement.lang || 'en';
+        logAnalyticsEvent(AnalyticsEvents.PAGE_CONTEXT, {
+          lang,
+          page_path: window.location.pathname,
+          title: document.title
+        });
+
+        // 3. Setup Store Click Tracking (Delegated)
+        // This catches clicks on links with data-analytics-store attribute
+        document.addEventListener('click', (event) => {
+          const target = event.target as HTMLElement;
+          const storeLink = target.closest('[data-analytics-store]');
+          
+          if (storeLink) {
+            const store = storeLink.getAttribute('data-analytics-store');
+            const placement = storeLink.getAttribute('data-analytics-placement');
+            const url = (storeLink as HTMLAnchorElement).href;
+
+            logAnalyticsEvent(AnalyticsEvents.STORE_CLICK, {
+              store,
+              placement,
+              link_url: url,
+              lang
+            });
+          }
+        });
+      }
+
+      // Initialize on load
+      setup();
+    </script>
   </body>
 </html>
