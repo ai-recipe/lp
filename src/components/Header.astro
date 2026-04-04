@@ -30,10 +30,7 @@ const currentLangLabel = languages.find(l => l.code === lang)?.label || 'Languag
   <div class="mx-auto flex max-w-7xl items-center justify-between">
     <!-- Logo -->
     <a href={logoHref} class="flex items-center gap-2 group" aria-label="SlayCal – Home">
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
-        <span class="material-symbols-outlined text-xl">local_dining</span>
-      </div>
-      <span class="text-xl font-bold tracking-tight text-slate-900">SlayCal</span>
+      <img src="/logo.svg" alt="SlayCal Logo" class="h-20 absolute" />
     </a>
 
     <!-- Nav -->
