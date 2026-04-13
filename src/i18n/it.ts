@@ -194,8 +194,8 @@ export const it = {
       { href: '#', label: 'Centro Assistenza' },
     ],
     legal_links: [
-      { href: '#', label: 'Informativa sulla Privacy' },
-      { href: '#', label: 'Termini di Servizio' },
+      { href: '/privacy', label: 'Informativa sulla Privacy' },
+      { href: '/terms', label: 'Termini di Servizio' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

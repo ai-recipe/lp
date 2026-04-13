@@ -194,8 +194,8 @@ export const ru = {
       { href: '#', label: 'Центр помощи' },
     ],
     legal_links: [
-      { href: '#', label: 'Политика конфиденциальности' },
-      { href: '#', label: 'Условия обслуживания' },
+      { href: '/privacy', label: 'Политика конфиденциальности' },
+      { href: '/terms', label: 'Условия обслуживания' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

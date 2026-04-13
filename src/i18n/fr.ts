@@ -194,8 +194,8 @@ export const fr = {
       { href: '#', label: 'Centre d\'Aide' },
     ],
     legal_links: [
-      { href: '#', label: 'Politique de Confidentialité' },
-      { href: '#', label: 'Conditions d\'Utilisation' },
+      { href: '/privacy', label: 'Politique de Confidentialité' },
+      { href: '/terms', label: 'Conditions d\'Utilisation' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

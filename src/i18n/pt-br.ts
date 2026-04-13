@@ -194,8 +194,8 @@ export const pt_br = {
       { href: '#', label: 'Central de Ajuda' },
     ],
     legal_links: [
-      { href: '#', label: 'Política de Privacidade' },
-      { href: '#', label: 'Termos de Serviço' },
+      { href: '/privacy', label: 'Política de Privacidade' },
+      { href: '/terms', label: 'Termos de Serviço' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

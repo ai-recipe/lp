@@ -194,8 +194,8 @@ export const de = {
       { href: '#', label: 'Hilfezentrum' },
     ],
     legal_links: [
-      { href: '#', label: 'Datenschutzrichtlinie' },
-      { href: '#', label: 'Nutzungsbedingungen' },
+      { href: '/privacy', label: 'Datenschutzrichtlinie' },
+      { href: '/terms', label: 'Nutzungsbedingungen' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

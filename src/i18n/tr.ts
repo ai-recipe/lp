@@ -194,8 +194,8 @@ export const tr = {
       { href: '#', label: 'Yardım Merkezi' },
     ],
     legal_links: [
-      { href: '#', label: 'Gizlilik Politikası' },
-      { href: '#', label: 'Hizmet Şartları' },
+      { href: '/tr/privacy', label: 'Gizlilik Politikası' },
+      { href: '/tr/terms', label: 'Kullanım Koşulları' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

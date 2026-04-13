@@ -194,8 +194,8 @@ export const ja = {
       { href: '#', label: 'ヘルプセンター' },
     ],
     legal_links: [
-      { href: '#', label: 'プライバシーポリシー' },
-      { href: '#', label: '利用規約' },
+      { href: '/privacy', label: 'プライバシーポリシー' },
+      { href: '/terms', label: '利用規約' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

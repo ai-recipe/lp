@@ -1,0 +1,857 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const EFFECTIVE_DATE = '14 Nisan 2025';
+const LAST_UPDATED   = '14 Nisan 2025';
+---
+
+<Layout
+  title="Kullanım Koşulları — SlayCal"
+  description="SlayCal Kullanım Koşulları — MirrorBit AI tarafından geliştirilen SlayCal beslenme takip uygulamasının kullanım şart ve koşulları."
+  keywords="SlayCal kullanım koşulları, hizmet şartları, kullanıcı sözleşmesi, SlayCal uygulama"
+  lang="tr"
+  ogLocale="tr_TR"
+  canonicalPath="/tr/terms"
+  alternatePath="/terms"
+  alternateLang="en"
+>
+
+  <!-- ─── Minimal nav ─────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-6 py-4 lg:px-20">
+    <div class="mx-auto flex max-w-5xl items-center justify-between">
+      <a href="/tr/" class="flex items-center gap-2 group" aria-label="SlayCal – Ana Sayfa">
+        <img src="/logo.svg" alt="SlayCal Logo" class="h-20 absolute" />
+        <span class="pl-24 text-lg font-bold tracking-tight text-slate-900">SlayCal</span>
+      </a>
+      <a href="/tr/" class="text-sm font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        Ana Sayfaya Dön
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="min-h-screen bg-background-light">
+
+    <!-- ─── Hero ───────────────────────────────────────────────────────────── -->
+    <section class="bg-gradient-to-b from-primary/8 to-transparent px-6 py-16 lg:px-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-2xl">gavel</span>
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Yasal</span>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Kullanım Koşulları</h1>
+        <p class="text-slate-500 text-base">
+          <span class="font-semibold text-slate-700">Yürürlük tarihi:</span> {EFFECTIVE_DATE} &nbsp;·&nbsp;
+          <span class="font-semibold text-slate-700">Son güncelleme:</span> {LAST_UPDATED}
+        </p>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+          Bu Kullanım Koşulları ("Koşullar"), <strong>MirrorBit AI</strong> ("biz", "bizim" veya "bize")
+          tarafından işletilen <strong>SlayCal</strong> mobil uygulamasına ("Uygulama") erişiminizi ve
+          kullanımınızı düzenler. Uygulamayı kullanarak bu Koşulları kabul etmiş olursunuz.
+          Lütfen dikkatlice okuyunuz.
+        </p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-5xl px-6 pb-24 lg:px-20">
+
+      <!-- ─── Key Points Box ─────────────────────────────────────────────── -->
+      <div class="my-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 lg:p-8" id="key-points">
+        <h2 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
+          <span class="material-symbols-outlined text-primary">tips_and_updates</span>
+          Önemli Noktalar — Özet
+        </h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {[
+            ['person', '13 yaş ve üzeri olmalısınız', '13-17 yaş arası kullanıcılar için ebeveyn onayı gereklidir.'],
+            ['medical_information', 'Tıbbi tavsiye değildir', 'Beslenme verileri yalnızca bilgilendirme amaçlıdır — uzman görüşü alınız.'],
+            ['login', 'Google ve Apple ile giriş desteklenir', 'Google OAuth veya Apple kimliğiyle giriş yapabilirsiniz. Koşulları da geçerlidir.'],
+            ['payments', 'Abonelik otomatik yenilenir', 'Premium abonelikler otomatik yenilenir. Ücret alınmaması için süre dolmadan iptal ediniz.'],
+            ['content_copy', 'İçeriğiniz size aittir', 'Yüklediğiniz veriler ve görseller size aittir; hizmeti sunmak için sınırlı lisans verirsiniz.'],
+            ['policy', 'Uygulama Mağazası kuralları geçerlidir', 'Kullanımınız aynı zamanda Apple App Store veya Google Play koşullarına tabidir.'],
+          ].map(([icon, title, desc]) => (
+            <div class="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm">
+              <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">{icon}</span>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">{title}</p>
+                <p class="text-slate-500 text-xs mt-0.5">{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="mt-5 text-xs text-slate-400 italic">
+          Bu koşulların İngilizce versiyonu için <a href="/terms" class="text-primary hover:underline">buraya</a> tıklayın.
+          Sorularınız için <a href="mailto:legal@mirrorbit.ai" class="text-primary hover:underline">legal@mirrorbit.ai</a> adresine yazabilirsiniz.
+        </p>
+      </div>
+
+      <!-- ─── Table of Contents ───────────────────────────────────────────── -->
+      <nav class="my-10 rounded-2xl border border-slate-200 bg-white p-6 lg:p-8 shadow-sm" aria-label="İçindekiler">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">toc</span>
+          İçindekiler
+        </h2>
+        <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-sm text-slate-600 list-none">
+          {[
+            ['#s1',  '1.',  'Koşulların Kabulü'],
+            ['#s2',  '2.',  'Uygunluk'],
+            ['#s3',  '3.',  'Hesap Oluşturma'],
+            ['#s4',  '4.',  'Google ve Apple ile Giriş'],
+            ['#s5',  '5.',  'Abonelikler ve Ödemeler'],
+            ['#s6',  '6.',  'İçeriğiniz'],
+            ['#s7',  '7.',  'Kabul Edilebilir Kullanım'],
+            ['#s8',  '8.',  'Yapay Zeka Özellikleri ve Sınırlamaları'],
+            ['#s9',  '9.',  'Sağlık Sorumluluk Reddi'],
+            ['#s10', '10.', 'Fikri Mülkiyet'],
+            ['#s11', '11.', 'Gizlilik'],
+            ['#s12', '12.', 'Sorumluluk Reddi'],
+            ['#s13', '13.', 'Sorumluluğun Sınırlandırılması'],
+            ['#s14', '14.', 'Tazminat'],
+            ['#s15', '15.', 'Sözleşmenin Sona Ermesi'],
+            ['#s16', '16.', 'Geçerli Hukuk'],
+            ['#s17', '17.', 'Koşullardaki Değişiklikler'],
+            ['#s18', '18.', 'İletişim Bilgileri'],
+          ].map(([href, num, label]) => (
+            <li>
+              <a href={href} class="flex gap-2 items-baseline hover:text-primary transition-colors py-0.5 group">
+                <span class="text-primary font-semibold text-xs w-6 shrink-0">{num}</span>
+                <span class="group-hover:underline">{label}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <!-- ─── Sections ───────────────────────────────────────────────────── -->
+      <div class="space-y-2" id="terms-body">
+
+        <!-- 1. Kabul -->
+        <details class="policy-section group" open id="s1">
+          <summary class="policy-summary">
+            <span class="policy-num">01</span>
+            <span class="policy-title">Koşulların Kabulü</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              <strong>SlayCal</strong> mobil uygulamasını (iOS ve Android'de mevcuttur) indirerek,
+              yükleyerek veya kullanarak bu Kullanım Koşullarını ve referans yoluyla bu Koşullara
+              dahil edilen <a href="/tr/privacy" class="policy-link">Gizlilik Politikamızı</a> okuduğunuzu,
+              anladığınızı ve bağlayıcı olduğunu kabul ettiğinizi onaylarsınız.
+            </p>
+            <p class="mt-3">
+              Bu Koşulları kabul etmiyorsanız Uygulamayı indirmemelisiniz veya kullanmamalısınız.
+              Bu Koşullar, siz ve <strong>MirrorBit AI</strong> arasında hukuken bağlayıcı bir
+              sözleşme oluşturmaktadır.
+            </p>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                <strong>Anonim kullanım:</strong> Hesap oluşturmadan Uygulamayı kullansanız bile,
+                bu Koşullar kullanımınız için geçerlidir.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2. Uygunluk -->
+        <details class="policy-section group" id="s2">
+          <summary class="policy-summary">
+            <span class="policy-num">02</span>
+            <span class="policy-title">Uygunluk</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>SlayCal'ı kullanabilmek için aşağıdaki gereksinimleri karşılamanız gerekmektedir:</p>
+            <ul class="policy-list mt-3">
+              <li>En az <strong>13 yaşında</strong> olmanız gerekmektedir (veya bulunduğunuz ülkedeki dijital rıza yaşı hangisi daha yüksekse).</li>
+              <li><strong>13-17 yaş arasındaysanız</strong>, bu Koşulları sizin adınıza kabul eden bir ebeveyn veya yasal vasinin rızasına sahip olmalısınız.</li>
+              <li>Bulunduğunuz yargı bölgesinde bağlayıcı bir sözleşme yapabilme ehliyetine sahip olmanız gerekmektedir.</li>
+              <li>Uygulamayı kullanımınız, geçerli herhangi bir yasa veya yönetmelik tarafından yasaklanmış olmamalıdır.</li>
+            </ul>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">child_care</span>
+              <p>
+                SlayCal <strong>13 yaşın altındaki çocuklara yönelik değildir</strong>. 13 yaşın
+                altında bir kullanıcının hesap oluşturduğunu öğrenirsek, o hesabı ve ilgili verileri
+                derhal sileriz. Çocuklarının hesap oluşturduğunu düşünen ebeveynler
+                <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>
+                adresinden bizimle iletişime geçebilir.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3. Hesap Oluşturma -->
+        <details class="policy-section group" id="s3">
+          <summary class="policy-summary">
+            <span class="policy-num">03</span>
+            <span class="policy-title">Hesap Oluşturma</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal'ın temel özelliklerini kayıt olmadan kullanabilirsiniz. Premium özelliklere
+              erişmek, cihazlar arasında senkronizasyon sağlamak ve tam deneyimin kilidini açmak
+              için bir hesap oluşturmanız gerekmektedir.
+            </p>
+            <h3 class="policy-h3 mt-5">Hesap Oluştururken Aşağıdakileri Kabul Edersiniz:</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>Doğru, güncel ve eksiksiz</strong> kayıt bilgileri sağlamayı.</li>
+              <li>Giriş bilgilerinizi <strong>gizli tutmayı</strong> ve şifrenizi kimseyle paylaşmamayı.</li>
+              <li>Hesabınızın yetkisiz kullanımından şüphelenmeniz durumunda derhal <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a> adresine bildirmeyi.</li>
+              <li>Hesabınız altında gerçekleşen <strong>tüm etkinliklerden</strong> sorumlu olmayı.</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-500">
+              Kişi başına birden fazla hesap oluşturamazsınız. Otomatik araçlar veya botlar
+              kullanılarak oluşturulan hesaplar kesinlikle yasaktır.
+            </p>
+          </div>
+        </details>
+
+        <!-- 4. Google & Apple ile Giriş -->
+        <details class="policy-section group" id="s4">
+          <summary class="policy-summary">
+            <span class="policy-num">04</span>
+            <span class="policy-title">Google &amp; Apple ile Giriş</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal, e-posta/şifre kaydına uygun bir alternatif olarak <strong>Google OAuth</strong>
+              ve <strong>Apple ile Giriş Yap</strong> seçeneklerini sunmaktadır. Bu seçeneklerden
+              herhangi birini kullanarak aşağıdakileri kabul etmiş olursunuz:
+            </p>
+
+            <h3 class="policy-h3 mt-6">Google ile Giriş (OAuth 2.0)</h3>
+            <p>
+              Google ile giriş yaptığınızda, SlayCal'ın Google hesabınızdan aşağıdaki bilgileri
+              almasına yetki vermiş olursunuz:
+            </p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Alınan Veri</th>
+                    <th>Amaç</th>
+                    <th>Depolanıyor mu?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google Konu Kimliği (sub)</td>
+                    <td>Google hesabınızı SlayCal hesabınıza bağlamak için benzersiz kimlik</td>
+                    <td>Evet — veritabanımızda</td>
+                  </tr>
+                  <tr>
+                    <td>E-posta adresi</td>
+                    <td>Hesap oluşturma, giriş ve iletişim</td>
+                    <td>Evet — veritabanımızda</td>
+                  </tr>
+                  <tr>
+                    <td>Görünen ad</td>
+                    <td>Uygulama içi deneyiminizi kişiselleştirmek (isteğe bağlı)</td>
+                    <td>Evet (sağlandıysa)</td>
+                  </tr>
+                  <tr>
+                    <td>Google kimlik tokeni</td>
+                    <td>Kimliğinizi doğrulamak için sunucu tarafında google-auth-library ile doğrulanır</td>
+                    <td>Hayır — doğrulandıktan sonra silinir</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                Google ile Giriş,
+                <a href="https://policies.google.com/terms" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Hizmet Şartları</a>
+                ve
+                <a href="https://policies.google.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a>
+                tarafından yönetilmektedir. Google Drive'ınıza, Gmail'inize, kişilerinize veya
+                diğer Google hizmetlerinize erişmiyoruz. SlayCal'ın Google hesabınıza erişimini
+                istediğiniz zaman
+                <a href="https://myaccount.google.com/permissions" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Hesap İzinleri</a>
+                üzerinden iptal edebilirsiniz.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Apple ile Giriş Yap</h3>
+            <p>
+              Apple ile giriş yaptığınızda, SlayCal'ın Apple'dan aşağıdaki bilgileri almasına
+              yetki vermiş olursunuz:
+            </p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Alınan Veri</th>
+                    <th>Amaç</th>
+                    <th>Depolanıyor mu?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Apple Kullanıcı Kimliği (sub)</td>
+                    <td>Apple kimliğinizi SlayCal hesabınıza bağlamak için benzersiz kimlik</td>
+                    <td>Evet — veritabanımızda</td>
+                  </tr>
+                  <tr>
+                    <td>E-posta adresi</td>
+                    <td>Hesap oluşturma ve iletişim (Apple yönlendirme adresi sağlayabilir)</td>
+                    <td>Evet — veritabanımızda</td>
+                  </tr>
+                  <tr>
+                    <td>Ad</td>
+                    <td>Uygulama içi deneyiminizi kişiselleştirmek — yalnızca ilk girişte paylaşılır</td>
+                    <td>Evet (ilk girişte sağlandıysa)</td>
+                  </tr>
+                  <tr>
+                    <td>Apple kimlik tokeni</td>
+                    <td>Kimliğinizi doğrulamak için sunucu tarafında Apple'ın JWKS uç noktası ile doğrulanır</td>
+                    <td>Hayır — doğrulandıktan sonra silinir</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                Apple ile Giriş Yap,
+                <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Apple Şartları ve Koşulları</a>
+                ve
+                <a href="https://www.apple.com/legal/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Apple Gizlilik Politikası</a>
+                tarafından yönetilmektedir. Apple, gerçek e-posta adresinizi bizden gizlemek için
+                özel bir yönlendirme e-posta adresi sağlayabilir — bu tam olarak desteklenmektedir.
+                SlayCal'ın Apple ile Giriş erişimini
+                <em>iPhone Ayarları → [Adınız] → Şifre ve Güvenlik → Apple Kimliği Kullanan Uygulamalar</em>
+                yolunu izleyerek iptal edebilirsiniz.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Üçüncü Taraf Giriş — Genel Kurallar</h3>
+            <ul class="policy-list mt-3">
+              <li>Google veya Apple ile girişiniz, bu Koşullara <strong>ek olarak</strong> ilgili şart ve politikalarına tabidir.</li>
+              <li>Yalnızca hesabınızı oluşturmak ve sürdürmek için gereken <strong>minimum izinleri</strong> talep ederiz.</li>
+              <li>Google veya Apple hesabınıza <strong>hiçbir şey yayımlamıyor, yayınlamıyor veya yazmıyoruz</strong>.</li>
+              <li>Üçüncü taraf giriş erişimini iptal etmek SlayCal hesabınızı otomatik olarak silmez. Hesabınızı silmek için <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a> ile iletişime geçin.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 5. Abonelikler -->
+        <details class="policy-section group" id="s5">
+          <summary class="policy-summary">
+            <span class="policy-num">05</span>
+            <span class="policy-title">Abonelikler &amp; Ödemeler</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <h3 class="policy-h3">Ücretsiz &amp; Premium Planlar</h3>
+            <p>
+              SlayCal, sınırlı günlük özellik kullanımına sahip ücretsiz bir plan ve yapay zeka
+              taraması, tarif oluşturma ve gelişmiş takibe sınırsız erişim sağlayan premium bir
+              abonelik sunmaktadır.
+            </p>
+            <h3 class="policy-h3 mt-6">Fatura</h3>
+            <ul class="policy-list mt-3">
+              <li>Abonelikler, satın alma işleminizi yaptığınız <strong>Apple App Store</strong> (iOS) veya <strong>Google Play Store</strong> (Android) platformu aracılığıyla faturalandırılır.</li>
+              <li>Ödeme, satın alma onayında mağaza hesabınızdan tahsil edilir.</li>
+              <li>Abonelikler, yenileme tarihinden en az 24 saat önce iptal edilmediği sürece her faturalama döneminin sonunda otomatik olarak <strong>yenilenir</strong>.</li>
+              <li>Fiyatlar bölgeye göre değişebilir ve ödeme sırasında yerel para biriminizde gösterilir.</li>
+            </ul>
+            <h3 class="policy-h3 mt-6">İptal</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>iOS:</strong> <em>Ayarlar → [Adınız] → Abonelikler → SlayCal</em> yoluyla iptal edin.</li>
+              <li><strong>Android:</strong> <em>Google Play → Abonelikler → SlayCal</em> yoluyla iptal edin.</li>
+              <li>İptal, mevcut faturalama döneminin sonunda geçerli olur. O zamana kadar premium erişiminiz devam eder.</li>
+            </ul>
+            <h3 class="policy-h3 mt-6">İadeler</h3>
+            <p>
+              İade talepleri, MirrorBit AI tarafından değil, doğrudan Apple veya Google tarafından
+              işlenir. Lütfen Apple Destek veya Google Play Destek ile iletişime geçin.
+            </p>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">payments</span>
+              <p>
+                <strong>Ücretsiz deneme:</strong> Ücretsiz deneme sunuluyorsa, deneme süresi sona
+                ermeden iptal edilmediği takdirde otomatik olarak ücretli aboneliğe dönüşür.
+                İptal son tarihi kayıt sırasında açıkça bildirilecektir.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 6. İçeriğiniz -->
+        <details class="policy-section group" id="s6">
+          <summary class="policy-summary">
+            <span class="policy-num">06</span>
+            <span class="policy-title">İçeriğiniz</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              "İçeriğiniz"; Uygulamaya gönderdiğiniz veya Uygulama içinde oluşturduğunuz tüm veriler,
+              metinler, görseller veya diğer bilgileri ifade eder — öğün fotoğrafları, yiyecek günlükleri,
+              sağlık profili verileri ve tarif tercihleri dahil.
+            </p>
+            <h3 class="policy-h3 mt-5">Sahiplik</h3>
+            <p>İçeriğinizin tam sahipliği size aittir. Fikri mülkiyet hakları üzerinde herhangi bir hak talep etmiyoruz.</p>
+            <h3 class="policy-h3 mt-5">Bize Verilen Lisans</h3>
+            <p>
+              İçeriğinizi göndererek, MirrorBit AI'ya İçeriğinizi yalnızca Uygulamayı işletmek,
+              sürdürmek ve iyileştirmek ve talep ettiğiniz hizmetleri sunmak amacıyla depolamak,
+              işlemek, görüntülemek ve iletmek için <strong>münhasır olmayan, dünya genelinde,
+              telifsiz, alt lisans verilebilir bir lisans</strong> vermiş olursunuz.
+            </p>
+            <h3 class="policy-h3 mt-5">Öğün Görseli Erişilebilirliği</h3>
+            <div class="callout-warning mt-2">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">public</span>
+              <p>
+                Yüklediğiniz öğün görselleri <strong>Firebase Cloud Storage</strong>'da depolanır ve
+                belirli URL'ye sahip herkes tarafından erişilebilir. URL'ler herkese açık olarak
+                listelenmese veya indekslenmese de teknik olarak herkese açıktır. Kaydetmek
+                istediğiniz yiyecek dışında kişisel veya hassas bilgiler içeren görseller
+                yüklemeyiniz.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 7. Kabul Edilebilir Kullanım -->
+        <details class="policy-section group" id="s7">
+          <summary class="policy-summary">
+            <span class="policy-num">07</span>
+            <span class="policy-title">Kabul Edilebilir Kullanım</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>SlayCal'ı aşağıdaki amaçlarla kullanmamayı kabul edersiniz:</p>
+            <ul class="policy-list mt-3">
+              <li>Geçerli yerel, ulusal veya uluslararası yasa veya yönetmelikleri ihlal etmek.</li>
+              <li>Uygulamanın, sunucularının veya ilgili sistemlerin herhangi bir bölümüne yetkisiz erişim sağlamaya çalışmak.</li>
+              <li>Uygulamanın kaynak kodunu tersine mühendislik yapmak, derlemeyi kaldırmak veya çıkarmaya çalışmak.</li>
+              <li>Virüs, kötü amaçlı yazılım veya zararlı ya da bozucu kod yüklemek veya iletmek.</li>
+              <li>Uygulamadan veri erişmek veya çıkarmak için otomatik araçlar (botlar, tarayıcılar) kullanmak.</li>
+              <li>Günlük kullanım kotalarını veya hız sınırlarını aşmak veya istismar etmek.</li>
+              <li>Herhangi bir kişi veya kuruluşu taklit etmek veya herhangi bir kişi veya kuruluşla ilişkinizi yanlış beyan etmek.</li>
+              <li>MirrorBit AI'dan önceden yazılı onay almaksızın Uygulamayı ticari amaçlarla kullanmak.</li>
+              <li>Diğer kullanıcıların kişisel verilerini toplamak veya edinmek.</li>
+              <li>Uygulamanın veya altyapısının bütünlüğünü veya performansını engellemek veya bozmak.</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-500">
+              Bu kuralların ihlali, bildirim yapılmaksızın veya iade yapılmaksızın hesabınızın ve
+              Uygulamaya erişiminizin derhal sonlandırılmasıyla sonuçlanabilir.
+            </p>
+          </div>
+        </details>
+
+        <!-- 8. YZ Özellikleri -->
+        <details class="policy-section group" id="s8">
+          <summary class="policy-summary">
+            <span class="policy-num">08</span>
+            <span class="policy-title">Yapay Zeka Özellikleri &amp; Sınırlamaları</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal, <strong>OpenAI'nin API'si (GPT-4o-mini)</strong> tarafından desteklenen
+              öğün görüntü tanıma, kalori tahmini ve tarif oluşturma dahil <strong>yapay zeka
+              destekli özellikler</strong> kullanmaktadır.
+            </p>
+            <h3 class="policy-h3 mt-5">Önemli Sınırlamalar</h3>
+            <ul class="policy-list mt-3">
+              <li>Yapay zeka tarafından oluşturulan beslenme tahminleri <strong>yaklaşık değerlerdir</strong> ve %100 doğru olmayabilir. Porsiyon boyutları, pişirme yöntemleri ve içerik değişkenlikleri sonuçları etkileyebilir.</li>
+              <li>Yapay zeka tarafından oluşturulan tarifler yalnızca öneridir ve <strong>bir beslenme uzmanı veya şef tarafından incelenmemiştir</strong>.</li>
+              <li>Yapay zeka tarafından oluşturulan içeriklere dayanarak verdiğiniz kararlardan <strong>sorumlu değiliz</strong>.</li>
+              <li>Yapay zeka zaman zaman yanlış, eksik veya beklenmedik çıktılar üretebilir. Her zaman kendi değerlendirmenizi uygulayın.</li>
+            </ul>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">smart_toy</span>
+              <p>
+                Yapay zeka özelliklerini kullandığınızda, yiyecek görselleriniz ve metin istemleriniz
+                <strong>OpenAI'nin API'sine</strong> iletilir. Bu işlem
+                <a href="https://openai.com/terms" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI Kullanım Şartları</a>
+                ve
+                <a href="https://openai.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI Gizlilik Politikası</a>
+                kapsamındadır.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 9. Sağlık Sorumluluk Reddi -->
+        <details class="policy-section group" id="s9">
+          <summary class="policy-summary">
+            <span class="policy-num">09</span>
+            <span class="policy-title">Sağlık Sorumluluk Reddi</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="callout-warning">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">medical_information</span>
+              <p>
+                <strong>SlayCal bir tıbbi cihaz değildir ve tıbbi tavsiye vermemektedir.</strong>
+                Tüm beslenme bilgileri, kalori hedefleri, makro önerileri ve yapay zeka tarafından
+                oluşturulan içerikler yalnızca <strong>bilgilendirme ve genel sağlık amaçlıdır</strong>.
+              </p>
+            </div>
+            <ul class="policy-list mt-4">
+              <li>SlayCal'ı profesyonel tıbbi tavsiye, tanı veya tedavinin yerine <strong>kullanmayın</strong>.</li>
+              <li>Özellikle tıbbi bir durumunuz varsa, diyetinizde önemli değişiklikler yapmadan önce mutlaka nitelikli bir sağlık uzmanına veya diyetisyene danışın.</li>
+              <li>Herhangi bir olumsuz sağlık etkisiyle karşılaşırsanız, <strong>Uygulamayı kullanmayı bırakın ve derhal tıbbi yardım alın</strong>.</li>
+              <li>Kalori ve makro verileri genel referans amaçlı sunulmaktadır. Bireysel beslenme ihtiyaçları önemli ölçüde farklılık gösterir.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 10. Fikri Mülkiyet -->
+        <details class="policy-section group" id="s10">
+          <summary class="policy-summary">
+            <span class="policy-num">10</span>
+            <span class="policy-title">Fikri Mülkiyet</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal'ın tüm içeriği, özellikleri, tasarımı, kodu, logoları, ticari markaları ve
+              ticari görünümü — İçeriğiniz hariç — <strong>MirrorBit AI</strong>'ın münhasır mülkiyetinde
+              olup geçerli fikri mülkiyet yasaları tarafından korunmaktadır.
+            </p>
+            <p class="mt-3">
+              Bu Koşullar, Uygulamayı amaçlanan kullanımı için kullanmak için kesinlikle gerekli
+              olanın ötesinde MirrorBit AI'ın fikri mülkiyetini kullanmak için herhangi bir lisans
+              vermemektedir.
+            </p>
+          </div>
+        </details>
+
+        <!-- 11. Gizlilik -->
+        <details class="policy-section group" id="s11">
+          <summary class="policy-summary">
+            <span class="policy-num">11</span>
+            <span class="policy-title">Gizlilik</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal'ı kullanmanız aynı zamanda bu Koşullara referans yoluyla dahil edilen
+              <a href="/tr/privacy" class="policy-link font-semibold">Gizlilik Politikamız</a>
+              tarafından da yönetilmektedir. Uygulamayı kullanarak, bilgilerinizin
+              Gizlilik Politikasında açıklandığı şekilde toplanmasını ve kullanılmasını kabul etmiş olursunuz.
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Kişisel verilerinizi üçüncü taraflara <strong>satmıyoruz</strong>.</li>
+              <li>Sizi diğer uygulamalarda veya web sitelerinde <strong>takip etmiyoruz</strong>.</li>
+              <li>Üçüncü taraf analitik SDK'ları <strong>kullanmıyoruz</strong>.</li>
+              <li>Sağlık verileri <strong>sizin tarafınızdan bildirilen</strong> verilerdir; HealthKit veya Google Fit'ten edinilmez.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 12. Sorumluluk Reddi -->
+        <details class="policy-section group" id="s12">
+          <summary class="policy-summary">
+            <span class="policy-num">12</span>
+            <span class="policy-title">Sorumluluk Reddi</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              UYGULAMA, SATILABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME DAHİL ANCAK
+              BUNLARLA SINIRLI OLMAMAK ÜZERE HERHANGİ BİR AÇIK VEYA ZIMNİ GARANTİ OLMAKSIZIN
+              <strong>"OLDUĞU GİBİ" VE "MEVCUT OLDUĞU ŞEKİLDE"</strong> SUNULMAKTADIR.
+            </p>
+            <ul class="policy-list mt-4">
+              <li>Uygulamanın kesintisiz, hatasız veya virüs ya da diğer zararlı bileşenlerden arındırılmış olacağını garanti etmiyoruz.</li>
+              <li>Yapay zeka tarafından oluşturulan beslenme veya tarif bilgilerinin bireysel koşullarınıza uygun, doğru veya eksiksiz olacağını garanti etmiyoruz.</li>
+              <li>Herhangi bir bildirim yapmaksızın Uygulamanın herhangi bir bölümünü istediğimiz zaman değiştirme, askıya alma veya durdurma hakkını saklı tutuyoruz.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 13. Sorumluluğun Sınırlandırılması -->
+        <details class="policy-section group" id="s13">
+          <summary class="policy-summary">
+            <span class="policy-num">13</span>
+            <span class="policy-title">Sorumluluğun Sınırlandırılması</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              YÜRÜRLÜKTEKI YASANIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, HİÇBİR KOŞULDA MİRRORBİT AI,
+              GÖREVLİLERİ, YÖNETİCİLERİ, ÇALIŞANLARI VEYA ACENTALARI, AŞAĞIDAKİLER DE DAHİL OLMAK
+              ÜZERE HİÇBİR DOLAYLI, ARIZİ, ÖZEL, SONUÇSAL VEYA CEZAİ ZARARDAN SORUMLU TUTULAMAZ:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Veri veya kâr kaybı</li>
+              <li>Uygulama içeriğine güvenmekten kaynaklanan kişisel yaralanma veya sağlık sonuçları</li>
+              <li>Sunucularımıza veya kişisel bilgilere yetkisiz erişim veya bunların kullanımı</li>
+              <li>Uygulama hizmetlerinin kesintisi veya sona ermesi</li>
+            </ul>
+            <p class="mt-4">
+              HİÇBİR KOŞULDA SİZE YÖNELİK TOPLAM SORUMLULUĞUMUZ <strong>100 USD</strong> VEYA
+              TALEBİN ORTAYA ÇIKMASINDEN ÖNCEKİ ON İKİ AY İÇİNDE BİZE ÖDEDİĞİNİZ TUTARDAN
+              BÜYÜK OLANINDAN FAZLA OLMAYACAKTIR.
+            </p>
+            <p class="mt-3 text-sm text-slate-500">
+              Bazı yargı bölgeleri belirli zararların hariç tutulmasına veya sınırlandırılmasına
+              izin vermez. Bu tür yargı bölgelerinde sorumluluğumuz, yasanın izin verdiği azami
+              ölçüde sınırlıdır.
+            </p>
+          </div>
+        </details>
+
+        <!-- 14. Tazminat -->
+        <details class="policy-section group" id="s14">
+          <summary class="policy-summary">
+            <span class="policy-num">14</span>
+            <span class="policy-title">Tazminat</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              MirrorBit AI'yı ve görevlilerini, yöneticilerini, çalışanlarını ve acentalarını,
+              aşağıdakilerle bağlantılı olarak ortaya çıkan tüm iddialar, yükümlülükler, zararlar,
+              kayıplar ve giderlerden (makul avukatlık ücretleri dahil) savunmayı, tazmin etmeyi
+              ve zararsız kılmayı kabul edersiniz:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Bu Koşulları ihlal ederek Uygulamaya erişiminiz veya kullanımınız.</li>
+              <li>Herhangi bir üçüncü tarafın haklarını ihlal eden İçeriğiniz.</li>
+              <li>Geçerli herhangi bir yasa veya yönetmeliği ihlaliniz.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 15. Sona Erme -->
+        <details class="policy-section group" id="s15">
+          <summary class="policy-summary">
+            <span class="policy-num">15</span>
+            <span class="policy-title">Sözleşmenin Sona Ermesi</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <h3 class="policy-h3">Sizin Tarafınızdan Sona Erme</h3>
+            <p>
+              Uygulamayı istediğiniz zaman kullanmayı bırakabilir ve hesabınızı
+              <strong>Ayarlar → Hesap → Hesabı Sil</strong> bölümünden silebilir ya da
+              <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a>
+              ile iletişime geçebilirsiniz.
+            </p>
+            <h3 class="policy-h3 mt-6">Bizim Tarafımızdan Sona Erme</h3>
+            <p>
+              Aşağıdaki durumlarda Uygulamaya erişiminizi kendi takdirimizde bulunarak bildirim
+              yapmaksızın derhal askıya alabilir veya sonlandırabiliriz:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Bu Koşulların herhangi bir hükmünü ihlal etmeniz.</li>
+              <li>Bunu yasal olarak veya düzenleyici bir otorite tarafından yapmamızın zorunlu kılınması.</li>
+              <li>Hesabınızın sahte veya yasadışı amaçlarla kullanıldığına makul ölçüde inanmamız.</li>
+              <li>Diğer kullanıcılara, üçüncü taraflara veya MirrorBit AI'ın itibarına zarar veren davranışlarda bulunmanız.</li>
+            </ul>
+            <h3 class="policy-h3 mt-6">Sona Ermenin Etkisi</h3>
+            <p>
+              Sona ermenin ardından Uygulamayı kullanma hakkınız derhal sona erer. Niteliğiyle
+              sona ermeden sonra da yürürlükte kalması gereken bu Koşulların bölümleri (Sorumluluk
+              Reddi, Sorumluluğun Sınırlandırılması, Tazminat ve Geçerli Hukuk dahil) geçerliliğini
+              koruyacaktır.
+            </p>
+          </div>
+        </details>
+
+        <!-- 16. Geçerli Hukuk -->
+        <details class="policy-section group" id="s16">
+          <summary class="policy-summary">
+            <span class="policy-num">16</span>
+            <span class="policy-title">Geçerli Hukuk &amp; Anlaşmazlıklar</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              Bu Koşullar, kanunlar ihtilafı ilkeleri gözetilmeksizin MirrorBit AI'ın kurulu
+              olduğu yargı bölgesinin yasalarına göre yönetilir ve yorumlanır.
+            </p>
+            <p class="mt-3">
+              Bu Koşullardan veya Uygulamadan kaynaklanan herhangi bir anlaşmazlık, öncelikle
+              <a href="mailto:legal@mirrorbit.ai" class="policy-link">legal@mirrorbit.ai</a>
+              adresine başvurularak gayri resmi yollarla çözülmeye çalışılacaktır. Anlaşmazlık
+              30 gün içinde gayri resmi yollarla çözüme kavuşturulamazsa, bağlayıcı tahkime veya
+              yargı bölgemizdeki yetkili mahkemelere sunulacaktır.
+            </p>
+          </div>
+        </details>
+
+        <!-- 17. Değişiklikler -->
+        <details class="policy-section group" id="s17">
+          <summary class="policy-summary">
+            <span class="policy-num">17</span>
+            <span class="policy-title">Koşullardaki Değişiklikler</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              Bu Koşulları istediğimiz zaman değiştirme hakkımızı saklı tutarız. Önemli değişiklikler
+              yaptığımızda:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Bu sayfanın üst kısmındaki <strong>"Son güncelleme"</strong> tarihini güncelleyeceğiz.</li>
+              <li>Önemli değişiklikler için kayıtlı kullanıcılara <strong>anlık bildirim veya uygulama içi uyarı</strong> göndereceğiz.</li>
+              <li>Değişiklikler önemliyse Koşulları yeniden kabul etmenizi isteyeceğiz.</li>
+            </ul>
+            <p class="mt-4">
+              Revize edilmiş Koşulların yürürlüğe girmesinin ardından Uygulamayı kullanmaya devam
+              etmeniz, değişiklikleri kabul ettiğiniz anlamına gelir. Güncellenen Koşulları kabul
+              etmiyorsanız Uygulamayı kullanmayı bırakmalısınız.
+            </p>
+          </div>
+        </details>
+
+        <!-- 18. İletişim -->
+        <details class="policy-section group" id="s18">
+          <summary class="policy-summary">
+            <span class="policy-num">18</span>
+            <span class="policy-title">İletişim Bilgileri</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>Bu Koşullar hakkındaki sorularınız için bizimle iletişime geçin:</p>
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0">apartment</span>
+                <div>
+                  <p class="font-bold text-slate-900">MirrorBit AI</p>
+                  <p class="text-slate-500 text-sm">SlayCal Geliştiricisi</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">mail</span>
+                  <span class="text-slate-700">Hukuki sorular:</span>
+                  <a href="mailto:legal@mirrorbit.ai" class="text-primary font-medium hover:underline">legal@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">support_agent</span>
+                  <span class="text-slate-700">Destek:</span>
+                  <a href="mailto:support@mirrorbit.ai" class="text-primary font-medium hover:underline">support@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">language</span>
+                  <span class="text-slate-700">Web sitesi:</span>
+                  <a href="https://slaycal.app" class="text-primary font-medium hover:underline">slaycal.app</a>
+                </div>
+              </div>
+            </div>
+            <p class="mt-5 text-sm text-slate-500">
+              Tüm hukuki sorulara <strong>30 gün</strong> içinde yanıt vermeyi hedefliyoruz.
+            </p>
+          </div>
+        </details>
+
+      </div><!-- /terms-body -->
+
+      <!-- ─── Footer note ─────────────────────────────────────────────────── -->
+      <div class="mt-12 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl mb-2 block">gavel</span>
+        <p class="text-slate-700 font-semibold">Bu Koşullar hakkında sorularınız mı var?</p>
+        <p class="text-slate-500 text-sm mt-1">
+          <a href="mailto:legal@mirrorbit.ai" class="text-primary font-medium hover:underline">legal@mirrorbit.ai</a>
+          adresinden bize ulaşın — 30 gün içinde yanıt veriyoruz.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
+          <span>Yürürlük: {EFFECTIVE_DATE}</span>
+          <span>·</span>
+          <span>Son güncelleme: {LAST_UPDATED}</span>
+          <span>·</span>
+          <span>© 2025 MirrorBit AI. Tüm hakları saklıdır.</span>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ─── Minimal footer ─────────────────────────────────────────────────── -->
+  <footer class="border-t border-slate-100 bg-white px-6 py-8 text-center text-xs text-slate-400">
+    <div class="mx-auto max-w-5xl flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="/tr/" class="hover:text-primary transition-colors">Ana Sayfa</a>
+      <a href="/tr/privacy" class="hover:text-primary transition-colors">Gizlilik Politikası</a>
+      <a href="/tr/terms" class="text-primary font-semibold" aria-current="page">Kullanım Koşulları</a>
+      <a href="mailto:legal@mirrorbit.ai" class="hover:text-primary transition-colors">İletişim</a>
+      <a href="/terms" class="hover:text-primary transition-colors">English</a>
+    </div>
+    <p class="mt-4">© 2025 MirrorBit AI · SlayCal · Tüm hakları saklıdır.</p>
+  </footer>
+
+</Layout>
+
+<!-- ─── Styles ──────────────────────────────────────────────────────────────── -->
+<style>
+  .policy-section {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden;
+  }
+  .policy-summary {
+    @apply flex items-center gap-3 cursor-pointer select-none px-6 py-5 font-semibold text-slate-800
+           hover:bg-slate-50 transition-colors list-none;
+  }
+  .policy-summary::-webkit-details-marker { display: none; }
+  .policy-num {
+    @apply text-xs font-bold text-primary bg-primary/10 rounded-lg px-2 py-1 shrink-0 w-9 text-center;
+  }
+  .policy-title {
+    @apply text-base font-semibold text-slate-800;
+  }
+  .policy-body {
+    @apply px-6 pb-8 pt-2 text-slate-600 leading-relaxed text-sm border-t border-slate-100;
+  }
+  .policy-h3 {
+    @apply text-sm font-bold text-slate-800 uppercase tracking-wide mt-6 mb-2;
+  }
+  .policy-list {
+    @apply space-y-2 list-none pl-0;
+  }
+  .policy-list li {
+    @apply flex gap-2 items-start;
+  }
+  .policy-list li::before {
+    content: '→';
+    @apply text-primary shrink-0 mt-0.5 font-semibold text-xs leading-5;
+  }
+  .policy-link {
+    @apply text-primary hover:underline;
+  }
+  .callout-info {
+    @apply flex items-start gap-3 rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-800;
+  }
+  .callout-warning {
+    @apply flex items-start gap-3 rounded-xl bg-amber-50 border border-amber-100 p-4 text-sm text-amber-800;
+  }
+  .callout-success {
+    @apply flex items-start gap-3 rounded-xl bg-green-50 border border-green-100 p-4 text-sm text-green-800;
+  }
+  .data-table-wrapper {
+    @apply overflow-x-auto rounded-xl border border-slate-200;
+  }
+  .data-table {
+    @apply w-full text-xs text-left border-collapse;
+  }
+  .data-table thead tr {
+    @apply bg-slate-50;
+  }
+  .data-table th {
+    @apply px-4 py-3 font-semibold text-slate-700 border-b border-slate-200 whitespace-nowrap;
+  }
+  .data-table td {
+    @apply px-4 py-3 text-slate-600 border-b border-slate-100 align-top;
+  }
+  .data-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .data-table tbody tr:hover td {
+    @apply bg-slate-50/60;
+  }
+  code {
+    @apply bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded text-xs font-mono;
+  }
+</style>
+</Layout>

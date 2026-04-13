@@ -194,8 +194,8 @@ export const ko = {
       { href: '#', label: '도움말 센터' },
     ],
     legal_links: [
-      { href: '#', label: '개인정보 보호정책' },
-      { href: '#', label: '이용약관' },
+      { href: '/privacy', label: '개인정보 보호정책' },
+      { href: '/terms', label: '이용약관' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: false },

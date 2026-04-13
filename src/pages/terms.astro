@@ -1,0 +1,876 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const EFFECTIVE_DATE = 'April 14, 2025';
+const LAST_UPDATED   = 'April 14, 2025';
+---
+
+<Layout
+  title="Terms of Service — SlayCal"
+  description="SlayCal Terms of Service — the rules and conditions governing your use of the SlayCal nutrition tracking app by MirrorBit AI."
+  keywords="SlayCal terms of service, terms of use, user agreement, SlayCal app"
+  lang="en"
+  ogLocale="en_US"
+  canonicalPath="/terms"
+>
+
+  <!-- ─── Minimal nav ─────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-6 py-4 lg:px-20">
+    <div class="mx-auto flex max-w-5xl items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group" aria-label="SlayCal – Home">
+        <img src="/logo.svg" alt="SlayCal Logo" class="h-20 absolute" />
+        <span class="pl-24 text-lg font-bold tracking-tight text-slate-900">SlayCal</span>
+      </a>
+      <a href="/" class="text-sm font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="min-h-screen bg-background-light">
+
+    <!-- ─── Hero ───────────────────────────────────────────────────────────── -->
+    <section class="bg-gradient-to-b from-primary/8 to-transparent px-6 py-16 lg:px-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-2xl">gavel</span>
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Legal</span>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Terms of Service</h1>
+        <p class="text-slate-500 text-base">
+          <span class="font-semibold text-slate-700">Effective date:</span> {EFFECTIVE_DATE} &nbsp;·&nbsp;
+          <span class="font-semibold text-slate-700">Last updated:</span> {LAST_UPDATED}
+        </p>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+          These Terms of Service ("Terms") govern your access to and use of the
+          <strong>SlayCal</strong> mobile application ("App") operated by <strong>MirrorBit AI</strong>
+          ("we", "our", or "us"). By using the App, you agree to these Terms.
+          Please read them carefully.
+        </p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-5xl px-6 pb-24 lg:px-20">
+
+      <!-- ─── Key Points Box ─────────────────────────────────────────────── -->
+      <div class="my-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 lg:p-8" id="key-points">
+        <h2 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
+          <span class="material-symbols-outlined text-primary">tips_and_updates</span>
+          Key Points — Summary
+        </h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {[
+            ['person', 'You must be 13 or older', 'SlayCal is not intended for children under 13. Parental consent required for ages 13–17.'],
+            ['medical_information', 'Not medical advice', 'Nutrition data is for informational purposes only — consult a qualified professional.'],
+            ['login', 'Google & Apple Sign-In supported', 'You may sign in with Google OAuth or Apple ID. Their terms also apply to your sign-in.'],
+            ['payments', 'Subscription auto-renews', 'Premium subscriptions renew automatically. Cancel before renewal to avoid being charged.'],
+            ['content_copy', 'Your content stays yours', 'You own the data and images you upload. You grant us a limited licence to provide the service.'],
+            ['policy', 'App Store rules apply', 'Your use is also subject to Apple App Store or Google Play Store terms, as applicable.'],
+          ].map(([icon, title, desc]) => (
+            <div class="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm">
+              <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">{icon}</span>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">{title}</p>
+                <p class="text-slate-500 text-xs mt-0.5">{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p class="mt-5 text-xs text-slate-400 italic">
+          These Terms are available in English. For a translation, contact us at
+          <a href="mailto:legal@mirrorbit.ai" class="text-primary hover:underline">legal@mirrorbit.ai</a>.
+        </p>
+      </div>
+
+      <!-- ─── Table of Contents ───────────────────────────────────────────── -->
+      <nav class="my-10 rounded-2xl border border-slate-200 bg-white p-6 lg:p-8 shadow-sm" aria-label="Table of contents">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">toc</span>
+          Table of Contents
+        </h2>
+        <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-sm text-slate-600 list-none">
+          {[
+            ['#s1',  '1.',  'Acceptance of Terms'],
+            ['#s2',  '2.',  'Eligibility'],
+            ['#s3',  '3.',  'Account Registration'],
+            ['#s4',  '4.',  'Google & Apple Sign-In'],
+            ['#s5',  '5.',  'Subscriptions & Payments'],
+            ['#s6',  '6.',  'Your Content'],
+            ['#s7',  '7.',  'Acceptable Use'],
+            ['#s8',  '8.',  'AI Features & Limitations'],
+            ['#s9',  '9.',  'Health Disclaimer'],
+            ['#s10', '10.', 'Intellectual Property'],
+            ['#s11', '11.', 'Privacy'],
+            ['#s12', '12.', 'Disclaimers'],
+            ['#s13', '13.', 'Limitation of Liability'],
+            ['#s14', '14.', 'Indemnification'],
+            ['#s15', '15.', 'Termination'],
+            ['#s16', '16.', 'Governing Law'],
+            ['#s17', '17.', 'Changes to Terms'],
+            ['#s18', '18.', 'Contact Information'],
+          ].map(([href, num, label]) => (
+            <li>
+              <a href={href} class="flex gap-2 items-baseline hover:text-primary transition-colors py-0.5 group">
+                <span class="text-primary font-semibold text-xs w-6 shrink-0">{num}</span>
+                <span class="group-hover:underline">{label}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <!-- ─── Sections ───────────────────────────────────────────────────── -->
+      <div class="space-y-2" id="terms-body">
+
+        <!-- 1. Acceptance -->
+        <details class="policy-section group" open id="s1">
+          <summary class="policy-summary">
+            <span class="policy-num">01</span>
+            <span class="policy-title">Acceptance of Terms</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              By downloading, installing, or using the <strong>SlayCal</strong> mobile application
+              (available on iOS and Android), you confirm that you have read, understood, and agree to
+              be bound by these Terms of Service and our
+              <a href="/privacy" class="policy-link">Privacy Policy</a>, which is incorporated into
+              these Terms by reference.
+            </p>
+            <p class="mt-3">
+              If you do not agree to these Terms, you must not download or use the App.
+              These Terms form a legally binding agreement between you and <strong>MirrorBit AI</strong>.
+            </p>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                <strong>Anonymous use:</strong> Even if you use the App without creating an account,
+                these Terms still apply to your use of the App.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2. Eligibility -->
+        <details class="policy-section group" id="s2">
+          <summary class="policy-summary">
+            <span class="policy-num">02</span>
+            <span class="policy-title">Eligibility</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>You must meet the following requirements to use SlayCal:</p>
+            <ul class="policy-list mt-3">
+              <li>You must be at least <strong>13 years old</strong> (or the minimum age of digital consent in your country, whichever is higher).</li>
+              <li>If you are between <strong>13 and 17 years old</strong>, you must have the consent of a parent or legal guardian who agrees to these Terms on your behalf.</li>
+              <li>You must have the legal capacity to form a binding contract in your jurisdiction.</li>
+              <li>Your use of the App must not be prohibited by any applicable law or regulation.</li>
+            </ul>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">child_care</span>
+              <p>
+                SlayCal is <strong>not directed at children under 13</strong>. If we learn that a user
+                under 13 has created an account, we will delete that account and associated data
+                promptly. Parents who believe their child has created an account should contact us at
+                <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3. Account Registration -->
+        <details class="policy-section group" id="s3">
+          <summary class="policy-summary">
+            <span class="policy-num">03</span>
+            <span class="policy-title">Account Registration</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              You may use core features of SlayCal without registering. To access premium features,
+              sync across devices, and unlock the full experience, you must create an account.
+            </p>
+            <h3 class="policy-h3 mt-5">When Creating an Account You Agree To:</h3>
+            <ul class="policy-list mt-3">
+              <li>Provide <strong>accurate, current, and complete</strong> registration information.</li>
+              <li>Keep your login credentials <strong>confidential</strong> and not share your password with anyone.</li>
+              <li>Notify us immediately at <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a> if you suspect any unauthorised use of your account.</li>
+              <li>Be responsible for <strong>all activity</strong> that occurs under your account.</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-500">
+              You may not create more than one account per person. Accounts created using automated
+              methods or bots are strictly prohibited.
+            </p>
+          </div>
+        </details>
+
+        <!-- 4. Google & Apple Sign-In -->
+        <details class="policy-section group" id="s4">
+          <summary class="policy-summary">
+            <span class="policy-num">04</span>
+            <span class="policy-title">Google &amp; Apple Sign-In</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal offers sign-in via <strong>Google OAuth</strong> and <strong>Apple Sign in with Apple</strong>
+              as convenient alternatives to email/password registration. By using either of these options,
+              you agree to the following:
+            </p>
+
+            <h3 class="policy-h3 mt-6">Google Sign-In (OAuth 2.0)</h3>
+            <p>
+              When you sign in with Google, you authorise SlayCal to receive the following information
+              from your Google account:
+            </p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Data Received</th>
+                    <th>Purpose</th>
+                    <th>Stored?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google Subject ID (sub)</td>
+                    <td>Uniquely identifies your Google account to link it to your SlayCal account</td>
+                    <td>Yes — in our database</td>
+                  </tr>
+                  <tr>
+                    <td>Email address</td>
+                    <td>Account creation, login, and communications</td>
+                    <td>Yes — in our database</td>
+                  </tr>
+                  <tr>
+                    <td>Display name</td>
+                    <td>Personalise your in-app experience (optional)</td>
+                    <td>Yes (if provided)</td>
+                  </tr>
+                  <tr>
+                    <td>Google ID token</td>
+                    <td>Verified server-side via google-auth-library to confirm your identity</td>
+                    <td>No — verified and discarded</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                Google Sign-In is governed by
+                <a href="https://policies.google.com/terms" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google's Terms of Service</a>
+                and
+                <a href="https://policies.google.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
+                We do not access your Google Drive, Gmail, contacts, or any other Google services.
+                You may revoke SlayCal's access to your Google account at any time via
+                <a href="https://myaccount.google.com/permissions" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Account Permissions</a>.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Sign in with Apple</h3>
+            <p>
+              When you sign in with Apple, you authorise SlayCal to receive the following information
+              from Apple:
+            </p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Data Received</th>
+                    <th>Purpose</th>
+                    <th>Stored?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Apple User ID (sub)</td>
+                    <td>Uniquely identifies your Apple ID to link it to your SlayCal account</td>
+                    <td>Yes — in our database</td>
+                  </tr>
+                  <tr>
+                    <td>Email address</td>
+                    <td>Account creation and communications (Apple may provide a relay address)</td>
+                    <td>Yes — in our database</td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Personalise your in-app experience — shared only on first sign-in</td>
+                    <td>Yes (if provided on first sign-in)</td>
+                  </tr>
+                  <tr>
+                    <td>Apple identity token</td>
+                    <td>Verified server-side via Apple's JWKS endpoint to confirm your identity</td>
+                    <td>No — verified and discarded</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                Sign in with Apple is governed by
+                <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Apple's Terms and Conditions</a>
+                and
+                <a href="https://www.apple.com/legal/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Apple's Privacy Policy</a>.
+                Apple may provide a private relay email address to hide your real email from us — this
+                is fully supported. You may revoke SlayCal's Apple Sign-In access via
+                <em>iPhone Settings → [Your Name] → Password &amp; Security → Apps Using Apple ID</em>.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Third-Party Sign-In — General Rules</h3>
+            <ul class="policy-list mt-3">
+              <li>Your use of Google or Apple sign-in is subject to their respective terms and policies, <strong>in addition</strong> to these Terms.</li>
+              <li>We only request the <strong>minimum scopes</strong> necessary to create and maintain your account.</li>
+              <li>We do <strong>not</strong> post, publish, or write anything to your Google or Apple account.</li>
+              <li>Revoking third-party sign-in access does not automatically delete your SlayCal account. Contact us at <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a> to delete your account.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 5. Subscriptions & Payments -->
+        <details class="policy-section group" id="s5">
+          <summary class="policy-summary">
+            <span class="policy-num">05</span>
+            <span class="policy-title">Subscriptions &amp; Payments</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <h3 class="policy-h3">Free &amp; Premium Tiers</h3>
+            <p>
+              SlayCal offers a free tier with limited daily feature usage and a premium subscription
+              that unlocks unlimited access to AI scanning, recipe generation, and advanced tracking.
+            </p>
+
+            <h3 class="policy-h3 mt-6">Billing</h3>
+            <ul class="policy-list mt-3">
+              <li>Subscriptions are billed through the <strong>Apple App Store</strong> (iOS) or <strong>Google Play Store</strong> (Android) platform you used to purchase.</li>
+              <li>Payment is charged to your store account at confirmation of purchase.</li>
+              <li>Subscriptions automatically <strong>renew</strong> at the end of each billing period unless cancelled at least 24 hours before the renewal date.</li>
+              <li>Prices may vary by region and are displayed in your local currency at checkout.</li>
+            </ul>
+
+            <h3 class="policy-h3 mt-6">Cancellation</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>iOS:</strong> Cancel via <em>Settings → [Your Name] → Subscriptions → SlayCal</em>.</li>
+              <li><strong>Android:</strong> Cancel via <em>Google Play → Subscriptions → SlayCal</em>.</li>
+              <li>Cancellation takes effect at the end of the current billing period. You retain premium access until then.</li>
+            </ul>
+
+            <h3 class="policy-h3 mt-6">Refunds</h3>
+            <p>
+              Refund requests are handled by Apple or Google, not by MirrorBit AI directly. Please
+              contact Apple Support or Google Play Support. We do not issue refunds outside of what
+              the relevant app store policy permits.
+            </p>
+
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">payments</span>
+              <p>
+                <strong>Free trial:</strong> If a free trial is offered, it will automatically convert
+                to a paid subscription at the end of the trial unless cancelled before the trial period
+                ends. The cancellation deadline will be clearly communicated at sign-up.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 6. Your Content -->
+        <details class="policy-section group" id="s6">
+          <summary class="policy-summary">
+            <span class="policy-num">06</span>
+            <span class="policy-title">Your Content</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              "Your Content" means any data, text, images, or other information you submit to or
+              generate within the App — including meal photos, food logs, health profile data,
+              and recipe preferences.
+            </p>
+            <h3 class="policy-h3 mt-5">Ownership</h3>
+            <p>
+              You retain full ownership of Your Content. We do not claim intellectual property rights
+              over it.
+            </p>
+            <h3 class="policy-h3 mt-5">Licence to Us</h3>
+            <p>
+              By submitting Your Content, you grant MirrorBit AI a <strong>non-exclusive, worldwide,
+              royalty-free, sublicensable licence</strong> to store, process, display, and transmit
+              Your Content solely to operate, maintain, and improve the App and deliver the services
+              you request.
+            </p>
+            <h3 class="policy-h3 mt-5">Meal Image Accessibility</h3>
+            <div class="callout-warning mt-2">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">public</span>
+              <p>
+                Meal images you upload are stored in <strong>Firebase Cloud Storage</strong> and
+                are accessible to anyone with the specific URL. While URLs are not publicly listed
+                or indexed, they are technically public. Do not upload images containing personal or
+                sensitive information other than food you intend to log.
+              </p>
+            </div>
+            <h3 class="policy-h3 mt-5">Content Responsibility</h3>
+            <p>
+              You are solely responsible for Your Content. By submitting it, you confirm that:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>You have all necessary rights to submit the content.</li>
+              <li>The content does not violate any applicable laws or third-party rights.</li>
+              <li>The content does not contain malware, viruses, or harmful code.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 7. Acceptable Use -->
+        <details class="policy-section group" id="s7">
+          <summary class="policy-summary">
+            <span class="policy-num">07</span>
+            <span class="policy-title">Acceptable Use</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>You agree not to use SlayCal to:</p>
+            <ul class="policy-list mt-3">
+              <li>Violate any applicable local, national, or international law or regulation.</li>
+              <li>Attempt to gain unauthorised access to any part of the App, its servers, or related systems.</li>
+              <li>Reverse engineer, decompile, or attempt to extract the source code of the App.</li>
+              <li>Upload or transmit viruses, malware, or any harmful or disruptive code.</li>
+              <li>Use automated tools (bots, scrapers, crawlers) to access or extract data from the App.</li>
+              <li>Circumvent or abuse daily usage quotas or rate limits.</li>
+              <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity.</li>
+              <li>Use the App for any commercial purpose without prior written consent from MirrorBit AI.</li>
+              <li>Collect or harvest personal data of other users.</li>
+              <li>Interfere with or disrupt the integrity or performance of the App or its infrastructure.</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-500">
+              Violation of these rules may result in immediate termination of your account and access
+              to the App, without notice or refund.
+            </p>
+          </div>
+        </details>
+
+        <!-- 8. AI Features -->
+        <details class="policy-section group" id="s8">
+          <summary class="policy-summary">
+            <span class="policy-num">08</span>
+            <span class="policy-title">AI Features &amp; Limitations</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal uses <strong>AI-powered features</strong> including meal image recognition,
+              calorie estimation, and recipe generation — powered by <strong>OpenAI's API (GPT-4o-mini)</strong>.
+            </p>
+            <h3 class="policy-h3 mt-5">Important Limitations</h3>
+            <ul class="policy-list mt-3">
+              <li>AI-generated nutrition estimates are <strong>approximations</strong> and may not be 100% accurate. Portion sizes, preparation methods, and ingredient variations can affect results.</li>
+              <li>AI-generated recipes are suggestions only and have <strong>not been reviewed by a nutritionist or chef</strong>.</li>
+              <li>We are <strong>not responsible</strong> for any decisions you make based on AI-generated content.</li>
+              <li>The AI may occasionally produce incorrect, incomplete, or unexpected outputs ("hallucinations"). Always apply your own judgement.</li>
+            </ul>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">smart_toy</span>
+              <p>
+                When you use AI features, your food images and text prompts are transmitted to
+                <strong>OpenAI's API</strong>. This is subject to
+                <a href="https://openai.com/terms" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI's Terms of Use</a>
+                and
+                <a href="https://openai.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI's Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 9. Health Disclaimer -->
+        <details class="policy-section group" id="s9">
+          <summary class="policy-summary">
+            <span class="policy-num">09</span>
+            <span class="policy-title">Health Disclaimer</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="callout-warning">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">medical_information</span>
+              <p>
+                <strong>SlayCal is not a medical device and does not provide medical advice.</strong>
+                All nutrition information, calorie targets, macro recommendations, and AI-generated
+                content are for <strong>informational and general wellness purposes only</strong>.
+              </p>
+            </div>
+            <ul class="policy-list mt-4">
+              <li>Do <strong>not</strong> use SlayCal as a substitute for professional medical advice, diagnosis, or treatment.</li>
+              <li>Always consult a qualified healthcare provider or registered dietitian before making significant changes to your diet, especially if you have a medical condition.</li>
+              <li>If you experience any adverse health effects, <strong>stop using the App and seek medical attention immediately</strong>.</li>
+              <li>Calorie and macro data is provided for general reference. Individual nutritional needs vary significantly.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 10. Intellectual Property -->
+        <details class="policy-section group" id="s10">
+          <summary class="policy-summary">
+            <span class="policy-num">10</span>
+            <span class="policy-title">Intellectual Property</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              All content, features, design, code, logos, trademarks, and trade dress of SlayCal —
+              excluding Your Content — are the exclusive property of <strong>MirrorBit AI</strong>
+              and are protected by applicable intellectual property laws.
+            </p>
+            <p class="mt-3">
+              These Terms do not grant you any licence to use MirrorBit AI's intellectual property
+              other than as strictly necessary to use the App for its intended purpose.
+            </p>
+            <p class="mt-3 text-sm text-slate-500">
+              "SlayCal" and the SlayCal logo are trademarks of MirrorBit AI. You may not use
+              them without prior written permission.
+            </p>
+          </div>
+        </details>
+
+        <!-- 11. Privacy -->
+        <details class="policy-section group" id="s11">
+          <summary class="policy-summary">
+            <span class="policy-num">11</span>
+            <span class="policy-title">Privacy</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              Your use of SlayCal is also governed by our
+              <a href="/privacy" class="policy-link font-semibold">Privacy Policy</a>,
+              which is incorporated into these Terms by reference. By using the App, you consent
+              to the collection and use of your information as described in the Privacy Policy.
+            </p>
+            <p class="mt-3">
+              Key privacy commitments:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>We do <strong>not</strong> sell your personal data to third parties.</li>
+              <li>We do <strong>not</strong> track you across other apps or websites.</li>
+              <li>We do <strong>not</strong> use third-party analytics SDKs (no Firebase Analytics, Amplitude, or Segment).</li>
+              <li>Health data is <strong>self-reported</strong> and never sourced from HealthKit or Google Fit.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 12. Disclaimers -->
+        <details class="policy-section group" id="s12">
+          <summary class="policy-summary">
+            <span class="policy-num">12</span>
+            <span class="policy-title">Disclaimers</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              THE APP IS PROVIDED ON AN <strong>"AS IS" AND "AS AVAILABLE" BASIS</strong> WITHOUT
+              WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED
+              WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+            </p>
+            <ul class="policy-list mt-4">
+              <li>We do not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components.</li>
+              <li>We do not warrant that AI-generated nutrition or recipe information is accurate, complete, or suitable for your individual circumstances.</li>
+              <li>We reserve the right to modify, suspend, or discontinue any part of the App at any time, with or without notice.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 13. Limitation of Liability -->
+        <details class="policy-section group" id="s13">
+          <summary class="policy-summary">
+            <span class="policy-num">13</span>
+            <span class="policy-title">Limitation of Liability</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MIRRORBIT AI,
+              ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
+              SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Loss of data or profits</li>
+              <li>Personal injury or health outcomes resulting from reliance on App content</li>
+              <li>Unauthorised access to or use of our servers or personal information</li>
+              <li>Interruption or cessation of the App's services</li>
+            </ul>
+            <p class="mt-4">
+              IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE GREATER OF
+              <strong>USD $100</strong> OR THE AMOUNT YOU PAID US IN THE TWELVE MONTHS PRIOR TO THE
+              CLAIM ARISING.
+            </p>
+            <p class="mt-3 text-sm text-slate-500">
+              Some jurisdictions do not allow the exclusion or limitation of certain damages.
+              In such jurisdictions, our liability is limited to the fullest extent permitted by law.
+            </p>
+          </div>
+        </details>
+
+        <!-- 14. Indemnification -->
+        <details class="policy-section group" id="s14">
+          <summary class="policy-summary">
+            <span class="policy-num">14</span>
+            <span class="policy-title">Indemnification</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              You agree to defend, indemnify, and hold harmless MirrorBit AI and its officers,
+              directors, employees, and agents from and against any claims, liabilities, damages,
+              losses, and expenses (including reasonable legal fees) arising out of or in any way
+              connected with:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Your access to or use of the App in violation of these Terms.</li>
+              <li>Your Content that infringes the rights of any third party.</li>
+              <li>Your violation of any applicable law or regulation.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 15. Termination -->
+        <details class="policy-section group" id="s15">
+          <summary class="policy-summary">
+            <span class="policy-num">15</span>
+            <span class="policy-title">Termination</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <h3 class="policy-h3">Termination by You</h3>
+            <p>
+              You may stop using the App at any time and delete your account from
+              <strong>Settings → Account → Delete Account</strong>, or by contacting us at
+              <a href="mailto:support@mirrorbit.ai" class="policy-link">support@mirrorbit.ai</a>.
+            </p>
+            <h3 class="policy-h3 mt-6">Termination by Us</h3>
+            <p>
+              We may suspend or terminate your access to SlayCal, at our sole discretion, immediately
+              and without notice if:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>You breach any provision of these Terms.</li>
+              <li>We are required to do so by law or a regulatory authority.</li>
+              <li>We reasonably believe that your account is being used fraudulently or for illegal purposes.</li>
+              <li>You engage in conduct that is harmful to other users, third parties, or the reputation of MirrorBit AI.</li>
+            </ul>
+            <h3 class="policy-h3 mt-6">Effect of Termination</h3>
+            <p>
+              Upon termination, your right to use the App ceases immediately. Sections of these Terms
+              that by their nature should survive termination (including Disclaimers, Limitation of
+              Liability, Indemnification, and Governing Law) will remain in effect.
+            </p>
+          </div>
+        </details>
+
+        <!-- 16. Governing Law -->
+        <details class="policy-section group" id="s16">
+          <summary class="policy-summary">
+            <span class="policy-num">16</span>
+            <span class="policy-title">Governing Law &amp; Disputes</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              These Terms are governed by and construed in accordance with the laws of the jurisdiction
+              in which MirrorBit AI is incorporated, without regard to conflict of law principles.
+            </p>
+            <p class="mt-3">
+              Any dispute arising out of or relating to these Terms or the App shall first be
+              attempted to be resolved informally by contacting us at
+              <a href="mailto:legal@mirrorbit.ai" class="policy-link">legal@mirrorbit.ai</a>.
+              If the dispute cannot be resolved informally within 30 days, it shall be submitted to
+              binding arbitration or the competent courts of our jurisdiction, as applicable.
+            </p>
+            <p class="mt-3 text-sm text-slate-500">
+              If any provision of these Terms is found to be unenforceable or invalid, that provision
+              will be limited or eliminated to the minimum extent necessary so that these Terms will
+              otherwise remain in full force and effect.
+            </p>
+          </div>
+        </details>
+
+        <!-- 17. Changes to Terms -->
+        <details class="policy-section group" id="s17">
+          <summary class="policy-summary">
+            <span class="policy-num">17</span>
+            <span class="policy-title">Changes to These Terms</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              We reserve the right to modify these Terms at any time. When we make material changes, we will:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Update the <strong>"Last Updated"</strong> date at the top of this page.</li>
+              <li>Send a <strong>push notification or in-app alert</strong> to registered users for significant changes.</li>
+              <li>Require you to re-accept the Terms if the changes are material.</li>
+            </ul>
+            <p class="mt-4">
+              Your continued use of the App after the revised Terms take effect constitutes your
+              acceptance of the changes. If you do not agree to the updated Terms, you must stop
+              using the App.
+            </p>
+          </div>
+        </details>
+
+        <!-- 18. Contact -->
+        <details class="policy-section group" id="s18">
+          <summary class="policy-summary">
+            <span class="policy-num">18</span>
+            <span class="policy-title">Contact Information</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              For questions about these Terms, contact us at:
+            </p>
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0">apartment</span>
+                <div>
+                  <p class="font-bold text-slate-900">MirrorBit AI</p>
+                  <p class="text-slate-500 text-sm">Developer of SlayCal</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">mail</span>
+                  <span class="text-slate-700">Legal inquiries:</span>
+                  <a href="mailto:legal@mirrorbit.ai" class="text-primary font-medium hover:underline">legal@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">support_agent</span>
+                  <span class="text-slate-700">Support:</span>
+                  <a href="mailto:support@mirrorbit.ai" class="text-primary font-medium hover:underline">support@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">language</span>
+                  <span class="text-slate-700">Website:</span>
+                  <a href="https://slaycal.app" class="text-primary font-medium hover:underline">slaycal.app</a>
+                </div>
+              </div>
+            </div>
+            <p class="mt-5 text-sm text-slate-500">
+              We aim to respond to all legal inquiries within <strong>30 days</strong>.
+            </p>
+          </div>
+        </details>
+
+      </div><!-- /terms-body -->
+
+      <!-- ─── Footer note ─────────────────────────────────────────────────── -->
+      <div class="mt-12 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl mb-2 block">gavel</span>
+        <p class="text-slate-700 font-semibold">Questions about these Terms?</p>
+        <p class="text-slate-500 text-sm mt-1">
+          Contact us at
+          <a href="mailto:legal@mirrorbit.ai" class="text-primary font-medium hover:underline">legal@mirrorbit.ai</a>
+          — we respond within 30 days.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
+          <span>Effective: {EFFECTIVE_DATE}</span>
+          <span>·</span>
+          <span>Last updated: {LAST_UPDATED}</span>
+          <span>·</span>
+          <span>© 2025 MirrorBit AI. All rights reserved.</span>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ─── Minimal footer ─────────────────────────────────────────────────── -->
+  <footer class="border-t border-slate-100 bg-white px-6 py-8 text-center text-xs text-slate-400">
+    <div class="mx-auto max-w-5xl flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <a href="/privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+      <a href="/terms" class="text-primary font-semibold" aria-current="page">Terms of Service</a>
+      <a href="mailto:legal@mirrorbit.ai" class="hover:text-primary transition-colors">Contact</a>
+    </div>
+    <p class="mt-4">© 2025 MirrorBit AI · SlayCal · All rights reserved.</p>
+  </footer>
+
+</Layout>
+
+<!-- ─── Styles ──────────────────────────────────────────────────────────────── -->
+<style>
+  /* Section accordion */
+  .policy-section {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden;
+  }
+  .policy-summary {
+    @apply flex items-center gap-3 cursor-pointer select-none px-6 py-5 font-semibold text-slate-800
+           hover:bg-slate-50 transition-colors list-none;
+  }
+  .policy-summary::-webkit-details-marker { display: none; }
+  .policy-num {
+    @apply text-xs font-bold text-primary bg-primary/10 rounded-lg px-2 py-1 shrink-0 w-9 text-center;
+  }
+  .policy-title {
+    @apply text-base font-semibold text-slate-800;
+  }
+  .policy-body {
+    @apply px-6 pb-8 pt-2 text-slate-600 leading-relaxed text-sm border-t border-slate-100;
+  }
+  .policy-h3 {
+    @apply text-sm font-bold text-slate-800 uppercase tracking-wide mt-6 mb-2;
+  }
+  .policy-list {
+    @apply space-y-2 list-none pl-0;
+  }
+  .policy-list li {
+    @apply flex gap-2 items-start;
+  }
+  .policy-list li::before {
+    content: '→';
+    @apply text-primary shrink-0 mt-0.5 font-semibold text-xs leading-5;
+  }
+  .policy-link {
+    @apply text-primary hover:underline;
+  }
+
+  /* Callouts */
+  .callout-info {
+    @apply flex items-start gap-3 rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-800;
+  }
+  .callout-warning {
+    @apply flex items-start gap-3 rounded-xl bg-amber-50 border border-amber-100 p-4 text-sm text-amber-800;
+  }
+  .callout-success {
+    @apply flex items-start gap-3 rounded-xl bg-green-50 border border-green-100 p-4 text-sm text-green-800;
+  }
+
+  /* Data tables */
+  .data-table-wrapper {
+    @apply overflow-x-auto rounded-xl border border-slate-200;
+  }
+  .data-table {
+    @apply w-full text-xs text-left border-collapse;
+  }
+  .data-table thead tr {
+    @apply bg-slate-50;
+  }
+  .data-table th {
+    @apply px-4 py-3 font-semibold text-slate-700 border-b border-slate-200 whitespace-nowrap;
+  }
+  .data-table td {
+    @apply px-4 py-3 text-slate-600 border-b border-slate-100 align-top;
+  }
+  .data-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .data-table tbody tr:hover td {
+    @apply bg-slate-50/60;
+  }
+  code {
+    @apply bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded text-xs font-mono;
+  }
+</style>
+</Layout>

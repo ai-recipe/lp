@@ -195,7 +195,7 @@ export const en = {
     ],
     legal_links: [
       { href: '/privacy', label: 'Privacy Policy' },
-      { href: '#', label: 'Terms of Service' },
+      { href: '/terms', label: 'Terms of Service' },
     ],
     languages: [
       { href: '/', label: 'English (US)', active: true },
