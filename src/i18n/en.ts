@@ -194,7 +194,7 @@ export const en = {
       { href: '#', label: 'Help Center' },
     ],
     legal_links: [
-      { href: '#', label: 'Privacy Policy' },
+      { href: '/privacy', label: 'Privacy Policy' },
       { href: '#', label: 'Terms of Service' },
     ],
     languages: [

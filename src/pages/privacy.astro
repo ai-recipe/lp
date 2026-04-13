@@ -1,0 +1,1236 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+const EFFECTIVE_DATE = 'April 13, 2025';
+const LAST_UPDATED   = 'April 13, 2025';
+---
+
+<Layout
+  title="Privacy Policy — SlayCal"
+  description="SlayCal Privacy Policy — learn how MirrorBit AI collects, uses, and protects your personal data in the SlayCal nutrition tracking app."
+  keywords="SlayCal privacy policy, data protection, GDPR, CCPA, nutrition app privacy"
+  lang="en"
+  ogLocale="en_US"
+  canonicalPath="/privacy"
+>
+
+  <!-- ─── Minimal nav ─────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md px-6 py-4 lg:px-20">
+    <div class="mx-auto flex max-w-5xl items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group" aria-label="SlayCal – Home">
+        <img src="/logo.svg" alt="SlayCal Logo" class="h-20 absolute" />
+        <span class="pl-24 text-lg font-bold tracking-tight text-slate-900">SlayCal</span>
+      </a>
+      <a href="/" class="text-sm font-medium text-slate-500 hover:text-primary transition-colors flex items-center gap-1">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="min-h-screen bg-background-light">
+
+    <!-- ─── Hero ───────────────────────────────────────────────────────────── -->
+    <section class="bg-gradient-to-b from-primary/8 to-transparent px-6 py-16 lg:px-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary text-2xl">shield</span>
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Legal</span>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Privacy Policy</h1>
+        <p class="text-slate-500 text-base">
+          <span class="font-semibold text-slate-700">Effective date:</span> {EFFECTIVE_DATE} &nbsp;·&nbsp;
+          <span class="font-semibold text-slate-700">Last updated:</span> {LAST_UPDATED}
+        </p>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+          This Privacy Policy explains how <strong>MirrorBit AI</strong> ("we", "our", or "us")
+          collects, uses, shares, and protects your information when you use the
+          <strong>SlayCal</strong> mobile application ("App") on iOS or Android.
+          Please read it carefully.
+        </p>
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-5xl px-6 pb-24 lg:px-20">
+
+      <!-- ─── Key Points Box ─────────────────────────────────────────────── -->
+      <div class="my-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 lg:p-8" id="key-points">
+        <h2 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
+          <span class="material-symbols-outlined text-primary">tips_and_updates</span>
+          Key Points — Summary
+        </h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {[
+            ['sell_off', 'We do NOT sell your personal data', 'Your data is never sold to third parties for advertising.'],
+            ['tracking_off', 'We do NOT track you across apps', 'NSPrivacyTracking is disabled; no cross-app tracking.'],
+            ['analytics_off', 'No third-party analytics SDKs', 'We use no Amplitude, Segment, or Firebase Analytics.'],
+            ['mic_off', 'Microphone is NOT used', 'The microphone permission is explicitly disabled.'],
+            ['health_and_safety', 'Health data is self-reported', 'We never access HealthKit or Google Fit.'],
+            ['camera_alt', 'Meal images are processed by AI', 'Food photos are sent to OpenAI for recognition.'],
+            ['public', 'Meal images are publicly stored', 'Images in Firebase Storage are accessible via URL.'],
+            ['person_off', 'Anonymous use is supported', 'You can use the app without creating an account.'],
+          ].map(([icon, title, desc]) => (
+            <div class="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm">
+              <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">{icon}</span>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm">{title}</p>
+                <p class="text-slate-500 text-xs mt-0.5">{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Multilanguage note -->
+        <p class="mt-5 text-xs text-slate-400 italic">
+          This policy is available in English. If you need a translation, please contact us at
+          <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+        </p>
+      </div>
+
+      <!-- ─── Table of Contents ───────────────────────────────────────────── -->
+      <nav class="my-10 rounded-2xl border border-slate-200 bg-white p-6 lg:p-8 shadow-sm" aria-label="Table of contents">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">toc</span>
+          Table of Contents
+        </h2>
+        <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-sm text-slate-600 list-none">
+          {[
+            ['#s1',  '1.', 'Introduction'],
+            ['#s2',  '2.', 'Information We Collect'],
+            ['#s3',  '3.', 'How We Use Your Information'],
+            ['#s4',  '4.', 'How We Share Your Information'],
+            ['#s5',  '5.', 'Data Storage & Security'],
+            ['#s6',  '6.', 'Data Retention'],
+            ['#s7',  '7.', 'Your Privacy Rights'],
+            ['#s8',  '8.', 'Children\'s Privacy'],
+            ['#s9',  '9.', 'International Data Transfers'],
+            ['#s10', '10.', 'Local Storage (AsyncStorage)'],
+            ['#s11', '11.', 'Push Notifications'],
+            ['#s12', '12.', 'Device Permissions'],
+            ['#s13', '13.', 'Changes to This Policy'],
+            ['#s14', '14.', 'Contact Information'],
+            ['#s15', '15.', 'California (CCPA/CPRA) Rights'],
+            ['#s16', '16.', 'European (GDPR) Rights'],
+          ].map(([href, num, label]) => (
+            <li>
+              <a href={href} class="flex gap-2 items-baseline hover:text-primary transition-colors py-0.5 group">
+                <span class="text-primary font-semibold text-xs w-6 shrink-0">{num}</span>
+                <span class="group-hover:underline">{label}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <!-- ─── Sections ───────────────────────────────────────────────────── -->
+      <div class="space-y-2" id="policy-body">
+
+        <!-- 1. Introduction -->
+        <details class="policy-section group" open id="s1">
+          <summary class="policy-summary">
+            <span class="policy-num">01</span>
+            <span class="policy-title">Introduction</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              <strong>SlayCal</strong> is an AI-powered calorie and nutrition tracking mobile application developed
+              and operated by <strong>MirrorBit AI</strong> ("Company", "we", "us", or "our").
+              The App is available on iOS (bundle ID: <code>com.slaycal.ios</code>) and
+              Android (bundle ID: <code>com.slaycal.android</code>).
+            </p>
+            <p class="mt-3">
+              This Privacy Policy describes how we collect, use, disclose, and safeguard information about
+              you when you use SlayCal. It applies to all users regardless of account status, including
+              anonymous (guest) users.
+            </p>
+            <p class="mt-3">
+              By downloading or using the App, you agree to this Privacy Policy. If you do not agree,
+              please do not use the App. This policy is incorporated into and subject to our Terms of Service.
+            </p>
+            <div class="callout-info mt-4">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">info</span>
+              <p>
+                <strong>Anonymous users:</strong> You can use core features of SlayCal without creating an
+                account. In this case, we identify your session using a device identifier only
+                (iOS IDFV or Android ID) and do not collect your email or name.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2. Information We Collect -->
+        <details class="policy-section group" id="s2">
+          <summary class="policy-summary">
+            <span class="policy-num">02</span>
+            <span class="policy-title">Information We Collect</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p class="text-slate-500 mb-6">
+              We collect information you provide directly, information generated through your use of the App,
+              and limited technical information from your device.
+            </p>
+
+            <!-- 2.1 Account Information -->
+            <h3 class="policy-h3">2.1 Account Information</h3>
+            <p>Collected only when you register for an account:</p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead><tr><th>Data Element</th><th>Purpose</th><th>Required?</th></tr></thead>
+                <tbody>
+                  <tr><td>Email address</td><td>Account creation, login, and notifications</td><td>Yes (for registered users)</td></tr>
+                  <tr><td>Password (bcrypt hash)</td><td>Authentication — stored as a one-way hash, never in plain text</td><td>Yes (email/password accounts)</td></tr>
+                  <tr><td>First name &amp; last name</td><td>Personalise in-app experience</td><td>Optional</td></tr>
+                  <tr><td>Authentication provider</td><td>Identify login method (email, Google, Apple)</td><td>Yes</td></tr>
+                  <tr><td>Google Subject ID</td><td>Link Google Sign-In identity to your account</td><td>Only for Google Sign-In users</td></tr>
+                  <tr><td>Apple Subject ID</td><td>Link Apple Sign-In identity to your account</td><td>Only for Apple Sign-In users</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 2.2 Anonymous / Device Data -->
+            <h3 class="policy-h3 mt-8">2.2 Anonymous &amp; Device Data</h3>
+            <p>Collected for all users, including anonymous sessions:</p>
+            <ul class="policy-list mt-3">
+              <li><strong>Device identifier</strong> — iOS IDFV (Identifier for Vendor) or Android ID. Used to maintain anonymous sessions and enforce daily usage quotas. This identifier is NOT used to track you across other apps or websites.</li>
+              <li><strong>Platform</strong> — iOS or Android.</li>
+              <li><strong>App version</strong> — to provide version-appropriate features and support.</li>
+              <li><strong>Locale / language preference</strong> — to display the App in your preferred language.</li>
+            </ul>
+
+            <!-- 2.3 Health & Fitness Data -->
+            <h3 class="policy-h3 mt-8">2.3 Health &amp; Fitness Data</h3>
+            <div class="callout-warning mt-2 mb-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">warning</span>
+              <p>
+                All health data in SlayCal is <strong>self-reported by you</strong> during the onboarding survey
+                or subsequent profile updates. We do <strong>not</strong> access Apple HealthKit, Google Fit,
+                or any other health platform API.
+              </p>
+            </div>
+            <p>Data collected via the onboarding survey includes:</p>
+            <ul class="policy-list mt-3">
+              <li>Gender, age, height, current weight, and goal weight</li>
+              <li>Activity level and fitness level</li>
+              <li>Health conditions (e.g., diabetes, hypertension — as disclosed voluntarily)</li>
+              <li>Physical limitations or injuries</li>
+              <li>Workout and exercise preferences</li>
+              <li>Goal type (e.g., weight loss, muscle gain) and target timeline</li>
+              <li>Raw survey responses and survey completion timestamp</li>
+            </ul>
+            <p class="mt-3 text-sm text-slate-500">
+              Health conditions and physical limitations are considered <strong>special category (sensitive)
+              personal data</strong> under GDPR. We process this data solely to generate personalised
+              nutrition and fitness recommendations at your explicit request. You may delete this data
+              at any time from within the App or by contacting us.
+            </p>
+
+            <!-- 2.4 Dietary Preferences -->
+            <h3 class="policy-h3 mt-8">2.4 Dietary Preferences</h3>
+            <ul class="policy-list mt-3">
+              <li>Dietary style (e.g., vegan, vegetarian, keto, halal)</li>
+              <li>Food allergens and intolerances</li>
+              <li>Cuisine preferences</li>
+              <li>Preferred meals per day</li>
+              <li>Maximum cook time preference</li>
+            </ul>
+
+            <!-- 2.5 Nutrition & Lifestyle Logs -->
+            <h3 class="policy-h3 mt-8">2.5 Nutrition &amp; Lifestyle Logs</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>Food log entries</strong> — meal name, macronutrients (calories, protein, carbohydrates, fat), quantity, meal type (breakfast/lunch/dinner/snack), and timestamp.</li>
+              <li>
+                <strong>Meal images</strong> — photos taken with your camera or selected from your photo library.
+                <span class="block mt-1 text-sm font-medium text-amber-700 bg-amber-50 rounded-lg px-3 py-1.5">
+                  Important: meal images are uploaded to Firebase Storage and are accessible to anyone with the URL.
+                  Do not photograph anything other than food you intend to log.
+                </span>
+              </li>
+              <li><strong>Water intake logs</strong> — volume (ml) and timestamp per entry.</li>
+              <li><strong>Weight logs</strong> — body weight entries with date and unit (kg/lb).</li>
+              <li><strong>Goal plans</strong> — daily calorie target, macro targets (protein/carbs/fat), water goal, and weight goal.</li>
+            </ul>
+
+            <!-- 2.6 Subscription & Payment -->
+            <h3 class="policy-h3 mt-8">2.6 Subscription &amp; Payment Data</h3>
+            <ul class="policy-list mt-3">
+              <li>Subscription tier (free, premium, or trial)</li>
+              <li>Trial period start and end dates</li>
+              <li>Apple App Store transaction ID and product ID (iOS in-app purchases)</li>
+            </ul>
+            <div class="callout-info mt-3">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">credit_card_off</span>
+              <p>
+                We <strong>do not collect, store, or process</strong> credit card numbers, bank account
+                details, or any other payment credentials. All payment transactions are handled
+                exclusively by <strong>Apple App Store</strong> or <strong>Google Play Store</strong>,
+                governed by their respective privacy policies.
+              </p>
+            </div>
+
+            <!-- 2.7 Push Notification Data -->
+            <h3 class="policy-h3 mt-8">2.7 Push Notification Data</h3>
+            <ul class="policy-list mt-3">
+              <li>Firebase Cloud Messaging (FCM) token — a device-specific token used to deliver push notifications.</li>
+              <li>FCM token platform (iOS / Android).</li>
+            </ul>
+
+            <!-- 2.8 Usage Data -->
+            <h3 class="policy-h3 mt-8">2.8 Usage Data</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>Feature usage quotas</strong> — daily counters for AI meal scans, food recognition requests, and AI recipe generations. Stored transiently in Redis and reset every 24 hours.</li>
+              <li><strong>JWT refresh tokens</strong> — session tokens stored server-side to maintain authenticated sessions securely.</li>
+            </ul>
+            <div class="callout-info mt-3">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">analytics</span>
+              <p>
+                We do <strong>not</strong> use any third-party analytics SDK (e.g., Amplitude, Segment,
+                Mixpanel, or Firebase Analytics). Usage data is limited to the quota counters described
+                above and is not used for behavioural profiling.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3. How We Use Your Information -->
+        <details class="policy-section group" id="s3">
+          <summary class="policy-summary">
+            <span class="policy-num">03</span>
+            <span class="policy-title">How We Use Your Information</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Purpose</th>
+                    <th>Data Used</th>
+                    <th>Legal Basis (GDPR)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Account management</strong> — create, authenticate, and manage your account</td>
+                    <td>Account information, device identifier</td>
+                    <td>Contract performance (Art. 6(1)(b))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Nutrition &amp; calorie tracking</strong> — log meals, water, and weight; display daily goals and progress</td>
+                    <td>Food logs, water logs, weight logs, goal plans</td>
+                    <td>Contract performance (Art. 6(1)(b))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AI food image analysis</strong> — identify food from meal photos and return nutrition data</td>
+                    <td>Meal images, text prompts (sent to OpenAI)</td>
+                    <td>Contract performance (Art. 6(1)(b))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>AI recipe generation</strong> — generate personalised recipes based on your preferences</td>
+                    <td>Dietary preferences, health profile, text prompts (sent to OpenAI)</td>
+                    <td>Contract performance (Art. 6(1)(b))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Personalisation</strong> — tailor calorie goals, macro targets, and recommendations</td>
+                    <td>Health &amp; fitness data, dietary preferences</td>
+                    <td>Explicit consent (Art. 6(1)(a) + Art. 9(2)(a) for health data)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Push notifications</strong> — send reminders, hydration alerts, and meal logging prompts</td>
+                    <td>FCM token</td>
+                    <td>Consent (Art. 6(1)(a))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Subscription management</strong> — process and validate in-app purchases</td>
+                    <td>Subscription &amp; payment data</td>
+                    <td>Contract performance (Art. 6(1)(b))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Usage quota enforcement</strong> — enforce daily feature limits per subscription tier</td>
+                    <td>Device identifier, usage counters</td>
+                    <td>Legitimate interests (Art. 6(1)(f))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Security &amp; fraud prevention</strong> — detect, prevent, and investigate abuse</td>
+                    <td>Device identifier, session tokens</td>
+                    <td>Legitimate interests (Art. 6(1)(f))</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Legal compliance</strong> — comply with applicable laws and regulations</td>
+                    <td>As required by law</td>
+                    <td>Legal obligation (Art. 6(1)(c))</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">
+              We do not use your information for targeted advertising, behavioural profiling, or any
+              purpose other than those described above.
+            </p>
+          </div>
+        </details>
+
+        <!-- 4. How We Share Your Information -->
+        <details class="policy-section group" id="s4">
+          <summary class="policy-summary">
+            <span class="policy-num">04</span>
+            <span class="policy-title">How We Share Your Information</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="callout-success mb-6">
+              <span class="material-symbols-outlined text-green-600 shrink-0">verified_user</span>
+              <p>
+                <strong>We do not sell your personal data.</strong> We do not rent, trade, or share your
+                personal data with third parties for advertising or marketing purposes.
+              </p>
+            </div>
+
+            <p class="mb-4">We share data only with the following service providers, strictly to operate the App:</p>
+
+            <!-- Third-party table -->
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Provider</th>
+                    <th>Purpose</th>
+                    <th>Data Shared</th>
+                    <th>Privacy Policy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>AI Analysis</strong></td>
+                    <td>OpenAI (GPT-4o-mini)</td>
+                    <td>Food image recognition; recipe generation</td>
+                    <td>Meal image URLs; text prompts describing meals or recipe requests</td>
+                    <td><a href="https://openai.com/privacy" class="policy-link" target="_blank" rel="noopener noreferrer">openai.com/privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Image Storage</strong></td>
+                    <td>Firebase Cloud Storage (Google)</td>
+                    <td>Store user-uploaded meal and recipe images</td>
+                    <td>Image files; publicly accessible via Storage URL</td>
+                    <td><a href="https://firebase.google.com/support/privacy" class="policy-link" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Push Notifications</strong></td>
+                    <td>Firebase Cloud Messaging (Google)</td>
+                    <td>Deliver push notifications to your device</td>
+                    <td>FCM device token; notification content</td>
+                    <td><a href="https://firebase.google.com/support/privacy" class="policy-link" target="_blank" rel="noopener noreferrer">firebase.google.com/support/privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Google Sign-In</strong></td>
+                    <td>Google OAuth (google-auth-library)</td>
+                    <td>Verify Google Sign-In identity tokens</td>
+                    <td>Google user profile: email, name, Subject ID</td>
+                    <td><a href="https://policies.google.com/privacy" class="policy-link" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Apple Sign-In</strong></td>
+                    <td>Apple Inc.</td>
+                    <td>Verify Apple identity tokens via Apple's JWKS endpoint</td>
+                    <td>Apple user ID; optional email and name</td>
+                    <td><a href="https://www.apple.com/legal/privacy" class="policy-link" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Primary Database</strong></td>
+                    <td>MongoDB Atlas</td>
+                    <td>Store all user account and app data</td>
+                    <td>All user data described in Section 2</td>
+                    <td><a href="https://www.mongodb.com/legal/privacy-policy" class="policy-link" target="_blank" rel="noopener noreferrer">mongodb.com/legal/privacy-policy</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Caching</strong></td>
+                    <td>Redis</td>
+                    <td>Temporary storage of daily feature usage quotas</td>
+                    <td>Per-user daily counters (scan, recognition, recipe); reset every 24 hours</td>
+                    <td>Infrastructure only; no independent privacy policy</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="policy-h3 mt-8">AI-Processed Data Notice</h3>
+            <div class="callout-warning mt-3">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">smart_toy</span>
+              <p>
+                When you use the AI meal scanner or AI recipe features, your food images and text
+                prompts are transmitted to <strong>OpenAI's API</strong> for processing.
+                This data is subject to <strong>OpenAI's Privacy Policy and Terms of Service</strong>
+                in addition to this policy. OpenAI may retain API inputs and outputs for safety
+                monitoring in accordance with their own data usage policies.
+                We encourage you to review <a href="https://openai.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">OpenAI's privacy policy</a>.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Other Disclosures</h3>
+            <p>We may also disclose your information:</p>
+            <ul class="policy-list mt-3">
+              <li><strong>Legal requirements</strong> — if required by law, court order, or government authority.</li>
+              <li><strong>Protect rights</strong> — to enforce our Terms of Service or protect the rights, property, or safety of MirrorBit AI, our users, or the public.</li>
+              <li><strong>Business transfers</strong> — in connection with a merger, acquisition, or sale of all or a portion of our assets. You will be notified via email or a prominent in-app notice prior to your data being transferred and becoming subject to a different privacy policy.</li>
+              <li><strong>With your consent</strong> — for any other purpose with your explicit consent.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 5. Data Storage & Security -->
+        <details class="policy-section group" id="s5">
+          <summary class="policy-summary">
+            <span class="policy-num">05</span>
+            <span class="policy-title">Data Storage &amp; Security</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <h3 class="policy-h3">Where We Store Data</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>MongoDB Atlas</strong> — primary database for all user account data, health profiles, food logs, and settings. Hosted on secure, managed cloud infrastructure.</li>
+              <li><strong>Firebase Cloud Storage (Google)</strong> — stores meal images and AI-generated recipe images. Images are stored under unique paths and are publicly accessible via URL once uploaded.</li>
+              <li><strong>Redis</strong> — in-memory cache for daily usage quota counters. Data is ephemeral and automatically expires every 24 hours.</li>
+            </ul>
+
+            <h3 class="policy-h3 mt-8">Security Measures</h3>
+            <ul class="policy-list mt-3">
+              <li><strong>Encryption in transit</strong> — all data transmitted between the App and our servers uses HTTPS/TLS encryption.</li>
+              <li><strong>Password hashing</strong> — passwords are hashed with <strong>bcrypt</strong> (industry-standard adaptive hashing) before storage. We never store passwords in plain text.</li>
+              <li><strong>JWT authentication</strong> — session management uses short-lived JSON Web Tokens (JWT) with server-side refresh token rotation.</li>
+              <li><strong>Access controls</strong> — database access is restricted to authorised server-side services only, with role-based permissions.</li>
+              <li><strong>No cross-app tracking</strong> — NSPrivacyTracking is set to <code>false</code>; we do not track users across apps or websites.</li>
+            </ul>
+
+            <div class="callout-warning mt-5">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">public</span>
+              <p>
+                <strong>Meal image accessibility:</strong> Meal photos you take or upload are stored in
+                Firebase Cloud Storage and are accessible to anyone who has the specific URL.
+                While URLs are not listed or indexed, they are technically public.
+                Do not upload images containing sensitive personal information.
+              </p>
+            </div>
+
+            <p class="mt-4 text-sm text-slate-500">
+              No method of transmission over the Internet or electronic storage is 100% secure.
+              While we use commercially reasonable security measures, we cannot guarantee absolute
+              security. If you discover a security vulnerability, please report it to
+              <a href="mailto:security@mirrorbit.ai" class="text-primary hover:underline">security@mirrorbit.ai</a>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 6. Data Retention -->
+        <details class="policy-section group" id="s6">
+          <summary class="policy-summary">
+            <span class="policy-num">06</span>
+            <span class="policy-title">Data Retention</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Data Category</th>
+                    <th>Retention Period</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Account information</td>
+                    <td>Until account deletion</td>
+                    <td>Deleted within 30 days of account deletion request</td>
+                  </tr>
+                  <tr>
+                    <td>Health &amp; fitness profile</td>
+                    <td>Until account deletion or user removes data</td>
+                    <td>Can be cleared in-app at any time</td>
+                  </tr>
+                  <tr>
+                    <td>Food, water &amp; weight logs</td>
+                    <td>Until account deletion or user deletes entries</td>
+                    <td>Individual entries can be deleted in-app</td>
+                  </tr>
+                  <tr>
+                    <td>Meal images (Firebase Storage)</td>
+                    <td>Until account deletion</td>
+                    <td>Deleted from Firebase Storage within 30 days</td>
+                  </tr>
+                  <tr>
+                    <td>Daily usage quota counters</td>
+                    <td>24 hours (Redis TTL)</td>
+                    <td>Ephemeral — automatically expires</td>
+                  </tr>
+                  <tr>
+                    <td>JWT refresh tokens</td>
+                    <td>Until expiry or logout</td>
+                    <td>Invalidated server-side upon logout</td>
+                  </tr>
+                  <tr>
+                    <td>Subscription records</td>
+                    <td>7 years</td>
+                    <td>Retained for tax and financial compliance</td>
+                  </tr>
+                  <tr>
+                    <td>Anonymous session data (device ID)</td>
+                    <td>90 days of inactivity</td>
+                    <td>Purged after 90 days without activity</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Account Deletion</h3>
+            <p>
+              You may delete your account at any time from <strong>Settings → Account → Delete Account</strong>
+              within the App, or by emailing
+              <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+            </p>
+            <p class="mt-3">Upon account deletion:</p>
+            <ul class="policy-list mt-2">
+              <li>Your personal data is permanently deleted from our primary database within <strong>30 days</strong>.</li>
+              <li>Meal images are removed from Firebase Storage within 30 days.</li>
+              <li>Usage quota counters expire automatically within 24 hours.</li>
+              <li>Backup copies may persist for up to <strong>90 days</strong> in automated backup systems, after which they are also purged.</li>
+              <li>Financial transaction records are retained for the legally required period (up to 7 years) with all personal identifiers anonymised where possible.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- 7. Your Privacy Rights -->
+        <details class="policy-section group" id="s7">
+          <summary class="policy-summary">
+            <span class="policy-num">07</span>
+            <span class="policy-title">Your Privacy Rights</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p class="mb-5 text-slate-500">
+              Depending on your location, you may have the following rights regarding your personal data.
+              See Section 15 (California) and Section 16 (Europe) for jurisdiction-specific rights.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              {[
+                ['manage_search', 'Right to Access', 'Request a copy of the personal data we hold about you.'],
+                ['edit', 'Right to Rectification', 'Request correction of inaccurate or incomplete data.'],
+                ['delete', 'Right to Erasure', 'Request deletion of your personal data ("right to be forgotten").'],
+                ['download', 'Right to Portability', 'Receive your data in a structured, machine-readable format.'],
+                ['block', 'Right to Object', 'Object to processing based on legitimate interests or for direct marketing.'],
+                ['pause_circle', 'Right to Restriction', 'Request that we restrict processing of your data in certain circumstances.'],
+                ['undo', 'Right to Withdraw Consent', 'Withdraw consent at any time for consent-based processing (e.g., push notifications, sensitive health data).'],
+                ['gavel', 'Right to Lodge a Complaint', 'Lodge a complaint with your local data protection authority.'],
+              ].map(([icon, right, desc]) => (
+                <div class="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">{icon}</span>
+                  <div>
+                    <p class="font-semibold text-slate-800 text-sm">{right}</p>
+                    <p class="text-slate-500 text-xs mt-0.5">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="callout-info mt-6">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">contact_mail</span>
+              <p>
+                To exercise any of these rights, contact us at
+                <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+                We will respond within <strong>30 days</strong> (or within the timeframe required by applicable law).
+                We may need to verify your identity before processing your request.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 8. Children's Privacy -->
+        <details class="policy-section group" id="s8">
+          <summary class="policy-summary">
+            <span class="policy-num">08</span>
+            <span class="policy-title">Children's Privacy</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal is <strong>not intended for children under the age of 13</strong> (or under 16 in the
+              European Economic Area and the United Kingdom, where a higher age threshold applies under GDPR).
+              We do not knowingly collect personal data from children below these ages.
+            </p>
+            <p class="mt-3">
+              Our App is rated <strong>4+</strong> on the Apple App Store and the appropriate maturity rating
+              on Google Play. However, we rely on users to confirm they meet the minimum age requirement
+              during account registration.
+            </p>
+            <p class="mt-3">
+              If you are a parent or guardian and believe your child has provided personal information to us,
+              please contact us immediately at
+              <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+              We will delete any such information promptly upon verification.
+            </p>
+            <div class="callout-warning mt-4">
+              <span class="material-symbols-outlined text-amber-500 shrink-0">child_care</span>
+              <p>
+                If we discover that we have inadvertently collected personal data from a child under
+                the applicable minimum age, we will delete that information immediately and terminate
+                the associated account.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 9. International Data Transfers -->
+        <details class="policy-section group" id="s9">
+          <summary class="policy-summary">
+            <span class="policy-num">09</span>
+            <span class="policy-title">International Data Transfers</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              MirrorBit AI operates globally. Your personal data may be transferred to, and processed in,
+              countries other than the country in which you reside. In particular, our servers are hosted
+              via <strong>MongoDB Atlas</strong>, and we use cloud services from <strong>Google (Firebase)</strong>
+              and <strong>OpenAI</strong>, which may process data in the United States and other countries.
+            </p>
+            <p class="mt-4">
+              These countries may have data protection laws that differ from those in your country.
+              Where we transfer personal data from the European Economic Area (EEA), United Kingdom (UK),
+              or Switzerland to third countries, we ensure that appropriate safeguards are in place, including:
+            </p>
+            <ul class="policy-list mt-3">
+              <li><strong>Standard Contractual Clauses (SCCs)</strong> — approved by the European Commission, used with relevant service providers.</li>
+              <li><strong>Adequacy decisions</strong> — where the European Commission has recognised the recipient country as providing adequate protection.</li>
+              <li><strong>Data Processing Agreements</strong> — entered into with all sub-processors who handle EU personal data.</li>
+            </ul>
+            <p class="mt-4 text-sm text-slate-500">
+              By using SlayCal, you acknowledge and consent to the transfer of your information to
+              countries outside your country of residence, including the United States,
+              as described in this policy.
+            </p>
+          </div>
+        </details>
+
+        <!-- 10. Local Storage -->
+        <details class="policy-section group" id="s10">
+          <summary class="policy-summary">
+            <span class="policy-num">10</span>
+            <span class="policy-title">Local Storage (AsyncStorage) &amp; Cookies</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              SlayCal is a <strong>native mobile application</strong>. We do not use web cookies.
+              Instead, the App uses <strong>React Native AsyncStorage</strong> — a local, on-device
+              key-value storage system — to persist the following data locally on your device:
+            </p>
+            <div class="data-table-wrapper mt-4">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Key</th>
+                    <th>Data Stored</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>auth_token</code></td>
+                    <td>JWT access token</td>
+                    <td>Maintain authenticated session between app launches</td>
+                  </tr>
+                  <tr>
+                    <td><code>refresh_token</code></td>
+                    <td>JWT refresh token</td>
+                    <td>Silently refresh expired access tokens</td>
+                  </tr>
+                  <tr>
+                    <td><code>language</code></td>
+                    <td>Selected locale (e.g., "en", "tr")</td>
+                    <td>Display the App in your preferred language</td>
+                  </tr>
+                  <tr>
+                    <td><code>theme</code></td>
+                    <td>"light" or "dark"</td>
+                    <td>Remember your display theme preference</td>
+                  </tr>
+                  <tr>
+                    <td><code>onboarding_complete</code></td>
+                    <td>Boolean flag</td>
+                    <td>Skip the onboarding survey if already completed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">
+              This data is stored entirely on your device and is not transmitted to our servers
+              (with the exception of tokens, which are validated server-side).
+              Uninstalling the App clears all locally stored data.
+            </p>
+          </div>
+        </details>
+
+        <!-- 11. Push Notifications -->
+        <details class="policy-section group" id="s11">
+          <summary class="policy-summary">
+            <span class="policy-num">11</span>
+            <span class="policy-title">Push Notifications</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              With your permission, SlayCal sends push notifications to remind you to log meals,
+              drink water, check your daily progress, and receive motivational tips.
+            </p>
+            <p class="mt-3">
+              Push notifications are delivered via <strong>Firebase Cloud Messaging (FCM)</strong>.
+              To send notifications, we store your FCM device token on our servers.
+            </p>
+            <h3 class="policy-h3 mt-5">How to Opt Out</h3>
+            <ul class="policy-list mt-2">
+              <li><strong>iOS:</strong> Go to <em>Settings → Notifications → SlayCal</em> and toggle off "Allow Notifications".</li>
+              <li><strong>Android:</strong> Go to <em>Settings → Apps → SlayCal → Notifications</em> and disable notifications.</li>
+              <li><strong>In-App:</strong> Go to <em>SlayCal → Settings → Notifications</em> to manage individual notification types.</li>
+            </ul>
+            <p class="mt-3 text-sm text-slate-500">
+              Disabling notifications will not affect your ability to use the core features of the App.
+              Upon opt-out, we will stop sending notifications, though the FCM token may remain stored
+              on our servers until the next app session when it is cleared.
+            </p>
+          </div>
+        </details>
+
+        <!-- 12. Device Permissions -->
+        <details class="policy-section group" id="s12">
+          <summary class="policy-summary">
+            <span class="policy-num">12</span>
+            <span class="policy-title">Device Permissions</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <div class="data-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Permission</th>
+                    <th>Platform</th>
+                    <th>Purpose</th>
+                    <th>Required?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Camera</strong></td>
+                    <td>iOS &amp; Android</td>
+                    <td>Capture meal photos for AI food recognition</td>
+                    <td>Required for AI scan feature</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Photo Library / Media &amp; Files</strong></td>
+                    <td>iOS</td>
+                    <td>Select existing meal photos from your photo library</td>
+                    <td>Optional — alternative to Camera</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Storage (READ/WRITE)</strong></td>
+                    <td>Android</td>
+                    <td>Read and write meal image files on device</td>
+                    <td>Required for image handling on Android</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Internet</strong></td>
+                    <td>Android</td>
+                    <td>Required for all network operations</td>
+                    <td>Required</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vibration</strong></td>
+                    <td>Android</td>
+                    <td>Haptic feedback for notifications</td>
+                    <td>Optional</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Push Notifications</strong></td>
+                    <td>iOS &amp; Android</td>
+                    <td>Deliver reminders and alerts</td>
+                    <td>Optional</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout-info mt-5">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">mic_off</span>
+              <p>
+                <strong>Microphone:</strong> SlayCal does <strong>not</strong> request or use microphone
+                access. The microphone permission is explicitly disabled in the App's privacy manifest.
+                We do not record audio of any kind.
+              </p>
+            </div>
+            <div class="callout-info mt-3">
+              <span class="material-symbols-outlined text-blue-500 shrink-0">health_and_safety</span>
+              <p>
+                <strong>HealthKit / Google Fit:</strong> SlayCal does <strong>not</strong> access Apple
+                HealthKit or Google Fit. All health metrics (weight, activity level, etc.) are
+                manually entered by you.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- 13. Changes to This Policy -->
+        <details class="policy-section group" id="s13">
+          <summary class="policy-summary">
+            <span class="policy-num">13</span>
+            <span class="policy-title">Changes to This Policy</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              We may update this Privacy Policy from time to time. When we make material changes, we will:
+            </p>
+            <ul class="policy-list mt-3">
+              <li>Update the <strong>"Last Updated"</strong> date at the top of this policy.</li>
+              <li>Send a <strong>push notification</strong> or in-app alert to registered users if the changes are significant.</li>
+              <li>For changes that materially affect how we process special category data (health data), we will request <strong>renewed consent</strong> before processing.</li>
+            </ul>
+            <p class="mt-4">
+              Your continued use of SlayCal after the effective date of any changes constitutes your
+              acceptance of the updated policy. If you do not agree to the updated policy, you must
+              stop using the App and may delete your account.
+            </p>
+            <p class="mt-3 text-sm text-slate-500">
+              Previous versions of this policy are available upon request by emailing
+              <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+            </p>
+          </div>
+        </details>
+
+        <!-- 14. Contact Information -->
+        <details class="policy-section group" id="s14">
+          <summary class="policy-summary">
+            <span class="policy-num">14</span>
+            <span class="policy-title">Contact Information</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              For any questions, concerns, or requests regarding this Privacy Policy or your personal data,
+              please contact us at:
+            </p>
+            <div class="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl shrink-0">apartment</span>
+                <div>
+                  <p class="font-bold text-slate-900">MirrorBit AI</p>
+                  <p class="text-slate-500 text-sm">Developer of SlayCal</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">mail</span>
+                  <span class="text-slate-700">Privacy inquiries:</span>
+                  <a href="mailto:privacy@mirrorbit.ai" class="text-primary font-medium hover:underline">privacy@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">security</span>
+                  <span class="text-slate-700">Security reports:</span>
+                  <a href="mailto:security@mirrorbit.ai" class="text-primary font-medium hover:underline">security@mirrorbit.ai</a>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-base">language</span>
+                  <span class="text-slate-700">Website:</span>
+                  <a href="https://slaycal.app" class="text-primary font-medium hover:underline">slaycal.app</a>
+                </div>
+              </div>
+            </div>
+            <p class="mt-5 text-sm text-slate-500">
+              We aim to respond to all privacy-related inquiries within <strong>30 days</strong>. For
+              urgent matters, please include "URGENT" in your email subject line.
+            </p>
+          </div>
+        </details>
+
+        <!-- 15. California CCPA/CPRA -->
+        <details class="policy-section group" id="s15">
+          <summary class="policy-summary">
+            <span class="policy-num">15</span>
+            <span class="policy-title">California Privacy Rights (CCPA / CPRA)</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              If you are a California resident, you have specific rights under the
+              <strong>California Consumer Privacy Act (CCPA)</strong>, as amended by the
+              <strong>California Privacy Rights Act (CPRA)</strong>.
+            </p>
+
+            <h3 class="policy-h3 mt-6">Categories of Personal Information Collected</h3>
+            <p class="mt-2 text-sm text-slate-500">In the past 12 months, we have collected the following categories:</p>
+            <div class="data-table-wrapper mt-3">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Examples</th>
+                    <th>Collected?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Identifiers</td><td>Email, device ID, Apple/Google Subject ID</td><td>✓ Yes</td></tr>
+                  <tr><td>Personal Records</td><td>Name, account information</td><td>✓ Yes (optional)</td></tr>
+                  <tr><td>Protected Classifications</td><td>Age, gender</td><td>✓ Yes (self-reported)</td></tr>
+                  <tr><td>Health &amp; Medical Information</td><td>Weight, health conditions, fitness data</td><td>✓ Yes (self-reported)</td></tr>
+                  <tr><td>Commercial Information</td><td>Subscription tier, transaction IDs</td><td>✓ Yes</td></tr>
+                  <tr><td>Internet / Network Activity</td><td>FCM token, usage quotas</td><td>✓ Yes</td></tr>
+                  <tr><td>Geolocation Data</td><td>Precise location</td><td>✗ No</td></tr>
+                  <tr><td>Biometric Data</td><td>Fingerprints, facial scans</td><td>✗ No</td></tr>
+                  <tr><td>Sensory Data</td><td>Audio recordings</td><td>✗ No</td></tr>
+                  <tr><td>Inferences</td><td>Calorie goals and nutrition plans derived from profile</td><td>✓ Yes</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Your California Rights</h3>
+            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+              {[
+                ['manage_search', 'Right to Know', 'Request disclosure of what personal information we collect, use, disclose, and sell about you.'],
+                ['delete', 'Right to Delete', 'Request deletion of your personal information (subject to certain exceptions).'],
+                ['edit', 'Right to Correct', 'Request correction of inaccurate personal information we maintain about you.'],
+                ['sell_off', 'Right to Opt-Out of Sale/Sharing', 'We do NOT sell or share your personal information with third parties for cross-context behavioral advertising.'],
+                ['lock', 'Right to Limit Sensitive Data Use', 'Request that we limit the use of your sensitive personal information (e.g., health data) to necessary purposes.'],
+                ['equal', 'Right to Non-Discrimination', 'We will not discriminate against you for exercising your CCPA rights.'],
+              ].map(([icon, right, desc]) => (
+                <div class="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">{icon}</span>
+                  <div>
+                    <p class="font-semibold text-slate-800 text-sm">{right}</p>
+                    <p class="text-slate-500 text-xs mt-0.5">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div class="callout-success mt-6">
+              <span class="material-symbols-outlined text-green-600 shrink-0">sell_off</span>
+              <p>
+                <strong>We do not sell personal information</strong> as defined under CCPA/CPRA.
+                We do not share personal information for cross-context behavioral advertising.
+                California residents may still submit a "Do Not Sell or Share My Personal Information"
+                request to
+                <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>,
+                which we will honour.
+              </p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">How to Exercise Your California Rights</h3>
+            <p>Submit a verifiable consumer request by:</p>
+            <ul class="policy-list mt-2">
+              <li>Emailing <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a> with the subject line "California Privacy Request"</li>
+              <li>Using the in-app account deletion feature (Settings → Account → Delete Account)</li>
+            </ul>
+            <p class="mt-3 text-sm text-slate-500">
+              We will respond to verifiable requests within <strong>45 days</strong>. If we need additional
+              time (up to 90 days), we will notify you of the extension in writing.
+              You may designate an authorised agent to submit requests on your behalf.
+            </p>
+
+            <h3 class="policy-h3 mt-8">Shine the Light</h3>
+            <p class="text-sm">
+              California Civil Code Section 1798.83 ("Shine the Light") allows California residents
+              to request information once per year about the categories of personal information (if any)
+              we disclosed to third parties for their direct marketing purposes during the preceding
+              calendar year. We do not disclose personal information to third parties for direct
+              marketing purposes.
+            </p>
+          </div>
+        </details>
+
+        <!-- 16. European GDPR -->
+        <details class="policy-section group" id="s16">
+          <summary class="policy-summary">
+            <span class="policy-num">16</span>
+            <span class="policy-title">European Privacy Rights (GDPR)</span>
+            <span class="material-symbols-outlined ml-auto text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <div class="policy-body">
+            <p>
+              If you are located in the European Economic Area (EEA), the United Kingdom (UK), or
+              Switzerland, the <strong>General Data Protection Regulation (GDPR)</strong> (or equivalent
+              UK/Swiss law) applies to our processing of your personal data.
+            </p>
+
+            <h3 class="policy-h3 mt-6">Data Controller</h3>
+            <p>
+              MirrorBit AI is the <strong>data controller</strong> for your personal data.
+              For the purposes of GDPR, your data is controlled by:
+            </p>
+            <div class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm">
+              <p><strong>MirrorBit AI</strong><br/>
+              Email: <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a><br/>
+              Website: <a href="https://slaycal.app" class="text-primary hover:underline">slaycal.app</a></p>
+            </div>
+
+            <h3 class="policy-h3 mt-8">Legal Bases for Processing</h3>
+            <p>We process your personal data on the following legal bases under GDPR Article 6 (and Article 9 for special category data):</p>
+            <ul class="policy-list mt-3">
+              <li><strong>Contract performance (Art. 6(1)(b))</strong> — processing necessary to provide the App's core features (account management, food logging, AI analysis).</li>
+              <li><strong>Legitimate interests (Art. 6(1)(f))</strong> — security, fraud prevention, and usage quota enforcement, where our interests do not override your fundamental rights.</li>
+              <li><strong>Consent (Art. 6(1)(a))</strong> — push notifications and optional personalisation features. You may withdraw consent at any time.</li>
+              <li><strong>Legal obligation (Art. 6(1)(c))</strong> — financial record retention and regulatory compliance.</li>
+              <li><strong>Explicit consent for special category data (Art. 9(2)(a))</strong> — health conditions, physical limitations, and other sensitive health data provided during onboarding.</li>
+            </ul>
+
+            <h3 class="policy-h3 mt-8">Your GDPR Rights</h3>
+            <p>Under GDPR, you have the right to:</p>
+            <ul class="policy-list mt-3">
+              <li><strong>Access</strong> your personal data (Art. 15)</li>
+              <li><strong>Rectify</strong> inaccurate data (Art. 16)</li>
+              <li><strong>Erasure</strong> ("right to be forgotten") (Art. 17)</li>
+              <li><strong>Restrict processing</strong> in certain circumstances (Art. 18)</li>
+              <li><strong>Data portability</strong> in a machine-readable format (Art. 20)</li>
+              <li><strong>Object to processing</strong> based on legitimate interests or for direct marketing (Art. 21)</li>
+              <li><strong>Withdraw consent</strong> at any time without affecting lawfulness of prior processing (Art. 7(3))</li>
+              <li><strong>Not be subject to solely automated decision-making</strong> that produces significant legal effects (Art. 22)</li>
+            </ul>
+
+            <h3 class="policy-h3 mt-8">How to Exercise Your GDPR Rights</h3>
+            <p>
+              Submit requests to
+              <a href="mailto:privacy@mirrorbit.ai" class="text-primary hover:underline">privacy@mirrorbit.ai</a>.
+              We will respond within <strong>30 days</strong> (extendable to 3 months for complex requests
+              with notice). We may request proof of identity before fulfilling your request.
+            </p>
+
+            <h3 class="policy-h3 mt-8">Right to Lodge a Complaint</h3>
+            <p>
+              You have the right to lodge a complaint with your local supervisory authority.
+              For EU residents, find your national DPA at
+              <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">edpb.europa.eu</a>.
+              For UK residents, contact the
+              <a href="https://ico.org.uk/make-a-complaint/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a>.
+            </p>
+
+            <h3 class="policy-h3 mt-8">Automated Decision-Making</h3>
+            <p>
+              SlayCal generates personalised calorie goals and nutrition targets based on your
+              self-reported health profile. While these are generated algorithmically (including via
+              AI), they do not produce <strong>legal or similarly significant effects</strong> —
+              they are nutritional suggestions only. You retain full control and may adjust or
+              override any generated recommendations within the App.
+            </p>
+          </div>
+        </details>
+
+      </div><!-- /policy-body -->
+
+      <!-- ─── Footer note ─────────────────────────────────────────────────── -->
+      <div class="mt-12 rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <span class="material-symbols-outlined text-primary text-3xl mb-2 block">verified_user</span>
+        <p class="text-slate-700 font-semibold">Questions about your privacy?</p>
+        <p class="text-slate-500 text-sm mt-1">
+          Contact us at
+          <a href="mailto:privacy@mirrorbit.ai" class="text-primary font-medium hover:underline">privacy@mirrorbit.ai</a>
+          — we respond within 30 days.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs text-slate-400">
+          <span>Effective: {EFFECTIVE_DATE}</span>
+          <span>·</span>
+          <span>Last updated: {LAST_UPDATED}</span>
+          <span>·</span>
+          <span>© 2025 MirrorBit AI. All rights reserved.</span>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ─── Minimal footer ─────────────────────────────────────────────────── -->
+  <footer class="border-t border-slate-100 bg-white px-6 py-8 text-center text-xs text-slate-400">
+    <div class="mx-auto max-w-5xl flex flex-wrap justify-center gap-x-6 gap-y-2">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <a href="/privacy" class="text-primary font-semibold" aria-current="page">Privacy Policy</a>
+      <a href="/terms" class="hover:text-primary transition-colors">Terms of Service</a>
+      <a href="mailto:privacy@mirrorbit.ai" class="hover:text-primary transition-colors">Contact</a>
+    </div>
+    <p class="mt-4">© 2025 MirrorBit AI · SlayCal · All rights reserved.</p>
+  </footer>
+
+</Layout>
+
+<!-- ─── Styles ──────────────────────────────────────────────────────────────── -->
+<style>
+  /* Section accordion */
+  .policy-section {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden;
+  }
+  .policy-summary {
+    @apply flex items-center gap-3 cursor-pointer select-none px-6 py-5 font-semibold text-slate-800
+           hover:bg-slate-50 transition-colors list-none;
+  }
+  .policy-summary::-webkit-details-marker { display: none; }
+  .policy-num {
+    @apply text-xs font-bold text-primary bg-primary/10 rounded-lg px-2 py-1 shrink-0 w-9 text-center;
+  }
+  .policy-title {
+    @apply text-base font-semibold text-slate-800;
+  }
+  .policy-body {
+    @apply px-6 pb-8 pt-2 text-slate-600 leading-relaxed text-sm border-t border-slate-100;
+  }
+  .policy-h3 {
+    @apply text-sm font-bold text-slate-800 uppercase tracking-wide mt-6 mb-2;
+  }
+  .policy-list {
+    @apply space-y-2 list-none pl-0;
+  }
+  .policy-list li {
+    @apply flex gap-2 items-start;
+  }
+  .policy-list li::before {
+    content: '→';
+    @apply text-primary shrink-0 mt-0.5 font-semibold text-xs leading-5;
+  }
+  .policy-link {
+    @apply text-primary hover:underline;
+  }
+
+  /* Callouts */
+  .callout-info {
+    @apply flex items-start gap-3 rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-blue-800;
+  }
+  .callout-warning {
+    @apply flex items-start gap-3 rounded-xl bg-amber-50 border border-amber-100 p-4 text-sm text-amber-800;
+  }
+  .callout-success {
+    @apply flex items-start gap-3 rounded-xl bg-green-50 border border-green-100 p-4 text-sm text-green-800;
+  }
+
+  /* Data tables */
+  .data-table-wrapper {
+    @apply overflow-x-auto rounded-xl border border-slate-200;
+  }
+  .data-table {
+    @apply w-full text-xs text-left border-collapse;
+  }
+  .data-table thead tr {
+    @apply bg-slate-50;
+  }
+  .data-table th {
+    @apply px-4 py-3 font-semibold text-slate-700 border-b border-slate-200 whitespace-nowrap;
+  }
+  .data-table td {
+    @apply px-4 py-3 text-slate-600 border-b border-slate-100 align-top;
+  }
+  .data-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .data-table tbody tr:hover td {
+    @apply bg-slate-50/60;
+  }
+  code {
+    @apply bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded text-xs font-mono;
+  }
+</style>
+</Layout>
