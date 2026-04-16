@@ -86,13 +86,13 @@ const jsonLd = JSON.stringify({
   '@type': 'ItemList',
   name: 'Free Health & Nutrition Calculators',
   description: 'A collection of free online health calculators including BMI, calories, macros, and body fat.',
-  url: 'https://slaycal.app/calculators',
+  url: 'https://slaycal.com/calculators',
   numberOfItems: 4,
   itemListElement: calculators.map((c, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: c.title,
-    url: `https://slaycal.app${c.slug}`,
+    url: `https://slaycal.com${c.slug}`,
   })),
 });
 ---
