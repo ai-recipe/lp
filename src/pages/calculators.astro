@@ -1,0 +1,412 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+
+const calculators = [
+  {
+    slug: '/bmi-calculator',
+    icon: 'monitor_weight',
+    title: 'BMI Calculator',
+    description: 'Find out if your weight is in a healthy range for your height.',
+    benefit: 'Know your Body Mass Index in seconds — no guesswork.',
+    color: 'from-blue-50 to-indigo-50',
+    iconColor: 'text-blue-500',
+    borderColor: 'border-blue-100',
+    tag: 'Most popular',
+  },
+  {
+    slug: '/calorie-calculator',
+    icon: 'local_fire_department',
+    title: 'Calorie Calculator',
+    description: 'Get your personalized daily calorie target based on your goal.',
+    benefit: 'Eat the right amount — whether cutting, bulking, or maintaining.',
+    color: 'from-orange-50 to-amber-50',
+    iconColor: 'text-primary',
+    borderColor: 'border-orange-100',
+    tag: 'For weight loss',
+  },
+  {
+    slug: '/macro-calculator',
+    icon: 'pie_chart',
+    title: 'Macro Calculator',
+    description: 'Break your calories down into protein, carbs, and fat targets.',
+    benefit: 'Stop guessing macros — get a split built around your body.',
+    color: 'from-green-50 to-emerald-50',
+    iconColor: 'text-emerald-500',
+    borderColor: 'border-green-100',
+    tag: 'For fitness',
+  },
+  {
+    slug: '/body-fat-calculator',
+    icon: 'straighten',
+    title: 'Body Fat Calculator',
+    description: 'Estimate your body fat percentage using simple measurements.',
+    benefit: 'Understand your real body composition beyond the scale.',
+    color: 'from-purple-50 to-violet-50',
+    iconColor: 'text-violet-500',
+    borderColor: 'border-purple-100',
+    tag: 'For athletes',
+  },
+];
+
+const internalLinks = [
+  {
+    href: '/bmi-calculator',
+    label: 'BMI Calculator',
+    desc: 'Body Mass Index for adults — metric and imperial.',
+    icon: 'monitor_weight',
+  },
+  {
+    href: '/calorie-calculator',
+    label: 'Daily Calorie Calculator',
+    desc: 'TDEE-based calories for fat loss, muscle gain, or maintenance.',
+    icon: 'local_fire_department',
+  },
+  {
+    href: '/macro-calculator',
+    label: 'Macro Calculator',
+    desc: 'Protein, carbs, and fat ratios matched to your goal.',
+    icon: 'pie_chart',
+  },
+  {
+    href: '/body-fat-calculator',
+    label: 'Body Fat Calculator',
+    desc: 'Navy method estimate using height, waist, and neck measurements.',
+    icon: 'straighten',
+  },
+];
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Free Health & Nutrition Calculators',
+  description: 'A collection of free online health calculators including BMI, calories, macros, and body fat.',
+  url: 'https://slaycal.app/calculators',
+  numberOfItems: 4,
+  itemListElement: calculators.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.title,
+    url: `https://slaycal.app${c.slug}`,
+  })),
+});
+---
+
+<Layout
+  title="Free Health Calculators — BMI, Calories, Macros & Body Fat | SlayCal"
+  description="Calculate your BMI, daily calories, macro targets, and body fat percentage in seconds. Free online health calculators — no signup required."
+  keywords="BMI calculator, calorie calculator, macro calculator, body fat calculator, free health tools, nutrition calculator, TDEE calculator"
+  lang="en"
+  canonicalPath="/calculators"
+>
+  <script type="application/ld+json" set:html={jsonLd} slot="head" />
+  <Header t={t} lang="en" currentPath="/calculators" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-24 pb-16 lg:px-20 lg:pt-32 lg:pb-20" aria-labelledby="calc-hero-title">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-4xl text-center">
+        <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-6">
+          <span class="material-symbols-outlined text-primary text-base leading-none">calculate</span>
+          <span class="text-sm font-semibold text-primary">Free · No signup · Instant results</span>
+        </div>
+
+        <h1 id="calc-hero-title" class="text-4xl font-bold text-slate-900 lg:text-6xl leading-tight tracking-tight">
+          Free Health Calculators<br />
+          <span class="text-primary">Built for Real Results</span>
+        </h1>
+
+        <p class="mt-6 text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          BMI, calories, macros, body fat — answer the numbers that actually matter for your health. Each calculator takes under 60 seconds.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="#calculators"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-semibold shadow-lg shadow-primary/25 hover:bg-accent hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <span class="material-symbols-outlined text-base leading-none">arrow_downward</span>
+            Explore calculators
+          </a>
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 text-slate-700 font-semibold hover:border-primary/40 hover:text-primary transition-all"
+          >
+            About SlayCal
+          </a>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm text-slate-500">
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-primary">check_circle</span>
+            100% free
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-primary">check_circle</span>
+            No account required
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-primary">check_circle</span>
+            Instant calculation
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-primary">check_circle</span>
+            Science-backed formulas
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY THESE CALCULATORS ─────────────────────────────────────── -->
+    <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="why-title">
+      <div class="mx-auto max-w-4xl">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 items-center">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-primary">Why it matters</span>
+            <h2 id="why-title" class="mt-3 text-3xl font-bold text-slate-900 leading-tight">
+              Numbers you can<br />actually act on
+            </h2>
+            <p class="mt-4 text-slate-500 leading-relaxed">
+              Most people underestimate calories by 30–40%. They set goals without knowing their baseline. These calculators give you the data you need before you start — not after weeks of guessing.
+            </p>
+            <p class="mt-4 text-slate-500 leading-relaxed">
+              Whether you're starting your first diet, hitting a plateau, or building muscle — the right numbers change everything.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { icon: 'fitness_center', label: 'For weight loss', desc: 'Know your deficit target before day one.' },
+              { icon: 'sports_gymnastics', label: 'For fitness', desc: 'Dial in protein and macros for muscle.' },
+              { icon: 'wb_sunny', label: 'For beginners', desc: 'No nutrition knowledge needed.' },
+              { icon: 'trending_up', label: 'For tracking', desc: 'A baseline to measure progress against.' },
+            ].map(({ icon, label, desc }) => (
+              <div class="rounded-2xl bg-background-light p-4 space-y-2">
+                <span class="material-symbols-outlined text-primary text-2xl">{icon}</span>
+                <p class="text-sm font-semibold text-slate-800">{label}</p>
+                <p class="text-xs text-slate-500 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CALCULATOR GRID ────────────────────────────────────────────── -->
+    <section id="calculators" class="bg-background-light px-6 py-20 lg:px-20" aria-labelledby="grid-title">
+      <div class="mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-primary">The calculators</span>
+          <h2 id="grid-title" class="mt-3 text-3xl font-bold text-slate-900">
+            Choose your calculator
+          </h2>
+          <p class="mt-3 text-slate-500 max-w-xl mx-auto">
+            Four tools, each focused on one number. Pick the one that fits where you are right now.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {calculators.map(({ slug, icon, title, description, benefit, color, iconColor, borderColor, tag }) => (
+            <a
+              href={slug}
+              class={`group relative flex flex-col rounded-2xl border ${borderColor} bg-gradient-to-br ${color} p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary`}
+              aria-label={`Open ${title}`}
+            >
+              {tag && (
+                <span class="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                  {tag}
+                </span>
+              )}
+
+              <div class="mb-4">
+                <span class={`material-symbols-outlined text-4xl ${iconColor}`}>{icon}</span>
+              </div>
+
+              <h3 class="text-lg font-bold text-slate-900 leading-tight">{title}</h3>
+              <p class="mt-2 text-sm text-slate-500 leading-snug flex-1">{description}</p>
+
+              <div class="mt-4 flex items-start gap-2">
+                <span class="material-symbols-outlined text-base text-primary mt-0.5 shrink-0">lightbulb</span>
+                <p class="text-xs text-slate-600 leading-snug">{benefit}</p>
+              </div>
+
+              <div class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
+                Use Calculator
+                <span class="material-symbols-outlined text-base leading-none">arrow_forward</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INTERNAL LINKING (SEO) ─────────────────────────────────────── -->
+    <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="tools-title">
+      <div class="mx-auto max-w-4xl">
+        <h2 id="tools-title" class="text-xl font-bold text-slate-900 mb-8">
+          Popular health tools
+        </h2>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {internalLinks.map(({ href, label, desc, icon }) => (
+            <a
+              href={href}
+              class="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                <span class="material-symbols-outlined text-primary text-xl">{icon}</span>
+              </div>
+              <div class="min-w-0">
+                <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">{label}</p>
+                <p class="text-xs text-slate-400 leading-snug mt-0.5 truncate">{desc}</p>
+              </div>
+              <span class="material-symbols-outlined text-slate-300 group-hover:text-primary text-base ml-auto shrink-0 transition-colors">chevron_right</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONVERSION SECTION ─────────────────────────────────────────── -->
+    <section class="bg-background-light px-6 py-20 lg:px-20" aria-labelledby="conversion-title">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 items-start">
+
+          <!-- The problem -->
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">The problem</span>
+            <h2 id="conversion-title" class="mt-3 text-3xl font-bold text-slate-900 leading-tight">
+              One number won't change your habits
+            </h2>
+            <p class="mt-4 text-slate-500 leading-relaxed">
+              A calculator gives you a number for today. But nutrition isn't a single moment — it's every meal, every day, over months.
+            </p>
+
+            <ul class="mt-6 space-y-4">
+              {[
+                { icon: 'event_repeat', text: 'One-time results. No way to track if you\'re actually hitting them.' },
+                { icon: 'person_off', text: 'No personalization over time. Your body changes — your targets should too.' },
+                { icon: 'trending_flat', text: 'No feedback loop. You won\'t know what\'s working until it\'s too late.' },
+              ].map(({ icon, text }) => (
+                <li class="flex items-start gap-3">
+                  <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-100">
+                    <span class="material-symbols-outlined text-slate-400 text-base">{icon}</span>
+                  </div>
+                  <p class="text-sm text-slate-500 leading-relaxed pt-1">{text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- The solution -->
+          <div class="rounded-3xl bg-gradient-to-br from-primary via-accent to-amber-400 p-8 text-white">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 mb-5">
+              <span class="material-symbols-outlined text-white text-sm leading-none">auto_awesome</span>
+              <span class="text-xs font-semibold">The SlayCal difference</span>
+            </div>
+
+            <h3 class="text-2xl font-bold leading-tight mb-2">
+              Track every day.<br />Improve every week.
+            </h3>
+            <p class="text-white/80 text-sm leading-relaxed mb-6">
+              SlayCal takes your calculator results and turns them into a live dashboard that updates with every meal you log.
+            </p>
+
+            <ul class="space-y-4 mb-8">
+              {[
+                { icon: 'photo_camera', text: 'Snap a meal — get instant calories and macros' },
+                { icon: 'show_chart', text: 'Track progress automatically, day by day' },
+                { icon: 'tune', text: 'Goals adapt as your weight changes' },
+                { icon: 'water_drop', text: 'Hydration, weight, BMI — all in one place' },
+              ].map(({ icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/20">
+                    <span class="material-symbols-outlined text-white text-sm">{icon}</span>
+                  </div>
+                  <p class="text-sm font-medium">{text}</p>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="#"
+                class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg"
+                data-analytics-store="ios"
+                data-analytics-placement="calculators_conversion"
+              >
+                <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                App Store
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all"
+                data-analytics-store="android"
+                data-analytics-placement="calculators_conversion"
+              >
+                <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/>
+                </svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ──────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-20 lg:px-20" aria-labelledby="final-cta-title">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Next step</span>
+        <h2 id="final-cta-title" class="mt-3 text-3xl font-bold text-slate-900 lg:text-4xl leading-tight">
+          Ready to start?
+        </h2>
+        <p class="mt-4 text-slate-500 max-w-lg mx-auto leading-relaxed">
+          Pick a calculator below — or download SlayCal to go from numbers to actual daily tracking.
+        </p>
+
+        <!-- Dual CTA -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#calculators"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white font-bold hover:bg-accent hover:-translate-y-0.5 transition-all shadow-lg shadow-primary/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <span class="material-symbols-outlined text-base leading-none">calculate</span>
+            Use a calculator
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-slate-800 bg-slate-900 text-white font-bold hover:bg-slate-700 hover:-translate-y-0.5 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            data-analytics-store="ios"
+            data-analytics-placement="calculators_final_cta"
+          >
+            <svg class="w-4 h-4 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Download SlayCal free
+          </a>
+        </div>
+
+        <!-- Micro-copy -->
+        <p class="mt-5 text-xs text-slate-400">
+          Free download · 500 AI credits included · No credit card required
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

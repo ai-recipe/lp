@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BmiCalcContent from '../components/calculators/BmiCalcContent.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="BMI Calculator — Free Body Mass Index Calculator | SlayCal"
+  description="Calculate your BMI instantly. Enter your height and weight to find your Body Mass Index and see what your result means for your health."
+  keywords="BMI calculator, body mass index calculator, free BMI tool, healthy weight calculator, BMI chart"
+  lang="en"
+  canonicalPath="/bmi-calculator"
+>
+  <Header t={t} lang="en" currentPath="/bmi-calculator" />
+  <BmiCalcContent />
+  <Footer t={t} lang="en" />
+</Layout>

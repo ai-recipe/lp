@@ -1,0 +1,250 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Best Foods for Muscle Gain: What to Eat to Build Lean Muscle | SlayCal Blog"
+  description="The right foods can accelerate muscle growth. Here's a practical list of high-protein, calorie-dense foods to help you build lean muscle — without guesswork."
+  keywords="best foods for muscle gain, muscle building foods, high protein foods, bulking foods, lean bulk meal ideas, protein sources"
+  lang="en"
+  canonicalPath="/blog/best-foods-for-muscle-gain"
+>
+  <Header t={t} lang="en" currentPath="/blog/best-foods-for-muscle-gain" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Muscle gain</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Nutrition for Training</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Best Foods for Muscle Gain:<br/>What to Actually Eat
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Building lean muscle isn't about eating more of anything — it's about eating the right things. Here's the real list.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 7 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Muscle grows when three things line up: progressive strength training, enough protein to rebuild tissue, and a small calorie surplus to fuel it. Skip any of the three and results stall. This guide is about the second and third — what to put on your plate so your training actually turns into muscle.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The two numbers that matter</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Before food lists, get your targets dialed in:</p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 my-6">
+            <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-2">Calories</p>
+              <p class="text-base font-bold text-slate-900">TDEE + 200–400 kcal</p>
+              <p class="text-xs text-slate-500 mt-1">A lean bulk. Bigger surpluses just add fat, not muscle.</p>
+            </div>
+            <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">Protein</p>
+              <p class="text-base font-bold text-slate-900">1.6–2.2 g/kg body weight</p>
+              <p class="text-xs text-slate-500 mt-1">Split across 3–5 meals for best absorption.</p>
+            </div>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-4">Not sure what your numbers are? Our <a href="/calorie-calculator" class="text-primary font-semibold hover:underline">calorie calculator</a> and <a href="/macro-calculator" class="text-primary font-semibold hover:underline">macro calculator</a> handle the math.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Top protein sources</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">All protein isn't equal — some sources are more efficient per calorie, more filling, and easier to hit your daily target with.</p>
+
+          <div class="space-y-3 mb-8">
+            {[
+              { food: 'Chicken breast', stat: '31g protein · 165 kcal per 100g', desc: 'The gold standard. Lean, cheap, versatile, and high in leucine (the amino acid that triggers muscle protein synthesis).', icon: 'restaurant' },
+              { food: 'Greek yogurt (non-fat)', stat: '10g protein · 59 kcal per 100g', desc: 'Slow-digesting casein protein — great for before bed. Naturally fortified with probiotics and calcium.', icon: 'breakfast_dining' },
+              { food: 'Eggs (whole)', stat: '13g protein · 155 kcal per 100g', desc: 'Most bioavailable protein there is. The yolks contain choline, vitamin D, and healthy fats — don\'t skip them.', icon: 'egg' },
+              { food: 'Lean beef (95/5)', stat: '24g protein · 137 kcal per 100g', desc: 'High in creatine, iron, and B12. A little goes a long way for recovery.', icon: 'outdoor_grill' },
+              { food: 'Cottage cheese', stat: '11g protein · 98 kcal per 100g', desc: 'Mostly casein, slow digesting. Excellent anytime protein bump, especially pre-sleep.', icon: 'icecream' },
+              { food: 'Salmon', stat: '22g protein · 208 kcal per 100g', desc: 'Protein plus omega-3s. The omega-3s are linked to better muscle protein synthesis and joint recovery.', icon: 'set_meal' },
+              { food: 'Whey protein isolate', stat: '25g protein · 110 kcal per scoop', desc: 'Fastest-absorbing protein. Ideal post-workout or when you\'re short on whole food options.', icon: 'local_drink' },
+              { food: 'Lentils', stat: '9g protein · 116 kcal per 100g cooked', desc: 'Best plant option for muscle gain. High in protein, fiber, and slow carbs — a complete bulking food.', icon: 'grass' },
+            ].map(({ food, stat, desc, icon }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5 flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100">
+                  <span class="material-symbols-outlined text-blue-600 text-xl">{icon}</span>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900 text-sm mb-1">{food}</p>
+                  <p class="text-xs font-semibold text-primary mb-1">{stat}</p>
+                  <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Calorie-dense carbs</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">When calorie needs are high, easy-to-eat carbs keep you fueled without forcing down mountains of food.</p>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { food: 'Oats (rolled)', stat: '389 kcal / 100g', desc: 'Slow carbs, cheap, blend-friendly. Mix with milk + protein for a 700 kcal breakfast shake.' },
+              { food: 'White rice', stat: '130 kcal / 100g cooked', desc: 'Easy to digest around training. Volume eats faster than brown rice if you\'re struggling to hit calories.' },
+              { food: 'Sweet potatoes', stat: '86 kcal / 100g', desc: 'Dense carbs plus fiber, potassium, vitamin A. Staple side dish for hard-training lifters.' },
+              { food: 'Bananas', stat: '89 kcal / 100g', desc: 'Portable carb source. Pairs perfectly with peanut butter and a protein shake.' },
+              { food: 'Whole-grain bread', stat: '265 kcal / 100g', desc: 'Easy calorie vehicle. A PB + honey sandwich adds ~500 kcal in minutes.' },
+              { food: 'Dried fruit', stat: '300 kcal / 100g', desc: 'Concentrated calories. Dates and raisins are favorites of high-volume athletes.' },
+            ].map(({ food, stat, desc }) => (
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-4">
+                <p class="text-sm font-bold text-slate-900 mb-0.5">{food}</p>
+                <p class="text-xs font-semibold text-amber-600 mb-1.5">{stat}</p>
+                <p class="text-xs text-slate-600 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Healthy fats that help you eat more</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Fats are calorie-dense — 9 kcal per gram — which makes them the easiest macro to bump up without feeling stuffed.</p>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 my-6">
+            {[
+              { food: 'Olive oil', kcal: '~120 kcal / tbsp', icon: 'water_drop' },
+              { food: 'Nuts & nut butter', kcal: '~190 kcal / oz', icon: 'spa' },
+              { food: 'Avocado', kcal: '~240 kcal / fruit', icon: 'eco' },
+              { food: 'Whole milk', kcal: '~150 kcal / cup', icon: 'local_drink' },
+              { food: 'Dark chocolate 85%+', kcal: '~170 kcal / oz', icon: 'cookie' },
+              { food: 'Cheese', kcal: '~110 kcal / oz', icon: 'kebab_dining' },
+            ].map(({ food, kcal, icon }) => (
+              <div class="rounded-2xl border border-rose-100 bg-rose-50 p-4 flex items-center gap-3">
+                <span class="material-symbols-outlined text-rose-500 text-xl shrink-0">{icon}</span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900 leading-tight">{food}</p>
+                  <p class="text-xs text-rose-600 font-semibold">{kcal}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">A sample day for a 75 kg lifter</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Roughly 3,000 kcal, 170g protein — enough to build muscle without ballooning body fat:</p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { meal: 'Breakfast', food: 'Oat-protein bowl: 80g oats, 1 scoop whey, 1 banana, 1 tbsp peanut butter, milk', macros: '650 kcal · 45p / 90c / 15f' },
+              { meal: 'Lunch', food: '200g chicken breast, 1 cup rice, mixed veg, 1 tbsp olive oil', macros: '700 kcal · 65p / 80c / 18f' },
+              { meal: 'Snack', food: 'Greek yogurt + honey + mixed nuts', macros: '400 kcal · 25p / 35c / 18f' },
+              { meal: 'Dinner', food: '180g salmon, sweet potato, spinach, olive oil', macros: '700 kcal · 40p / 60c / 28f' },
+              { meal: 'Pre-bed', food: '200g cottage cheese + berries', macros: '220 kcal · 22p / 18c / 3f' },
+            ].map(({ meal, food, macros }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">{meal}</p>
+                <p class="text-sm text-slate-800 font-medium mb-0.5">{food}</p>
+                <p class="text-xs text-slate-400 tabular-nums">{macros}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Mistakes that slow muscle gain</h2>
+          <div class="space-y-4 mb-8">
+            {[
+              { title: 'Under-eating on training days', desc: 'Appetite lies after hard sessions. Pre-plan your calories; don\'t trust hunger signals when you\'re in a surplus.' },
+              { title: 'Skimping on protein at breakfast', desc: 'Most people load protein at dinner. Hitting 30g+ at breakfast maximizes daily muscle protein synthesis.' },
+              { title: 'Chasing "clean" too hard', desc: 'If you can\'t hit your calorie target on chicken and broccoli, add rice, milk, oats, and nut butter. Adherence beats purity.' },
+              { title: 'Ignoring progress photos', desc: 'The scale lies in both directions during a bulk. Weekly photos tell you whether you\'re actually adding muscle, not just weight.' },
+            ].map(({ title, desc }) => (
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+                <p class="font-bold text-slate-900 text-sm mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-amber-500 text-base">warning</span>{title}</p>
+                <p class="text-xs text-slate-500 leading-relaxed pl-7">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Hit your protein target every day. Stay in a small surplus. Prioritize whole foods you actually enjoy eating. Do this consistently for 3–6 months while training hard — and you'll see real muscle.</p>
+          <p class="text-slate-600 leading-relaxed">The hardest part isn't picking the right foods. It's tracking them accurately enough to know you're on target. That's where most people fall off.</p>
+
+        </div>
+
+        <!-- Internal link to macro calculator -->
+        <div class="mt-10 rounded-2xl bg-emerald-50 border border-emerald-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100">
+            <span class="material-symbols-outlined text-emerald-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Get your personalized macros</p>
+            <p class="text-xs text-slate-500 mb-3">Use our free macro calculator to split your calories into the right protein, carb, and fat targets for muscle gain.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track protein effortlessly.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal scans your meals and updates your protein totals in real time — no weighing, no searching for "chicken breast grilled skinless."</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_muscle_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_muscle_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles & tools</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/how-many-calories-should-i-eat" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How Many Calories Should I Eat Per Day?</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/body-fat-calculator" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-50">
+              <span class="material-symbols-outlined text-violet-500 text-xl">straighten</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Body Fat Calculator</p>
+              <p class="text-xs text-slate-400 mt-0.5">Track body composition as you bulk</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

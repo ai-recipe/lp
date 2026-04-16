@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CalorieCalcContent from '../components/calculators/CalorieCalcContent.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Calorie Calculator — Find Your Daily Calorie Needs | SlayCal"
+  description="Calculate exactly how many calories you need per day to lose weight, maintain, or build muscle. Based on the Mifflin-St Jeor equation."
+  keywords="calorie calculator, daily calorie needs, TDEE calculator, calorie deficit calculator, how many calories to lose weight"
+  lang="en"
+  canonicalPath="/calorie-calculator"
+>
+  <Header t={t} lang="en" currentPath="/calorie-calculator" />
+  <CalorieCalcContent />
+  <Footer t={t} lang="en" />
+</Layout>

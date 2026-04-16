@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BmiCalcContent from '../../components/calculators/BmiCalcContent.astro';
+import { tr } from '../../i18n/tr';
+import '../../styles/global.css';
+
+const t = tr;
+---
+
+<Layout
+  title="VKİ Hesaplayıcı — Ücretsiz Vücut Kitle İndeksi Hesapla | SlayCal"
+  description="VKİ'nizi anında hesaplayın. Boy ve kilonuzu girerek Vücut Kitle Endeksinizi ve sağlık durumunuzu öğrenin."
+  keywords="VKİ hesaplayıcı, vücut kitle indeksi, ücretsiz VKİ, sağlıklı kilo hesaplama"
+  lang="tr"
+  canonicalPath="/tr/bmi-calculator"
+>
+  <Header t={t} lang="tr" currentPath="/bmi-calculator" />
+  <BmiCalcContent />
+  <Footer t={t} lang="tr" />
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BodyFatCalcContent from '../../components/calculators/BodyFatCalcContent.astro';
+import { tr } from '../../i18n/tr';
+import '../../styles/global.css';
+
+const t = tr;
+---
+
+<Layout
+  title="Vücut Yağ Oranı Hesaplayıcı — Yağ Yüzdenizi Tahmin Edin | SlayCal"
+  description="ABD Donanması yöntemiyle vücut yağ oranınızı tahmin edin. Sadece boy, bel ve boyun ölçülerinizi girin."
+  keywords="vücut yağ oranı hesaplayıcı, yağ yüzdesi hesaplama, vücut kompozisyonu"
+  lang="tr"
+  canonicalPath="/tr/body-fat-calculator"
+>
+  <Header t={t} lang="tr" currentPath="/body-fat-calculator" />
+  <BodyFatCalcContent />
+  <Footer t={t} lang="tr" />
+</Layout>

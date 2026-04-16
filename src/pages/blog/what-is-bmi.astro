@@ -1,0 +1,233 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="What Is BMI? How to Use It (and When to Ignore It) | SlayCal Blog"
+  description="BMI is a quick health screen — but it has real blind spots. Learn what BMI measures, what it misses, and what to look at instead for a full picture of your health."
+  keywords="what is BMI, body mass index meaning, is BMI accurate, BMI limitations, BMI categories, normal BMI"
+  lang="en"
+  canonicalPath="/blog/what-is-bmi"
+>
+  <Header t={t} lang="en" currentPath="/blog/what-is-bmi" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">What Is BMI</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-500">Health Metrics</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          What Is BMI? How to Use It<br/>(and When to Ignore It)
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          BMI is useful — up to a point. Here's what it actually tells you, where it breaks down, and what else you should be tracking.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            BMI — Body Mass Index — has been used by doctors since the 1970s as a quick, free, low-effort way to screen for weight-related health risk. It's on millions of health reports worldwide. It's also frequently misunderstood and misused. This guide explains both sides.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What BMI actually measures</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">BMI is a simple ratio of your weight to your height squared:</p>
+
+          <div class="rounded-2xl bg-slate-900 text-white p-6 my-6 text-center">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Formula</p>
+            <p class="text-2xl font-bold font-mono">BMI = weight (kg) ÷ height² (m)</p>
+            <p class="text-xs text-slate-400 mt-2">Imperial: BMI = 703 × weight (lbs) ÷ height² (in)</p>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-4">That's it. No blood test. No scan. Just a number derived from two measurements anyone can take. The result falls into one of four categories set by the World Health Organization:</p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden my-6">
+            {[
+              { range: 'Below 18.5', label: 'Underweight', note: 'May signal malnutrition or other health issues', color: 'bg-blue-50' },
+              { range: '18.5 – 24.9', label: 'Normal weight', note: 'Lowest statistical health risk for most populations', color: 'bg-green-50' },
+              { range: '25.0 – 29.9', label: 'Overweight', note: 'Increased risk of some chronic conditions', color: 'bg-yellow-50' },
+              { range: '30.0+', label: 'Obese', note: 'Significantly elevated cardiovascular and metabolic risk', color: 'bg-red-50' },
+            ].map(({ range, label, note, color }, i) => (
+              <div class={`flex items-center gap-4 px-5 py-4 ${color}`}>
+                <span class="text-sm font-bold text-slate-900 w-28 shrink-0 tabular-nums">{range}</span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">{label}</p>
+                  <p class="text-xs text-slate-500">{note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why BMI is actually useful</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Despite its critics, BMI has real value in specific contexts:</p>
+          <ul class="space-y-3 mb-6">
+            {[
+              { title: 'Population-level screening', desc: 'Studies consistently show BMI correlates with higher rates of type 2 diabetes, heart disease, and certain cancers at the group level.' },
+              { title: 'Simple baseline tracking', desc: 'If you\'re losing weight, a falling BMI is a clear directional signal — even if the absolute number has caveats.' },
+              { title: 'Conversation starter with a doctor', desc: 'BMI gives a physician a quick reference point that prompts further testing if needed.' },
+            ].map(({ title, desc }) => (
+              <li class="flex items-start gap-3 p-4 rounded-xl bg-background-light">
+                <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">check_circle</span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">{title}</p>
+                  <p class="text-xs text-slate-500 mt-0.5 leading-snug">{desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Where BMI breaks down</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">BMI was designed to describe populations, not individuals. It was created using data from European males in the 1800s. In practice it has four major blind spots:</p>
+
+          <div class="space-y-4 my-6">
+            {[
+              {
+                icon: 'fitness_center',
+                title: 'It can\'t distinguish fat from muscle',
+                desc: 'A 90 kg bodybuilder and a 90 kg sedentary person with the same height get the same BMI — even though their health profiles are completely different. Athletes frequently score "overweight" or "obese" while having very low body fat.',
+              },
+              {
+                icon: 'elderly',
+                title: 'It changes with age in misleading ways',
+                desc: 'Older adults tend to lose muscle and gain fat even when their weight stays the same. A "normal" BMI in a 70-year-old may hide significant muscle loss that BMI simply doesn\'t capture.',
+              },
+              {
+                icon: 'public',
+                title: 'Different populations, different risk thresholds',
+                desc: 'Research shows that people of South Asian or East Asian descent face higher cardiometabolic risk at lower BMI values than the WHO cutoffs were built around. The one-size-fits-all categories don\'t fit all.',
+              },
+              {
+                icon: 'pregnant_woman',
+                title: 'It changes during pregnancy',
+                desc: 'BMI is effectively meaningless during pregnancy due to expected weight gain. It should not be used as a health indicator during this time.',
+              },
+            ].map(({ icon, title, desc }) => (
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5 flex gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100">
+                  <span class="material-symbols-outlined text-amber-600 text-xl">{icon}</span>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900 text-sm mb-1">{title}</p>
+                  <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to track alongside BMI</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">BMI is a starting point. For a fuller picture of your health, these metrics add context:</p>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { label: 'Waist circumference', desc: 'A better proxy for abdominal fat, which is most strongly linked to metabolic risk. Men: under 94 cm. Women: under 80 cm.', icon: 'straighten' },
+              { label: 'Body fat percentage', desc: 'Separates fat mass from lean mass. Gives a far more accurate picture of body composition than BMI alone.', icon: 'monitor_heart' },
+              { label: 'Weight trend over time', desc: 'A single weigh-in is noisy. Daily fluctuations of 1–2 kg are normal. What matters is the trend over weeks.', icon: 'show_chart' },
+              { label: 'Bloodwork', desc: 'Cholesterol, blood sugar, blood pressure, and inflammation markers reveal metabolic health that no scale or tape measure can.', icon: 'biotech' },
+            ].map(({ label, desc, icon }) => (
+              <div class="rounded-2xl bg-background-light border border-slate-100 p-4 flex gap-3">
+                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">{icon}</span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800 mb-1">{label}</p>
+                  <p class="text-xs text-slate-500 leading-snug">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Use BMI as a quick, free snapshot — not a verdict. If your BMI is in the normal range but you feel bad, eat poorly, and never exercise, that's not actually good. And if your BMI is technically "overweight" but you have great bloodwork, high muscle mass, and solid daily habits, the number alone means little.</p>
+          <p class="text-slate-600 leading-relaxed">Track it, note the trend, but don't let it define your entire health picture.</p>
+
+        </div>
+
+        <!-- Internal link to BMI calculator -->
+        <div class="mt-10 rounded-2xl bg-blue-50 border border-blue-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100">
+            <span class="material-symbols-outlined text-blue-500 text-xl">calculate</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Calculate your BMI now</p>
+            <p class="text-xs text-slate-500 mb-3">Use our free BMI calculator to get your result in under 30 seconds — metric or imperial.</p>
+            <a href="/bmi-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:underline">
+              Open BMI Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track more than just a number.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal tracks weight trends, BMI over time, macros, and hydration — giving you the full picture, automatically.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_bmi_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_bmi_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles & tools</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/how-many-calories-should-i-eat" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How Many Calories Should I Eat Per Day?</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/body-fat-calculator" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-50">
+              <span class="material-symbols-outlined text-violet-500 text-xl">straighten</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Body Fat Calculator</p>
+              <p class="text-xs text-slate-400 mt-0.5">Goes beyond what BMI measures</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CalorieCalcContent from '../../components/calculators/CalorieCalcContent.astro';
+import { tr } from '../../i18n/tr';
+import '../../styles/global.css';
+
+const t = tr;
+---
+
+<Layout
+  title="Kalori Hesaplayıcı — Günlük Kalori İhtiyacını Bul | SlayCal"
+  description="Kilo vermek, korumak veya kas kazanmak için günlük kalori ihtiyacınızı hesaplayın. Mifflin-St Jeor formülüne dayalı."
+  keywords="kalori hesaplayıcı, günlük kalori ihtiyacı, TDEE hesaplama, kalori açığı hesaplama"
+  lang="tr"
+  canonicalPath="/tr/calorie-calculator"
+>
+  <Header t={t} lang="tr" currentPath="/calorie-calculator" />
+  <CalorieCalcContent />
+  <Footer t={t} lang="tr" />
+</Layout>

@@ -1,0 +1,338 @@
+---
+// Shared Calorie calculator content — used by EN and TR pages (calculator math is language-agnostic)
+---
+
+<main id="main-content">
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+    <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-40 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <a href="/calculators" class="hover:text-primary transition-colors">Calculators</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <span class="text-slate-600 font-medium">Calorie Calculator</span>
+      </nav>
+      <div class="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-1.5 mb-5">
+        <span class="material-symbols-outlined text-primary text-base leading-none">local_fire_department</span>
+        <span class="text-sm font-semibold text-primary">Free · Instant results</span>
+      </div>
+      <h1 class="text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">Calorie Calculator</h1>
+      <p class="mt-4 text-lg text-slate-500 max-w-xl leading-relaxed">Find out exactly how many calories you need per day — based on your body, activity, and goal. Uses the Mifflin-St Jeor equation.</p>
+    </div>
+  </section>
+
+  <!-- ── CALCULATOR ─────────────────────────────────────────────── -->
+  <section class="bg-background-light px-6 pb-16 lg:px-20" aria-label="Calorie Calculator">
+    <div class="mx-auto max-w-4xl">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+
+        <div class="rounded-3xl bg-white border border-slate-100 shadow-sm p-8">
+          <h2 class="text-lg font-bold text-slate-900 mb-6">Enter your details</h2>
+
+          <div class="flex rounded-xl bg-background-light p-1 mb-6 w-fit" role="group" aria-label="Unit system">
+            <button id="unit-metric" class="unit-btn px-5 py-2 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm transition-all" aria-pressed="true">Metric</button>
+            <button id="unit-imperial" class="unit-btn px-5 py-2 rounded-lg text-sm font-semibold text-slate-500 hover:text-slate-700 transition-all" aria-pressed="false">Imperial</button>
+          </div>
+
+          <form id="cal-form" novalidate>
+            <div class="mb-5">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">Sex</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-slate-200 bg-background-light cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 has-[:checked]:text-primary transition-all">
+                  <input type="radio" name="sex" value="male" checked class="sr-only" />
+                  <span class="material-symbols-outlined text-base">male</span>
+                  <span class="text-sm font-semibold">Male</span>
+                </label>
+                <label class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-slate-200 bg-background-light cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 has-[:checked]:text-primary transition-all">
+                  <input type="radio" name="sex" value="female" class="sr-only" />
+                  <span class="material-symbols-outlined text-base">female</span>
+                  <span class="text-sm font-semibold">Female</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label for="age" class="block text-sm font-semibold text-slate-700 mb-2">Age</label>
+              <div class="relative">
+                <input type="number" id="age" min="10" max="120" placeholder="30" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-16 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">years</span>
+              </div>
+            </div>
+
+            <div id="height-metric" class="mb-5">
+              <label for="height-cm" class="block text-sm font-semibold text-slate-700 mb-2">Height</label>
+              <div class="relative">
+                <input type="number" id="height-cm" min="50" max="300" placeholder="175" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-14 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">cm</span>
+              </div>
+            </div>
+            <div id="height-imperial" class="mb-5 hidden">
+              <label class="block text-sm font-semibold text-slate-700 mb-2">Height</label>
+              <div class="flex gap-3">
+                <div class="relative flex-1">
+                  <input type="number" id="height-ft" min="1" max="9" placeholder="5" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-12 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                  <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">ft</span>
+                </div>
+                <div class="relative flex-1">
+                  <input type="number" id="height-in" min="0" max="11" placeholder="9" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-12 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                  <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">in</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="weight-metric" class="mb-5">
+              <label for="weight-kg" class="block text-sm font-semibold text-slate-700 mb-2">Weight</label>
+              <div class="relative">
+                <input type="number" id="weight-kg" min="10" max="500" placeholder="70" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-12 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">kg</span>
+              </div>
+            </div>
+            <div id="weight-imperial" class="mb-5 hidden">
+              <label for="weight-lbs" class="block text-sm font-semibold text-slate-700 mb-2">Weight</label>
+              <div class="relative">
+                <input type="number" id="weight-lbs" min="20" max="1100" placeholder="154" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 pr-14 text-slate-900 placeholder-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">lbs</span>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label for="activity" class="block text-sm font-semibold text-slate-700 mb-2">Activity level</label>
+              <select id="activity" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 text-slate-900 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+                <option value="1.2">Sedentary — desk job, no exercise</option>
+                <option value="1.375">Lightly active — 1–3 workouts/week</option>
+                <option value="1.55" selected>Moderately active — 3–5 workouts/week</option>
+                <option value="1.725">Very active — 6–7 workouts/week</option>
+                <option value="1.9">Extra active — physical job + daily training</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label for="goal" class="block text-sm font-semibold text-slate-700 mb-2">Goal</label>
+              <select id="goal" class="w-full rounded-xl border border-slate-200 bg-background-light px-4 py-3.5 text-slate-900 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
+                <option value="-500">Lose weight (~0.5 kg/week)</option>
+                <option value="-250">Mild loss (~0.25 kg/week)</option>
+                <option value="0" selected>Maintain weight</option>
+                <option value="250">Mild gain (~0.25 kg/week)</option>
+                <option value="500">Gain weight (~0.5 kg/week)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-primary text-white font-bold text-base hover:bg-accent transition-all shadow-lg shadow-primary/25 hover:-translate-y-0.5">Calculate my calories</button>
+          </form>
+        </div>
+
+        <div class="rounded-3xl border border-slate-100 bg-white shadow-sm p-8 flex flex-col" aria-live="polite">
+          <div id="results-placeholder" class="flex flex-col items-center justify-center h-full min-h-48 text-center">
+            <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-50 mb-4">
+              <span class="material-symbols-outlined text-slate-300 text-3xl">calculate</span>
+            </div>
+            <p class="text-sm text-slate-400 max-w-xs">Fill in your details to see your personalized calorie target.</p>
+          </div>
+          <div id="results-content" class="hidden">
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-lg font-bold text-slate-900">Your daily target</h2>
+              <button id="reset-btn" class="text-xs text-slate-400 hover:text-primary transition-colors flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">refresh</span> Reset
+              </button>
+            </div>
+            <div class="text-center my-6">
+              <div id="target-value" class="text-6xl font-bold text-slate-900 tabular-nums">—</div>
+              <div class="mt-1 text-sm font-semibold text-slate-500">kcal / day</div>
+              <div id="goal-badge" class="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-primary/10 text-primary"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">BMR (at rest)</p>
+                <p id="bmr-stat" class="text-base font-bold text-slate-900">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">TDEE (maintenance)</p>
+                <p id="tdee-stat" class="text-base font-bold text-slate-900">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">Weekly deficit/surplus</p>
+                <p id="weekly-stat" class="text-base font-bold text-slate-900">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">Projected change</p>
+                <p id="projection-stat" class="text-base font-bold text-slate-900">—</p>
+              </div>
+            </div>
+            <a href="#" class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-700 transition-all" data-analytics-store="ios" data-analytics-placement="cal_result">
+              <span class="material-symbols-outlined text-base">photo_camera</span>Hit this target automatically with SlayCal
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ───────────────────────────────────────────── -->
+  <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="how-cal-title">
+    <div class="mx-auto max-w-4xl">
+      <h2 id="how-cal-title" class="text-2xl font-bold text-slate-900 mb-2">How this calculator works</h2>
+      <p class="text-slate-500 mb-8">A quick walkthrough of the math behind your number.</p>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {[
+          { step: '01', title: 'BMR', desc: 'Your Basal Metabolic Rate — calories burned at complete rest — using the Mifflin-St Jeor equation.' },
+          { step: '02', title: 'TDEE', desc: 'BMR multiplied by your activity level to estimate your real-world daily calorie burn.' },
+          { step: '03', title: 'Target', desc: 'TDEE adjusted up or down based on your goal (loss, maintain, or gain).' },
+        ].map(({ step, title, desc }) => (
+          <div class="rounded-2xl border border-slate-100 bg-background-light p-6">
+            <span class="text-xs font-bold text-primary">{step}</span>
+            <p class="mt-2 font-bold text-slate-900">{title}</p>
+            <p class="mt-1 text-sm text-slate-500 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 rounded-2xl bg-amber-50 border border-amber-100 p-5 flex gap-3">
+        <span class="material-symbols-outlined text-amber-500 text-xl shrink-0 mt-0.5">info</span>
+        <p class="text-sm text-slate-600 leading-relaxed"><strong class="text-slate-800">Estimates, not prescriptions.</strong> These numbers give you a solid starting point. Real metabolism varies by ±10–15% between people. Track for 2–3 weeks and adjust if your weight trend doesn't match your goal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLAYCAL CTA ────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-20 lg:px-20" aria-labelledby="cta-cal-title">
+    <div class="relative mx-auto max-w-3xl text-center">
+      <h2 id="cta-cal-title" class="text-3xl font-bold text-white lg:text-4xl leading-tight">Knowing the number is easy. Hitting it is hard.</h2>
+      <p class="mt-4 text-white/80 max-w-xl mx-auto leading-relaxed">SlayCal scans every meal, logs the calories automatically, and shows you exactly how much room is left in your daily target — in real time.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#" class="flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-50 transition-all shadow-xl" data-analytics-store="ios" data-analytics-placement="cal_cta">
+          <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download free on iOS
+        </a>
+        <a href="#" class="flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white/15 border-2 border-white/30 text-white font-bold hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="cal_cta">
+          <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+          Get it on Google Play
+        </a>
+      </div>
+      <p class="mt-5 text-xs text-white/60">500 free scan credits · No credit card</p>
+    </div>
+  </section>
+
+  <!-- ── OTHER CALCULATORS ──────────────────────────────────────── -->
+  <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="more-cal-title">
+    <div class="mx-auto max-w-4xl">
+      <h2 id="more-cal-title" class="text-xl font-bold text-slate-900 mb-6">More free calculators</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {[
+          { href: '/bmi-calculator', icon: 'monitor_weight', label: 'BMI Calculator', desc: 'Check if your weight is in a healthy range.' },
+          { href: '/macro-calculator', icon: 'pie_chart', label: 'Macro Calculator', desc: 'Break calories into protein, carbs, fat.' },
+          { href: '/body-fat-calculator', icon: 'straighten', label: 'Body Fat Calculator', desc: 'Estimate your body fat percentage.' },
+        ].map(({ href, icon, label, desc }) => (
+          <a href={href} class="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+              <span class="material-symbols-outlined text-primary text-xl">{icon}</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">{label}</p>
+              <p class="text-xs text-slate-400">{desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const metricBtn = document.getElementById('unit-metric')!;
+  const imperialBtn = document.getElementById('unit-imperial')!;
+  const form = document.getElementById('cal-form')!;
+  const placeholder = document.getElementById('results-placeholder')!;
+  const resultsContent = document.getElementById('results-content')!;
+  const resetBtn = document.getElementById('reset-btn')!;
+  let isMetric = true;
+
+  function setUnit(metric: boolean) {
+    isMetric = metric;
+    metricBtn.setAttribute('aria-pressed', String(metric));
+    imperialBtn.setAttribute('aria-pressed', String(!metric));
+    const active = ['bg-white', 'text-slate-900', 'shadow-sm'];
+    if (metric) {
+      metricBtn.classList.add(...active); metricBtn.classList.remove('text-slate-500');
+      imperialBtn.classList.remove(...active); imperialBtn.classList.add('text-slate-500');
+    } else {
+      imperialBtn.classList.add(...active); imperialBtn.classList.remove('text-slate-500');
+      metricBtn.classList.remove(...active); metricBtn.classList.add('text-slate-500');
+    }
+    document.getElementById('height-metric')!.classList.toggle('hidden', !metric);
+    document.getElementById('height-imperial')!.classList.toggle('hidden', metric);
+    document.getElementById('weight-metric')!.classList.toggle('hidden', !metric);
+    document.getElementById('weight-imperial')!.classList.toggle('hidden', metric);
+  }
+
+  metricBtn.addEventListener('click', () => setUnit(true));
+  imperialBtn.addEventListener('click', () => setUnit(false));
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const sexInput = document.querySelector('input[name="sex"]:checked') as HTMLInputElement | null;
+    const sex = sexInput?.value === 'female' ? 'female' : 'male';
+    const age = parseFloat((document.getElementById('age') as HTMLInputElement).value);
+    const activity = parseFloat((document.getElementById('activity') as HTMLSelectElement).value);
+    const goalAdj = parseFloat((document.getElementById('goal') as HTMLSelectElement).value);
+
+    let heightCm: number, weightKg: number;
+    if (isMetric) {
+      heightCm = parseFloat((document.getElementById('height-cm') as HTMLInputElement).value);
+      weightKg = parseFloat((document.getElementById('weight-kg') as HTMLInputElement).value);
+      if (!heightCm || !weightKg) return;
+    } else {
+      const ft = parseFloat((document.getElementById('height-ft') as HTMLInputElement).value) || 0;
+      const inches = parseFloat((document.getElementById('height-in') as HTMLInputElement).value) || 0;
+      const lbs = parseFloat((document.getElementById('weight-lbs') as HTMLInputElement).value);
+      if ((!ft && !inches) || !lbs) return;
+      heightCm = ((ft * 12) + inches) * 2.54;
+      weightKg = lbs * 0.453592;
+    }
+    if (!age) return;
+
+    // Mifflin-St Jeor
+    const bmr = sex === 'male'
+      ? 10 * weightKg + 6.25 * heightCm - 5 * age + 5
+      : 10 * weightKg + 6.25 * heightCm - 5 * age - 161;
+    const tdee = bmr * activity;
+    const target = tdee + goalAdj;
+
+    const goalLabels: Record<string, string> = {
+      '-500': 'Weight loss (~0.5 kg/wk)',
+      '-250': 'Mild loss (~0.25 kg/wk)',
+      '0': 'Maintenance',
+      '250': 'Mild gain (~0.25 kg/wk)',
+      '500': 'Weight gain (~0.5 kg/wk)',
+    };
+    const weekly = goalAdj * 7;
+    const weeklyLabel = goalAdj === 0
+      ? '—'
+      : `${goalAdj > 0 ? '+' : ''}${weekly} kcal/wk`;
+    const projKg = (goalAdj * 7) / 7700;
+    const projectionLabel = goalAdj === 0
+      ? 'Stable'
+      : isMetric
+        ? `${goalAdj > 0 ? '+' : ''}${projKg.toFixed(2)} kg/wk`
+        : `${goalAdj > 0 ? '+' : ''}${(projKg * 2.2046).toFixed(2)} lb/wk`;
+
+    document.getElementById('target-value')!.textContent = String(Math.round(target));
+    document.getElementById('bmr-stat')!.textContent = `${Math.round(bmr)} kcal`;
+    document.getElementById('tdee-stat')!.textContent = `${Math.round(tdee)} kcal`;
+    document.getElementById('weekly-stat')!.textContent = weeklyLabel;
+    document.getElementById('projection-stat')!.textContent = projectionLabel;
+    document.getElementById('goal-badge')!.textContent = goalLabels[String(goalAdj)] || '';
+
+    placeholder.classList.add('hidden');
+    resultsContent.classList.remove('hidden');
+  });
+
+  resetBtn.addEventListener('click', () => {
+    resultsContent.classList.add('hidden');
+    placeholder.classList.remove('hidden');
+    (form as HTMLFormElement).reset();
+  });
+</script>

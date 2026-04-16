@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import MacroCalcContent from '../../components/calculators/MacroCalcContent.astro';
+import { tr } from '../../i18n/tr';
+import '../../styles/global.css';
+
+const t = tr;
+---
+
+<Layout
+  title="Makro Hesaplayıcı — Protein, Karbonhidrat & Yağ Hedefleri | SlayCal"
+  description="Kalori hedefinize ve fitness amacınıza göre günlük protein, karbonhidrat ve yağ hedeflerinizi gram cinsinden hesaplayın."
+  keywords="makro hesaplayıcı, protein hesaplama, karbonhidrat hesaplama, beslenme makroları"
+  lang="tr"
+  canonicalPath="/tr/macro-calculator"
+>
+  <Header t={t} lang="tr" currentPath="/macro-calculator" />
+  <MacroCalcContent />
+  <Footer t={t} lang="tr" />
+</Layout>

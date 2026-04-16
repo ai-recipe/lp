@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MacroCalcContent from '../components/calculators/MacroCalcContent.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Macro Calculator — Protein, Carbs & Fat Targets | SlayCal"
+  description="Calculate your ideal macros — protein, carbohydrates, and fat in grams — based on your calorie goal and fitness objective. Free and instant."
+  keywords="macro calculator, protein calculator, carb calculator, fat calculator, macronutrient calculator, IIFYM calculator, macros for weight loss"
+  lang="en"
+  canonicalPath="/macro-calculator"
+>
+  <Header t={t} lang="en" currentPath="/macro-calculator" />
+  <MacroCalcContent />
+  <Footer t={t} lang="en" />
+</Layout>

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BodyFatCalcContent from '../components/calculators/BodyFatCalcContent.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Body Fat Calculator — Estimate Your Body Fat Percentage | SlayCal"
+  description="Estimate your body fat percentage using the US Navy method. Enter your height, waist, and neck measurements for an instant result — no equipment needed."
+  keywords="body fat calculator, body fat percentage calculator, Navy body fat calculator, how to calculate body fat, lean mass calculator"
+  lang="en"
+  canonicalPath="/body-fat-calculator"
+>
+  <Header t={t} lang="en" currentPath="/body-fat-calculator" />
+  <BodyFatCalcContent />
+  <Footer t={t} lang="en" />
+</Layout>

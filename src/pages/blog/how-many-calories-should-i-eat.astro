@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="How Many Calories Should I Eat Per Day? | SlayCal Blog"
+  description="Find out exactly how many calories you need based on your body, activity level, and goal. Includes the Mifflin-St Jeor formula, TDEE explained, and common mistakes."
+  keywords="how many calories should I eat, daily calorie intake, TDEE, calorie needs per day, calorie deficit, calorie surplus"
+  lang="en"
+  canonicalPath="/blog/how-many-calories-should-i-eat"
+>
+  <Header t={t} lang="en" currentPath="/blog/how-many-calories-should-i-eat" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Calorie needs</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Nutrition Basics</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          How Many Calories Should I Eat Per Day?
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Most people guess — and get it wrong by hundreds of calories per day. Here's how to find your actual number.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 6 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            The "2,000 calories a day" guidance you see on nutrition labels? It's an average — and it might be hundreds of calories off from what <em>you</em> actually need. Getting this right is the single most important step you can take if your goal involves your weight.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why your calorie number is unique to you</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Your body burns a certain amount of energy just to stay alive — breathing, circulating blood, repairing cells. This is called your <strong class="text-slate-800">Basal Metabolic Rate (BMR)</strong>. On top of that, you burn more through daily movement and exercise.</p>
+          <p class="text-slate-600 leading-relaxed mb-4">Your BMR depends on:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Body weight — more mass = more calories burned at rest',
+              'Height — taller people have more surface area to maintain',
+              'Age — BMR decreases roughly 2% per decade after 20',
+              'Biological sex — men typically have higher BMR due to more muscle mass',
+            ].map(item => (
+              <li class="flex items-start gap-2 text-slate-600 text-sm leading-relaxed">
+                <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">check</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">From BMR to TDEE: your actual daily needs</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">BMR is just the base. To find your <strong class="text-slate-800">Total Daily Energy Expenditure (TDEE)</strong> — the calories you actually burn each day — multiply your BMR by an activity factor:</p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { level: 'Sedentary', desc: 'Desk job, no exercise', multiplier: '×1.2' },
+              { level: 'Lightly active', desc: '1–3 workouts/week', multiplier: '×1.375' },
+              { level: 'Moderately active', desc: '3–5 workouts/week', multiplier: '×1.55' },
+              { level: 'Very active', desc: '6–7 workouts/week', multiplier: '×1.725' },
+              { level: 'Extra active', desc: 'Physical job + daily training', multiplier: '×1.9' },
+            ].map(({ level, desc, multiplier }, i) => (
+              <div class={`flex items-center justify-between px-5 py-3.5 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">{level}</p>
+                  <p class="text-xs text-slate-400">{desc}</p>
+                </div>
+                <span class="text-sm font-bold text-primary tabular-nums">{multiplier}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-6">Your TDEE is your maintenance number — eat this and your weight stays the same. Eat less to lose weight. Eat more to gain.</p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">How many calories for weight loss?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">A deficit of <strong class="text-slate-800">500 kcal/day</strong> leads to roughly 0.5 kg (1 lb) of fat loss per week — a safe, sustainable rate for most people. Going too aggressive (1,000+ kcal deficit) often backfires through muscle loss, extreme hunger, and metabolic adaptation.</p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 my-8">
+            {[
+              { label: 'Fat loss', calc: 'TDEE – 500', result: '~0.5 kg/week', color: 'bg-blue-50 border-blue-100', badge: 'text-blue-600' },
+              { label: 'Maintenance', calc: 'TDEE', result: 'Weight holds', color: 'bg-green-50 border-green-100', badge: 'text-green-600' },
+              { label: 'Muscle gain', calc: 'TDEE + 300', result: 'Lean bulk', color: 'bg-purple-50 border-purple-100', badge: 'text-purple-600' },
+            ].map(({ label, calc, result, color, badge }) => (
+              <div class={`rounded-2xl border p-5 text-center ${color}`}>
+                <p class={`text-xs font-bold uppercase tracking-wider mb-2 ${badge}`}>{label}</p>
+                <p class="text-base font-bold text-slate-900">{calc}</p>
+                <p class="text-xs text-slate-500 mt-1">{result}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The 3 most common calorie mistakes</h2>
+
+          <div class="space-y-4 mb-8">
+            {[
+              {
+                num: '01',
+                title: 'Using a fixed number instead of calculating',
+                desc: 'A 55 kg sedentary woman needs around 1,600 kcal/day. A 90 kg active man might need 3,200. Using "2,000" for both is useless.',
+              },
+              {
+                num: '02',
+                title: 'Not recalculating as your weight changes',
+                desc: 'As you lose weight, your TDEE drops — your body needs fewer calories to function. Failing to adjust leads to plateaus.',
+              },
+              {
+                num: '03',
+                title: 'Overestimating the calorie burn from exercise',
+                desc: 'Calorie counters on treadmills overestimate burn by 30–70%. Use activity level in your TDEE calculation, not gym machine readouts.',
+              },
+            ].map(({ num, title, desc }) => (
+              <div class="flex gap-4 p-5 rounded-2xl bg-background-light">
+                <span class="text-2xl font-bold text-primary/30 leading-none shrink-0">{num}</span>
+                <div>
+                  <p class="font-bold text-slate-900 text-sm mb-1">{title}</p>
+                  <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">How to track it without going crazy</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Knowing your calorie target is step one. Actually staying near it is step two — and that's where most people struggle. Manual logging is tedious, and estimates for restaurant meals are wildly inaccurate.</p>
+          <p class="text-slate-600 leading-relaxed mb-4">SlayCal solves this by letting you point your camera at a meal and get an instant calorie and macro breakdown — no barcode hunting, no manual searches. Your daily total updates in real time as you eat.</p>
+
+        </div>
+
+        <!-- Internal link to calculator -->
+        <div class="mt-10 rounded-2xl bg-primary/5 border border-primary/20 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+            <span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Find your exact calorie target</p>
+            <p class="text-xs text-slate-500 mb-3">Use our free calorie calculator to get your personalized TDEE based on your body and activity level.</p>
+            <a href="/calorie-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
+              Open Calorie Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Stop estimating. Start knowing.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal scans your meals for instant calorie counts and compares them to your personal target. Free to download.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_calories_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_calories_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED POSTS ──────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/what-is-bmi" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-500 text-xl">monitor_weight</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">What Is BMI and How Should You Actually Use It?</p>
+              <p class="text-xs text-slate-400 mt-0.5">5 min read</p>
+            </div>
+          </a>
+          <a href="/calorie-calculator" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-primary text-xl">calculate</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Free Calorie Calculator</p>
+              <p class="text-xs text-slate-400 mt-0.5">Get your personalized target</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

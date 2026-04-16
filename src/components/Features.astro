@@ -42,19 +42,19 @@ const { features } = t;
     <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-slate-400 border-t border-slate-100 pt-12">
       <div class="flex items-center gap-2">
         <span class="material-symbols-outlined text-primary text-lg">verified</span>
-        <span>iOS & Android</span>
+        <span>{features.trust_bar.platform}</span>
       </div>
       <div class="flex items-center gap-2">
         <span class="material-symbols-outlined text-primary text-lg">lock</span>
-        <span>{features.items[0].title.includes('AI') ? 'Privacy first' : 'Gizlilik öncelikli'}</span>
+        <span>{features.trust_bar.privacy}</span>
       </div>
       <div class="flex items-center gap-2">
         <span class="material-symbols-outlined text-primary text-lg">bolt</span>
-        <span>{features.items[0].icon === 'photo_camera' ? 'Real-time AI' : 'Gerçek zamanlı yapay zeka'}</span>
+        <span>{features.trust_bar.realtime}</span>
       </div>
       <div class="flex items-center gap-2">
         <span class="material-symbols-outlined text-primary text-lg">star</span>
-        <span>4.8 ★ rating</span>
+        <span>{features.trust_bar.rating}</span>
       </div>
     </div>
   </div>
