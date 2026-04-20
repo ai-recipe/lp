@@ -11,90 +11,138 @@ const { footer, nav } = t;
 const logoHref = lang === 'en' ? '/' : `/${lang}/`;
 ---
 
-<footer class="border-t border-slate-100 bg-white px-6 py-16 lg:px-20" aria-label="Footer">
-  <div class="mx-auto max-w-7xl">
-    <div class="grid grid-cols-1 gap-12 lg:grid-cols-4">
+<footer class="border-t border-slate-100 bg-white" aria-label="Footer">
 
-      <!-- Brand column -->
-      <div class="col-span-1 lg:col-span-2 space-y-6">
-        <a href={logoHref} class="flex items-center gap-2 w-fit group" aria-label="SlayCal – Home">
-          <img src="/logo.svg" alt="SlayCal Logo" class="w-24" />
+  <!-- ── Main grid ──────────────────────────────────────────── -->
+  <div class="px-6 py-16 lg:px-20">
+    <div class="mx-auto max-w-7xl grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-5">
+
+      <!-- Brand column (spans 2 cols on lg) -->
+      <div class="col-span-2 lg:col-span-2 space-y-6">
+        <a href={logoHref} class="flex items-center gap-2 w-fit" aria-label="SlayCal – Home">
+          <img src="/logo.svg" alt="SlayCal" class="w-28" />
         </a>
-        <p class="max-w-sm text-slate-500 text-sm leading-relaxed">
+        <p class="max-w-xs text-slate-500 text-sm leading-relaxed">
           {footer.tagline}
         </p>
 
-        <!-- App Store Badges -->
-        <div class="flex flex-wrap gap-3">
+        <!-- App store badges -->
+        <div class="flex flex-col sm:flex-row gap-3">
           <a
             href="#"
-            class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-700 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            class="inline-flex items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-700 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 w-fit"
             aria-label={`${nav.download_ios_sub} ${nav.store_ios}`}
             data-analytics-store="ios"
             data-analytics-placement="footer"
           >
-            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             <div class="flex flex-col leading-none">
-              <span class="text-[9px] opacity-75">{nav.download_ios_sub}</span>
+              <span class="text-[9px] opacity-70 mb-0.5">{nav.download_ios_sub}</span>
               <span class="text-sm font-bold">{nav.store_ios}</span>
             </div>
           </a>
           <a
             href="#"
-            class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white hover:bg-accent transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            class="inline-flex items-center gap-2.5 px-4 py-3 rounded-xl bg-primary text-white hover:bg-accent transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary w-fit"
             aria-label={`${nav.download_android_sub} ${nav.store_android}`}
             data-analytics-store="android"
             data-analytics-placement="footer"
           >
-            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/>
             </svg>
             <div class="flex flex-col leading-none">
-              <span class="text-[9px] opacity-75">{nav.download_android_sub}</span>
+              <span class="text-[9px] opacity-70 mb-0.5">{nav.download_android_sub}</span>
               <span class="text-sm font-bold">{nav.store_android}</span>
             </div>
           </a>
         </div>
       </div>
 
-      <!-- Product links -->
-      <nav aria-label="Product links">
-        <h4 class="mb-6 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.product_title}</h4>
-        <ul class="space-y-3 text-sm text-slate-500">
+      <!-- Calculators column -->
+      <nav aria-label="Calculator links">
+        <h4 class="mb-5 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.product_title}</h4>
+        <ul class="space-y-3">
           {footer.product_links.map((link) => (
             <li>
-              <a class="hover:text-primary transition-colors" href={link.href}>{link.label}</a>
+              <a class="text-sm text-slate-500 hover:text-primary transition-colors" href={link.href}>{link.label}</a>
             </li>
           ))}
         </ul>
       </nav>
 
-      <!-- Legal + Language -->
-      <div class="space-y-8">
-        <nav aria-label="Legal links">
-          <h4 class="mb-6 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.legal_title}</h4>
-          <ul class="space-y-3 text-sm text-slate-500">
-            {footer.legal_links.map((link) => (
-              <li>
-                <a class="hover:text-primary transition-colors" href={link.href}>{link.label}</a>
-              </li>
+      <!-- Blog column -->
+      <nav aria-label="Blog links">
+        <h4 class="mb-5 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.blog_title}</h4>
+        <ul class="space-y-3">
+          {footer.blog_links.map((link) => (
+            <li>
+              <a class="text-sm text-slate-500 hover:text-primary transition-colors" href={link.href}>{link.label}</a>
+            </li>
+          ))}
+          <li>
+            <a class="text-sm text-primary font-semibold hover:underline flex items-center gap-1" href="/blog">
+              {lang === 'tr' ? 'Tüm yazılar' : lang === 'de' ? 'Alle Artikel' : lang === 'fr' ? 'Tous les articles' : lang === 'es' ? 'Ver todos' : 'All posts'}
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Legal column -->
+      <nav aria-label="Legal links">
+        <h4 class="mb-5 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.legal_title}</h4>
+        <ul class="space-y-3">
+          {footer.legal_links.map((link) => (
+            <li>
+              <a class="text-sm text-slate-500 hover:text-primary transition-colors" href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+
+        <!-- Language badge -->
+        <div class="mt-8">
+          <h4 class="mb-3 font-bold uppercase tracking-wider text-xs text-slate-900">{footer.language_title}</h4>
+          <div class="flex flex-wrap gap-1.5">
+            {[
+              { code: 'en', label: 'EN', href: '/' },
+              { code: 'tr', label: 'TR', href: '/tr/' },
+              { code: 'de', label: 'DE', href: '/de/' },
+              { code: 'fr', label: 'FR', href: '/fr/' },
+              { code: 'es', label: 'ES', href: '/es/' },
+              { code: 'pt-br', label: 'PT', href: '/pt-br/' },
+              { code: 'ru', label: 'RU', href: '/ru/' },
+              { code: 'ja', label: 'JA', href: '/ja/' },
+              { code: 'ko', label: 'KO', href: '/ko/' },
+              { code: 'it', label: 'IT', href: '/it/' },
+            ].map(({ code, label, href }) => (
+              <a
+                href={href}
+                class={`px-2 py-1 rounded-lg text-xs font-bold transition-all ${code === lang ? 'bg-primary text-white' : 'bg-slate-100 text-slate-500 hover:bg-primary/10 hover:text-primary'}`}
+              >
+                {label}
+              </a>
             ))}
-          </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
 
-  
-      </div>
     </div>
+  </div>
 
-    <!-- Bottom bar -->
-    <div class="mt-16 border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+  <!-- ── Bottom bar ─────────────────────────────────────────── -->
+  <div class="border-t border-slate-100 px-6 py-6 lg:px-20">
+    <div class="mx-auto max-w-7xl flex flex-col sm:flex-row justify-between items-center gap-3">
       <p class="text-xs text-slate-400">{footer.copyright}</p>
-      <div class="flex items-center gap-2 text-xs text-slate-400">
-        <span class="material-symbols-outlined text-sm text-primary">favorite</span>
-        <span>{lang === 'tr' ? 'Sağlıklı beslenmeyi seviyoruz' : 'Made with love for healthy eating'}</span>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1.5 text-xs text-slate-400">
+          <span class="material-symbols-outlined text-sm text-primary">favorite</span>
+          <span>{lang === 'tr' ? 'Sağlıklı beslenmeyi seviyoruz' : 'Made with love for healthy eating'}</span>
+        </div>
       </div>
     </div>
   </div>
+
 </footer>

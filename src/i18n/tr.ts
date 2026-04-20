@@ -203,10 +203,19 @@ export const tr = {
     legal_title: 'Yasal',
     language_title: 'Dil',
     product_links: [
-      { href: '#features', label: 'Özellikler' },
-      { href: '#pricing', label: 'Fiyatlandırma' },
-      { href: '#progress', label: 'İlerleme' },
-      { href: '#', label: 'Yardım Merkezi' },
+      { href: '/tr/calculators', label: 'Hesaplayıcılar' },
+      { href: '/tr/calorie-calculator', label: 'Kalori Hesaplayıcı' },
+      { href: '/tr/macro-calculator', label: 'Makro Hesaplayıcı' },
+      { href: '/tr/bmi-calculator', label: 'VKİ Hesaplayıcı' },
+      { href: '/tr/body-fat-calculator', label: 'Vücut Yağı Hesaplayıcı' },
+    ],
+    blog_title: 'Blog',
+    blog_links: [
+      { href: '/blog/caffeine-supplement-guide', label: 'Kafein Rehberi' },
+      { href: '/blog/creatine-supplement-guide', label: 'Kreatin Rehberi' },
+      { href: '/blog/protein-powder-guide', label: 'Protein Tozu' },
+      { href: '/blog/push-pull-legs-program', label: 'Push Pull Legs' },
+      { href: '/blog/protein-pancake-recipe', label: 'Protein Pankek' },
     ],
     legal_links: [
       { href: '/tr/privacy', label: 'Gizlilik Politikası' },

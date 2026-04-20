@@ -203,10 +203,19 @@ export const ru = {
     legal_title: 'Правовая информация',
     language_title: 'Язык',
     product_links: [
-      { href: '#features', label: 'Возможности' },
-      { href: '#pricing', label: 'Цены' },
-      { href: '#progress', label: 'Прогресс' },
-      { href: '#', label: 'Центр помощи' },
+      { href: '/calculators', label: 'Калькуляторы' },
+      { href: '/calorie-calculator', label: 'Калькулятор калорий' },
+      { href: '/macro-calculator', label: 'Калькулятор макросов' },
+      { href: '/bmi-calculator', label: 'Калькулятор ИМТ' },
+      { href: '/body-fat-calculator', label: 'Калькулятор жира' },
+    ],
+    blog_title: 'Блог',
+    blog_links: [
+      { href: '/blog/caffeine-supplement-guide', label: 'Гид по кофеину' },
+      { href: '/blog/creatine-supplement-guide', label: 'Гид по креатину' },
+      { href: '/blog/protein-powder-guide', label: 'Протеиновый порошок' },
+      { href: '/blog/push-pull-legs-program', label: 'Push Pull Legs' },
+      { href: '/blog/protein-pancake-recipe', label: 'Протеиновые панкейки' },
     ],
     legal_links: [
       { href: '/privacy', label: 'Политика конфиденциальности' },

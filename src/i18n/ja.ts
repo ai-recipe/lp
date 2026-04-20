@@ -203,10 +203,19 @@ export const ja = {
     legal_title: '法的情報',
     language_title: '言語',
     product_links: [
-      { href: '#features', label: '機能' },
-      { href: '#pricing', label: '料金' },
-      { href: '#progress', label: '進捗' },
-      { href: '#', label: 'ヘルプセンター' },
+      { href: '/calculators', label: '計算機' },
+      { href: '/calorie-calculator', label: 'カロリー計算機' },
+      { href: '/macro-calculator', label: 'マクロ計算機' },
+      { href: '/bmi-calculator', label: 'BMI計算機' },
+      { href: '/body-fat-calculator', label: '体脂肪計算機' },
+    ],
+    blog_title: 'ブログ',
+    blog_links: [
+      { href: '/blog/caffeine-supplement-guide', label: 'カフェインガイド' },
+      { href: '/blog/creatine-supplement-guide', label: 'クレアチンガイド' },
+      { href: '/blog/protein-powder-guide', label: 'プロテインパウダー' },
+      { href: '/blog/push-pull-legs-program', label: 'プッシュプルレッグ' },
+      { href: '/blog/protein-pancake-recipe', label: 'プロテインパンケーキ' },
     ],
     legal_links: [
       { href: '/privacy', label: 'プライバシーポリシー' },

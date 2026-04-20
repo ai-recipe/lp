@@ -203,10 +203,19 @@ export const ko = {
     legal_title: '법률',
     language_title: '언어',
     product_links: [
-      { href: '#features', label: '기능' },
-      { href: '#pricing', label: '요금' },
-      { href: '#progress', label: '진행률' },
-      { href: '#', label: '도움말 센터' },
+      { href: '/calculators', label: '계산기' },
+      { href: '/calorie-calculator', label: '칼로리 계산기' },
+      { href: '/macro-calculator', label: '매크로 계산기' },
+      { href: '/bmi-calculator', label: 'BMI 계산기' },
+      { href: '/body-fat-calculator', label: '체지방 계산기' },
+    ],
+    blog_title: '블로그',
+    blog_links: [
+      { href: '/blog/caffeine-supplement-guide', label: '카페인 가이드' },
+      { href: '/blog/creatine-supplement-guide', label: '크레아틴 가이드' },
+      { href: '/blog/protein-powder-guide', label: '단백질 파우더' },
+      { href: '/blog/push-pull-legs-program', label: 'Push Pull Legs' },
+      { href: '/blog/protein-pancake-recipe', label: '단백질 팬케이크' },
     ],
     legal_links: [
       { href: '/privacy', label: '개인정보 보호정책' },

@@ -203,10 +203,19 @@ export const pt_br = {
     legal_title: 'Legal',
     language_title: 'Idioma',
     product_links: [
-      { href: '#features', label: 'Recursos' },
-      { href: '#pricing', label: 'Preços' },
-      { href: '#progress', label: 'Progresso' },
-      { href: '#', label: 'Central de Ajuda' },
+      { href: '/calculators', label: 'Calculadoras' },
+      { href: '/calorie-calculator', label: 'Calculadora de Calorias' },
+      { href: '/macro-calculator', label: 'Calculadora de Macros' },
+      { href: '/bmi-calculator', label: 'Calculadora de IMC' },
+      { href: '/body-fat-calculator', label: 'Calculadora de Gordura' },
+    ],
+    blog_title: 'Blog',
+    blog_links: [
+      { href: '/blog/caffeine-supplement-guide', label: 'Guia de Cafeína' },
+      { href: '/blog/creatine-supplement-guide', label: 'Guia de Creatina' },
+      { href: '/blog/protein-powder-guide', label: 'Proteína em Pó' },
+      { href: '/blog/push-pull-legs-program', label: 'Push Pull Legs' },
+      { href: '/blog/protein-pancake-recipe', label: 'Panquecas de Proteína' },
     ],
     legal_links: [
       { href: '/privacy', label: 'Política de Privacidade' },
