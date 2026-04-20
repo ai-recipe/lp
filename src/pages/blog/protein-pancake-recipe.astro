@@ -1,0 +1,278 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="High-Protein Pancake Recipe: 40g Protein, 5 Minutes | SlayCal Blog"
+  description="A protein pancake recipe that actually tastes good. 40g protein, ready in 5 minutes, with macros for every variation — chocolate, banana, blueberry, and more."
+  keywords="protein pancake recipe, high protein pancakes, whey protein pancakes, macro friendly pancakes, healthy pancake recipe, muscle building breakfast"
+  lang="en"
+  canonicalPath="/blog/protein-pancake-recipe"
+>
+  <Header t={t} lang="en" currentPath="/blog/protein-pancake-recipe" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Protein Pancakes</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-yellow-600">Recipes</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          High-Protein Pancake Recipe:<br/>40g Protein, 5 Minutes
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          A breakfast that tastes like a treat and hits like a proper meal. Full macros, 5 variations, and the two mistakes that make protein pancakes rubbery.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Protein pancakes have a reputation problem — most recipes produce dense, rubbery discs that taste like chalk. Done right, they're light, fluffy, genuinely delicious, and a legitimate high-protein breakfast that doesn't feel like a sacrifice. Here's the base recipe that works, plus the variations and the mistakes to avoid.
+          </p>
+
+          <!-- Macro snapshot -->
+          <div class="rounded-2xl border border-yellow-100 bg-yellow-50 p-6 mb-10">
+            <p class="text-xs font-bold uppercase tracking-wider text-yellow-700 mb-4">Nutrition per full batch (serves 1–2)</p>
+            <div class="grid grid-cols-4 gap-3">
+              {[
+                { label: 'Calories', value: '480 kcal' },
+                { label: 'Protein', value: '42g' },
+                { label: 'Carbs', value: '45g' },
+                { label: 'Fat', value: '10g' },
+              ].map(({ label, value }) => (
+                <div class="text-center">
+                  <p class="text-xl font-bold text-slate-900">{value}</p>
+                  <p class="text-xs text-slate-500 mt-0.5">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The base recipe</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">This is the foundation. Get this right, then experiment with variations.</p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            <div class="px-5 py-3 bg-slate-800">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-300">Ingredients</p>
+            </div>
+            {[
+              { ingredient: '1 scoop (30g) whey protein concentrate', note: 'Vanilla or unflavoured works best' },
+              { ingredient: '60g rolled oats', note: 'Blended to flour, or use oat flour' },
+              { ingredient: '2 whole eggs', note: 'Adds fat, richness, and binding' },
+              { ingredient: '120ml milk (any type)', note: 'Adjust to get thick pancake batter consistency' },
+              { ingredient: '½ tsp baking powder', note: 'Critical for fluffiness — do not skip' },
+              { ingredient: 'Pinch of salt', note: 'Enhances sweetness' },
+              { ingredient: '½ tsp vanilla extract', note: 'Optional, but makes a big difference' },
+            ].map(({ ingredient, note }, i) => (
+              <div class={`px-5 py-3.5 flex items-start gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <span class="material-symbols-outlined text-yellow-500 text-base shrink-0 mt-0.5">check_small</span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">{ingredient}</p>
+                  <p class="text-xs text-slate-400">{note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Method</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { step: '1', action: 'Blend oats into flour', detail: 'Use a blender or food processor until fine. This gives a much smoother pancake than whole rolled oats.' },
+              { step: '2', action: 'Mix dry ingredients', detail: 'Combine oat flour, protein powder, baking powder, and salt in a bowl. Whisk to combine.' },
+              { step: '3', action: 'Add wet ingredients', detail: 'Beat in eggs, milk, and vanilla. Mix until just combined — a few small lumps are fine. Overmixing develops gluten and makes pancakes dense.' },
+              { step: '4', action: 'Rest the batter (optional but recommended)', detail: 'Let batter sit for 3–5 minutes. The oats absorb liquid and the batter thickens. Adjust with a splash more milk if too thick.' },
+              { step: '5', action: 'Cook on medium-low heat', detail: 'Use a non-stick pan with a tiny amount of coconut oil or cooking spray. Medium-low heat is key — protein burns faster than flour.' },
+              { step: '6', action: 'Flip once bubbles form', detail: 'Wait for bubbles to appear across the surface and edges to look set before flipping. About 2–3 minutes per side.' },
+            ].map(({ step, action, detail }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5 flex gap-4">
+                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-700 font-bold text-sm">{step}</div>
+                <div>
+                  <p class="text-sm font-bold text-slate-900 mb-1">{action}</p>
+                  <p class="text-xs text-slate-500 leading-relaxed">{detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">5 variations with macros</h2>
+
+          <div class="space-y-4 mb-8">
+            {[
+              {
+                name: 'Banana Protein Pancakes',
+                change: 'Add 1 medium ripe banana (mashed) to the batter. Reduce milk by 2 tbsp.',
+                macros: '~540 kcal · 40g protein · 60g carbs · 10g fat',
+                bonus: 'Natural sweetness, no added sugar needed. Great pre-workout breakfast.',
+                color: 'yellow',
+              },
+              {
+                name: 'Blueberry Protein Pancakes',
+                change: 'Fold 80g fresh or frozen blueberries into the batter after mixing.',
+                macros: '~510 kcal · 42g protein · 52g carbs · 10g fat',
+                bonus: 'Antioxidants plus natural sweetness. Frozen work just as well as fresh.',
+                color: 'blue',
+              },
+              {
+                name: 'Chocolate Protein Pancakes',
+                change: 'Use chocolate whey and add 1 tbsp cocoa powder. Add 1 tbsp maple syrup to batter.',
+                macros: '~530 kcal · 41g protein · 50g carbs · 11g fat',
+                bonus: 'Tastes like a dessert. Works for a high-calorie bulking breakfast.',
+                color: 'amber',
+              },
+              {
+                name: 'Greek Yogurt Protein Pancakes (extra protein)',
+                change: 'Replace half the milk (60ml) with 100g non-fat Greek yogurt.',
+                macros: '~500 kcal · 50g protein · 44g carbs · 9g fat',
+                bonus: 'Casein boost from yogurt. Ideal if you\'re prioritizing protein above everything.',
+                color: 'emerald',
+              },
+              {
+                name: 'Vegan Protein Pancakes',
+                change: 'Use pea protein, replace eggs with 2 flax eggs (2 tbsp ground flax + 5 tbsp water, rested 5 min), use oat milk.',
+                macros: '~460 kcal · 35g protein · 50g carbs · 9g fat',
+                bonus: 'Slightly denser than egg-based version but works well with banana added.',
+                color: 'lime',
+              },
+            ].map(({ name, change, macros, bonus, color }) => (
+              <div class={`rounded-2xl border border-${color}-100 bg-${color}-50 p-5`}>
+                <p class={`text-sm font-bold text-slate-900 mb-2`}>{name}</p>
+                <p class="text-xs text-slate-600 mb-2"><span class="font-semibold">Change:</span> {change}</p>
+                <p class={`text-xs font-semibold text-${color}-700 mb-1.5`}>{macros}</p>
+                <p class="text-xs text-slate-500 italic">{bonus}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The two mistakes that ruin protein pancakes</h2>
+          <div class="space-y-4 mb-8">
+            {[
+              {
+                mistake: 'Heat too high',
+                why: 'Protein denatures and toughens quickly at high heat. The outside burns before the inside cooks. Use medium-low heat and cook slowly — it takes an extra minute but makes all the difference.',
+              },
+              {
+                mistake: 'Too much protein powder, not enough binder',
+                why: 'Recipes with 2 scoops per serving and only 1 egg have a bad ratio. Protein powder has no gluten and poor binding properties. Stick to 1 scoop max with 2 eggs and include the oat flour as the structural base.',
+              },
+            ].map(({ mistake, why }) => (
+              <div class="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+                <p class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-rose-500 text-base">warning</span>{mistake}
+                </p>
+                <p class="text-xs text-slate-500 leading-relaxed pl-7">{why}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Topping ideas (and their macros)</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { topping: 'Greek yogurt + honey', macros: '+80 kcal, +8g protein', note: 'Best all-rounder. Adds creaminess and protein.' },
+              { topping: 'Nut butter (1 tbsp)', macros: '+90 kcal, +4g protein', note: 'Healthy fats. Adds calories for bulking.' },
+              { topping: 'Fresh berries (100g)', macros: '+50 kcal, +1g protein', note: 'Antioxidants, fiber, low calorie add-on.' },
+              { topping: 'Maple syrup (1 tbsp)', macros: '+52 kcal, 0g protein', note: 'Pure flavor. Use sparingly if cutting.' },
+            ].map(({ topping, macros, note }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-4">
+                <p class="text-sm font-bold text-slate-900 mb-0.5">{topping}</p>
+                <p class="text-xs font-semibold text-primary mb-1">{macros}</p>
+                <p class="text-xs text-slate-500">{note}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Meal prep: can you make them ahead?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Yes. Cook the full batch, let cool, stack with parchment between each pancake, and refrigerate for up to 3 days or freeze for up to 1 month. Reheat in a dry pan for 1 minute each side or 30 seconds in a microwave. Quality drops slightly from fresh but holds up very well.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-yellow-50 border border-yellow-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-yellow-100">
+            <span class="material-symbols-outlined text-yellow-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Track your breakfast macros automatically</p>
+            <p class="text-xs text-slate-500 mb-3">Log your protein pancakes in SlayCal in seconds — scan the ingredients or search by name. Know your totals before 8am.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-yellow-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Know exactly what you're eating.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal tracks meals in seconds — scan, log, and see your protein, carb, and calorie totals update live.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_pancake_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_pancake_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/protein-powder-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">fitness_center</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Protein Powder: Which Type Is Right for You?</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

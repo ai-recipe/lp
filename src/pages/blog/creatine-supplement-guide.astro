@@ -1,0 +1,234 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Creatine: The Complete Supplement Guide — How It Works, Dosing & Myths | SlayCal Blog"
+  description="Creatine is the most evidence-backed strength supplement that exists. Here's how it works, the right dose, loading vs no-load, and the myths debunked."
+  keywords="creatine supplement, creatine monohydrate, creatine loading, creatine dose, creatine benefits, creatine myths, creatine for muscle"
+  lang="en"
+  canonicalPath="/blog/creatine-supplement-guide"
+>
+  <Header t={t} lang="en" currentPath="/blog/creatine-supplement-guide" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Creatine</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Supplements</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Creatine: The Complete<br/>Supplement Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          The most research-backed performance supplement in existence. Here's everything you need to know — no bro-science included.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 6 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Creatine monohydrate has over 500 peer-reviewed studies behind it. It is one of the cheapest, safest, and most effective supplements you can take. Yet most gym-goers either misuse it, cycle it unnecessarily, or avoid it entirely based on myths. This guide sets the record straight.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What creatine actually does</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Creatine is stored in muscle cells as phosphocreatine. During short bursts of high-intensity effort — a heavy squat, a sprint, a final rep — your body rapidly regenerates ATP (energy currency) using phosphocreatine as a fuel source. More creatine in the muscle = more ATP available = more reps before fatigue kicks in.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Supplementing creatine saturates your muscle stores beyond what diet alone provides, increasing your capacity for explosive, high-intensity work.
+          </p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 my-6">
+            {[
+              { label: 'Strength gain', value: '+5–15%', sub: 'Typical improvement in 1RM over 4–8 weeks' },
+              { label: 'Lean mass gain', value: '+1–2 kg', sub: 'Initial water retention, then real muscle' },
+              { label: 'Rep performance', value: '+1–3 reps', sub: 'Extra reps at 70–80% 1RM in compound lifts' },
+            ].map(({ label, value, sub }) => (
+              <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">{label}</p>
+                <p class="text-2xl font-bold text-slate-900">{value}</p>
+                <p class="text-xs text-slate-500 mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Loading vs. no loading</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Both approaches work. Loading gets you to full saturation faster; skipping the load phase just takes a bit longer.
+          </p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { method: 'Loading protocol', dose: '20g/day (4×5g) for 5–7 days, then 3–5g/day', time: 'Full saturation in ~7 days', note: 'Slightly more GI discomfort during loading week' },
+              { method: 'No-load protocol', dose: '3–5g/day from day one', time: 'Full saturation in ~28 days', note: 'No side effects, no difference in long-term results' },
+            ].map(({ method, dose, time, note }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-bold text-slate-900 mb-1">{method}</p>
+                <p class="text-xs font-semibold text-blue-600 mb-0.5">{dose}</p>
+                <p class="text-xs text-slate-500">{time} · {note}</p>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-4">
+            <strong>Recommendation:</strong> Skip the loading phase. Take 5g daily, every day, including rest days. Muscle creatine stores stay saturated as long as you keep taking it.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Timing: does it matter?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Timing is largely irrelevant. Some evidence suggests post-workout creatine may have a slight edge — insulin sensitivity is higher after training, which helps creatine transport into muscles. But the effect is small. Consistency matters far more than timing. Pick a time and take it daily.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Which form of creatine should you buy?</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { form: 'Creatine monohydrate', verdict: 'Best choice', desc: 'Cheapest, most studied, equally effective as every other form. Buy micronized for better mixability.' },
+              { form: 'Creatine HCL', verdict: 'Fine, but overpriced', desc: 'Better solubility, smaller dose needed, but costs 3–5x more with no proven performance advantage.' },
+              { form: 'Buffered creatine (Kre-Alkalyn)', verdict: 'Skip it', desc: 'Marketing claims it avoids conversion to creatinine. Studies show no difference vs monohydrate.' },
+              { form: 'Creatine ethyl ester', verdict: 'Avoid', desc: 'Converts to creatinine faster than monohydrate. Actually less effective in studies.' },
+            ].map(({ form, verdict, desc }) => (
+              <div class={`rounded-2xl border p-5 flex gap-4 ${verdict === 'Best choice' ? 'border-emerald-100 bg-emerald-50' : verdict === 'Avoid' ? 'border-red-100 bg-red-50' : 'border-slate-100 bg-background-light'}`}>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <p class="text-sm font-bold text-slate-900">{form}</p>
+                    <span class={`text-xs font-bold px-2 py-0.5 rounded-full ${verdict === 'Best choice' ? 'bg-emerald-100 text-emerald-700' : verdict === 'Avoid' ? 'bg-red-100 text-red-700' : 'bg-slate-200 text-slate-600'}`}>{verdict}</span>
+                  </div>
+                  <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Myths busted</h2>
+          <div class="space-y-4 mb-8">
+            {[
+              { myth: 'Creatine damages your kidneys', fact: 'False in healthy individuals. Creatine raises serum creatinine (a kidney marker) but this is a direct result of creatine metabolism, not kidney damage. Hundreds of studies confirm long-term safety.' },
+              { myth: 'You need to cycle creatine', fact: 'No evidence for this. There is no benefit to cycling. Taking it daily indefinitely maintains muscle saturation with no downside.' },
+              { myth: 'Creatine causes hair loss', fact: 'One study in rugby players found elevated DHT (linked to hair loss) after loading. No follow-up study has replicated this. The evidence is extremely weak.' },
+              { myth: 'Creatine is a steroid', fact: 'It is an amino acid derivative made naturally in your liver. Nothing like a steroid pharmacologically or legally.' },
+              { myth: 'More is better', fact: 'Once muscle stores are saturated (~5g/day), excess creatine is excreted. Taking 10–20g/day in maintenance is just expensive urine.' },
+            ].map(({ myth, fact }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="font-bold text-rose-600 text-sm mb-2 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-base">close</span>Myth: "{myth}"
+                </p>
+                <p class="text-xs text-slate-600 leading-relaxed flex items-start gap-2">
+                  <span class="material-symbols-outlined text-emerald-600 text-base shrink-0 mt-0.5">check_circle</span>{fact}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Who benefits most</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Creatine benefits anyone doing resistance training, sprinting, or high-intensity intervals. It is particularly effective for:
+          </p>
+          <ul class="list-none space-y-2 mb-8">
+            {[
+              'Strength and power athletes (weightlifting, powerlifting, sprinting)',
+              'Vegetarians and vegans — dietary creatine comes only from meat/fish, so baseline stores are lower and response to supplementation is stronger',
+              'Natural lifters trying to maximize strength without performance-enhancing drugs',
+              'Older adults — evidence shows creatine preserves muscle mass and cognitive function with aging',
+            ].map(item => (
+              <li class="flex gap-2 text-sm text-slate-600">
+                <span class="material-symbols-outlined text-blue-500 text-base shrink-0 mt-0.5">check_circle</span>{item}
+              </li>
+            ))}
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            5g of creatine monohydrate, daily, consistently. That is all. No loading required. No cycling required. No exotic forms needed. One of the cheapest, safest, most effective decisions you can make in your supplement stack.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-blue-50 border border-blue-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100">
+            <span class="material-symbols-outlined text-blue-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Calculate your macro targets</p>
+            <p class="text-xs text-slate-500 mb-3">Creatine handles the energy side. Make sure your protein and calorie targets support your muscle gain goal.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track every macro automatically.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal logs your nutrition in seconds — scan, tap, done. Spend your energy lifting, not logging.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_creatine_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_creatine_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/protein-powder-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">fitness_center</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Protein Powder: Which Type Is Right for You?</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

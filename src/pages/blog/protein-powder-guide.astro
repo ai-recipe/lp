@@ -1,0 +1,277 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Protein Powder: Which Type Is Right for You? Complete Guide | SlayCal Blog"
+  description="Whey, casein, plant protein — what's the actual difference? A practical breakdown of every major protein powder type, who needs them, and what to look for on the label."
+  keywords="protein powder guide, whey protein, casein protein, plant protein, best protein supplement, protein powder types, when to take protein powder"
+  lang="en"
+  canonicalPath="/blog/protein-powder-guide"
+>
+  <Header t={t} lang="en" currentPath="/blog/protein-powder-guide" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Protein Powder</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Supplements</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Protein Powder: Which<br/>Type Is Right for You?
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Whey, isolate, casein, plant, collagen — the supplement aisle is overwhelming. Here's a clear breakdown of what works, what's hype, and how to choose.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 7 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Protein powder is a food supplement, not a magic formula. It is simply a convenient way to increase your daily protein intake when whole food sources are inconvenient or insufficient. Whether you need it — and which type you should pick — depends on your diet, goal, and gut tolerance.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Do you actually need protein powder?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Only if you're consistently missing your daily protein target through whole foods. For most active people hitting <strong>1.6–2.2g of protein per kg body weight</strong>, protein powder is a convenient gap-filler — not a requirement. If you can hit your target with chicken, eggs, Greek yogurt, and legumes, you don't need powder.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            If you're a vegetarian, vegan, very busy, or simply don't enjoy eating a lot of high-protein food, powder earns its place.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Types of protein powder: the full breakdown</h2>
+
+          <div class="space-y-4 mb-8">
+            {[
+              {
+                name: 'Whey Concentrate',
+                protein: '70–80% protein by weight',
+                best: 'Best all-rounder',
+                color: 'emerald',
+                details: [
+                  'Derived from milk during cheese production.',
+                  'Fast-digesting — peaks in blood within 60–90 minutes.',
+                  'Rich in leucine, the amino acid that triggers muscle protein synthesis.',
+                  'Contains small amounts of lactose — can cause bloating for sensitive people.',
+                  'Most affordable whey option.',
+                ],
+              },
+              {
+                name: 'Whey Isolate',
+                protein: '90%+ protein by weight',
+                best: 'Best for lactose intolerance',
+                color: 'blue',
+                details: [
+                  'Further processed to remove lactose and fat.',
+                  'Slightly faster absorption than concentrate.',
+                  'Minimal carbs and fat per scoop.',
+                  'No meaningful performance difference vs concentrate — pay more for purity, not results.',
+                ],
+              },
+              {
+                name: 'Casein',
+                protein: '70–80% protein by weight',
+                best: 'Best before bed',
+                color: 'violet',
+                details: [
+                  'Slow-digesting — forms a gel in the stomach, releases amino acids over 5–7 hours.',
+                  'Ideal pre-sleep protein to support overnight muscle protein synthesis.',
+                  'More filling than whey — good for appetite control.',
+                  'Thicker consistency, often works better in puddings/overnight oats than shakes.',
+                ],
+              },
+              {
+                name: 'Plant Protein (Pea, Rice, Hemp)',
+                protein: '70–85% protein by weight',
+                best: 'Best for vegans',
+                color: 'lime',
+                details: [
+                  'Pea protein is closest in profile to whey — high leucine, fast-absorbing.',
+                  'Pea + rice blend completes the amino acid profile that each lacks alone.',
+                  'Soy protein isolate has a complete amino acid profile on its own but is heavily debated.',
+                  'Slightly lower digestibility vs whey but effective when dosed correctly.',
+                ],
+              },
+              {
+                name: 'Collagen Protein',
+                protein: '90%+ protein by weight',
+                best: 'Joint support only',
+                color: 'amber',
+                details: [
+                  'Lacks tryptophan — incomplete amino acid profile.',
+                  'Poor muscle protein synthesis stimulus — not a substitute for whey or plant protein.',
+                  'Evidence for joint/tendon support is emerging but not conclusive.',
+                  'Not a muscle-building protein powder. Do not count it as your primary protein source.',
+                ],
+              },
+            ].map(({ name, protein, best, color, details }) => (
+              <div class={`rounded-2xl border border-${color}-100 bg-${color}-50 p-6`}>
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 class="text-base font-bold text-slate-900">{name}</h3>
+                    <p class={`text-xs font-semibold text-${color}-700 mt-0.5`}>{protein}</p>
+                  </div>
+                  <span class={`text-xs font-bold px-3 py-1 rounded-full bg-${color}-100 text-${color}-700 shrink-0 ml-3`}>{best}</span>
+                </div>
+                <ul class="space-y-1.5">
+                  {details.map(d => (
+                    <li class="text-xs text-slate-600 flex gap-2">
+                      <span class={`material-symbols-outlined text-${color}-500 text-sm shrink-0 mt-0.5`}>arrow_right</span>{d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Quick decision guide</h2>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { question: 'I digest dairy fine', answer: 'Whey Concentrate — best value, great performance' },
+              { question: 'I\'m lactose intolerant', answer: 'Whey Isolate or Pea Protein' },
+              { question: 'I\'m vegan or vegetarian', answer: 'Pea + Rice blend or Soy Isolate' },
+              { question: 'I want a pre-bed protein', answer: 'Casein or high-casein Greek yogurt' },
+              { question: 'I want maximum protein per calorie', answer: 'Whey Isolate or Pea Isolate' },
+              { question: 'I train in the morning fasted', answer: 'Whey Concentrate post-workout' },
+            ].map(({ question, answer }, i) => (
+              <div class={`px-5 py-4 flex gap-3 items-start ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <span class="material-symbols-outlined text-slate-400 text-base shrink-0 mt-0.5">help_outline</span>
+                <div>
+                  <p class="text-sm text-slate-700 font-medium">"{question}"</p>
+                  <p class="text-xs text-primary font-semibold mt-0.5">→ {answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to look for on the label</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { label: 'Protein per scoop', tip: 'Aim for 20–30g per serving. Anything under 18g is usually a sign of fillers.' },
+              { label: 'Leucine content', tip: 'At least 2g per scoop for optimal muscle protein synthesis signaling.' },
+              { label: 'Sugar content', tip: 'Under 5g per serving. Watch out for flavored powders loaded with added sugars.' },
+              { label: 'Artificial sweeteners', tip: 'Sucralose and acesulfame K are fine for most people. Avoid if sensitive to GI side effects.' },
+              { label: 'Third-party testing', tip: 'Look for NSF Certified for Sport or Informed Sport badge if you compete in drug-tested sports.' },
+              { label: 'Serving size tricks', tip: 'Some brands use 50g scoops to show high protein content. Always check per-100g figures to compare.' },
+            ].map(({ label, tip }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-4">
+                <p class="text-sm font-bold text-slate-900 mb-1">{label}</p>
+                <p class="text-xs text-slate-500 leading-snug">{tip}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">When to take it</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Timing is less important than your total daily protein. That said:
+          </p>
+          <ul class="list-none space-y-2 mb-8">
+            {[
+              'Post-workout whey within 2 hours is ideal but not mandatory — the "anabolic window" is wider than old broscience suggested.',
+              'Pre-bed casein (30–40g) can improve overnight muscle protein synthesis, especially on hard training days.',
+              'Between meals whenever you need a convenient top-up to hit your daily target.',
+            ].map(item => (
+              <li class="flex gap-2 text-sm text-slate-600">
+                <span class="material-symbols-outlined text-emerald-500 text-base shrink-0 mt-0.5">check_circle</span>{item}
+              </li>
+            ))}
+          </ul>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Whey concentrate is the default pick for most people — cheap, effective, great amino acid profile. Go isolate if you're lactose sensitive. Go plant-based if you're vegan. Add casein before bed if you want an extra muscle-building edge. Skip collagen as your primary protein source.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            And remember — powder supplements whole food, it doesn't replace it. Build your diet around real protein sources first.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-emerald-50 border border-emerald-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100">
+            <span class="material-symbols-outlined text-emerald-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Find your daily protein target</p>
+            <p class="text-xs text-slate-500 mb-3">Use our macro calculator to get the exact protein, carb, and fat targets for your goal — bulk, cut, or maintain.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Log your protein in seconds.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal tracks protein shakes, meals, and snacks automatically. Know your protein totals without manual counting.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_protein_powder_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_protein_powder_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/creatine-supplement-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">bolt</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Creatine: The Complete Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/mass-gainer-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-50">
+              <span class="material-symbols-outlined text-violet-600 text-xl">monitor_weight</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Mass Gainers: Who Needs Them & How to Use Them</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

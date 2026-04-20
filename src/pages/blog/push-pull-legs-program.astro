@@ -1,0 +1,262 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Push Pull Legs (PPL): The Complete Program Guide | SlayCal Blog"
+  description="Push Pull Legs is one of the most effective training splits for intermediate and advanced lifters. Here's how to structure it, exercise selection, frequency, and a full sample program."
+  keywords="push pull legs program, PPL workout, push pull legs split, PPL for muscle gain, push day exercises, pull day exercises, leg day exercises"
+  lang="en"
+  canonicalPath="/blog/push-pull-legs-program"
+>
+  <Header t={t} lang="en" currentPath="/blog/push-pull-legs-program" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Push Pull Legs</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-red-600">Training Programs</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Push Pull Legs:<br/>The Complete Program Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          PPL is the gold standard split for intermediate lifters. Here's the full structure, sample workouts, and how to adapt it to your schedule.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Push Pull Legs divides your training into three types of movement: pushing muscles (chest, shoulders, triceps), pulling muscles (back, biceps), and legs (quads, hamstrings, glutes, calves). Each muscle group gets direct work twice per week when run on a 6-day schedule — hitting the optimal training frequency for hypertrophy without excessive overlap or fatigue.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why PPL works so well</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 my-6">
+            {[
+              { title: 'Optimal frequency', desc: 'Each muscle group is trained twice per week — the sweet spot for maximum muscle protein synthesis.' },
+              { title: 'Minimal overlap', desc: 'Pushing and pulling muscles don\'t compete. Your back is fresh on pull day; your chest is fresh on push day.' },
+              { title: 'Scalable volume', desc: 'Add sets to weak points without overloading the whole session. Legs need more volume? Just extend leg day.' },
+            ].map(({ title, desc }) => (
+              <div class="rounded-2xl border border-red-100 bg-red-50 p-4">
+                <p class="text-sm font-bold text-slate-900 mb-1">{title}</p>
+                <p class="text-xs text-slate-600 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">PPL schedule options</h2>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { schedule: '6 days/week (classic)', layout: 'Push · Pull · Legs · Push · Pull · Legs · Rest', best: 'Maximum frequency. Best for intermediate to advanced lifters.' },
+              { schedule: '5 days/week', layout: 'Push · Pull · Legs · Push · Pull · Rest · Rest (rotate legs next cycle)', best: 'Good compromise. Each muscle hit ~1.5× per week on average.' },
+              { schedule: '3 days/week (once-per-week)', layout: 'Push · Rest · Pull · Rest · Legs · Rest · Rest', best: 'Fine for beginners but frequency is low. Better options exist at 3 days.' },
+            ].map(({ schedule, layout, best }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-bold text-slate-900 mb-1">{schedule}</p>
+                <p class="text-xs font-mono text-slate-500 mb-1">{layout}</p>
+                <p class="text-xs text-slate-500 italic">{best}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The Push Day workout</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Chest, front/side delts, triceps. Compound movements first, isolation work at the end.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { exercise: 'Barbell Bench Press', sets: '4 × 4–6', note: 'Primary chest compound. Use progressive overload each session.' },
+              { exercise: 'Incline Dumbbell Press', sets: '3 × 8–12', note: 'Upper chest emphasis. Control the eccentric.' },
+              { exercise: 'Cable Lateral Raise', sets: '4 × 12–15', note: 'Side delts. Go lighter and focus on the squeeze at the top.' },
+              { exercise: 'Overhead Dumbbell Press', sets: '3 × 8–12', note: 'Front delt and shoulder strength compound.' },
+              { exercise: 'Chest Fly (cable or pec deck)', sets: '3 × 12–15', note: 'Isolation for chest. Stretch at the bottom.' },
+              { exercise: 'Tricep Pushdown', sets: '3 × 12–15', note: 'Cable or rope — full extension at bottom.' },
+              { exercise: 'Overhead Tricep Extension', sets: '3 × 10–12', note: 'Long head emphasis. Keep elbows tight.' },
+            ].map(({ exercise, sets, note }, i) => (
+              <div class={`px-5 py-3.5 flex justify-between items-start gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-slate-900">{exercise}</p>
+                  <p class="text-xs text-slate-400 mt-0.5">{note}</p>
+                </div>
+                <span class="text-xs font-bold text-red-600 tabular-nums shrink-0">{sets}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The Pull Day workout</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Back (upper, lower, lats), rear delts, biceps. The most technically demanding day — prioritize mind-muscle connection on rows and pulls.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { exercise: 'Weighted Pull-Up or Lat Pulldown', sets: '4 × 4–8', note: 'Primary lat builder. Full stretch at top, squeeze at bottom.' },
+              { exercise: 'Barbell or Dumbbell Row', sets: '4 × 6–10', note: 'Mid-back thickness. Chest to pad on chest-supported row to isolate.' },
+              { exercise: 'Cable Row (close grip)', sets: '3 × 10–12', note: 'Lower trap and mid-back. Full retraction at the squeeze.' },
+              { exercise: 'Face Pull', sets: '3 × 15–20', note: 'Rear delt and external rotator health. Never skip this.' },
+              { exercise: 'Dumbbell Curl', sets: '3 × 10–12', note: 'Supinate at the top for full bicep contraction.' },
+              { exercise: 'Hammer Curl', sets: '3 × 10–12', note: 'Brachialis and brachioradialis emphasis. Thickens the arm overall.' },
+            ].map(({ exercise, sets, note }, i) => (
+              <div class={`px-5 py-3.5 flex justify-between items-start gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-slate-900">{exercise}</p>
+                  <p class="text-xs text-slate-400 mt-0.5">{note}</p>
+                </div>
+                <span class="text-xs font-bold text-blue-600 tabular-nums shrink-0">{sets}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The Leg Day workout</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Quads, hamstrings, glutes, calves. The day most people skip — and the day that contributes most to overall body composition.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { exercise: 'Back Squat', sets: '4 × 4–6', note: 'The cornerstone of leg day. Full depth, controlled descent.' },
+              { exercise: 'Romanian Deadlift', sets: '4 × 6–10', note: 'Hamstring and glute hinge pattern. Feel the stretch, not just the weight.' },
+              { exercise: 'Leg Press', sets: '3 × 10–15', note: 'High volume quad work. Go heavier here than on squat for sets.' },
+              { exercise: 'Leg Curl (lying or seated)', sets: '3 × 10–15', note: 'Isolated hamstring work. Slow eccentric.' },
+              { exercise: 'Bulgarian Split Squat', sets: '3 × 8–12/leg', note: 'Single-leg quad + glute builder. Humbling but effective.' },
+              { exercise: 'Calf Raise (standing)', sets: '4 × 12–20', note: 'Full range — bottom stretch is the point. Partial reps are useless.' },
+            ].map(({ exercise, sets, note }, i) => (
+              <div class={`px-5 py-3.5 flex justify-between items-start gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-slate-900">{exercise}</p>
+                  <p class="text-xs text-slate-400 mt-0.5">{note}</p>
+                </div>
+                <span class="text-xs font-bold text-emerald-600 tabular-nums shrink-0">{sets}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Progressive overload: the rule that makes it work</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            PPL without progression is just exercise — not training. Apply one of these approaches every session:
+          </p>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { method: 'Double progression', desc: 'Work within a rep range (e.g. 8–12). Once you hit the top, add weight.' },
+              { method: 'Linear progression', desc: 'Add a fixed weight increment each session. Simple and effective for 6–12 months.' },
+              { method: 'Rep PR method', desc: 'Same weight, aim for one more rep than last session.' },
+              { method: 'Volume progression', desc: 'Add one set per week until you hit 20 sets/week, then deload.' },
+            ].map(({ method, desc }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-4">
+                <p class="text-sm font-bold text-slate-900 mb-1">{method}</p>
+                <p class="text-xs text-slate-500 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Common PPL mistakes</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { mistake: 'Skipping leg day', fix: 'Legs are 60% of your muscle mass. Half your effort should go there, not be an afterthought.' },
+              { mistake: 'Too many isolation movements', fix: 'Compounds first, always. 3–4 exercises done well beats 8 exercises done poorly.' },
+              { mistake: 'Never changing rep ranges', fix: 'Rotate between strength (3–6 reps), hypertrophy (8–12), and volume (15–20) mesocycles.' },
+              { mistake: 'No deload', fix: 'Every 4–8 weeks, reduce volume by 50% for a week. Deloads prevent accumulated fatigue and often precede PRs.' },
+            ].map(({ mistake, fix }) => (
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+                <p class="font-bold text-slate-900 text-sm mb-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-amber-500 text-base">warning</span>{mistake}
+                </p>
+                <p class="text-xs text-slate-500 leading-relaxed pl-7">{fix}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            PPL is one of the most time-tested splits in strength training because the logic is sound: train each pattern twice weekly, keep fatigue interference low, and allow enough recovery between sessions for each muscle group. Run it for 12–16 weeks with consistent progressive overload and quality nutrition, and results will follow.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-red-50 border border-red-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100">
+            <span class="material-symbols-outlined text-red-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Fuel your PPL program right</p>
+            <p class="text-xs text-slate-500 mb-3">Training volume this high demands proper calorie and protein targets. Get your macros dialed in before you start.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Train harder. Track smarter.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal keeps your nutrition on point so your PPL program produces maximum results. Scan your meals, hit your macros, grow.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_ppl_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_ppl_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/arnold-schwarzenegger-workout-program" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100">
+              <span class="material-symbols-outlined text-slate-700 text-xl">emoji_events</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Arnold's Workout Program: The Golden Era Split</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

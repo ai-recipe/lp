@@ -22,7 +22,7 @@ const posts = [
     slug: '/blog/what-is-bmi',
     title: 'What Is BMI? How to Use It (and When to Ignore It)',
     excerpt: 'BMI is useful as a quick health screen — but it has real blind spots. Learn what your number means, what it misses, and what to track instead.',
-    category: 'Health Metrics',
+    category: 'Nutrition Basics',
     readTime: '5 min read',
     icon: 'monitor_weight',
     iconColor: 'text-blue-500 bg-blue-50',
@@ -48,13 +48,85 @@ const posts = [
     iconColor: 'text-rose-500 bg-rose-50',
     date: 'April 2025',
   },
+  {
+    slug: '/blog/caffeine-supplement-guide',
+    title: 'Caffeine: The Complete Supplement Guide',
+    excerpt: 'The world\'s most studied performance drug. Dosing, timing, tolerance management, and how to pair it for maximum effect — without the crash.',
+    category: 'Supplements',
+    readTime: '7 min read',
+    icon: 'coffee',
+    iconColor: 'text-amber-600 bg-amber-50',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/creatine-supplement-guide',
+    title: 'Creatine: The Complete Guide',
+    excerpt: 'Over 500 studies back it. Here\'s how it works, why loading is optional, which form to buy, and every myth debunked in plain language.',
+    category: 'Supplements',
+    readTime: '6 min read',
+    icon: 'bolt',
+    iconColor: 'text-blue-600 bg-blue-50',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/protein-powder-guide',
+    title: 'Protein Powder: Which Type Is Right for You?',
+    excerpt: 'Whey, casein, plant, collagen — a clear breakdown of every type, who needs each one, and what to look for (and avoid) on the label.',
+    category: 'Supplements',
+    readTime: '7 min read',
+    icon: 'blender',
+    iconColor: 'text-emerald-600 bg-emerald-50',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/mass-gainer-guide',
+    title: 'Mass Gainers: Who Needs Them & How to Use Them',
+    excerpt: 'A mass gainer can be a legitimate tool — or an overpriced bag of sugar. Find out if you actually need one, how to pick one, and the cheaper DIY alternative.',
+    category: 'Supplements',
+    readTime: '6 min read',
+    icon: 'monitor_weight',
+    iconColor: 'text-violet-600 bg-violet-50',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/push-pull-legs-program',
+    title: 'Push Pull Legs: The Complete Program Guide',
+    excerpt: 'The most popular training split for intermediate lifters, fully explained. Schedule options, sample workouts for all three days, and the one rule that makes it work.',
+    category: 'Training Programs',
+    readTime: '8 min read',
+    icon: 'sports_gymnastics',
+    iconColor: 'text-red-600 bg-red-50',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/arnold-schwarzenegger-workout-program',
+    title: "Arnold's Workout Program: The Golden Era Split",
+    excerpt: 'Seven Mr. Olympia titles, six days a week, twice a day. Here\'s Arnold\'s full training program, his philosophy, and how to adapt it without overtraining.',
+    category: 'Training Programs',
+    readTime: '8 min read',
+    icon: 'emoji_events',
+    iconColor: 'text-slate-700 bg-slate-100',
+    date: 'April 2025',
+  },
+  {
+    slug: '/blog/protein-pancake-recipe',
+    title: 'High-Protein Pancake Recipe: 40g Protein, 5 Minutes',
+    excerpt: '40g protein, fluffy texture, 5-minute prep. The base recipe, five tested variations with full macros, and the two mistakes that make protein pancakes rubbery.',
+    category: 'Recipes',
+    readTime: '5 min read',
+    icon: 'breakfast_dining',
+    iconColor: 'text-yellow-600 bg-yellow-50',
+    date: 'April 2025',
+  },
 ];
+
+const categories = ['All', ...Array.from(new Set(posts.map(p => p.category)))];
 ---
 
 <Layout
   title="SlayCal Blog — Nutrition, Health & Fitness Guides"
-  description="Free guides on nutrition, calorie tracking, BMI, macros, and building healthy habits. Written for real people, not textbooks."
-  keywords="nutrition blog, calorie guide, BMI guide, macro tips, healthy eating, weight loss tips, SlayCal blog"
+  description="Free guides on nutrition, calorie tracking, BMI, macros, supplements, training programs, and building healthy habits. Written for real people, not textbooks."
+  keywords="nutrition blog, calorie guide, BMI guide, macro tips, healthy eating, weight loss tips, supplements guide, workout programs, SlayCal blog"
   lang="en"
   canonicalPath="/blog"
 >
@@ -71,12 +143,28 @@ const posts = [
           <span class="text-sm font-semibold text-primary">The SlayCal Blog</span>
         </div>
         <h1 class="text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
-          Nutrition & Health,<br/>
+          Nutrition & Fitness,<br/>
           <span class="text-primary">Made Simple</span>
         </h1>
         <p class="mt-4 text-lg text-slate-500 max-w-xl leading-relaxed">
-          No fluff. No pseudoscience. Just practical guides for eating better and tracking what actually matters.
+          No fluff. No pseudoscience. Practical guides on nutrition, supplements, and training — for people who want results, not information overload.
         </p>
+      </div>
+    </section>
+
+    <!-- ── CATEGORY FILTER ─────────────────────────────────────────── -->
+    <section class="bg-background-light px-6 pb-6 lg:px-20">
+      <div class="mx-auto max-w-4xl">
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filter posts by category">
+          {categories.map(cat => (
+            <button
+              data-category={cat}
+              class={`category-btn px-4 py-2 rounded-full text-sm font-semibold border transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${cat === 'All' ? 'bg-primary text-white border-primary' : 'bg-white text-slate-600 border-slate-200 hover:border-primary/40 hover:text-primary'}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
 
@@ -84,11 +172,12 @@ const posts = [
     <section class="bg-background-light px-6 pb-20 lg:px-20" aria-labelledby="posts-title">
       <div class="mx-auto max-w-4xl">
         <h2 id="posts-title" class="sr-only">Blog posts</h2>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2" id="posts-grid">
           {posts.map(({ slug, title, excerpt, category, readTime, icon, iconColor, date }) => (
             <a
               href={slug}
-              class="group flex flex-col rounded-3xl bg-white border border-slate-100 p-7 hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              data-post-category={category}
+              class="post-card group flex flex-col rounded-3xl bg-white border border-slate-100 p-7 hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <div class="flex items-center justify-between mb-5">
                 <div class={`flex h-11 w-11 items-center justify-center rounded-2xl ${iconColor}`}>
@@ -113,6 +202,8 @@ const posts = [
             </a>
           ))}
         </div>
+
+        <p id="no-posts-msg" class="hidden text-center text-slate-400 text-sm py-16">No posts in this category yet.</p>
       </div>
     </section>
 
@@ -138,3 +229,36 @@ const posts = [
 
   <Footer t={t} lang="en" />
 </Layout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.category-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.post-card');
+  const noPostsMsg = document.getElementById('no-posts-msg');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selected = btn.dataset.category ?? 'All';
+
+      buttons.forEach(b => {
+        if (b.dataset.category === selected) {
+          b.classList.add('bg-primary', 'text-white', 'border-primary');
+          b.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+        } else {
+          b.classList.remove('bg-primary', 'text-white', 'border-primary');
+          b.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+        }
+      });
+
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const match = selected === 'All' || card.dataset.postCategory === selected;
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+
+      if (noPostsMsg) {
+        noPostsMsg.classList.toggle('hidden', visibleCount > 0);
+      }
+    });
+  });
+</script>

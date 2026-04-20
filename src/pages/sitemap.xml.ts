@@ -60,6 +60,41 @@ const blogPaths = [
     priority: "0.7",
     changefreq: "monthly",
   },
+  {
+    slug: "/blog/caffeine-supplement-guide",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/creatine-supplement-guide",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/protein-powder-guide",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/mass-gainer-guide",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/push-pull-legs-program",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/arnold-schwarzenegger-workout-program",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/protein-pancake-recipe",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
 ];
 
 const pages: Page[] = [];

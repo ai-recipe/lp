@@ -1,0 +1,231 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Caffeine: The Complete Supplement Guide — Dosing, Timing & Effects | SlayCal Blog"
+  description="Caffeine is the most studied performance supplement on earth. Here's what it actually does, the right dose, best timing, and how to avoid crashing tolerance."
+  keywords="caffeine supplement, caffeine for working out, pre workout caffeine dose, caffeine timing, caffeine tolerance, caffeine side effects"
+  lang="en"
+  canonicalPath="/blog/caffeine-supplement-guide"
+>
+  <Header t={t} lang="en" currentPath="/blog/caffeine-supplement-guide" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Caffeine</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Supplements</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Caffeine: The Complete<br/>Supplement Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          The world's most popular performance drug. Here's exactly how to use it to train harder, focus better, and avoid dependency.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 7 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Caffeine is not a marketing gimmick. It is the single most studied ergogenic (performance-enhancing) compound in sports nutrition, with hundreds of randomized controlled trials backing it. Used correctly, it genuinely improves endurance, strength output, focus, and fat oxidation. Used incorrectly, it disrupts sleep, triggers anxiety, and builds tolerance fast. Here is everything you need to know.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">How caffeine actually works</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Caffeine blocks adenosine receptors in your brain. Adenosine is a chemical that builds up throughout the day and makes you feel tired — caffeine binds to those receptors first, preventing the tired signal. As a side effect, dopamine and norepinephrine levels rise, giving the familiar boost in mood, alertness, and motivation.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            In muscle tissue, caffeine increases calcium ion release and reduces the perception of effort — the same workload literally feels easier.
+          </p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 my-6">
+            {[
+              { label: 'Endurance boost', value: '+3–5%', sub: 'Time to exhaustion in trained athletes' },
+              { label: 'Strength boost', value: '+2–4%', sub: 'One-rep max in compound lifts' },
+              { label: 'Fat oxidation', value: '+10–16%', sub: 'Increased during fasted cardio' },
+            ].map(({ label, value, sub }) => (
+              <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-1">{label}</p>
+                <p class="text-2xl font-bold text-slate-900">{value}</p>
+                <p class="text-xs text-slate-500 mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The right dose</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Evidence-based dosing is <strong>3–6 mg per kg of body weight</strong>, taken 30–60 minutes before exercise. For a 75 kg person, that's 225–450 mg — roughly 2–4 cups of brewed coffee.
+          </p>
+
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { source: 'Espresso (1 shot)', caffeine: '60–80 mg', note: 'Concentrated but small volume' },
+              { source: 'Brewed coffee (240 ml)', caffeine: '80–120 mg', note: 'Varies widely by roast and brew' },
+              { source: 'Pre-workout powder', caffeine: '150–300 mg', note: 'Check label — some are extreme' },
+              { source: 'Caffeine tablet (pure)', caffeine: '100–200 mg', note: 'Most precise way to dose' },
+              { source: 'Energy drink (250 ml)', caffeine: '80–160 mg', note: 'Often loaded with sugar too' },
+            ].map(({ source, caffeine, note }, i) => (
+              <div class={`px-5 py-4 flex justify-between items-center ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">{source}</p>
+                  <p class="text-xs text-slate-400">{note}</p>
+                </div>
+                <span class="text-sm font-bold text-amber-600 tabular-nums shrink-0 ml-4">{caffeine}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Best timing for training</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { time: '30–60 min before training', why: 'Peak plasma caffeine levels align with your workout window. This is the standard recommendation for most people.' },
+              { time: 'Morning fasted cardio', why: 'Caffeine is especially effective before fasted-state cardio — it amplifies fat oxidation when glycogen is low.' },
+              { time: 'Avoid within 6 hours of sleep', why: 'Caffeine has a half-life of ~5–6 hours. A 3pm dose still has half its effect at 9pm, trashing sleep quality and recovery.' },
+            ].map(({ time, why }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{time}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{why}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Tolerance: why it stops working</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Your brain adapts. Within 1–2 weeks of daily caffeine use, adenosine receptor density increases — your brain grows more receptors to compensate. You need more caffeine to feel the same effect, and skipping it causes withdrawal headaches.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The fix is periodic cycling: take 1–2 weeks off every 6–8 weeks, or simply avoid caffeine on rest days. Sensitivity resets quickly.
+          </p>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Side effects to watch for</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { effect: 'Anxiety & jitteriness', detail: 'Common above 400 mg, or at lower doses in sensitive individuals. Reduce dose or switch to half-dose + L-theanine (200 mg L-theanine smooths the edge).' },
+              { effect: 'Sleep disruption', detail: 'The most damaging long-term side effect. Poor sleep kills recovery, hormones, and focus — undoing every training benefit caffeine gave you.' },
+              { effect: 'Increased heart rate / blood pressure', detail: 'Transient, usually harmless in healthy people. Consult a doctor if you have cardiovascular conditions.' },
+              { effect: 'GI distress', detail: 'Coffee especially can cause stomach upset pre-workout. Pure caffeine tabs or capsules are easier on the gut.' },
+              { effect: 'Dependency & withdrawal', detail: 'Caffeine is mildly addictive. Missing doses causes headaches, fatigue, and irritability for 1–3 days. Plan resets strategically.' },
+            ].map(({ effect, detail }) => (
+              <div class="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+                <p class="font-bold text-slate-900 text-sm mb-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-rose-500 text-base">warning</span>{effect}
+                </p>
+                <p class="text-xs text-slate-500 leading-relaxed pl-7">{detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Caffeine + other supplements</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { pair: 'Caffeine + L-Theanine', rating: 'Excellent', desc: 'Most popular stack. L-theanine (200 mg) removes jitteriness while keeping focus sharp. Common in nootropics.' },
+              { pair: 'Caffeine + Creatine', rating: 'Good', desc: 'Both are evidence-backed. Creatine is taken daily regardless, caffeine is dosed pre-workout. No interaction.' },
+              { pair: 'Caffeine + Beta-Alanine', rating: 'Good', desc: 'Beta-alanine (pre-workout dose) reduces fatigue in high-rep training. The "tingle" is harmless.' },
+              { pair: 'Caffeine + Alcohol', rating: 'Avoid', desc: 'Caffeine masks alcohol impairment without reducing it. Classic dangerous combo — not performance related.' },
+            ].map(({ pair, rating, desc }) => (
+              <div class={`rounded-2xl border p-4 ${rating === 'Avoid' ? 'border-red-100 bg-red-50' : rating === 'Excellent' ? 'border-emerald-100 bg-emerald-50' : 'border-blue-100 bg-blue-50'}`}>
+                <div class="flex items-center justify-between mb-2">
+                  <p class="text-sm font-bold text-slate-900">{pair}</p>
+                  <span class={`text-xs font-bold px-2 py-0.5 rounded-full ${rating === 'Avoid' ? 'bg-red-100 text-red-700' : rating === 'Excellent' ? 'bg-emerald-100 text-emerald-700' : 'bg-blue-100 text-blue-700'}`}>{rating}</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Caffeine works. 3–6 mg/kg body weight, 45 minutes pre-workout, cycled to preserve sensitivity. Pair it with L-theanine to remove the edge, never dose within 6 hours of bed, and give yourself a week off every couple of months. That's the whole protocol.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-amber-50 border border-amber-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100">
+            <span class="material-symbols-outlined text-amber-600 text-xl">local_fire_department</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Track your calorie intake around training</p>
+            <p class="text-xs text-slate-500 mb-3">Caffeine helps you train harder — but nutrition fuels the result. Use our calorie calculator to dial in your targets.</p>
+            <a href="/calorie-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-600 hover:underline">
+              Open Calorie Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Fuel smarter. Train harder.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal tracks your nutrition automatically — so you can focus on the workout, not the spreadsheet.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_caffeine_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_caffeine_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/creatine-supplement-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">bolt</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Creatine: The Complete Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/protein-powder-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">fitness_center</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Protein Powder: Which Type Is Right for You?</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>
