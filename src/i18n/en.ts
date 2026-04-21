@@ -1,7 +1,7 @@
 export const en = {
   meta: {
     title: 'SlayCal – Snap a Meal. Know Your Macros. Hit Your Goals.',
-    description: 'Stop guessing what you eat. SlayCal uses your camera to count calories and macros in seconds. Scan your fridge for personalized recipes. Free on iOS & Android.',
+    description: 'Stop guessing what you eat. SlayCal uses AI to count calories and macros instantly. Scan your fridge for personalized recipes. Free on iOS & Android.',
     keywords: 'calorie counter app, macro tracker, food photo scanner, nutrition app, AI recipe generator, weight loss app, fridge scanner, SlayCal',
     og_locale: 'en_US',
   },

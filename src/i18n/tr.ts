@@ -1,7 +1,7 @@
 export const tr = {
   meta: {
     title: 'SlayCal – Yemeğini Fotoğrafla. Macrolarını Bil. Hedefine Ulaş.',
-    description: 'Ne yediğini tahmin etmeyi bırak. SlayCal kameranla saniyelerde kalori ve makroları hesaplar. Buzdolabını tara, kişisel tarifler al. iOS ve Android\'de ücretsiz.',
+    description: 'Ne yediğini tahmin etmeyi bırak. Yapay zekayla saniyelerde kalori ve makroları hesapla. Buzdolabını tara, kişisel tarifler al. Ücretsiz.',
     keywords: 'kalori sayacı uygulama, makro takipçi, yemek fotoğraf tarayıcı, beslenme uygulaması, tarif üretici, kilo verme uygulaması, buzdolabı tarayıcı, SlayCal',
     og_locale: 'tr_TR',
   },
