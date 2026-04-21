@@ -1,0 +1,754 @@
+# SlayCal
+
+> SlayCal is an AI-powered nutrition coaching app for iOS and Android. Users point their phone camera at any meal, barcode, or nutrition label and get a full calorie and macro breakdown in under 3 seconds — no manual entry required. The app also scans fridge contents to generate personalized recipes, tracks hydration, weight, and BMI, and adapts daily nutrition goals to the user's body metrics and targets.
+
+SlayCal is free to download with 500 scan credits included (no credit card required). A Pro subscription unlocks unlimited scans, priority processing, and early feature access. This site is the marketing landing page for the app, and also hosts free nutrition calculators and a health/fitness blog.
+
+---
+
+## Page: How Many Calories Should I Eat Per Day?
+
+URL: https://slaycal.com/blog/how-many-calories-should-i-eat
+
+Category: Nutrition Basics | 6 min read | April 2025
+
+Most people guess — and get it wrong by hundreds of calories per day. Here's how to find your actual number.
+
+The "2,000 calories a day" guidance you see on nutrition labels? It's an average — and it might be hundreds of calories off from what you actually need. Getting this right is the single most important step you can take if your goal involves your weight.
+
+### Why your calorie number is unique to you
+
+Your body burns a certain amount of energy just to stay alive — breathing, circulating blood, repairing cells. This is called your Basal Metabolic Rate (BMR). On top of that, you burn more through daily movement and exercise.
+
+Your BMR depends on:
+- Body weight — more mass = more calories burned at rest
+- Height — taller people have more surface area to maintain
+- Age — BMR decreases roughly 2% per decade after 20
+- Biological sex — men typically have higher BMR due to more muscle mass
+
+### From BMR to TDEE: your actual daily needs
+
+BMR is just the base. To find your Total Daily Energy Expenditure (TDEE) — the calories you actually burn each day — multiply your BMR by an activity factor:
+
+- Sedentary (desk job, no exercise): ×1.2
+- Lightly active (1–3 workouts/week): ×1.375
+- Moderately active (3–5 workouts/week): ×1.55
+- Very active (6–7 workouts/week): ×1.725
+- Extra active (physical job + daily training): ×1.9
+
+Your TDEE is your maintenance number — eat this and your weight stays the same. Eat less to lose weight. Eat more to gain.
+
+### How many calories for weight loss?
+
+A deficit of 500 kcal/day leads to roughly 0.5 kg (1 lb) of fat loss per week — a safe, sustainable rate for most people. Going too aggressive (1,000+ kcal deficit) often backfires through muscle loss, extreme hunger, and metabolic adaptation.
+
+- Fat loss: TDEE – 500 → ~0.5 kg/week
+- Maintenance: TDEE → weight holds
+- Muscle gain: TDEE + 300 → lean bulk
+
+### The 3 most common calorie mistakes
+
+1. Using a fixed number instead of calculating — A 55 kg sedentary woman needs around 1,600 kcal/day. A 90 kg active man might need 3,200. Using "2,000" for both is useless.
+2. Not recalculating as your weight changes — As you lose weight, your TDEE drops — your body needs fewer calories to function. Failing to adjust leads to plateaus.
+3. Overestimating the calorie burn from exercise — Calorie counters on treadmills overestimate burn by 30–70%. Use activity level in your TDEE calculation, not gym machine readouts.
+
+### How to track it without going crazy
+
+Knowing your calorie target is step one. Actually staying near it is step two — and that's where most people struggle. Manual logging is tedious, and estimates for restaurant meals are wildly inaccurate. SlayCal solves this by letting you point your camera at a meal and get an instant calorie and macro breakdown — no barcode hunting, no manual searches. Your daily total updates in real time as you eat.
+
+---
+
+## Page: What Is BMI? How to Use It (and When to Ignore It)
+
+URL: https://slaycal.com/blog/what-is-bmi
+
+Category: Health Metrics | 5 min read | April 2025
+
+BMI is useful — up to a point. Here's what it actually tells you, where it breaks down, and what else you should be tracking.
+
+BMI — Body Mass Index — has been used by doctors since the 1970s as a quick, free, low-effort way to screen for weight-related health risk. It's on millions of health reports worldwide. It's also frequently misunderstood and misused.
+
+### What BMI actually measures
+
+BMI is a simple ratio of your weight to your height squared:
+
+Formula: BMI = weight (kg) ÷ height² (m)
+Imperial: BMI = 703 × weight (lbs) ÷ height² (in)
+
+WHO categories:
+- Below 18.5 — Underweight: May signal malnutrition or other health issues
+- 18.5–24.9 — Normal weight: Lowest statistical health risk for most populations
+- 25.0–29.9 — Overweight: Increased risk of some chronic conditions
+- 30.0+ — Obese: Significantly elevated cardiovascular and metabolic risk
+
+### Why BMI is actually useful
+
+- Population-level screening: Studies consistently show BMI correlates with higher rates of type 2 diabetes, heart disease, and certain cancers at the group level.
+- Simple baseline tracking: If you're losing weight, a falling BMI is a clear directional signal — even if the absolute number has caveats.
+- Conversation starter with a doctor: BMI gives a physician a quick reference point that prompts further testing if needed.
+
+### Where BMI breaks down
+
+BMI was designed to describe populations, not individuals. It was created using data from European males in the 1800s. In practice it has four major blind spots:
+
+1. It can't distinguish fat from muscle — A 90 kg bodybuilder and a 90 kg sedentary person with the same height get the same BMI — even though their health profiles are completely different. Athletes frequently score "overweight" or "obese" while having very low body fat.
+2. It changes with age in misleading ways — Older adults tend to lose muscle and gain fat even when their weight stays the same. A "normal" BMI in a 70-year-old may hide significant muscle loss.
+3. Different populations, different risk thresholds — Research shows that people of South Asian or East Asian descent face higher cardiometabolic risk at lower BMI values than the WHO cutoffs were built around.
+4. It changes during pregnancy — BMI is effectively meaningless during pregnancy due to expected weight gain.
+
+### What to track alongside BMI
+
+- Waist circumference — A better proxy for abdominal fat. Men: under 94 cm. Women: under 80 cm.
+- Body fat percentage — Separates fat mass from lean mass. Far more accurate picture of body composition.
+- Weight trend over time — A single weigh-in is noisy. What matters is the trend over weeks.
+- Bloodwork — Cholesterol, blood sugar, blood pressure, and inflammation markers reveal metabolic health.
+
+### The bottom line
+
+Use BMI as a quick, free snapshot — not a verdict. Track it, note the trend, but don't let it define your entire health picture.
+
+---
+
+## Page: Best Foods for Muscle Gain: What to Actually Eat
+
+URL: https://slaycal.com/blog/best-foods-for-muscle-gain
+
+Category: Nutrition for Training | 7 min read | April 2025
+
+Building lean muscle isn't about eating more of anything — it's about eating the right things.
+
+Muscle grows when three things line up: progressive strength training, enough protein to rebuild tissue, and a small calorie surplus to fuel it.
+
+### The two numbers that matter
+
+- Calories: TDEE + 200–400 kcal — A lean bulk. Bigger surpluses just add fat, not muscle.
+- Protein: 1.6–2.2 g/kg body weight — Split across 3–5 meals for best absorption.
+
+### Top protein sources
+
+- Chicken breast — 31g protein · 165 kcal per 100g. The gold standard. Lean, cheap, versatile, and high in leucine.
+- Greek yogurt (non-fat) — 10g protein · 59 kcal per 100g. Slow-digesting casein protein, great before bed.
+- Eggs (whole) — 13g protein · 155 kcal per 100g. Most bioavailable protein. The yolks contain choline, vitamin D, and healthy fats.
+- Lean beef (95/5) — 24g protein · 137 kcal per 100g. High in creatine, iron, and B12.
+- Cottage cheese — 11g protein · 98 kcal per 100g. Mostly casein, slow digesting.
+- Salmon — 22g protein · 208 kcal per 100g. Protein plus omega-3s.
+- Whey protein isolate — 25g protein · 110 kcal per scoop. Fastest-absorbing protein.
+- Lentils — 9g protein · 116 kcal per 100g cooked. Best plant option for muscle gain.
+
+### Calorie-dense carbs
+
+- Oats (rolled) — 389 kcal/100g. Slow carbs, cheap, blend-friendly.
+- White rice — 130 kcal/100g cooked. Easy to digest around training.
+- Sweet potatoes — 86 kcal/100g. Dense carbs plus fiber, potassium, vitamin A.
+- Bananas — 89 kcal/100g. Portable carb source.
+- Whole-grain bread — 265 kcal/100g. Easy calorie vehicle.
+- Dried fruit — 300 kcal/100g. Concentrated calories.
+
+### Healthy fats that help you eat more
+
+- Olive oil — ~120 kcal/tbsp
+- Nuts & nut butter — ~190 kcal/oz
+- Avocado — ~240 kcal/fruit
+- Whole milk — ~150 kcal/cup
+- Dark chocolate 85%+ — ~170 kcal/oz
+- Cheese — ~110 kcal/oz
+
+### A sample day for a 75 kg lifter (3,000 kcal, 170g protein)
+
+- Breakfast: Oat-protein bowl: 80g oats, 1 scoop whey, 1 banana, 1 tbsp peanut butter, milk — 650 kcal · 45p/90c/15f
+- Lunch: 200g chicken breast, 1 cup rice, mixed veg, 1 tbsp olive oil — 700 kcal · 65p/80c/18f
+- Snack: Greek yogurt + honey + mixed nuts — 400 kcal · 25p/35c/18f
+- Dinner: 180g salmon, sweet potato, spinach, olive oil — 700 kcal · 40p/60c/28f
+- Pre-bed: 200g cottage cheese + berries — 220 kcal · 22p/18c/3f
+
+### Mistakes that slow muscle gain
+
+- Under-eating on training days — Appetite lies after hard sessions. Pre-plan your calories.
+- Skimping on protein at breakfast — Most people load protein at dinner. Hitting 30g+ at breakfast maximizes daily muscle protein synthesis.
+- Chasing "clean" too hard — If you can't hit your calorie target on chicken and broccoli, add rice, milk, oats, and nut butter.
+- Ignoring progress photos — The scale lies in both directions during a bulk.
+
+### The bottom line
+
+Hit your protein target every day. Stay in a small surplus. Prioritize whole foods you actually enjoy eating. Do this consistently for 3–6 months while training hard.
+
+---
+
+## Page: How to Lose Weight Without Counting Calories
+
+URL: https://slaycal.com/blog/how-to-lose-weight-without-counting-calories
+
+Category: Weight Loss | 7 min read | April 2025
+
+Calorie counting isn't the only way to lose fat. These habits create a natural deficit that sticks around long after motivation fades.
+
+Fat loss always comes down to a calorie deficit. But you can opt out of counting every bite by building habits that make a deficit happen automatically.
+
+The real rule: High volume + high protein = full on fewer calories.
+
+### Habit 1 — Build meals around protein
+
+Protein is the most filling macro, it preserves muscle during fat loss, and it has the highest thermic effect. Aim for 25–40g protein at every meal.
+
+Good sources: chicken, turkey, lean beef, fish, eggs, Greek yogurt, cottage cheese, low-fat milk, tofu, tempeh, edamame, lentils, beans, protein shakes.
+
+### Habit 2 — Fill half your plate with vegetables
+
+Vegetables bring fiber, water, and volume with almost no calories:
+- Leafy greens — ~20 kcal/100g
+- Broccoli — ~35 kcal/100g
+- Zucchini — ~17 kcal/100g
+- Bell peppers — ~31 kcal/100g
+- Cucumber — ~16 kcal/100g
+- Cauliflower — ~25 kcal/100g
+
+### Habit 3 — Drink your calories consciously
+
+Liquid calories don't satisfy hunger the same way solid food does. Easy wins:
+- Swap sugar-sweetened drinks for sparkling water or unsweetened tea
+- Drink coffee black or with a splash of milk
+- Keep alcohol occasional — it's 7 kcal/g and kills appetite regulation
+- Eat the whole fruit instead of juice
+
+### Habit 4 — Eat slowly and stop at 80% full
+
+It takes your brain ~20 minutes to register fullness. People who eat slowly consume ~10–15% fewer calories per meal. Tips: put your fork down between bites, chew each bite 15+ times, no phone or TV while eating, stop when "not hungry" not stuffed.
+
+### Habit 5 — Keep trigger foods out of sight
+
+Keep fruit in a bowl on the counter; hide cookies in a cabinet. Pre-portion snacks into small containers. Make protein-rich snacks the most visible option.
+
+### Habit 6 — Move more outside the gym
+
+NEAT (Non-Exercise Activity Thermogenesis) can burn 700+ kcal/day. Targets: 8,000–10,000 steps/day, walking meetings, stand-up breaks every 30–60 minutes.
+
+### Habit 7 — Sleep 7+ hours
+
+Under-sleeping increases ghrelin (hunger hormone) and reduces leptin (fullness hormone). Studies show people sleeping under 6 hours eat an extra 300+ calories per day.
+
+### When counting might still help
+
+These habits work for most people. But if the scale won't move, counting calories for 2–3 weeks gives objective feedback. It's a diagnostic tool, not a lifestyle.
+
+### The bottom line
+
+Protein at every meal, vegetables on half your plate, minimal liquid calories, solid sleep, more daily movement. Do those seven things consistently for 2–3 months and the scale will move.
+
+---
+
+## Page: Caffeine: The Complete Supplement Guide
+
+URL: https://slaycal.com/blog/caffeine-supplement-guide
+
+Category: Supplements | 7 min read | April 2025
+
+The world's most popular performance drug. Here's exactly how to use it to train harder, focus better, and avoid dependency.
+
+Caffeine is not a marketing gimmick. It is the single most studied ergogenic compound in sports nutrition. Used correctly, it genuinely improves endurance, strength output, focus, and fat oxidation.
+
+### How caffeine actually works
+
+Caffeine blocks adenosine receptors in your brain. Adenosine is a chemical that builds up throughout the day and makes you feel tired — caffeine binds to those receptors first, preventing the tired signal. As a side effect, dopamine and norepinephrine levels rise, giving the familiar boost in mood, alertness, and motivation. In muscle tissue, caffeine increases calcium ion release and reduces the perception of effort.
+
+Evidence-backed performance stats:
+- Endurance boost: +3–5% time to exhaustion in trained athletes
+- Strength boost: +2–4% one-rep max in compound lifts
+- Fat oxidation: +10–16% during fasted cardio
+
+### The right dose
+
+Evidence-based dosing: 3–6 mg per kg of body weight, taken 30–60 minutes before exercise. For a 75 kg person, that's 225–450 mg — roughly 2–4 cups of brewed coffee.
+
+Caffeine sources:
+- Espresso (1 shot): 60–80 mg
+- Brewed coffee (240ml): 80–120 mg
+- Pre-workout powder: 150–300 mg (check label — some are extreme)
+- Caffeine tablet (pure): 100–200 mg (most precise)
+- Energy drink (250ml): 80–160 mg (often loaded with sugar)
+
+### Best timing for training
+
+- 30–60 min before training: Peak plasma levels align with your workout window.
+- Morning fasted cardio: Especially effective — amplifies fat oxidation when glycogen is low.
+- Avoid within 6 hours of sleep: Caffeine has a half-life of ~5–6 hours. A 3pm dose still has half its effect at 9pm.
+
+### Tolerance: why it stops working
+
+Within 1–2 weeks of daily use, adenosine receptor density increases. The fix: take 1–2 weeks off every 6–8 weeks, or avoid caffeine on rest days.
+
+### Side effects to watch for
+
+- Anxiety & jitteriness: Common above 400 mg. Reduce dose or add L-theanine (200 mg).
+- Sleep disruption: The most damaging long-term side effect.
+- Increased heart rate / blood pressure: Transient, usually harmless in healthy people.
+- GI distress: Coffee especially can cause stomach upset. Pure caffeine tabs are easier on the gut.
+- Dependency & withdrawal: Missing doses causes headaches, fatigue, and irritability for 1–3 days.
+
+### Caffeine + other supplements
+
+- Caffeine + L-Theanine: Excellent. Removes jitteriness while keeping focus sharp. 200 mg L-theanine per dose.
+- Caffeine + Creatine: Good. Both are evidence-backed. No interaction.
+- Caffeine + Beta-Alanine: Good. Reduces fatigue in high-rep training.
+- Caffeine + Alcohol: Avoid. Masks alcohol impairment without reducing it.
+
+### The bottom line
+
+Caffeine works. 3–6 mg/kg body weight, 45 minutes pre-workout, cycled to preserve sensitivity. Pair with L-theanine, never dose within 6 hours of bed, take a week off every couple of months.
+
+---
+
+## Page: Creatine: The Complete Supplement Guide
+
+URL: https://slaycal.com/blog/creatine-supplement-guide
+
+Category: Supplements | 6 min read | April 2025
+
+The most research-backed performance supplement in existence. No bro-science included.
+
+Creatine monohydrate has over 500 peer-reviewed studies behind it. It is one of the cheapest, safest, and most effective supplements you can take.
+
+### What creatine actually does
+
+Creatine is stored in muscle cells as phosphocreatine. During short bursts of high-intensity effort — a heavy squat, a sprint, a final rep — your body rapidly regenerates ATP using phosphocreatine as a fuel source. More creatine in the muscle = more ATP available = more reps before fatigue kicks in.
+
+Evidence-backed results:
+- Strength gain: +5–15% typical improvement in 1RM over 4–8 weeks
+- Lean mass gain: +1–2 kg (initial water retention, then real muscle)
+- Rep performance: +1–3 extra reps at 70–80% 1RM in compound lifts
+
+### Loading vs. no loading
+
+Loading protocol: 20g/day (4×5g) for 5–7 days, then 3–5g/day. Full saturation in ~7 days. Slightly more GI discomfort during loading week.
+
+No-load protocol: 3–5g/day from day one. Full saturation in ~28 days. No side effects, no difference in long-term results.
+
+Recommendation: Skip the loading phase. Take 5g daily, every day, including rest days.
+
+### Timing: does it matter?
+
+Timing is largely irrelevant. Some evidence suggests post-workout creatine may have a slight edge due to higher insulin sensitivity. Consistency matters far more than timing.
+
+### Which form should you buy?
+
+- Creatine monohydrate — Best choice. Cheapest, most studied, equally effective as every other form. Buy micronized for better mixability.
+- Creatine HCL — Fine but overpriced. No proven performance advantage over monohydrate.
+- Buffered creatine (Kre-Alkalyn) — Skip it. No difference vs monohydrate in studies.
+- Creatine ethyl ester — Avoid. Converts to creatinine faster than monohydrate. Less effective.
+
+### Myths busted
+
+- "Creatine damages your kidneys" — False in healthy individuals. Raises serum creatinine but this is a direct result of metabolism, not kidney damage.
+- "You need to cycle creatine" — No evidence. Taking it daily indefinitely maintains saturation with no downside.
+- "Creatine causes hair loss" — One study found elevated DHT; no follow-up has replicated this. Evidence is extremely weak.
+- "Creatine is a steroid" — It is an amino acid derivative made naturally in your liver.
+- "More is better" — Once muscle stores are saturated, excess is excreted. 5g/day in maintenance is all you need.
+
+### Who benefits most
+
+Strength and power athletes, vegetarians and vegans (baseline stores are lower), natural lifters, and older adults (preserves muscle mass and cognitive function).
+
+### The bottom line
+
+5g of creatine monohydrate, daily, consistently. No loading required. No cycling required. No exotic forms needed.
+
+---
+
+## Page: Protein Powder: Which Type Is Right for You?
+
+URL: https://slaycal.com/blog/protein-powder-guide
+
+Category: Supplements | 7 min read | April 2025
+
+Whey, casein, plant protein — a practical breakdown of what works, what's hype, and how to choose.
+
+Protein powder is simply a convenient way to increase your daily protein intake. Whether you need it depends on your diet, goal, and gut tolerance.
+
+### Do you actually need protein powder?
+
+Only if you're consistently missing your daily protein target (1.6–2.2g/kg body weight) through whole foods. If you're vegan, very busy, or don't enjoy eating a lot of high-protein food, powder earns its place.
+
+### Types of protein powder
+
+**Whey Concentrate** — 70–80% protein by weight. Best all-rounder.
+- Fast-digesting, peaks in blood within 60–90 minutes
+- Rich in leucine, triggers muscle protein synthesis
+- Contains small amounts of lactose — can cause bloating for sensitive people
+- Most affordable whey option
+
+**Whey Isolate** — 90%+ protein by weight. Best for lactose intolerance.
+- Further processed to remove lactose and fat
+- Slightly faster absorption than concentrate
+- No meaningful performance difference vs concentrate
+
+**Casein** — 70–80% protein by weight. Best before bed.
+- Slow-digesting — releases amino acids over 5–7 hours
+- Ideal pre-sleep protein
+- More filling than whey
+
+**Plant Protein (Pea, Rice, Hemp)** — 70–85% protein by weight. Best for vegans.
+- Pea protein is closest in profile to whey
+- Pea + rice blend completes the amino acid profile
+- Slightly lower digestibility vs whey but effective when dosed correctly
+
+**Collagen Protein** — 90%+ protein by weight. Joint support only.
+- Lacks tryptophan — incomplete amino acid profile
+- Poor muscle protein synthesis stimulus
+- Not a substitute for whey or plant protein
+
+### Quick decision guide
+
+- I digest dairy fine → Whey Concentrate
+- I'm lactose intolerant → Whey Isolate or Pea Protein
+- I'm vegan or vegetarian → Pea + Rice blend or Soy Isolate
+- I want a pre-bed protein → Casein or high-casein Greek yogurt
+- I want maximum protein per calorie → Whey Isolate or Pea Isolate
+
+### What to look for on the label
+
+- Protein per scoop: Aim for 20–30g. Anything under 18g usually signals fillers.
+- Leucine content: At least 2g per scoop for optimal MPS signaling.
+- Sugar content: Under 5g per serving.
+- Third-party testing: NSF Certified for Sport or Informed Sport if you compete.
+
+### When to take it
+
+- Post-workout whey within 2 hours is ideal but not mandatory
+- Pre-bed casein (30–40g) can improve overnight muscle protein synthesis
+- Between meals whenever you need a convenient top-up
+
+### The bottom line
+
+Whey concentrate is the default pick — cheap, effective. Go isolate if lactose sensitive. Go plant-based if vegan. Add casein before bed for an extra edge. Skip collagen as a primary protein source.
+
+---
+
+## Page: Mass Gainers: Who Needs Them & How to Use Them
+
+URL: https://slaycal.com/blog/mass-gainer-guide
+
+Category: Supplements | 6 min read | April 2025
+
+A mass gainer can be a legitimate tool — or an overpriced bag of sugar.
+
+A mass gainer is a high-calorie protein supplement — typically 600–1,200 kcal per serving — designed to help people struggling to eat enough calories gain weight faster.
+
+Typical mass gainer stats:
+- Calories: 700–1,200 per serving (2–4 scoops)
+- Protein: 40–60g per serving
+- Carb ratio: 2:1 to 5:1 (carbs to protein)
+
+### Who actually needs a mass gainer?
+
+- Hardgainers (ectomorphs): Naturally fast metabolism and genuinely struggle to eat enough whole food.
+- Very high TDEE athletes: CrossFit competitors, endurance athletes with 4,000+ kcal/day needs.
+- Post-illness or injury recovery: When appetite is suppressed and high-calorie shakes fill a genuine gap.
+
+### Who does NOT need a mass gainer
+
+- Average gym-goers looking to "bulk" — If you can hit a 300–500 kcal surplus with real food, a gainer is just expensive maltodextrin.
+- People already eating 3,000+ kcal/day — Adding a 1,000 kcal gainer creates excessive surplus.
+- Anyone who hates counting — A single serving can wipe out most of your calorie budget.
+
+### What to look for when buying
+
+- Protein source: Whey, casein, or egg — not amino spiked blends
+- Carb source: Oats, sweet potato starch, or complex carbs over pure maltodextrin/sugar
+- Protein per 100g: At least 20g — many gainers are only 10–15g
+- Sugar content: Under 20g per serving — some gainers exceed 80g sugar per shake
+
+### The DIY mass gainer (better & cheaper)
+
+DIY 1,000 kcal Gainer Shake:
+- 100g rolled oats — 389 kcal (slow carbs, fiber-rich)
+- 2 scoops whey concentrate — 240 kcal (~50g protein)
+- 2 tbsp peanut butter — 188 kcal (healthy fats)
+- 1 large banana — 105 kcal (potassium + fast carbs)
+- 300ml whole milk — 186 kcal (protein + casein + fat)
+
+Total: ~1,108 kcal · ~65g protein · ~130g carbs · ~30g fat — at roughly 1/3 the cost of commercial gainers.
+
+### How to use a mass gainer correctly
+
+- Track it in a calorie app — a 1,000 kcal shake is invisible unless you log it
+- Use it to supplement food, not replace meals
+- Start with half a serving if new to high-calorie shakes
+- Post-workout or between meals is ideal
+- If gaining more than 0.5–1kg per week, the surplus is too large
+
+### The bottom line
+
+Mass gainers are a legitimate tool for genuine hardgainers who can't hit their calorie targets through whole food. For everyone else, they're expensive calories. Build your DIY shake, track your intake, and keep the surplus in the 300–500 kcal range.
+
+---
+
+## Page: Push Pull Legs: The Complete Program Guide
+
+URL: https://slaycal.com/blog/push-pull-legs-program
+
+Category: Training Programs | 8 min read | April 2025
+
+PPL is the gold standard split for intermediate lifters. Full structure, sample workouts, and schedule options.
+
+Push Pull Legs divides training into: pushing muscles (chest, shoulders, triceps), pulling muscles (back, biceps), and legs (quads, hamstrings, glutes, calves). Each muscle group gets direct work twice per week on a 6-day schedule.
+
+### Why PPL works so well
+
+- Optimal frequency: Each muscle group trained twice per week — the sweet spot for maximum muscle protein synthesis.
+- Minimal overlap: Pushing and pulling muscles don't compete.
+- Scalable volume: Add sets to weak points without overloading the whole session.
+
+### PPL schedule options
+
+- 6 days/week (classic): Push · Pull · Legs · Push · Pull · Legs · Rest. Maximum frequency for intermediate to advanced lifters.
+- 5 days/week: Push · Pull · Legs · Push · Pull · Rest · Rest. Good compromise, ~1.5× per week on average.
+- 3 days/week (once-per-week): Push · Rest · Pull · Rest · Legs · Rest · Rest. Fine for beginners but frequency is low.
+
+### Push Day workout (Chest, Shoulders, Triceps)
+
+- Barbell Bench Press: 4 × 4–6 (primary chest compound, progressive overload)
+- Incline Dumbbell Press: 3 × 8–12 (upper chest emphasis)
+- Cable Lateral Raise: 4 × 12–15 (side delts)
+- Overhead Dumbbell Press: 3 × 8–12 (front delt and shoulder strength)
+- Chest Fly (cable or pec deck): 3 × 12–15 (chest isolation)
+- Tricep Pushdown: 3 × 12–15 (full extension at bottom)
+- Overhead Tricep Extension: 3 × 10–12 (long head emphasis)
+
+### Pull Day workout (Back, Rear Delts, Biceps)
+
+- Weighted Pull-Up or Lat Pulldown: 4 × 4–8 (primary lat builder)
+- Barbell or Dumbbell Row: 4 × 6–10 (mid-back thickness)
+- Cable Row (close grip): 3 × 10–12 (lower trap and mid-back)
+- Face Pull: 3 × 15–20 (rear delt and external rotator health — never skip)
+- Dumbbell Curl: 3 × 10–12 (supinate at top for full contraction)
+- Hammer Curl: 3 × 10–12 (brachialis emphasis)
+
+### Leg Day workout (Quads, Hamstrings, Glutes, Calves)
+
+- Back Squat: 4 × 4–6 (cornerstone of leg day, full depth)
+- Romanian Deadlift: 4 × 6–10 (hamstring and glute hinge pattern)
+- Leg Press: 3 × 10–15 (high volume quad work)
+- Leg Curl (lying or seated): 3 × 10–15 (isolated hamstring work)
+- Bulgarian Split Squat: 3 × 8–12/leg (single-leg quad + glute builder)
+- Calf Raise (standing): 4 × 12–20 (full range — bottom stretch is the point)
+
+### Progressive overload approaches
+
+- Double progression: Work within a rep range. Once you hit the top, add weight.
+- Linear progression: Add a fixed weight increment each session.
+- Rep PR method: Same weight, aim for one more rep than last session.
+- Volume progression: Add one set per week until 20 sets/week, then deload.
+
+### Common PPL mistakes
+
+- Skipping leg day — Legs are 60% of your muscle mass.
+- Too many isolation movements — Compounds first, always. 3–4 exercises done well beats 8 done poorly.
+- Never changing rep ranges — Rotate between strength (3–6), hypertrophy (8–12), and volume (15–20) mesocycles.
+- No deload — Every 4–8 weeks, reduce volume by 50% for a week.
+
+### The bottom line
+
+Train each pattern twice weekly, keep fatigue interference low, allow enough recovery. Run it for 12–16 weeks with consistent progressive overload and quality nutrition.
+
+---
+
+## Page: Arnold's Workout Program: The Golden Era Split
+
+URL: https://slaycal.com/blog/arnold-schwarzenegger-workout-program
+
+Category: Training Programs | 8 min read | April 2025
+
+Seven Mr. Olympia titles. Six days a week, twice a day. Here's exactly how Arnold trained and how to adapt it for modern lifters.
+
+Arnold Schwarzenegger dominated bodybuilding from 1970 to 1980, winning Mr. Olympia seven times. His program remains studied and debated today.
+
+### The Arnold Split overview
+
+Arnold trained 6 days per week, splitting the body into three groups trained twice each week. Volume: 20–30 sets per muscle group per session.
+
+- Monday & Thursday: Chest + Back
+- Tuesday & Friday: Shoulders + Arms (Biceps & Triceps)
+- Wednesday & Saturday: Legs + Lower Back
+- Sunday: Rest
+
+### Monday & Thursday — Chest + Back
+
+Arnold paired antagonist muscles to allow one to recover while the other works.
+
+- Barbell Bench Press: 5 × 6–10 (Chest)
+- Flat Dumbbell Fly: 5 × 6–10 (Chest)
+- Incline Barbell Press: 6 × 6–10 (Upper Chest)
+- Cable Crossover: 6 × 10–12 (Chest)
+- Wide-Grip Pull-Up: 6 × failure (Lats)
+- T-Bar Row: 5 × 6–10 (Mid Back)
+- Seated Cable Row: 6 × 6–10 (Mid Back)
+- One-Arm Dumbbell Row: 5 × 6–10 (Lats)
+
+### Tuesday & Friday — Shoulders + Arms
+
+- Barbell Clean & Press: 6 × 6–10 (Shoulders)
+- Dumbbell Lateral Raise: 6 × 6–10 (Side Delts)
+- Rear Delt Bent-Over Raise: 5 × 6–10 (Rear Delts)
+- Barbell Curl: 6 × 6–10 (Biceps)
+- Incline Dumbbell Curl: 6 × 6–10 (Biceps)
+- Concentration Curl: 6 × 6–10 (Biceps peak)
+- Close-Grip Bench Press: 6 × 6–10 (Triceps)
+- Tricep Pushdown: 6 × 6–10 (Triceps)
+- Barbell French Press (Skull Crusher): 6 × 6–10 (Triceps)
+
+### Wednesday & Saturday — Legs + Lower Back
+
+- Back Squat: 6 × 8–12 (Quads/Glutes)
+- Leg Press: 6 × 8–12 (Quads)
+- Leg Extension: 6 × 10–12 (Quads isolation)
+- Leg Curl: 6 × 10–12 (Hamstrings)
+- Stiff-Leg Deadlift: 6 × 6–10 (Hamstrings/Lower Back)
+- Good Morning: 5 × 6–10 (Lower Back/Hamstrings)
+- Standing Calf Raise: 10 × 10 (Gastrocnemius)
+- Seated Calf Raise: 8 × 10 (Soleus)
+
+### Arnold's core training philosophy
+
+- Mind-muscle connection: "Feel the muscle working with every rep." Mental focus directly intensifies the training stimulus.
+- Shocking the muscle: Regularly changing exercises, rep ranges, angles, and tempo to prevent adaptation.
+- Extreme volume tolerance: Built progressively over years. Do not attempt the full volume without years of adaptation.
+- Competing with a partner: Training with others creates competitive energy that pushes both beyond what solo training would achieve.
+
+### Can you do Arnold's program?
+
+Probably not at full original volume — at least not yet. This is an advanced program designed for someone with years of training and exceptional recovery capacity.
+
+- Intermediate (1–3 years): Use the Arnold Split schedule but reduce volume to 12–16 sets per muscle group. One session per day only.
+- Advanced (3+ years): Run the full program for 8–12 weeks. Monitor recovery closely. Deload every 6 weeks.
+
+### Arnold's nutrition
+
+Estimated intake during peak training: 3,500–4,000 kcal/day with 250–300g protein.
+
+Modern approach: 1.8–2.2g protein per kg body weight, small calorie surplus, prioritize food quality.
+
+### The bottom line
+
+Take the architecture (chest+back, shoulders+arms, legs, high frequency), adapt the volume to your level. The structure and principles translate perfectly to modern training.
+
+---
+
+## Page: High-Protein Pancake Recipe: 40g Protein, 5 Minutes
+
+URL: https://slaycal.com/blog/protein-pancake-recipe
+
+Category: Recipes | 5 min read | April 2025
+
+A breakfast that tastes like a treat and hits like a proper meal. Full macros, 5 variations, and the mistakes to avoid.
+
+### Nutrition per full batch (serves 1–2)
+
+- Calories: 480 kcal
+- Protein: 42g
+- Carbs: 45g
+- Fat: 10g
+
+### The base recipe
+
+Ingredients:
+- 1 scoop (30g) whey protein concentrate — vanilla or unflavoured works best
+- 60g rolled oats — blended to flour, or use oat flour
+- 2 whole eggs — adds fat, richness, and binding
+- 120ml milk (any type) — adjust to get thick pancake batter consistency
+- ½ tsp baking powder — critical for fluffiness, do not skip
+- Pinch of salt — enhances sweetness
+- ½ tsp vanilla extract — optional but makes a big difference
+
+Method:
+1. Blend oats into flour — use a blender until fine for a smoother pancake.
+2. Mix dry ingredients — combine oat flour, protein powder, baking powder, and salt.
+3. Add wet ingredients — beat in eggs, milk, and vanilla. Mix until just combined. Overmixing develops gluten and makes pancakes dense.
+4. Rest the batter (optional) — 3–5 minutes. The oats absorb liquid and the batter thickens.
+5. Cook on medium-low heat — use a non-stick pan with a tiny amount of coconut oil. Protein burns faster than flour.
+6. Flip once bubbles form — wait for bubbles across the surface and edges to look set. About 2–3 minutes per side.
+
+### 5 variations with macros
+
+- Banana Protein Pancakes: Add 1 medium ripe banana (mashed), reduce milk by 2 tbsp. → ~540 kcal · 40g protein · 60g carbs · 10g fat. Natural sweetness, great pre-workout breakfast.
+- Blueberry Protein Pancakes: Fold 80g fresh or frozen blueberries into batter. → ~510 kcal · 42g protein · 52g carbs · 10g fat.
+- Chocolate Protein Pancakes: Use chocolate whey, add 1 tbsp cocoa powder and 1 tbsp maple syrup. → ~530 kcal · 41g protein · 50g carbs · 11g fat.
+- Greek Yogurt Protein Pancakes (extra protein): Replace half the milk (60ml) with 100g non-fat Greek yogurt. → ~500 kcal · 50g protein · 44g carbs · 9g fat.
+- Vegan Protein Pancakes: Use pea protein, replace eggs with 2 flax eggs, use oat milk. → ~460 kcal · 35g protein · 50g carbs · 9g fat.
+
+### The two mistakes that ruin protein pancakes
+
+1. Heat too high — Protein denatures and toughens quickly at high heat. Use medium-low heat and cook slowly.
+2. Too much protein powder, not enough binder — Stick to 1 scoop max with 2 eggs and oat flour as the structural base.
+
+### Topping ideas
+
+- Greek yogurt + honey: +80 kcal, +8g protein. Best all-rounder.
+- Nut butter (1 tbsp): +90 kcal, +4g protein. Adds calories for bulking.
+- Fresh berries (100g): +50 kcal, +1g protein. Low calorie add-on.
+- Maple syrup (1 tbsp): +52 kcal, 0g protein. Use sparingly if cutting.
+
+### Meal prep
+
+Cook the full batch, let cool, stack with parchment between each pancake, refrigerate for up to 3 days or freeze for up to 1 month. Reheat in a dry pan 1 minute each side or 30 seconds in a microwave.
+
+---
+
+## Page: Free Nutrition Calculators
+
+URL: https://slaycal.com/calculators
+
+SlayCal offers four free, browser-based nutrition calculators — no account or download required.
+
+- BMI Calculator (https://slaycal.com/bmi-calculator): Calculate Body Mass Index from height and weight. Supports metric and imperial. Shows your category (underweight, normal, overweight, obese) with health context.
+- Calorie Calculator (https://slaycal.com/calorie-calculator): Estimate daily calorie needs (TDEE) based on age, sex, weight, height, and activity level using the Mifflin-St Jeor formula. Shows maintenance calories plus suggested targets for fat loss, maintenance, and muscle gain.
+- Macro Calculator (https://slaycal.com/macro-calculator): Calculate recommended protein, carbohydrate, and fat ratios for a given goal (fat loss, maintenance, or muscle gain). Outputs grams per day and percentages.
+- Body Fat Calculator (https://slaycal.com/body-fat-calculator): Estimate body fat percentage using the US Navy measurement method. Requires waist, neck, and height measurements (plus hip for women).
+
+---
+
+## Page: Pricing
+
+URL: https://slaycal.com/#pricing
+
+SlayCal offers three tiers (available via the iOS App Store and Google Play):
+
+- Free: 500 scan credits included at signup — no credit card required.
+- Monthly Pro: $9.99/month — unlimited meal scans, full macro tracking, water & weight tracking, ad-free.
+- Yearly Pro: $6.67/month (billed $79.99/year) — everything in Monthly plus priority scan processing, early feature access, personalized goal recalibration.
+- Lifetime: $199 one-time — all Pro features forever, all future updates, VIP support, personalized coaching insights.
+
+---
+
+## Page: Privacy Policy
+
+URL: https://slaycal.com/privacy
+
+SlayCal collects only the data needed to provide the nutrition tracking service. Key points:
+
+- Account data: email address used for authentication
+- Health data: body metrics (weight, height, age, sex) entered voluntarily for goal calculation
+- Meal scan data: photos processed by AI on-device or server-side; not stored longer than required for processing
+- Usage data: anonymized analytics to improve app performance
+- No data is sold to third parties
+- Users may request deletion of all personal data at any time
+
+---
+
+## Page: Terms of Service
+
+URL: https://slaycal.com/terms
+
+Key terms governing use of the SlayCal app and website:
+
+- SlayCal is a nutrition informational tool, not a medical device or substitute for professional dietary advice
+- Free tier users receive 500 scan credits; Pro subscribers receive unlimited scans per their plan
+- Subscriptions auto-renew unless cancelled before renewal date
+- Refund policy follows App Store and Google Play standard policies
+- Users must be 13 years or older
+- Users retain ownership of their personal data; SlayCal retains a license to use anonymized, aggregated data for product improvement
+
+---
+
+## Download
+
+- App Store (iOS): https://apps.apple.com/app/slaycal
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.slaycal
