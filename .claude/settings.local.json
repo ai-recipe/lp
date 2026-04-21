@@ -6,7 +6,8 @@
       "Bash(grep \"^export const\" /Users/sahin/Desktop/slaycallp/src/i18n/*.ts)",
       "Bash(ls -la /Users/sahin/Desktop/slaycallp/src/i18n/*.ts)",
       "Bash(for file:*)",
-      "Bash(do echo:*)"
+      "Bash(do echo:*)",
+      "WebFetch(domain:llmstxt.org)"
     ]
   }
 }

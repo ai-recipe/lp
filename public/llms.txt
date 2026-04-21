@@ -1,0 +1,72 @@
+# SlayCal
+
+> SlayCal is an AI-powered nutrition coaching app for iOS and Android. Users point their phone camera at any meal, barcode, or nutrition label and get a full calorie and macro breakdown in under 3 seconds — no manual entry required. The app also scans fridge contents to generate personalized recipes, tracks hydration, weight, and BMI, and adapts daily nutrition goals to the user's body metrics and targets.
+
+SlayCal is free to download with 500 scan credits included (no credit card required). A Pro subscription unlocks unlimited scans, priority processing, and early feature access. This site is the marketing landing page for the app, and also hosts free nutrition calculators and a health/fitness blog.
+
+## Core App Features
+
+- [Instant Meal Recognition](https://slaycal.com/#features): Point your camera at food, a barcode, or a nutrition label — get calories, protein, carbs, and fat logged in under 3 seconds.
+- [Fridge Scanner & Recipe Generator](https://slaycal.com/#features): Scan the contents of your fridge to receive step-by-step recipes with macros pre-calculated.
+- [Macro & Calorie Tracking](https://slaycal.com/#features): Real-time daily dashboard showing protein, carb, fat, and calorie progress against personalized goals.
+- [Hydration Tracking](https://slaycal.com/#features): One-tap water logging with a visual ring and gentle reminders.
+- [Progress Dashboard](https://slaycal.com/#progress): Weight charts, BMI tracking, and weekly nutrition trend breakdowns.
+- [Adaptive Goal Setting](https://slaycal.com/#features): Enter body metrics and target; SlayCal sets and adjusts daily macro and calorie targets automatically.
+- [Recipe Explorer](https://slaycal.com/#features): Browse 100+ macro-balanced recipes, save favorites, filter by goal, and follow guided step-by-step cooking instructions.
+
+## Free Nutrition Calculators
+
+- [Calculator Hub](https://slaycal.com/calculators): Overview of all available free calculators.
+- [BMI Calculator](https://slaycal.com/bmi-calculator): Calculate Body Mass Index from height and weight.
+- [Calorie Calculator](https://slaycal.com/calorie-calculator): Estimate daily calorie needs based on age, sex, weight, height, and activity level.
+- [Macro Calculator](https://slaycal.com/macro-calculator): Calculate recommended protein, carbohydrate, and fat ratios for a given goal.
+- [Body Fat Calculator](https://slaycal.com/body-fat-calculator): Estimate body fat percentage using standard measurement methods.
+
+## Blog — Nutrition & Fitness Guides
+
+- [How Many Calories Should I Eat?](https://slaycal.com/blog/how-many-calories-should-i-eat): Guide to TDEE and calorie targets for weight loss, maintenance, and gain.
+- [What Is BMI?](https://slaycal.com/blog/what-is-bmi): Explanation of Body Mass Index, its uses, and limitations.
+- [Best Foods for Muscle Gain](https://slaycal.com/blog/best-foods-for-muscle-gain): High-protein food choices that support hypertrophy.
+- [How to Lose Weight Without Counting Calories](https://slaycal.com/blog/how-to-lose-weight-without-counting-calories): Behavioral and dietary strategies for fat loss without strict tracking.
+- [Caffeine Supplement Guide](https://slaycal.com/blog/caffeine-supplement-guide): Evidence-based overview of caffeine dosing, timing, and effects on performance.
+- [Creatine Supplement Guide](https://slaycal.com/blog/creatine-supplement-guide): How creatine works, loading protocols, and safety data.
+- [Protein Powder Guide](https://slaycal.com/blog/protein-powder-guide): Types of protein powder, when to use them, and how to choose.
+- [Mass Gainer Guide](https://slaycal.com/blog/mass-gainer-guide): Who should use mass gainers, how to use them, and alternatives.
+- [Push Pull Legs Program](https://slaycal.com/blog/push-pull-legs-program): A complete PPL workout split with exercise selection and programming notes.
+- [Arnold Schwarzenegger Workout Program](https://slaycal.com/blog/arnold-schwarzenegger-workout-program): Breakdown of Arnold's classic training split and philosophy.
+- [Protein Pancake Recipe](https://slaycal.com/blog/protein-pancake-recipe): High-protein pancake recipe with full macro breakdown.
+
+## Pricing
+
+SlayCal offers three tiers (available via the iOS App Store and Google Play):
+
+- **Free**: 500 scan credits included at signup — no credit card required.
+- **Monthly Pro**: $9.99/month — unlimited meal scans, full macro tracking, water & weight tracking, ad-free.
+- **Yearly Pro**: $6.67/month (billed $79.99/year) — everything in Monthly plus priority scan processing, early feature access, personalized goal recalibration.
+- **Lifetime**: $199 one-time — all Pro features forever, all future updates, VIP support, personalized coaching insights.
+
+## Download
+
+- [App Store (iOS)](https://apps.apple.com/app/slaycal): Download SlayCal for iPhone and iPad.
+- [Google Play (Android)](https://play.google.com/store/apps/details?id=com.slaycal): Download SlayCal for Android.
+
+## Legal
+
+- [Privacy Policy](https://slaycal.com/privacy): How SlayCal collects, uses, and protects user data.
+- [Terms of Service](https://slaycal.com/terms): Terms governing use of the SlayCal app and website.
+
+## Optional
+
+- [Turkish Homepage](https://slaycal.com/tr/): Full site localization in Turkish.
+- [Spanish Homepage](https://slaycal.com/es/): Homepage in Spanish.
+- [French Homepage](https://slaycal.com/fr/): Homepage in French.
+- [German Homepage](https://slaycal.com/de/): Homepage in German.
+- [Portuguese (Brazil) Homepage](https://slaycal.com/pt-br/): Homepage in Brazilian Portuguese.
+- [Russian Homepage](https://slaycal.com/ru/): Homepage in Russian.
+- [Japanese Homepage](https://slaycal.com/ja/): Homepage in Japanese.
+- [Korean Homepage](https://slaycal.com/ko/): Homepage in Korean.
+- [Italian Homepage](https://slaycal.com/it/): Homepage in Italian.
+- [Turkish BMI Calculator](https://slaycal.com/tr/bmi-calculator): BMI calculator in Turkish.
+- [Turkish Calorie Calculator](https://slaycal.com/tr/calorie-calculator): Calorie calculator in Turkish.
+- [Turkish Macro Calculator](https://slaycal.com/tr/macro-calculator): Macro calculator in Turkish.
+- [Turkish Body Fat Calculator](https://slaycal.com/tr/body-fat-calculator): Body fat calculator in Turkish.

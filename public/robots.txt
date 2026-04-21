@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://slaycal.com/sitemap.xml
+
+# LLM-friendly content index (https://llmstxt.org)
+LLMs-txt: https://slaycal.com/llms.txt
