@@ -1,0 +1,338 @@
+---
+// 1RM & Working Set Calculator
+---
+
+<main id="main-content">
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+    <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-40 pointer-events-none" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl">
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <a href="/calculators" class="hover:text-primary transition-colors">Calculators</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <span class="text-slate-600 font-medium">1RM Calculator</span>
+      </nav>
+      <div class="inline-flex items-center gap-2 rounded-full bg-red-50 px-4 py-1.5 mb-5">
+        <span class="material-symbols-outlined text-red-500 text-base leading-none">fitness_center</span>
+        <span class="text-sm font-semibold text-red-600">Free · Instant results</span>
+      </div>
+      <h1 class="text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">1RM Calculator</h1>
+      <p class="mt-4 text-lg text-slate-500 max-w-xl leading-relaxed">Find your one-rep max or pick the right weight for your working sets — based on what you actually lifted.</p>
+    </div>
+  </section>
+
+  <!-- ── CALCULATOR ─────────────────────────────────────────────── -->
+  <section class="bg-background-light px-6 pb-16 lg:px-20" aria-label="1RM Calculator">
+    <div class="mx-auto max-w-4xl">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+
+        <!-- Inputs -->
+        <div class="rounded-3xl bg-white border border-slate-100 shadow-sm p-8">
+          <h2 class="text-lg font-bold text-slate-900 mb-6">Enter your lift</h2>
+
+          <!-- Weight -->
+          <div class="mb-7">
+            <div class="flex items-center justify-between mb-2">
+              <label for="weight-input" class="text-sm font-semibold text-slate-700">Weight lifted</label>
+              <div class="flex items-center gap-1.5">
+                <input
+                  type="number"
+                  id="weight-input"
+                  min="20" max="400" value="100"
+                  class="w-20 rounded-lg border border-slate-200 bg-background-light px-2 py-1 text-center text-sm font-bold text-slate-900 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                  aria-label="Weight in kilograms"
+                />
+                <span class="text-sm font-semibold text-slate-400">kg</span>
+              </div>
+            </div>
+            <input
+              type="range"
+              id="weight-slider"
+              min="20" max="400" value="100" step="1"
+              class="w-full h-2 rounded-full bg-slate-200 accent-primary cursor-pointer"
+              aria-label="Weight slider"
+            />
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1.5 font-medium">
+              <span>20 kg</span><span>400 kg</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">For decimals, type directly into the number field.</p>
+          </div>
+
+          <!-- Reps -->
+          <div class="mb-7">
+            <div class="flex items-center justify-between mb-2">
+              <label for="reps-slider" class="text-sm font-semibold text-slate-700">Reps performed</label>
+              <span id="reps-display" class="text-sm font-bold text-slate-900 bg-primary/10 text-primary px-3 py-1 rounded-full">5</span>
+            </div>
+            <input
+              type="range"
+              id="reps-slider"
+              min="1" max="12" value="5" step="1"
+              class="w-full h-2 rounded-full bg-slate-200 accent-primary cursor-pointer"
+              aria-label="Reps slider"
+            />
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1.5 font-medium">
+              <span>1</span><span>12</span>
+            </div>
+          </div>
+
+          <!-- Warning -->
+          <div class="mb-6 flex items-start gap-3 rounded-2xl bg-amber-50 border border-amber-100 p-4">
+            <span class="material-symbols-outlined text-amber-500 text-lg shrink-0 mt-0.5">warning</span>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <strong class="text-slate-800">Don't train at your repmax.</strong> For efficient training, always leave 1–2 reps in reserve. Use the working set mode below for safe training weights.
+            </p>
+          </div>
+
+          <!-- Mode toggle -->
+          <div class="flex rounded-xl bg-background-light p-1" role="group" aria-label="Calculator mode">
+            <button id="mode-max" class="mode-btn flex-1 px-3 py-2.5 rounded-lg text-xs font-semibold bg-white text-slate-900 shadow-sm transition-all leading-tight" aria-pressed="true">
+              Show my 1RM
+            </button>
+            <button id="mode-sets" class="mode-btn flex-1 px-3 py-2.5 rounded-lg text-xs font-semibold text-slate-500 hover:text-slate-700 transition-all leading-tight" aria-pressed="false">
+              Working set weights
+            </button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="rounded-3xl border border-slate-100 bg-white shadow-sm p-8 flex flex-col" aria-live="polite">
+
+          <!-- Max mode results -->
+          <div id="results-max">
+            <h2 class="text-lg font-bold text-slate-900 mb-5">Your estimated max</h2>
+
+            <!-- 1RM hero -->
+            <div class="rounded-2xl bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 p-5 mb-4 text-center">
+              <p class="text-xs font-semibold text-red-400 uppercase tracking-wider mb-1">1 Rep Max</p>
+              <p id="orm-value" class="text-5xl font-bold text-slate-900 tabular-nums">—</p>
+              <p class="text-sm text-slate-400 mt-1">kg · estimated max for 1 rep</p>
+            </div>
+
+            <!-- nRM grid -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">2 RM</p>
+                <p id="orm-2" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">3 RM</p>
+                <p id="orm-3" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">5 RM</p>
+                <p id="orm-5" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="rounded-2xl bg-background-light p-4">
+                <p class="text-xs text-slate-500 mb-1">10 RM</p>
+                <p id="orm-10" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Working set mode results -->
+          <div id="results-sets" class="hidden">
+            <h2 class="text-lg font-bold text-slate-900 mb-1">Working set weights</h2>
+            <p class="text-xs text-slate-400 mb-5">Leaving 1–2 reps in reserve (RPE 7–8)</p>
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between rounded-2xl bg-background-light px-5 py-3.5">
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">Strength · 3–5 reps</p>
+                  <p class="text-xs text-slate-400 mt-0.5">~90% of 1RM</p>
+                </div>
+                <p id="ws-strength" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-background-light px-5 py-3.5">
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">Power-hypertrophy · 5–8 reps</p>
+                  <p class="text-xs text-slate-400 mt-0.5">~80% of 1RM</p>
+                </div>
+                <p id="ws-power-hyp" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-background-light px-5 py-3.5">
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">Hypertrophy · 8–12 reps</p>
+                  <p class="text-xs text-slate-400 mt-0.5">~70% of 1RM</p>
+                </div>
+                <p id="ws-hyp" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-background-light px-5 py-3.5">
+                <div>
+                  <p class="text-sm font-semibold text-slate-800">Endurance · 12–15 reps</p>
+                  <p class="text-xs text-slate-400 mt-0.5">~60% of 1RM</p>
+                </div>
+                <p id="ws-endurance" class="text-base font-bold text-slate-900 tabular-nums">—</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a href="#" class="mt-5 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-700 transition-all" data-analytics-store="ios" data-analytics-placement="orm_result">
+            <span class="material-symbols-outlined text-base">fitness_center</span>Track your lifts in SlayCal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ──────────────────────────────────────────── -->
+  <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="how-title">
+    <div class="mx-auto max-w-4xl">
+      <h2 id="how-title" class="text-2xl font-bold text-slate-900 mb-2">How the 1RM formula works</h2>
+      <p class="text-slate-500 mb-8">This calculator uses the <strong class="text-slate-700">Wathan formula</strong>, one of the most accurate multi-rep prediction models for real-world lifting.</p>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {[
+          { icon: 'straighten', title: 'Enter any set', desc: 'Use a weight you can lift with good form for 1–12 reps. Avoid grinding reps — clean technique gives the best estimate.' },
+          { icon: 'calculate', title: 'Formula runs instantly', desc: 'The Wathan formula calculates your estimated 1RM and derives all nRM values from a validated percentage table.' },
+          { icon: 'table_chart', title: 'Read your numbers', desc: 'See your theoretical max and working set weights for every major training zone — strength, hypertrophy, endurance.' },
+        ].map(({ icon, title, desc }) => (
+          <div class="rounded-2xl bg-background-light p-5">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-100 mb-4">
+              <span class="material-symbols-outlined text-red-500 text-xl">{icon}</span>
+            </div>
+            <p class="font-bold text-slate-900 text-sm mb-1">{title}</p>
+            <p class="text-xs text-slate-500 leading-snug">{desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 rounded-2xl bg-blue-50 border border-blue-100 p-5 flex gap-3">
+        <span class="material-symbols-outlined text-blue-500 text-xl shrink-0 mt-0.5">info</span>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          <strong class="text-slate-800">1RM estimates are approximations.</strong> Factors like fatigue, exercise selection, bar speed, and training age affect your real max. Use the result as a training guide, not an absolute number. Never attempt a true 1RM without a spotter.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLAYCAL CTA ────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-20 lg:px-20" aria-labelledby="cta-orm-title">
+    <div class="relative mx-auto max-w-3xl text-center">
+      <h2 id="cta-orm-title" class="text-3xl font-bold text-white lg:text-4xl leading-tight">A number today. A PR next month.</h2>
+      <p class="mt-4 text-white/80 max-w-xl mx-auto leading-relaxed">SlayCal logs your lifts and tracks strength progress over time — so you always know if you're getting stronger.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#" class="flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-50 transition-all shadow-xl" data-analytics-store="ios" data-analytics-placement="orm_cta">
+          <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download free on iOS
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.slaycal.app" class="flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white/15 border-2 border-white/30 text-white font-bold hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="orm_cta">
+          <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+          Get it on Google Play
+        </a>
+      </div>
+      <p class="mt-5 text-xs text-white/60">Free download · No credit card required</p>
+    </div>
+  </section>
+
+  <!-- ── OTHER CALCULATORS ──────────────────────────────────────── -->
+  <section class="bg-white px-6 py-16 lg:px-20" aria-labelledby="more-orm-title">
+    <div class="mx-auto max-w-4xl">
+      <h2 id="more-orm-title" class="text-xl font-bold text-slate-900 mb-6">More free calculators</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {[
+          { href: '/calorie-calculator', icon: 'local_fire_department', label: 'Calorie Calculator', desc: 'Find your daily calorie target.' },
+          { href: '/macro-calculator', icon: 'pie_chart', label: 'Macro Calculator', desc: 'Break calories into protein, carbs, fat.' },
+          { href: '/body-fat-calculator', icon: 'straighten', label: 'Body Fat Calculator', desc: 'Estimate your body fat percentage.' },
+        ].map(({ href, icon, label, desc }) => (
+          <a href={href} class="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+              <span class="material-symbols-outlined text-primary text-xl">{icon}</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">{label}</p>
+              <p class="text-xs text-slate-400">{desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const weightInput = document.getElementById('weight-input') as HTMLInputElement;
+  const weightSlider = document.getElementById('weight-slider') as HTMLInputElement;
+  const repsSlider = document.getElementById('reps-slider') as HTMLInputElement;
+  const repsDisplay = document.getElementById('reps-display')!;
+  const modeMaxBtn = document.getElementById('mode-max')!;
+  const modeSetsBtn = document.getElementById('mode-sets')!;
+  const resultsMax = document.getElementById('results-max')!;
+  const resultsSets = document.getElementById('results-sets')!;
+
+  // nRM percentages derived from Epley's validated table
+  const nrmPct: Record<number, number> = {
+    1: 1.0, 2: 0.955, 3: 0.922, 4: 0.9, 5: 0.863,
+    6: 0.837, 7: 0.811, 8: 0.786, 9: 0.762, 10: 0.739,
+    11: 0.715, 12: 0.694,
+  };
+
+  function calcOneRM(weight: number, reps: number): number {
+    // Wathan formula
+    return (100 * weight) / (48.8 + 53.8 * Math.exp(-0.075 * reps));
+  }
+
+  function fmt(val: number): string {
+    return val.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function update() {
+    const weight = parseFloat(weightInput.value) || 0;
+    const reps = parseInt(repsSlider.value, 10);
+
+    repsDisplay.textContent = String(reps);
+
+    if (!weight || weight <= 0) return;
+
+    const oneRM = calcOneRM(weight, reps);
+
+    (document.getElementById('orm-value') as HTMLElement).textContent = fmt(oneRM);
+    (document.getElementById('orm-2') as HTMLElement).textContent = fmt(oneRM * nrmPct[2]) + ' kg';
+    (document.getElementById('orm-3') as HTMLElement).textContent = fmt(oneRM * nrmPct[3]) + ' kg';
+    (document.getElementById('orm-5') as HTMLElement).textContent = fmt(oneRM * nrmPct[5]) + ' kg';
+    (document.getElementById('orm-10') as HTMLElement).textContent = fmt(oneRM * nrmPct[10]) + ' kg';
+
+    (document.getElementById('ws-strength') as HTMLElement).textContent = fmt(oneRM * 0.9) + ' kg';
+    (document.getElementById('ws-power-hyp') as HTMLElement).textContent = fmt(oneRM * 0.8) + ' kg';
+    (document.getElementById('ws-hyp') as HTMLElement).textContent = fmt(oneRM * 0.7) + ' kg';
+    (document.getElementById('ws-endurance') as HTMLElement).textContent = fmt(oneRM * 0.6) + ' kg';
+  }
+
+  // Sync weight slider ↔ number input
+  weightSlider.addEventListener('input', () => {
+    weightInput.value = weightSlider.value;
+    update();
+  });
+  weightInput.addEventListener('input', () => {
+    const v = parseFloat(weightInput.value);
+    if (v >= 20 && v <= 400) weightSlider.value = String(Math.round(v));
+    update();
+  });
+
+  repsSlider.addEventListener('input', update);
+
+  // Mode toggle
+  function setMode(isMax: boolean) {
+    modeMaxBtn.setAttribute('aria-pressed', String(isMax));
+    modeSetsBtn.setAttribute('aria-pressed', String(!isMax));
+    const active = ['bg-white', 'text-slate-900', 'shadow-sm'];
+    if (isMax) {
+      modeMaxBtn.classList.add(...active); modeMaxBtn.classList.remove('text-slate-500');
+      modeSetsBtn.classList.remove(...active); modeSetsBtn.classList.add('text-slate-500');
+    } else {
+      modeSetsBtn.classList.add(...active); modeSetsBtn.classList.remove('text-slate-500');
+      modeMaxBtn.classList.remove(...active); modeMaxBtn.classList.add('text-slate-500');
+    }
+    resultsMax.classList.toggle('hidden', !isMax);
+    resultsSets.classList.toggle('hidden', isMax);
+  }
+
+  modeMaxBtn.addEventListener('click', () => setMode(true));
+  modeSetsBtn.addEventListener('click', () => setMode(false));
+
+  // Initial calculation
+  update();
+</script>

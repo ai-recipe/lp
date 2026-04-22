@@ -52,6 +52,17 @@ const calculators = [
     borderColor: 'border-purple-100',
     tag: 'For athletes',
   },
+  {
+    slug: '/one-rm-calculator',
+    icon: 'fitness_center',
+    title: '1RM Calculator',
+    description: 'Find your one-rep max or get working set weights for any lift.',
+    benefit: 'Stop guessing — train at the exact intensity your goal requires.',
+    color: 'from-red-50 to-orange-50',
+    iconColor: 'text-red-500',
+    borderColor: 'border-red-100',
+    tag: 'For strength',
+  },
 ];
 
 const internalLinks = [
@@ -79,6 +90,12 @@ const internalLinks = [
     desc: 'Navy method estimate using height, waist, and neck measurements.',
     icon: 'straighten',
   },
+  {
+    href: '/one-rm-calculator',
+    label: '1RM Calculator',
+    desc: 'One-rep max and working set weights for any lift.',
+    icon: 'fitness_center',
+  },
 ];
 
 const jsonLd = JSON.stringify({
@@ -87,7 +104,7 @@ const jsonLd = JSON.stringify({
   name: 'Free Health & Nutrition Calculators',
   description: 'A collection of free online health calculators including BMI, calories, macros, and body fat.',
   url: 'https://slaycal.com/calculators',
-  numberOfItems: 4,
+  numberOfItems: 5,
   itemListElement: calculators.map((c, i) => ({
     '@type': 'ListItem',
     position: i + 1,

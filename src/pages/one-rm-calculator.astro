@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import OneRmCalcContent from '../components/calculators/OneRmCalcContent.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="1RM Calculator — One Rep Max & Working Set Weight Calculator | SlayCal"
+  description="Calculate your one-rep max and find the right working set weights for every training zone. Enter any weight and rep count for an instant estimate."
+  keywords="1RM calculator, one rep max calculator, working set calculator, strength calculator, max weight calculator, repmax"
+  lang="en"
+  canonicalPath="/one-rm-calculator"
+>
+  <Header t={t} lang="en" currentPath="/one-rm-calculator" />
+  <OneRmCalcContent />
+  <Footer t={t} lang="en" />
+</Layout>

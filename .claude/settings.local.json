@@ -7,7 +7,8 @@
       "Bash(ls -la /Users/sahin/Desktop/slaycallp/src/i18n/*.ts)",
       "Bash(for file:*)",
       "Bash(do echo:*)",
-      "WebFetch(domain:llmstxt.org)"
+      "WebFetch(domain:llmstxt.org)",
+      "Bash(npx astro *)"
     ]
   }
 }

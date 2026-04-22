@@ -1,0 +1,367 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Best Supplements Guide: What to Take, What to Skip & Why | SlayCal Blog"
+  description="Supplements aren't magic and they aren't poison. Here's an honest, evidence-based breakdown of the top 5 supplements worth your money — and how to use them correctly."
+  keywords="best supplements, supplement guide, creatine, protein powder, omega-3, probiotics, ZMA, zinc magnesium, sports nutrition, supplement stack"
+  lang="en"
+  canonicalPath="/blog/best-supplements-guide"
+>
+  <Header t={t} lang="en" currentPath="/blog/best-supplements-guide" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Best Supplements</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Supplements</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          The Best Supplements:<br/>An Honest Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Supplements are neither magic nor poison. Here's what the evidence actually says — no purchased research, no hype, no bro-science.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Researching supplements is hard. Funded studies, exaggerated results, and manipulative marketing blur the line between what works and what's just expensive packaging. This guide cuts through it — here's what to take, the right dose, and what to ignore.
+          </p>
+
+          <!-- What are supplements -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What are supplements, really?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The word "supplement" means exactly that: a supplement to your diet, not a replacement for it. These products isolate specific nutrients — a vitamin, a mineral, a protein fraction — and deliver them in a convenient form. They are not meal replacements. They are not magic. They exist to fill gaps.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            That means the first step is identifying what's actually missing. Taking a supplement you don't need is just an expensive habit. Taking one that addresses a real deficiency can make a meaningful difference.
+          </p>
+
+          <!-- Nutrition pyramid callout -->
+          <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5 mb-8 flex gap-4">
+            <span class="material-symbols-outlined text-amber-500 text-2xl shrink-0 mt-0.5">info</span>
+            <div>
+              <p class="text-sm font-bold text-slate-900 mb-1">Supplements are at the top of the nutrition pyramid</p>
+              <p class="text-xs text-slate-600 leading-relaxed">Calories, protein, meal timing, and hydration come first. Get those right, and supplements become genuinely useful. Skip them, and no supplement will paper over the gap.</p>
+            </div>
+          </div>
+
+          <!-- Two myths -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Two myths to kill first</h2>
+
+          <div class="space-y-4 mb-8">
+            <div class="rounded-2xl border border-red-100 bg-red-50 p-5">
+              <p class="font-bold text-rose-600 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">close</span>Myth: "Supplements are dangerous"
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Supplements are processed foods. A whey protein tub is no more dangerous than a chicken breast in terms of what it's delivering. Used correctly and from reputable brands, the supplements in this guide have no meaningful safety concerns for healthy adults.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-red-100 bg-red-50 p-5">
+              <p class="font-bold text-rose-600 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">close</span>Myth: "Supplements will transform my body"
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                They won't. Supplements remove obstacles — a protein gap here, a mineral deficiency there. The actual work is done by consistent training, quality nutrition, and sleep. No supplement skips that queue.
+              </p>
+            </div>
+          </div>
+
+          <!-- Top 5 -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-2">The top 5 supplements</h2>
+          <p class="text-slate-500 text-sm mb-8">Ranked by evidence strength and practical return on investment.</p>
+
+          <!-- #1 Creatine -->
+          <div class="flex items-center gap-3 mb-3 mt-10">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white text-sm font-bold shrink-0">#1</span>
+            <h3 class="text-xl font-bold text-slate-900">Creatine Monohydrate</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Over 500 peer-reviewed studies. The most evidence-backed performance supplement in existence. Creatine is stored in muscle as phosphocreatine, which your body uses to rapidly regenerate ATP during short, explosive efforts — a heavy squat, a sprint, the last rep of a hard set. More creatine in the muscle = more available energy = more output before fatigue.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Beyond performance, creatine has documented benefits for brain health, bone density, and age-related muscle preservation. It is also completely safe long-term.
+          </p>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 my-6">
+            {[
+              { label: 'Who benefits', value: 'Everyone lifting', sub: 'Especially vegetarians/vegans with lower baseline stores' },
+              { label: 'Daily dose', value: '3–5 g', sub: 'Every day, including rest days. No loading required.' },
+              { label: 'Form to buy', value: 'Monohydrate', sub: 'Cheapest, most studied. Micronized for better mixability.' },
+            ].map(({ label, value, sub }) => (
+              <div class="rounded-2xl border border-blue-100 bg-blue-50 p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1">{label}</p>
+                <p class="text-lg font-bold text-slate-900">{value}</p>
+                <p class="text-xs text-slate-500 mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-500 text-xs mb-8">On a tight budget? Buy creatine and nothing else. It's the single highest-return supplement for strength athletes.</p>
+
+          <!-- #2 ZMA -->
+          <div class="flex items-center gap-3 mb-3 mt-10">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white text-sm font-bold shrink-0">#2</span>
+            <h3 class="text-xl font-bold text-slate-900">Zinc & Magnesium (ZMA)</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Zinc and magnesium are involved in hundreds of metabolic reactions. Deficiency in either — extremely common in athletes who sweat heavily — shows up as low testosterone, poor sleep quality, hair loss, low energy, and hormonal imbalances. Supplementing to optimal levels restores those markers, it doesn't pharmacologically boost them above natural.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { mineral: 'Zinc', dose: '25–45 mg/day', note: 'Take at night, away from calcium which blocks absorption' },
+              { mineral: 'Magnesium', dose: '200–400 mg/day', note: 'Glycinate or citrate form for best absorption; also improves sleep quality' },
+            ].map(({ mineral, dose, note }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-bold text-slate-900 mb-1">{mineral}</p>
+                <p class="text-xs font-semibold text-indigo-600 mb-0.5">{dose}</p>
+                <p class="text-xs text-slate-500">{note}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            You can buy a combined ZMA capsule or take each mineral separately. Either works. The combined formula is more convenient and typically well-dosed.
+          </p>
+
+          <!-- #3 Omega-3 -->
+          <div class="flex items-center gap-3 mb-3 mt-10">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-600 text-white text-sm font-bold shrink-0">#3</span>
+            <h3 class="text-xl font-bold text-slate-900">Omega-3 Fish Oil</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Modern diets are heavily tilted toward omega-6 fats (vegetable oils, processed food) with very little omega-3 (fatty fish, grass-fed meat). This imbalance drives chronic low-grade inflammation. For athletes, elevated inflammation slows recovery between sessions and increases injury risk over time.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Omega-3 supplementation rebalances this ratio, reduces inflammation markers, supports cardiovascular health, and has emerging evidence for cognitive benefits. It's a long-term investment more than an acute performance tool.
+          </p>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 my-6">
+            {[
+              { label: 'Target dose', value: '2–3 g EPA+DHA/day', sub: 'Check the label — most capsules contain 300 mg per 1000 mg softgel' },
+              { label: 'What to look for', value: 'EPA + DHA content', sub: 'Ignore the total fish oil volume, look at the active fatty acids' },
+            ].map(({ label, value, sub }) => (
+              <div class="rounded-2xl border border-teal-100 bg-teal-50 p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-1">{label}</p>
+                <p class="text-base font-bold text-slate-900">{value}</p>
+                <p class="text-xs text-slate-500 mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-500 text-xs mb-8">Quality varies enormously across fish oil products. Cheap options are often oxidized and provide little benefit. Look for brands with third-party testing (IFOS certification).</p>
+
+          <!-- #4 Probiotics -->
+          <div class="flex items-center gap-3 mb-3 mt-10">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white text-sm font-bold shrink-0">#4</span>
+            <h3 class="text-xl font-bold text-slate-900">Probiotics</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Your gut microbiome handles more than digestion. It regulates nutrient absorption, immune function, hormonal signaling, and even mood. Antibiotics, processed food, chronic stress, and excess refined carbohydrates all damage the bacterial ecosystem in your gut. When the microbiome is compromised, you can eat perfectly and still absorb nutrients poorly.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            If you experience bloating, irregular digestion, weak immunity, persistent skin issues, or low energy, gut health is worth addressing before adding anything else.
+          </p>
+
+          <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5 mb-6">
+            <p class="text-sm font-bold text-slate-900 mb-3">What to look for in a probiotic</p>
+            <ul class="space-y-2">
+              {[
+                'Diversity over quantity — strain variety matters more than total CFU count',
+                'Must include Lactobacillus rhamnosus and Lactobacillus acidophilus as a minimum',
+                'Check the expiry date — dead bacteria provide no benefit',
+                'Refrigerated products are generally more reliable for live culture count',
+              ].map(item => (
+                <li class="flex gap-2 text-xs text-slate-600">
+                  <span class="material-symbols-outlined text-emerald-600 text-base shrink-0 mt-0.5">check_circle</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p class="text-slate-500 text-xs mb-8">Prebiotics (food for existing bacteria — inulin, FOS) are a useful complement. You don't need both, but pairing them accelerates microbiome recovery.</p>
+
+          <!-- #5 Protein Powder -->
+          <div class="flex items-center gap-3 mb-3 mt-10">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-white text-sm font-bold shrink-0">#5</span>
+            <h3 class="text-xl font-bold text-slate-900">Protein Powder</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Protein powder is a convenience tool, not a magic supplement. If your diet already hits your daily protein target — typically 1.6–2.2 g per kg of bodyweight for lifters — you don't need it. If it doesn't, a quality whey protein or plant-based equivalent is the most practical way to close the gap.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Protein powder is especially useful during a calorie deficit, when total food volume is reduced and hitting protein targets through whole foods alone becomes harder.
+          </p>
+          <div class="space-y-3 mb-8">
+            {[
+              { form: 'Whey concentrate', verdict: 'Best value', desc: 'Fast-digesting, complete amino acid profile, affordable. Minor lactose content — fine for most people.' },
+              { form: 'Whey isolate', verdict: 'Good option', desc: 'Lactose removed, slightly higher protein per gram. Worth it if you\'re lactose sensitive; overkill otherwise.' },
+              { form: 'Casein', verdict: 'Situational', desc: 'Slow-digesting. Marginally useful before bed for overnight muscle protein synthesis. Not essential.' },
+              { form: 'Plant protein (pea/rice blend)', verdict: 'Solid alternative', desc: 'For vegans. A 70/30 pea-to-rice blend matches the amino profile of whey closely enough to be equivalent.' },
+            ].map(({ form, verdict, desc }) => (
+              <div class={`rounded-2xl border p-5 flex gap-4 ${verdict === 'Best value' ? 'border-emerald-100 bg-emerald-50' : 'border-slate-100 bg-background-light'}`}>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <p class="text-sm font-bold text-slate-900">{form}</p>
+                    <span class={`text-xs font-bold px-2 py-0.5 rounded-full ${verdict === 'Best value' ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-200 text-slate-600'}`}>{verdict}</span>
+                  </div>
+                  <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Other supplements -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Other supplements worth knowing</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">Not in the top 5, but legitimate uses exist for the right person.</p>
+          <div class="space-y-3 mb-8">
+            {[
+              { name: 'Vitamin D3', use: 'Critical if you live in a low-sun climate or work indoors. Most people in the northern hemisphere are deficient in winter. 2000–4000 IU/day is typical.' },
+              { name: 'Caffeine', use: 'The most studied performance drug. 3–6 mg/kg pre-workout improves strength, endurance, and focus. Tolerance builds quickly — cycle off periodically.' },
+              { name: 'Pre-workout supplements', use: 'Usually a blend of caffeine, beta-alanine, and citrulline. The caffeine does the heavy lifting. Useful if you need convenience; skip if you manage caffeine separately.' },
+              { name: 'Glucosamine & Collagen', use: 'For joint health. Evidence is moderate but relevant for anyone with recurring joint pain or heavy connective tissue load.' },
+              { name: 'L-Glutamine', use: 'Conditionally essential during illness or very high training volumes. Not needed by most recreational lifters eating adequate protein.' },
+            ].map(({ name, use }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{name}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{use}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Summary table -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Quick reference: budget vs comprehensive stack</h2>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            <div class="grid grid-cols-2 bg-slate-50 px-5 py-3">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Tight budget</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Comprehensive stack</p>
+            </div>
+            {[
+              ['Creatine monohydrate (5g/day)', 'Creatine monohydrate'],
+              ['That\'s it. Seriously.', 'Zinc & Magnesium (ZMA)'],
+              ['', 'Omega-3 fish oil'],
+              ['', 'Probiotic'],
+              ['', 'Protein powder (if needed)'],
+              ['', 'Vitamin D3 (in winter)'],
+            ].map(([budget, full], i) => (
+              <div class={`grid grid-cols-2 px-5 py-3 border-t border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-background-light'}`}>
+                <p class="text-xs text-slate-600">{budget}</p>
+                <p class="text-xs text-slate-600">{full}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The best supplement is a consistent training program, a diet that hits your protein and calorie targets, and enough sleep. Once that foundation is in place, the five supplements above have the strongest evidence for real-world benefit. Start with creatine. Add the others as your budget allows. Skip anything not on this list until you've nailed the basics.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            If you have a health condition or take medication, run this list by your doctor first. Otherwise, the risk profile of everything on this page is low.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-blue-50 border border-blue-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100">
+            <span class="material-symbols-outlined text-blue-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Know your daily protein target</p>
+            <p class="text-xs text-slate-500 mb-3">Before adding protein powder, check whether you actually need it. Your target depends on your weight, goal, and activity level.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track your nutrition automatically.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal logs your macros in seconds — scan, tap, done. Stop guessing whether you're hitting your protein target.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_supplements_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_supplements_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/creatine-supplement-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">bolt</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Creatine: The Complete Supplement Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/protein-powder-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">blender</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Protein Powder: Which Type Is Right for You?</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/caffeine-supplement-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
+              <span class="material-symbols-outlined text-amber-600 text-xl">coffee</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Caffeine: The Complete Supplement Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

@@ -1,0 +1,335 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Fitness for Beginners: The Complete Roadmap | SlayCal Blog"
+  description="What is fitness, how is it different from bodybuilding, and how do you actually start? A complete beginner's roadmap covering goals, training, nutrition, and common myths."
+  keywords="fitness for beginners, how to start working out, beginner workout guide, fitness roadmap, bodybuilding vs fitness, how to lose weight and build muscle, fitness tips"
+  lang="en"
+  canonicalPath="/blog/fitness-for-beginners"
+>
+  <Header t={t} lang="en" currentPath="/blog/fitness-for-beginners" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Fitness for Beginners</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Training Programs</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Fitness for Beginners:<br/>The Complete Roadmap
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          What is fitness, how does it differ from bodybuilding, and how do you actually start? Clear answers, zero fluff, and a roadmap tailored to your specific goal.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 10 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <!-- TABLE OF CONTENTS -->
+          <div class="rounded-2xl bg-slate-50 border border-slate-100 p-6 mb-10">
+            <p class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-base">list</span>
+              In this article
+            </p>
+            <ol class="space-y-1.5 text-sm text-primary list-decimal list-inside marker:text-slate-400 marker:font-semibold">
+              <li><a href="#what-is-fitness" class="hover:underline text-primary">What Is Fitness?</a></li>
+              <li><a href="#fitness-vs-bodybuilding" class="hover:underline text-primary">Fitness vs. Bodybuilding</a></li>
+              <li><a href="#benefits" class="hover:underline text-primary">Benefits of Fitness</a></li>
+              <li><a href="#tips-for-beginners" class="hover:underline text-primary">Tips for Beginners</a></li>
+              <li><a href="#roadmap" class="hover:underline text-primary">Your Fitness Roadmap</a></li>
+              <li><a href="#faq" class="hover:underline text-primary">Frequently Asked Questions</a></li>
+            </ol>
+          </div>
+
+          <!-- WHAT IS FITNESS -->
+          <h2 id="what-is-fitness" class="text-2xl font-bold text-slate-900 mt-10 mb-4">What Is Fitness?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Fitness means being strong, fast, durable, flexible, and agile — athletic and aesthetic at the same time.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            These days "getting fit" is everywhere — gyms, social media, TV. But it's easy to reduce the idea to a flat stomach or visible abs. Fitness is something deeper than that.
+          </p>
+
+          <div class="rounded-2xl border-l-4 border-primary bg-primary/5 p-5 my-6">
+            <p class="text-sm font-bold text-slate-900 mb-1">The real definition</p>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Fitness is the ability to perform a given physical task safely and effectively. It's not about how you look — it's about what you can do.
+            </p>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-4">
+            A good athlete doesn't just look the part. They run, jump, lift, rotate, and recover. If you want to look great <em>and</em> perform great, you're in the right place.
+          </p>
+
+          <!-- FITNESS VS BODYBUILDING -->
+          <h2 id="fitness-vs-bodybuilding" class="text-2xl font-bold text-slate-900 mt-12 mb-4">Fitness vs. Bodybuilding: What's the Difference?</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Both target a healthy, well-formed body. Both involve weights and gym equipment. But the goals and methods are meaningfully different.
+          </p>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-slate-50">
+                  <th class="text-left px-4 py-3 text-slate-500 font-semibold border border-slate-100 w-1/2"></th>
+                  <th class="text-left px-4 py-3 text-slate-900 font-bold border border-slate-100">Fitness</th>
+                  <th class="text-left px-4 py-3 text-slate-900 font-bold border border-slate-100">Bodybuilding</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Goal', 'Look good, feel healthy, stay active', 'Maximum muscle mass, minimum body fat'],
+                  ['Training', 'Regular, sustainable sessions', 'High-volume, very demanding programs'],
+                  ['Exercise variety', 'Running, swimming, yoga all count', 'Heavy lifting is the primary tool'],
+                  ['Diet', 'Healthy habits are usually enough', 'Strict, often difficult diet protocols'],
+                  ['Competition focus', 'Aesthetics, proportion, vitality', 'Extreme mass and very low body fat'],
+                ].map(([label, fit, bb]) => (
+                  <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                    <td class="px-4 py-3 font-semibold text-slate-700 border border-slate-100">{label}</td>
+                    <td class="px-4 py-3 text-slate-600 border border-slate-100">{fit}</td>
+                    <td class="px-4 py-3 text-slate-600 border border-slate-100">{bb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-slate-600 leading-relaxed mb-4">
+            If you're saying "I don't want to get too big, I just want to look fit," you're describing fitness. You want to use weight training to improve your shape — not chase maximum muscle mass. That's a completely valid and achievable goal.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            True bodybuilding takes years of intense training and very strict nutrition. Fitness is more accessible: a few hours a week can dramatically improve how you look, feel, and perform.
+          </p>
+
+          <!-- BENEFITS -->
+          <h2 id="benefits" class="text-2xl font-bold text-slate-900 mt-12 mb-4">Why Bother? The Real Benefits of Fitness</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            You can earn more money, get a better education, or find the best doctors — and all of those improve your quality of life. But regular exercise is one of the highest-leverage investments you can make. A few hours a week returns compounding benefits across your health, mood, confidence, and energy for decades.
+          </p>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 my-6">
+            {[
+              { icon: 'self_improvement', title: 'Confidence', desc: 'Changing your body composition — and the hormones that come with it — raises your self-image noticeably and consistently.' },
+              { icon: 'bolt', title: 'Energy & strength', desc: 'Regular training makes daily tasks easier. If you feel chronically tired, exercise is often the missing piece.' },
+              { icon: 'fitness_center', title: 'Muscle mass', desc: 'More muscle speeds up your metabolism and makes your body more resilient — at any age.' },
+              { icon: 'favorite', title: 'Heart health', desc: 'Cardiovascular disease is the leading cause of death. A stronger heart from regular training is powerful prevention.' },
+              { icon: 'accessibility_new', title: 'Posture & mobility', desc: 'Training corrects imbalances and improves your range of motion — huge quality-of-life impact.' },
+              { icon: 'bedtime', title: 'Better sleep & routine', desc: 'Training anchors your schedule and consistently improves sleep quality.' },
+              { icon: 'speed', title: 'Athletic performance', desc: 'Getting fitter makes you better at every other sport you play.' },
+              { icon: 'elderly', title: 'Bone density', desc: 'Weight training strengthens bones, not just muscles — critical protection as you age.' },
+            ].map(({ icon, title, desc }) => (
+              <div class="flex gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                <span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">{icon}</span>
+                <div>
+                  <p class="text-sm font-bold text-slate-900 mb-0.5">{title}</p>
+                  <p class="text-xs text-slate-600 leading-snug">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- TIPS FOR BEGINNERS -->
+          <h2 id="tips-for-beginners" class="text-2xl font-bold text-slate-900 mt-12 mb-4">Tips for Beginners Starting Out</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            If you've decided to start, here's how to make that start stick:
+          </p>
+
+          <ol class="space-y-4 mb-8">
+            {[
+              { n: '01', title: 'Find a gym you actually like', desc: 'Good equipment and a good atmosphere will keep you coming back. If you dread the environment, you won\'t show up.' },
+              { n: '02', title: 'Follow coaches and athletes on social media', desc: 'Daily exposure to good training content builds motivation and keeps your knowledge growing.' },
+              { n: '03', title: 'Think in months, not weeks', desc: 'Fitness gives results — but it\'s not surgery. Make plans on a multi-month timeline and resist the urge to judge too early.' },
+              { n: '04', title: 'Learn the movements, don\'t avoid the hard ones', desc: 'Doing things correctly — even when it\'s difficult — keeps you safe and produces far better results.' },
+              { n: '05', title: 'Learn the vocabulary', desc: 'The faster you understand the language of training, the faster you learn and the more at home you feel.' },
+              { n: '06', title: 'Start simple', desc: 'Jumping into extreme programs, heavy diets, and a dozen supplements at once is a recipe for quitting. Take one step at a time.' },
+              { n: '07', title: 'Follow a structured program', desc: 'Walking into the gym without a plan wastes sessions. A good program tells you exactly what to do — and ensures you\'re progressing.' },
+            ].map(({ n, title, desc }) => (
+              <li class="flex gap-4 items-start">
+                <span class="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">{n}</span>
+                <div>
+                  <p class="text-sm font-bold text-slate-900">{title}</p>
+                  <p class="text-sm text-slate-600 leading-relaxed mt-0.5">{desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <!-- ROADMAP -->
+          <h2 id="roadmap" class="text-2xl font-bold text-slate-900 mt-12 mb-4">Your Fitness Roadmap</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Your goal shapes your roadmap. Here are the three most common starting points — and what each one actually requires.
+          </p>
+
+          <!-- Goal 1 -->
+          <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-6 mb-5">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">trending_up</span>
+              <h3 class="text-lg font-bold text-slate-900">I want to gain weight and build muscle</h3>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              If you struggle to gain weight — classic ectomorph — the answer is structured resistance training paired with eating more than feels comfortable.
+            </p>
+            <ul class="space-y-1.5 text-sm text-slate-700">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500 text-base shrink-0 mt-0.5">check_circle</span>Solid training program built on compound lifts</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500 text-base shrink-0 mt-0.5">check_circle</span>Eat consistently — even when you're not hungry</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-emerald-500 text-base shrink-0 mt-0.5">check_circle</span>Prioritize sleep and recovery</li>
+            </ul>
+          </div>
+
+          <!-- Goal 2 -->
+          <div class="rounded-2xl border border-rose-100 bg-rose-50 p-6 mb-5">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="material-symbols-outlined text-rose-600 text-xl">trending_down</span>
+              <h3 class="text-lg font-bold text-slate-900">I want to lose weight and get leaner</h3>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              The combination of resistance training plus a calorie deficit is the most effective approach for losing fat while preserving muscle.
+            </p>
+            <ul class="space-y-1.5 text-sm text-slate-700">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-rose-500 text-base shrink-0 mt-0.5">check_circle</span>Solid resistance training program</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-rose-500 text-base shrink-0 mt-0.5">check_circle</span>Add cardio to increase your calorie deficit and boost metabolism</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-rose-500 text-base shrink-0 mt-0.5">check_circle</span>Eat in a moderate deficit — you shouldn't be starving</li>
+            </ul>
+          </div>
+
+          <!-- Goal 3 -->
+          <div class="rounded-2xl border border-violet-100 bg-violet-50 p-6 mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="material-symbols-outlined text-violet-600 text-xl">swap_vert</span>
+              <h3 class="text-lg font-bold text-slate-900">I want to burn fat and build muscle at the same time</h3>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              This is body recomposition — harder than the other two, but very possible for beginners. Weight training is the cornerstone because it sends a hormonal signal to build muscle even while you're eating slightly below maintenance.
+            </p>
+            <ul class="space-y-1.5 text-sm text-slate-700">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-violet-500 text-base shrink-0 mt-0.5">check_circle</span>Solid resistance training — non-negotiable</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-violet-500 text-base shrink-0 mt-0.5">check_circle</span>Light cardio to create a small deficit without compromising recovery</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-violet-500 text-base shrink-0 mt-0.5">check_circle</span>Eat at or slightly below maintenance — not starving, not overeating</li>
+            </ul>
+          </div>
+
+          <!-- FAQ -->
+          <h2 id="faq" class="text-2xl font-bold text-slate-900 mt-12 mb-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-4">
+            {[
+              {
+                q: 'If I stop training, will my muscles turn to fat?',
+                a: 'No. Muscles grow (hypertrophy) and shrink (atrophy) — they don\'t convert into fat. If you stop training and eat poorly, you\'ll lose muscle and gain fat separately. The "saggy" look is fat layered over a smaller muscle, not transformed muscle. Keep your nutrition in check and you\'ll maintain firmness even through short breaks.',
+              },
+              {
+                q: 'Do sore muscles mean I\'m growing?',
+                a: 'Sometimes, but not reliably. Soreness happens when your muscles are exposed to unfamiliar stress. As you get consistent, soreness disappears — that\'s normal and expected, not a sign you\'re not growing. Chasing pain by overloading randomly just creates unnecessary stress without productive adaptation. Follow a program and let progression drive growth.',
+              },
+              {
+                q: 'Can I spot-reduce belly fat with crunches?',
+                a: 'No. No exercise burns fat from a specific area. Fat loss is systemic — your body decides where it comes from. Crunches build abdominal muscles; a calorie deficit reveals them. Doing 500 crunches won\'t flatten your stomach if your diet doesn\'t create a deficit.',
+              },
+              {
+                q: 'Will lifting weights make me slow and stiff?',
+                a: 'No — done correctly, it makes you faster and more mobile. Heavy compound training is what elite sprinters, jumpers, and martial artists do. The myth comes from people who only lift and abandon their sport-specific training. Keep your athletic work in place; add weights on top of it.',
+              },
+              {
+                q: 'Can I change the shape of my muscles?',
+                a: 'No. Muscle shape is determined by the attachment points you were born with — that doesn\'t change. What you can do is increase or decrease muscle size, and reduce the fat sitting on top of them. The result is a better-looking version of the shape you already have.',
+              },
+              {
+                q: 'More reps or heavier weight — which is better?',
+                a: 'Both work. Higher reps (8–15) generally favor hypertrophy; lower reps (1–5) generally favor strength. But the difference is smaller than most people think — the quality and consistency of the overall program matters far more. Pick a structured program and execute it well rather than obsessing over rep ranges.',
+              },
+              {
+                q: 'Full-body or split programs — which should a beginner do?',
+                a: 'Full-body training wins for beginners. Training each muscle group three times per week accelerates the neurological learning that drives early progress. Once you\'ve built that base — typically after 6–12 months — splits become a better fit.',
+              },
+            ].map(({ q, a }) => (
+              <details class="group rounded-2xl border border-slate-100 bg-slate-50 overflow-hidden">
+                <summary class="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-bold text-slate-900 list-none">
+                  {q}
+                  <span class="material-symbols-outlined text-slate-400 text-base shrink-0 ml-3 group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <p class="px-5 pb-4 pt-0 text-sm text-slate-600 leading-relaxed border-t border-slate-100">{a}</p>
+              </details>
+            ))}
+          </div>
+
+          <!-- CLOSING -->
+          <div class="mt-12 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 p-6 text-center">
+            <p class="text-sm font-bold text-slate-900 mb-2">The bottom line</p>
+            <p class="text-slate-600 text-sm leading-relaxed max-w-xl mx-auto">
+              Fitness is simple: lift consistently, eat sensibly, sleep enough, repeat. The complexity is in the marketing, not the practice. Pick a goal from the roadmap above, follow a structured program, and give it three honest months before you judge the results.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED POSTS ─────────────────────────────────────────── -->
+    <section class="bg-background-light px-6 py-14 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Keep reading</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            { href: '/blog/5x5-workout-program', label: 'Training Programs', title: '5×5 Workout Program: The Complete Guide', icon: 'fitness_center', color: 'text-red-600 bg-red-50' },
+            { href: '/blog/how-many-calories-should-i-eat', label: 'Nutrition Basics', title: 'How Many Calories Should I Eat Per Day?', icon: 'local_fire_department', color: 'text-primary bg-orange-50' },
+            { href: '/blog/best-foods-for-muscle-gain', label: 'Nutrition', title: 'Best Foods for Muscle Gain', icon: 'egg_alt', color: 'text-emerald-600 bg-emerald-50' },
+          ].map(({ href, label, title, icon, color }) => (
+            <a href={href} class="group flex flex-col rounded-2xl bg-white border border-slate-100 p-5 hover:border-primary/30 hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+              <div class={`flex h-9 w-9 items-center justify-center rounded-xl ${color} mb-3`}>
+                <span class="material-symbols-outlined text-lg">{icon}</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-primary mb-1">{label}</span>
+              <p class="text-sm font-semibold text-slate-900 leading-snug group-hover:text-primary transition-colors">{title}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ── APP CTA ────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Put the plan into action.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal tracks your calories, macros, and BMI automatically. No manual logging — just scan and go.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_beginners_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.slaycal.app" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_beginners_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

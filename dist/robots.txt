@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://slaycal.app/sitemap.xml
+Sitemap: https://slaycal.com/sitemap.xml

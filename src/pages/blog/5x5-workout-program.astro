@@ -1,0 +1,405 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="5×5 Workout Program: The Complete Beginner's Guide | SlayCal Blog"
+  description="The 5×5 full-body program is one of the fastest ways to build muscle and strength as a beginner. Here's the full schedule, progressive overload rules, RPE table, and FAQ."
+  keywords="5x5 workout program, 5x5 training, stronglifts 5x5, beginner strength program, full body workout, squat bench deadlift, progressive overload, 5x5 for muscle gain"
+  lang="en"
+  canonicalPath="/blog/5x5-workout-program"
+>
+  <Header t={t} lang="en" currentPath="/blog/5x5-workout-program" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">5×5 Workout Program</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-red-600">Training Programs</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          5×5 Workout Program:<br/>The Complete Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Three days a week. Five sets of five reps. The same core lifts, repeated until they become heavy. It's the simplest program in the gym — and for beginners, it's the most effective one.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 10 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> April 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            The 5×5 full-body program has become one of the most practiced training methods for beginners worldwide — and for good reason. Over 100,000 athletes have run it and reported faster progress than they expected. The program works because it does everything right for a beginner: high-frequency compound training, built-in progressive overload, and enough simplicity that you can actually execute it consistently.
+          </p>
+
+          <!-- WHY 5x5 -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why 5×5 works for beginners</h2>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 my-6">
+            {[
+              { title: 'High frequency', desc: 'You train every major movement pattern three times per week, maximizing the neurological adaptation that drives beginner gains.' },
+              { title: 'Built-in overload', desc: 'The program mandates adding weight each session. That forced progression is what separates 5×5 from random gym workouts.' },
+              { title: 'Compound-first focus', desc: 'Squat, bench, deadlift, row, overhead press. These moves build the most muscle and teach you to move real weight safely.' },
+            ].map(({ title, desc }) => (
+              <div class="rounded-2xl border border-red-100 bg-red-50 p-4">
+                <p class="text-sm font-bold text-slate-900 mb-1">{title}</p>
+                <p class="text-xs text-slate-600 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- PROGRAM SCHEDULE -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The 5×5 program schedule</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Three sessions per week with at least one rest day between each. Monday, Wednesday, Friday is the classic setup. The two workouts alternate: A and B.
+          </p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-8">
+            {[
+              {
+                day: 'Day 1 — Monday',
+                label: 'Workout A',
+                color: 'red',
+                exercises: ['Squat 5×5', 'Bench Press 5×5', 'Weighted Pull-Up 5×5', 'Weighted Dips 5×5'],
+              },
+              {
+                day: 'Day 2 — Wednesday',
+                label: 'Workout B',
+                color: 'blue',
+                exercises: ['Squat 5×5', 'Overhead Press 5×5', 'Deadlift 1×5'],
+              },
+              {
+                day: 'Day 3 — Friday',
+                label: 'Workout A',
+                color: 'red',
+                exercises: ['Squat 5×5', 'Bench Press 5×5', 'Bentover Row 5×5'],
+              },
+            ].map(({ day, label, color, exercises }) => (
+              <div class={`rounded-2xl border p-5 ${color === 'red' ? 'border-red-100 bg-red-50' : 'border-blue-100 bg-blue-50'}`}>
+                <p class="text-xs text-slate-400 font-medium mb-1">{day}</p>
+                <p class={`text-sm font-bold mb-3 ${color === 'red' ? 'text-red-600' : 'text-blue-600'}`}>{label}</p>
+                <ul class="space-y-1.5">
+                  {exercises.map(ex => (
+                    <li class="text-xs font-semibold text-slate-700">{ex}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5 mb-8">
+            <p class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+              <span class="material-symbols-outlined text-amber-500 text-base">info</span>Program notes
+            </p>
+            <ul class="space-y-1.5 pl-7">
+              {[
+                '5×5 means 5 working sets of 5 reps. 1×5 means 1 working set of 5 reps (deadlift only).',
+                'Working sets come after 1–2 warm-up sets at lighter weights.',
+                'Always include a general warm-up before lifting — dynamic mobility, not static stretching.',
+                'Rest as long as you need between sets — up to 5 minutes is fine on heavier weeks.',
+                'Deadlift is only 1 set because it taxes the central nervous system heavily. One hard set is enough.',
+              ].map(note => (
+                <li class="text-xs text-slate-600 leading-relaxed">{note}</li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- EXERCISE SUBSTITUTIONS -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Can't do the main lifts? Use these substitutions</h2>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { main: 'Squat', sub: 'Leg Press or Goblet Squat' },
+              { main: 'Bench Press', sub: 'Dumbbell Chest Press' },
+              { main: 'Weighted Pull-Up', sub: 'Lat Pulldown' },
+              { main: 'Weighted Dips', sub: 'Close-Grip Bench Press' },
+              { main: 'Deadlift', sub: 'Romanian Deadlift (RDL)' },
+            ].map(({ main, sub }, i) => (
+              <div class={`px-5 py-3.5 flex items-center justify-between gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-semibold text-slate-900">{main}</p>
+                <p class="text-xs text-slate-500 text-right">{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- PROGRESSIVE OVERLOAD -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Progressive overload: the engine of 5×5</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The rule is simple: if you complete all sets and reps with correct form, add weight next session. The standard increments are:
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { lift: 'Squat, Bench, Overhead Press, Row', increment: '+2.5 kg per session' },
+              { lift: 'Deadlift', increment: '+5 kg per session' },
+            ].map(({ lift, increment }, i) => (
+              <div class={`px-5 py-4 flex items-center justify-between gap-3 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-semibold text-slate-900">{lift}</p>
+                <span class="text-xs font-bold text-red-600 tabular-nums shrink-0">{increment}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Start at a weight you could do for 12 reps — which makes 5 reps feel manageable. Starting too heavy is the most common mistake beginners make on this program. Progress built on a solid foundation lasts; progress rushed from the start stalls in weeks.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            If you can't find 1.25 kg micro plates, buy a pair — they are among the most cost-effective investments in your training. Without them, you'll be forced into 5 kg jumps on upper-body lifts, which will stall you prematurely.
+          </p>
+
+          <!-- RPE TABLE -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">RPE: when to add weight and when to wait</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Don't add weight just because you completed all reps. Rate of Perceived Exertion (RPE) tells you how close you were to failure. Only add weight if your last set was RPE 9 or below.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            <div class="grid grid-cols-2 bg-slate-800 text-white text-xs font-bold px-5 py-3">
+              <span>RPE</span>
+              <span>What it means</span>
+            </div>
+            {[
+              { rpe: '10', meaning: 'Absolute maximum — couldn\'t do one more rep or any more weight.' },
+              { rpe: '9.5', meaning: 'Maybe 1 more rep, or slightly heavier was possible.' },
+              { rpe: '9', meaning: '1 more rep was possible. Limit for progressing.' },
+              { rpe: '8.5', meaning: 'Definitely 1, maybe 2 more reps possible.' },
+              { rpe: '8', meaning: '2 more reps in the tank.' },
+              { rpe: '7.5', meaning: 'Definitely 2, maybe 3 reps left.' },
+              { rpe: '7', meaning: '3 more reps available.' },
+              { rpe: '5–6', meaning: '4–5 reps still available. Too easy — check your weight.' },
+              { rpe: '1–4', meaning: 'Extremely easy. Significantly underloaded.' },
+            ].map(({ rpe, meaning }, i) => (
+              <div class={`grid grid-cols-2 px-5 py-3 text-xs ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <span class="font-bold text-slate-800">{rpe}</span>
+                <span class="text-slate-600">{meaning}</span>
+              </div>
+            ))}
+          </div>
+
+          <!-- STALL PROTOCOL -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to do when progress stalls</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            If you fail to progress on the same weight for three consecutive sessions, don't force it — deload that specific lift.
+          </p>
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3 mb-8">
+            {[
+              { step: '1. Identify the lift', desc: 'Only the stalled exercise gets deloaded. Keep adding weight on everything else as normal.' },
+              { step: '2. Drop 10–15%', desc: 'e.g. If you\'re stuck at 80 kg squat, drop to 70 kg and rebuild from there.' },
+              { step: '3. Resume linear progress', desc: 'Add weight each session again. You\'ll often blow past your previous stall point within 2–3 weeks.' },
+            ].map(({ step, desc }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-4">
+                <p class="text-sm font-bold text-slate-900 mb-1">{step}</p>
+                <p class="text-xs text-slate-500 leading-snug">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- FAQ -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-6">Frequently asked questions</h2>
+          <div class="space-y-4 mb-10">
+            {[
+              {
+                q: 'Is 5×5 safe for beginners?',
+                a: 'Yes — safer than most machine-based programs. Free-weight compound movements teach you to stabilize loads through full ranges of motion, which machines mask. Learn the movements properly from the start and the risk is extremely low.',
+              },
+              {
+                q: 'Will 5×5 actually build muscle?',
+                a: 'Absolutely. It\'s a full-body program with built-in progressive overload — the primary driver of hypertrophy. The fact that it doesn\'t produce a pump doesn\'t mean it isn\'t working. Strength gain is muscle gain.',
+              },
+              {
+                q: 'Is this a powerlifting program?',
+                a: 'No. It\'s a bodybuilding program that uses strength-based progression. The squat, bench, and deadlift appear because they\'re the most effective mass-building movements, not because you\'re training for a powerlifting meet.',
+              },
+              {
+                q: 'Why don\'t I feel a pump on 5×5?',
+                a: 'Pump reflects cellular swelling and metabolic stress, not muscle growth. 5×5 drives mechanical tension — the most potent stimulus for hypertrophy. Trust the weight on the bar going up, not the feeling in your muscles.',
+              },
+              {
+                q: 'Can I add cardio to this program?',
+                a: 'Yes. Up to two cardio sessions per week on rest days is fine and will support fat loss without impairing recovery from lifting.',
+              },
+              {
+                q: 'Can I add extra exercises?',
+                a: 'You don\'t need to, but you can add isolation work each session — bicep curls, planks, calf raises, etc. Don\'t add so much that recovery suffers.',
+              },
+              {
+                q: 'When should I move on from 5×5?',
+                a: 'When weight stops increasing week over week despite proper recovery and nutrition. At that point, linear progression has run its course and you\'re ready for the 3×5 intermediate program.',
+              },
+            ].map(({ q, a }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-2">{q}</p>
+                <p class="text-xs text-slate-600 leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- PRINCIPLES -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The five principles that make any program work</h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            5×5 is built on these fundamentals. Understanding them means you'll never be confused about why you're progressing — or why you're not.
+          </p>
+          <div class="space-y-3 mb-8">
+            {[
+              {
+                icon: 'fitness_center',
+                title: 'Correct movement quality',
+                body: 'A heavy weight done poorly builds less muscle and more injury risk than a moderate weight done well. Learn the mechanics before you chase numbers.',
+                color: 'text-red-600',
+                bg: 'bg-red-50',
+                border: 'border-red-100',
+              },
+              {
+                icon: 'calendar_month',
+                title: 'Consistency over months',
+                body: 'Weeks and months are short timeframes in fitness. Results compound over years. Show up three times a week and don\'t stop.',
+                color: 'text-blue-600',
+                bg: 'bg-blue-50',
+                border: 'border-blue-100',
+              },
+              {
+                icon: 'trending_up',
+                title: 'Sufficient training volume',
+                body: 'Science suggests 3–8 working sets per muscle group per session, and 10–20 sets per week. 5×5 sits comfortably in that range for beginners.',
+                color: 'text-emerald-600',
+                bg: 'bg-emerald-50',
+                border: 'border-emerald-100',
+              },
+              {
+                icon: 'arrow_upward',
+                title: 'Progressive overload',
+                body: 'If the weight on the bar isn\'t increasing over time, you\'re exercising — not training. Overload is the only reliable signal that adaptation is occurring.',
+                color: 'text-amber-600',
+                bg: 'bg-amber-50',
+                border: 'border-amber-100',
+              },
+              {
+                icon: 'restaurant',
+                title: 'Nutrition and recovery',
+                body: 'Muscle is built outside the gym. Adequate calories, sufficient protein (1.6–2.2 g/kg bodyweight), and 8 hours of sleep are not optional add-ons — they are the program.',
+                color: 'text-purple-600',
+                bg: 'bg-purple-50',
+                border: 'border-purple-100',
+              },
+            ].map(({ icon, title, body, color, bg, border }) => (
+              <div class={`rounded-2xl border ${border} ${bg} p-5 flex gap-4`}>
+                <div class={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/60`}>
+                  <span class={`material-symbols-outlined ${color} text-xl`}>{icon}</span>
+                </div>
+                <div>
+                  <p class="text-sm font-bold text-slate-900 mb-1">{title}</p>
+                  <p class="text-xs text-slate-600 leading-relaxed">{body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- BOTTOM LINE -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            5×5 is not complicated. Three days a week, five compound exercises, add weight every session. That simplicity is intentional — the fewer decisions you make in the gym, the more energy goes into the lifts. Follow the program for 12–16 weeks, eat enough protein, sleep enough, and you will be measurably stronger and more muscular than when you started. No amount of complicated programming can beat that combination for a beginner.
+          </p>
+
+        </div>
+
+        <!-- CTA CARD -->
+        <div class="mt-10 rounded-2xl bg-red-50 border border-red-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-100">
+            <span class="material-symbols-outlined text-red-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Dial in your nutrition to match your training</p>
+            <p class="text-xs text-slate-500 mb-3">5×5 demands consistent calorie and protein intake to drive the progress it promises. Calculate your exact targets before your first session.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Train smarter. Track every rep.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal keeps your calories and macros on point so your 5×5 progress doesn't stall from under-eating. Scan meals, hit your protein, get stronger.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_5x5_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_5x5_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/push-pull-legs-program" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50">
+              <span class="material-symbols-outlined text-red-600 text-xl">sync_alt</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Push Pull Legs: The Complete Program Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/how-many-calories-should-i-eat" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
+              <span class="material-symbols-outlined text-amber-600 text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How Many Calories Should I Eat?</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/creatine-supplement-guide" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">science</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Creatine: The Complete Supplement Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">9 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

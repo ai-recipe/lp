@@ -14,13 +14,14 @@ SlayCal is free to download with 500 scan credits included (no credit card requi
 - [Adaptive Goal Setting](https://slaycal.com/#features): Enter body metrics and target; SlayCal sets and adjusts daily macro and calorie targets automatically.
 - [Recipe Explorer](https://slaycal.com/#features): Browse 100+ macro-balanced recipes, save favorites, filter by goal, and follow guided step-by-step cooking instructions.
 
-## Free Nutrition Calculators
+## Free Nutrition & Strength Calculators
 
 - [Calculator Hub](https://slaycal.com/calculators): Overview of all available free calculators.
 - [BMI Calculator](https://slaycal.com/bmi-calculator): Calculate Body Mass Index from height and weight.
 - [Calorie Calculator](https://slaycal.com/calorie-calculator): Estimate daily calorie needs based on age, sex, weight, height, and activity level.
 - [Macro Calculator](https://slaycal.com/macro-calculator): Calculate recommended protein, carbohydrate, and fat ratios for a given goal.
 - [Body Fat Calculator](https://slaycal.com/body-fat-calculator): Estimate body fat percentage using standard measurement methods.
+- [1RM Calculator](https://slaycal.com/one-rm-calculator): Calculate one-rep max and working set weights for every training zone from any weight and rep count.
 
 ## Blog — Nutrition & Fitness Guides
 
@@ -35,6 +36,9 @@ SlayCal is free to download with 500 scan credits included (no credit card requi
 - [Push Pull Legs Program](https://slaycal.com/blog/push-pull-legs-program): A complete PPL workout split with exercise selection and programming notes.
 - [Arnold Schwarzenegger Workout Program](https://slaycal.com/blog/arnold-schwarzenegger-workout-program): Breakdown of Arnold's classic training split and philosophy.
 - [Protein Pancake Recipe](https://slaycal.com/blog/protein-pancake-recipe): High-protein pancake recipe with full macro breakdown.
+- [5×5 Workout Program](https://slaycal.com/blog/5x5-workout-program): Complete guide to the 5×5 beginner strength program — schedule, progressive overload rules, and FAQ.
+- [Best Supplements Guide](https://slaycal.com/blog/best-supplements-guide): Evidence-based breakdown of the top 5 supplements worth using, correct dosing, and what to skip.
+- [Fitness for Beginners](https://slaycal.com/blog/fitness-for-beginners): What fitness is, how it differs from bodybuilding, benefits, tips, and a goal-based roadmap for new lifters.
 
 ## Pricing
 

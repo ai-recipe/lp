@@ -1,5 +1,5 @@
 const SITE_URL = "https://slaycal.com";
-const LASTMOD = "2025-04-15";
+const LASTMOD = "2025-04-22";
 
 type Alt = { hreflang: string; href: string };
 type Page = {
@@ -39,6 +39,11 @@ const calculatorPaths = [
   { slug: "/calorie-calculator", priority: "0.9" },
   { slug: "/macro-calculator", priority: "0.9" },
   { slug: "/body-fat-calculator", priority: "0.9" },
+];
+
+// EN-only calculator pages.
+const enOnlyCalculatorPaths = [
+  { slug: "/one-rm-calculator", priority: "0.9" },
 ];
 
 // Blog posts (EN only for now).
@@ -95,6 +100,21 @@ const blogPaths = [
     priority: "0.7",
     changefreq: "monthly",
   },
+  {
+    slug: "/blog/5x5-workout-program",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/best-supplements-guide",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
+  {
+    slug: "/blog/fitness-for-beginners",
+    priority: "0.7",
+    changefreq: "monthly",
+  },
 ];
 
 const pages: Page[] = [];
@@ -132,6 +152,16 @@ for (const c of calculatorPaths) {
     changefreq: "monthly",
     priority: c.priority,
     alternates,
+  });
+}
+
+// EN-only calculator pages.
+for (const c of enOnlyCalculatorPaths) {
+  pages.push({
+    url: `${SITE_URL}${c.slug}`,
+    lastmod: LASTMOD,
+    changefreq: "monthly",
+    priority: c.priority,
   });
 }
 
