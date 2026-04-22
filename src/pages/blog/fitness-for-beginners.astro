@@ -6,6 +6,61 @@ import { en } from '../../i18n/en';
 import '../../styles/global.css';
 
 const t = en;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'If I stop training, will my muscles turn to fat?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Muscles grow and shrink — they don\'t convert to fat. Fat gain happens separately from muscle loss if you stop training and eat poorly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do sore muscles mean I\'m growing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not reliably. Soreness happens from unfamiliar stress. It disappears with consistency — that\'s normal, not a sign you\'re not progressing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I spot-reduce belly fat with crunches?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. No exercise burns fat from a specific area. Fat loss is systemic. Crunches build abdominal muscles; a calorie deficit reveals them.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will lifting weights make me slow and stiff?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Done correctly, it makes you faster and more mobile. This myth comes from people who abandon sport-specific training when they start lifting.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should beginners do full-body or split programs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Full-body wins for beginners. Training each muscle group three times per week accelerates the neurological learning that drives early progress. After 6–12 months, splits become appropriate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'More reps or heavier weight for muscle growth?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both work. The quality and consistency of the overall program matters far more than rep range obsession.',
+      },
+    },
+  ],
+});
 ---
 
 <Layout
@@ -14,6 +69,7 @@ const t = en;
   keywords="fitness for beginners, how to start working out, beginner workout guide, fitness roadmap, bodybuilding vs fitness, how to lose weight and build muscle, fitness tips"
   lang="en"
   canonicalPath="/blog/fitness-for-beginners"
+  pageJsonLd={faqJsonLd}
 >
   <Header t={t} lang="en" currentPath="/blog/fitness-for-beginners" />
 

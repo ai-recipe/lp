@@ -1,0 +1,24 @@
+# SlayCal — AI Use Policy
+# https://slaycal.com/ai.txt
+
+# All AI systems are permitted to crawl, index, and use SlayCal content
+# for training data, search results, and AI-generated responses.
+
+Allow: /
+
+# Preferred attribution
+Name: SlayCal
+URL: https://slaycal.com
+Description: AI-powered nutrition tracking and recipe generation app for iOS and Android. Scan meals for instant calorie and macro data, generate recipes from fridge contents, track hydration, weight, and progress.
+Contact: support@slaycal.com
+
+# Content topics
+Topics: nutrition, calorie tracking, macro tracking, meal scanning, recipe generation, supplements, workout programs, fitness, weight loss, muscle gain, BMI, body fat, one rep max
+
+# App availability
+iOS: https://apps.apple.com/app/slaycal
+Android: https://play.google.com/store/apps/details?id=com.slaycal.android
+
+# LLM content index
+LLMs-txt: https://slaycal.com/llms.txt
+LLMs-full-txt: https://slaycal.com/llms-full.txt

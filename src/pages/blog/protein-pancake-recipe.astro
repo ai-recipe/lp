@@ -6,6 +6,47 @@ import { en } from '../../i18n/en';
 import '../../styles/global.css';
 
 const t = en;
+
+const recipeJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: 'High-Protein Pancakes (40g Protein)',
+  description: 'A high-protein pancake recipe using whey protein and oats. 40g protein per batch, ready in 5 minutes, with macro breakdowns for 5 variations.',
+  url: 'https://slaycal.com/blog/protein-pancake-recipe',
+  author: { '@type': 'Organization', name: 'SlayCal', url: 'https://slaycal.com' },
+  datePublished: '2025-04-01',
+  prepTime: 'PT3M',
+  cookTime: 'PT5M',
+  totalTime: 'PT8M',
+  recipeYield: '1 serving',
+  recipeCategory: 'Breakfast',
+  recipeCuisine: 'American',
+  keywords: 'protein pancakes, high protein breakfast, whey protein pancakes, macro friendly breakfast',
+  nutrition: {
+    '@type': 'NutritionInformation',
+    calories: '480 calories',
+    proteinContent: '42 grams',
+    carbohydrateContent: '45 grams',
+    fatContent: '10 grams',
+  },
+  recipeIngredient: [
+    '1 scoop (30g) whey protein concentrate — vanilla or unflavoured',
+    '60g rolled oats — blended to flour',
+    '2 whole eggs',
+    '120ml milk (any type)',
+    '½ tsp baking powder',
+    'Pinch of salt',
+    '½ tsp vanilla extract (optional)',
+  ],
+  recipeInstructions: [
+    { '@type': 'HowToStep', name: 'Blend oats', text: 'Blend oats into flour using a blender until fine for a smoother pancake.' },
+    { '@type': 'HowToStep', name: 'Mix dry ingredients', text: 'Combine oat flour, protein powder, baking powder, and salt in a bowl.' },
+    { '@type': 'HowToStep', name: 'Add wet ingredients', text: 'Beat in eggs, milk, and vanilla. Mix until just combined — do not overmix or pancakes will be dense.' },
+    { '@type': 'HowToStep', name: 'Rest the batter', text: 'Rest batter for 3–5 minutes to let the oats absorb the liquid and thicken.' },
+    { '@type': 'HowToStep', name: 'Cook', text: 'Cook on medium-low heat in a non-stick pan with a tiny amount of coconut oil. Protein burns faster than flour — keep the heat low.' },
+    { '@type': 'HowToStep', name: 'Flip', text: 'Flip once bubbles form across the surface and edges look set — about 2–3 minutes per side.' },
+  ],
+});
 ---
 
 <Layout
@@ -14,6 +55,7 @@ const t = en;
   keywords="protein pancake recipe, high protein pancakes, whey protein pancakes, macro friendly pancakes, healthy pancake recipe, muscle building breakfast"
   lang="en"
   canonicalPath="/blog/protein-pancake-recipe"
+  pageJsonLd={recipeJsonLd}
 >
   <Header t={t} lang="en" currentPath="/blog/protein-pancake-recipe" />
 

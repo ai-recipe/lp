@@ -7,6 +7,30 @@ import '../styles/global.css';
 
 const t = en;
 const apiUrl = import.meta.env.PUBLIC_API_URL ?? 'http://api.slaycal.com';
+
+const contactJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ContactPage',
+      '@id': 'https://slaycal.com/contact#contactpage',
+      name: 'Contact SlayCal',
+      url: 'https://slaycal.com/contact',
+      description: 'Contact the SlayCal team for support, feedback, or partnership inquiries. Response within 24 hours.',
+      mainEntity: {
+        '@type': 'Organization',
+        '@id': 'https://slaycal.com/#organization',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://slaycal.com' },
+        { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://slaycal.com/contact' },
+      ],
+    },
+  ],
+});
 ---
 
 <Layout
@@ -15,6 +39,7 @@ const apiUrl = import.meta.env.PUBLIC_API_URL ?? 'http://api.slaycal.com';
   keywords="SlayCal contact, support, feedback, get in touch"
   lang="en"
   canonicalPath="/contact"
+  pageJsonLd={contactJsonLd}
 >
   <Header t={t} lang="en" currentPath="/contact" />
 

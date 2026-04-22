@@ -6,6 +6,53 @@ import { en } from '../../i18n/en';
 import '../../styles/global.css';
 
 const t = en;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does creatine damage your kidneys?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'False in healthy individuals. Creatine raises serum creatinine (a kidney marker) but this is a direct result of creatine metabolism, not kidney damage. Hundreds of studies confirm long-term safety.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you need to cycle creatine?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. There is no benefit to cycling creatine. Taking it daily indefinitely maintains muscle saturation with no downside.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does creatine cause hair loss?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'One study in rugby players found elevated DHT (linked to hair loss) after loading. No follow-up study has replicated this. The evidence is extremely weak.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is creatine a steroid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Creatine is an amino acid derivative made naturally in your liver. It is nothing like a steroid pharmacologically or legally.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I take more creatine for better results?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Once muscle stores are saturated (typically with 5g/day), excess creatine is excreted. Taking 10–20g/day in maintenance adds no benefit.',
+      },
+    },
+  ],
+});
 ---
 
 <Layout
@@ -14,6 +61,7 @@ const t = en;
   keywords="creatine supplement, creatine monohydrate, creatine loading, creatine dose, creatine benefits, creatine myths, creatine for muscle"
   lang="en"
   canonicalPath="/blog/creatine-supplement-guide"
+  pageJsonLd={faqJsonLd}
 >
   <Header t={t} lang="en" currentPath="/blog/creatine-supplement-guide" />
 

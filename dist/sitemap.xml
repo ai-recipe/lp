@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://slaycal.com/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/es/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/fr/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -71,7 +71,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/de/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -88,7 +88,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/pt-br/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -105,7 +105,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/ru/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/ja/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -139,7 +139,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/ko/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -156,7 +156,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/it/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/"/>
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/calculators</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/calculators"/>
@@ -182,7 +182,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/calculators</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/calculators"/>
@@ -191,7 +191,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/bmi-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/bmi-calculator"/>
@@ -200,7 +200,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/bmi-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/bmi-calculator"/>
@@ -209,7 +209,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/calorie-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/calorie-calculator"/>
@@ -218,7 +218,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/calorie-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/calorie-calculator"/>
@@ -227,7 +227,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/macro-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/macro-calculator"/>
@@ -236,7 +236,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/macro-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/macro-calculator"/>
@@ -245,7 +245,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/body-fat-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/body-fat-calculator"/>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/body-fat-calculator</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/body-fat-calculator"/>
@@ -262,86 +262,116 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://slaycal.com/body-fat-calculator"/>
   </url>
   <url>
+    <loc>https://slaycal.com/one-rm-calculator</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://slaycal.com/blog</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/how-many-calories-should-i-eat</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/what-is-bmi</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/best-foods-for-muscle-gain</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/how-to-lose-weight-without-counting-calories</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/caffeine-supplement-guide</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/creatine-supplement-guide</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/protein-powder-guide</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/mass-gainer-guide</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/push-pull-legs-program</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/arnold-schwarzenegger-workout-program</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://slaycal.com/blog/protein-pancake-recipe</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://slaycal.com/blog/5x5-workout-program</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://slaycal.com/blog/best-supplements-guide</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://slaycal.com/blog/fitness-for-beginners</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://slaycal.com/contact</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://slaycal.com/privacy</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://slaycal.com/terms</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/terms"/>
@@ -350,7 +380,7 @@
   </url>
   <url>
     <loc>https://slaycal.com/tr/terms</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://slaycal.com/terms"/>

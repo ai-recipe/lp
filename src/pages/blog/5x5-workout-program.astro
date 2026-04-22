@@ -6,6 +6,45 @@ import { en } from '../../i18n/en';
 import '../../styles/global.css';
 
 const t = en;
+
+const faqJsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Should I add accessory exercises to the 5×5 program?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not at first. Run the program as written for 8–12 weeks. Adding exercises slows recovery and obscures what\'s working.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I do cardio while running 5×5?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Light cardio (walking, cycling) is fine on rest days. Avoid anything that significantly impairs recovery — sprints, heavy HIIT.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long can I run the 5×5 program?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Until progress stalls repeatedly and you can no longer add weight for weeks. For most beginners: 4–6 months. Then move to an intermediate program.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to eat differently on the 5×5 program?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Eat at or above maintenance. 5×5 is a strength program — you won\'t get stronger if you\'re in a meaningful calorie deficit.',
+      },
+    },
+  ],
+});
 ---
 
 <Layout
@@ -14,6 +53,7 @@ const t = en;
   keywords="5x5 workout program, 5x5 training, stronglifts 5x5, beginner strength program, full body workout, squat bench deadlift, progressive overload, 5x5 for muscle gain"
   lang="en"
   canonicalPath="/blog/5x5-workout-program"
+  pageJsonLd={faqJsonLd}
 >
   <Header t={t} lang="en" currentPath="/blog/5x5-workout-program" />
 

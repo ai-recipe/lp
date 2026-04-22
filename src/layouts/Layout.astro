@@ -10,6 +10,7 @@ interface Props {
   canonicalPath?: string;
   alternatePath?: string;
   alternateLang?: string;
+  pageJsonLd?: string;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   canonicalPath = '/',
   alternatePath,
   alternateLang,
+  pageJsonLd,
 } = Astro.props;
 
 const canonicalUrl = `${SITE_URL}${canonicalPath}`;
@@ -67,14 +69,115 @@ const jsonLd = JSON.stringify({
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: 'SlayCal',
+      alternateName: 'MirrorBit AI',
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo.svg`,
+        width: 512,
+        height: 512,
       },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: 'support@slaycal.com',
+        url: `${SITE_URL}/contact`,
+        availableLanguage: ['English', 'Turkish'],
+      },
+      sameAs: [
+        'https://apps.apple.com/app/slaycal',
+        'https://play.google.com/store/apps/details?id=com.slaycal.android',
+      ],
     },
   ],
 });
+
+// Auto-generate BreadcrumbList for calculator pages
+const calculatorNames: Record<string, string> = {
+  'calculators': 'Calculators',
+  'bmi-calculator': 'BMI Calculator',
+  'calorie-calculator': 'Calorie Calculator',
+  'macro-calculator': 'Macro Calculator',
+  'body-fat-calculator': 'Body Fat Calculator',
+  'one-rm-calculator': '1RM Calculator',
+};
+const pathSlug = canonicalPath.replace(/^\/tr\//, '').replace(/^\//, '').replace(/\/$/, '');
+const calculatorName = calculatorNames[pathSlug];
+const isCalculatorPage = !!calculatorName;
+const isCalculatorHub = pathSlug === 'calculators';
+const calcBreadcrumbJsonLd = isCalculatorPage ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: isCalculatorHub
+    ? [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Calculators', item: `${SITE_URL}/calculators` },
+      ]
+    : [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Calculators', item: `${SITE_URL}/calculators` },
+        { '@type': 'ListItem', position: 3, name: calculatorName, item: canonicalUrl },
+      ],
+}) : null;
+
+// Auto-generate BreadcrumbList for blog index
+const isBlogIndex = canonicalPath === '/blog';
+const blogIndexBreadcrumbJsonLd = isBlogIndex ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+  ],
+}) : null;
+
+// Auto-generate Article + BreadcrumbList for individual blog posts
+const isBlogPost = canonicalPath.startsWith('/blog/') && canonicalPath !== '/blog/';
+const blogJsonLd = isBlogPost ? JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      headline: title,
+      description: description,
+      url: canonicalUrl,
+      datePublished: '2025-04-01',
+      dateModified: '2025-04-22',
+      author: {
+        '@type': 'Organization',
+        name: 'SlayCal',
+        url: SITE_URL,
+      },
+      publisher: {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: 'SlayCal',
+        url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/logo.svg`,
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonicalUrl,
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+        { '@type': 'ListItem', position: 3, name: title.replace(/ \| SlayCal Blog$/, ''), item: canonicalUrl },
+      ],
+    },
+  ],
+}) : null;
 ---
 
 <!doctype html>
@@ -87,7 +190,7 @@ const jsonLd = JSON.stringify({
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="SlayCal" />
 
     <!-- Canonical & hreflang -->
@@ -102,6 +205,8 @@ const jsonLd = JSON.stringify({
     <!-- LLM content index (https://llmstxt.org) -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
     <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs-full.txt" />
+    <!-- AI use policy -->
+    <link rel="alternate" type="text/plain" href="/ai.txt" title="AI.txt" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -148,6 +253,10 @@ const jsonLd = JSON.stringify({
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={jsonLd} />
+    {blogJsonLd && <script type="application/ld+json" set:html={blogJsonLd} />}
+    {calcBreadcrumbJsonLd && <script type="application/ld+json" set:html={calcBreadcrumbJsonLd} />}
+    {blogIndexBreadcrumbJsonLd && <script type="application/ld+json" set:html={blogIndexBreadcrumbJsonLd} />}
+    {pageJsonLd && <script type="application/ld+json" set:html={pageJsonLd} />}
   </head>
   <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
     <slot />
