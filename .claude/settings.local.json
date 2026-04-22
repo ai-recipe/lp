@@ -8,7 +8,8 @@
       "Bash(for file:*)",
       "Bash(do echo:*)",
       "WebFetch(domain:llmstxt.org)",
-      "Bash(npx astro *)"
+      "Bash(npx astro *)",
+      "Read(//Users/sahin/Desktop/slaycallapp/new/express-backend/src/routes/**)"
     ]
   }
 }

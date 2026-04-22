@@ -12,17 +12,17 @@ const { nav } = t;
 const logoHref = lang === 'en' ? '/' : `/${lang}/`;
 const base = lang === 'en' ? '' : `/${lang}`;
 
-const navLabels: Record<string, { home: string; calculators: string; blog: string; privacy: string; terms: string }> = {
-  en: { home: 'Home', calculators: 'Calculators', blog: 'Blog', privacy: 'Privacy', terms: 'Terms' },
-  tr: { home: 'Ana Sayfa', calculators: 'Hesaplayıcılar', blog: 'Blog', privacy: 'Gizlilik', terms: 'Şartlar' },
-  es: { home: 'Inicio', calculators: 'Calculadoras', blog: 'Blog', privacy: 'Privacidad', terms: 'Términos' },
-  fr: { home: 'Accueil', calculators: 'Calculatrices', blog: 'Blog', privacy: 'Confidentialité', terms: 'Conditions' },
-  de: { home: 'Startseite', calculators: 'Rechner', blog: 'Blog', privacy: 'Datenschutz', terms: 'AGB' },
-  'pt-br': { home: 'Início', calculators: 'Calculadoras', blog: 'Blog', privacy: 'Privacidade', terms: 'Termos' },
-  ru: { home: 'Главная', calculators: 'Калькуляторы', blog: 'Блог', privacy: 'Конфиденциальность', terms: 'Условия' },
-  ja: { home: 'ホーム', calculators: '計算機', blog: 'ブログ', privacy: 'プライバシー', terms: '利用規約' },
-  ko: { home: '홈', calculators: '계산기', blog: '블로그', privacy: '개인정보', terms: '약관' },
-  it: { home: 'Home', calculators: 'Calcolatrici', blog: 'Blog', privacy: 'Privacy', terms: 'Termini' },
+const navLabels: Record<string, { home: string; calculators: string; blog: string; contact: string; privacy: string; terms: string }> = {
+  en: { home: 'Home', calculators: 'Calculators', blog: 'Blog', contact: 'Contact', privacy: 'Privacy', terms: 'Terms' },
+  tr: { home: 'Ana Sayfa', calculators: 'Hesaplayıcılar', blog: 'Blog', contact: 'İletişim', privacy: 'Gizlilik', terms: 'Şartlar' },
+  es: { home: 'Inicio', calculators: 'Calculadoras', blog: 'Blog', contact: 'Contacto', privacy: 'Privacidad', terms: 'Términos' },
+  fr: { home: 'Accueil', calculators: 'Calculatrices', blog: 'Blog', contact: 'Contact', privacy: 'Confidentialité', terms: 'Conditions' },
+  de: { home: 'Startseite', calculators: 'Rechner', blog: 'Blog', contact: 'Kontakt', privacy: 'Datenschutz', terms: 'AGB' },
+  'pt-br': { home: 'Início', calculators: 'Calculadoras', blog: 'Blog', contact: 'Contato', privacy: 'Privacidade', terms: 'Termos' },
+  ru: { home: 'Главная', calculators: 'Калькуляторы', blog: 'Блог', contact: 'Контакты', privacy: 'Конфиденциальность', terms: 'Условия' },
+  ja: { home: 'ホーム', calculators: '計算機', blog: 'ブログ', contact: 'お問い合わせ', privacy: 'プライバシー', terms: '利用規約' },
+  ko: { home: '홈', calculators: '계산기', blog: '블로그', contact: '연락처', privacy: '개인정보', terms: '약관' },
+  it: { home: 'Home', calculators: 'Calcolatrici', blog: 'Blog', contact: 'Contatti', privacy: 'Privacy', terms: 'Termini' },
 };
 const labels = navLabels[lang] ?? navLabels.en;
 
@@ -30,6 +30,7 @@ const mainNav = [
   { label: labels.home, href: logoHref },
   { label: labels.calculators, href: `${base}/calculators` },
   { label: labels.blog, href: `${base}/blog` },
+  { label: labels.contact, href: '/contact' },
   { label: labels.privacy, href: `${base}/privacy` },
   { label: labels.terms, href: `${base}/terms` },
 ];

@@ -54,6 +54,10 @@ SlayCal offers three tiers (available via the iOS App Store and Google Play):
 - [App Store (iOS)](https://apps.apple.com/app/slaycal): Download SlayCal for iPhone and iPad.
 - [Google Play (Android)](https://play.google.com/store/apps/details?id=com.slaycal): Download SlayCal for Android.
 
+## Contact
+
+- [Contact](https://slaycal.com/contact): Send a message to the SlayCal team — support, feedback, or partnership inquiries. Response within 24 hours.
+
 ## Legal
 
 - [Privacy Policy](https://slaycal.com/privacy): How SlayCal collects, uses, and protects user data.

@@ -175,6 +175,14 @@ for (const b of blogPaths) {
   });
 }
 
+// Contact page.
+pages.push({
+  url: `${SITE_URL}/contact`,
+  lastmod: LASTMOD,
+  changefreq: "monthly",
+  priority: "0.6",
+});
+
 // Legal pages.
 pages.push({
   url: `${SITE_URL}/privacy`,

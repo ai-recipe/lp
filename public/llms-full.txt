@@ -989,6 +989,18 @@ SlayCal offers three tiers (available via the iOS App Store and Google Play):
 
 ---
 
+## Page: Contact
+
+URL: https://slaycal.com/contact
+
+Contact form for the SlayCal team. Accepts a name, email address, and message. No account required. Submissions are stored and reviewed by the team with a target response time of 24 hours.
+
+- Support email: support@slaycal.com
+- Partnerships: partners@slaycal.com
+- Use cases: bug reports, feature requests, subscription questions, general feedback, partnership inquiries
+
+---
+
 ## Page: Privacy Policy
 
 URL: https://slaycal.com/privacy

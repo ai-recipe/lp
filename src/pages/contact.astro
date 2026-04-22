@@ -1,0 +1,294 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { en } from '../i18n/en';
+import '../styles/global.css';
+
+const t = en;
+const apiUrl = import.meta.env.PUBLIC_API_URL ?? 'http://api.slaycal.com';
+---
+
+<Layout
+  title="Contact Us — SlayCal"
+  description="Have a question, feedback, or partnership inquiry? Send us a message and our team will get back to you."
+  keywords="SlayCal contact, support, feedback, get in touch"
+  lang="en"
+  canonicalPath="/contact"
+>
+  <Header t={t} lang="en" currentPath="/contact" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-2xl text-center">
+        <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-5">
+          <span class="material-symbols-outlined text-primary text-base leading-none">mail</span>
+          <span class="text-sm font-semibold text-primary">Get in touch</span>
+        </div>
+        <h1 class="text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Contact Us
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Questions, feedback, or partnership inquiries — we read every message and reply within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── FORM + INFO ────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-14 lg:px-20">
+      <div class="mx-auto max-w-5xl grid grid-cols-1 gap-12 lg:grid-cols-5">
+
+        <!-- Contact info sidebar -->
+        <aside class="lg:col-span-2 flex flex-col gap-6">
+          <div>
+            <h2 class="text-lg font-bold text-slate-900 mb-4">We're here to help</h2>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Whether you have a bug report, a feature request, a question about your subscription, or just want to say hello — reach out and we'll get back to you.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {[
+              { icon: 'support_agent', label: 'Support', value: 'support@slaycal.com' },
+              { icon: 'business', label: 'Partnerships', value: 'partners@slaycal.com' },
+              { icon: 'schedule', label: 'Response time', value: 'Within 24 hours' },
+            ].map(({ icon, label, value }) => (
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">{icon}</span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-slate-400">{label}</p>
+                  <p class="text-sm text-slate-700 mt-0.5">{value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="rounded-2xl bg-primary/5 border border-primary/20 p-5 mt-2">
+            <p class="text-sm font-bold text-slate-900 mb-1">Looking for app support?</p>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              For in-app issues, you can also reach us directly through the Help section inside SlayCal. It lets you attach screenshots to speed up troubleshooting.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Form -->
+        <div class="lg:col-span-3">
+          <form
+            id="contact-form"
+            class="flex flex-col gap-5"
+            novalidate
+          >
+            <!-- Success state -->
+            <div id="form-success" class="hidden rounded-2xl bg-emerald-50 border border-emerald-200 p-6 text-center">
+              <span class="material-symbols-outlined text-emerald-500 text-4xl">check_circle</span>
+              <p class="mt-2 font-bold text-slate-900">Message sent!</p>
+              <p class="mt-1 text-sm text-slate-500">We'll get back to you within 24 hours.</p>
+            </div>
+
+            <!-- Error banner -->
+            <div id="form-error" class="hidden rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700 flex items-start gap-2">
+              <span class="material-symbols-outlined text-red-500 text-base shrink-0 mt-0.5">error</span>
+              <span id="form-error-msg">Something went wrong. Please try again.</span>
+            </div>
+
+            <!-- Fields -->
+            <div id="form-fields" class="flex flex-col gap-5">
+              <div class="flex flex-col gap-1.5">
+                <label for="contact-name" class="text-sm font-semibold text-slate-700">
+                  Name <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="100"
+                  placeholder="Jane Doe"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                  required
+                />
+                <p id="name-error" class="hidden text-xs text-red-500">Name is required.</p>
+              </div>
+
+              <div class="flex flex-col gap-1.5">
+                <label for="contact-email" class="text-sm font-semibold text-slate-700">
+                  Email <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="jane@example.com"
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                  required
+                />
+                <p id="email-error" class="hidden text-xs text-red-500">A valid email is required.</p>
+              </div>
+
+              <div class="flex flex-col gap-1.5">
+                <label for="contact-message" class="text-sm font-semibold text-slate-700">
+                  Message <span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  maxlength="5000"
+                  placeholder="Tell us how we can help..."
+                  class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                  required
+                ></textarea>
+                <div class="flex justify-between">
+                  <p id="message-error" class="hidden text-xs text-red-500">Message is required.</p>
+                  <p id="char-count" class="text-xs text-slate-400 ml-auto">0 / 5000</p>
+                </div>
+              </div>
+
+              <button
+                id="submit-btn"
+                type="submit"
+                class="flex items-center justify-center gap-2 w-full rounded-2xl bg-primary px-6 py-3.5 text-sm font-bold text-white hover:bg-primary/90 active:scale-95 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <span id="btn-label">Send message</span>
+                <span id="btn-spinner" class="hidden">
+                  <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                  </svg>
+                </span>
+                <span class="material-symbols-outlined text-base" id="btn-icon">send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────────────────── -->
+    <section class="bg-background-light px-6 py-14 lg:px-20">
+      <div class="mx-auto max-w-2xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 text-center">Common questions</h2>
+        <div class="space-y-3">
+          {[
+            {
+              q: 'How do I cancel my subscription?',
+              a: 'Subscriptions are managed through the App Store (iOS) or Google Play (Android). Open your device\'s subscription settings and cancel from there. Your access continues until the end of the billing period.',
+            },
+            {
+              q: 'Can I get a refund?',
+              a: 'Refunds are handled by Apple or Google depending on where you purchased. Contact them directly through your purchase history. We\'re happy to help if you run into issues.',
+            },
+            {
+              q: 'My scans aren\'t working accurately — what should I do?',
+              a: 'Make sure you\'re in good lighting and holding the camera steady. If a specific food is consistently off, send us a message with a photo and the result you received and we\'ll investigate.',
+            },
+            {
+              q: 'Is SlayCal available for web?',
+              a: 'SlayCal is currently an iOS and Android app. This website hosts our free calculators and blog. A web app is on the roadmap.',
+            },
+          ].map(({ q, a }) => (
+            <details class="group rounded-2xl border border-slate-100 bg-white overflow-hidden">
+              <summary class="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-bold text-slate-900 list-none">
+                {q}
+                <span class="material-symbols-outlined text-slate-400 text-base shrink-0 ml-3 group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <p class="px-5 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100">{a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>
+
+<script define:vars={{ apiUrl }}>
+  const form = document.getElementById('contact-form');
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const messageInput = document.getElementById('contact-message');
+  const charCount = document.getElementById('char-count');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnLabel = document.getElementById('btn-label');
+  const btnSpinner = document.getElementById('btn-spinner');
+  const btnIcon = document.getElementById('btn-icon');
+  const formFields = document.getElementById('form-fields');
+  const formSuccess = document.getElementById('form-success');
+  const formError = document.getElementById('form-error');
+  const formErrorMsg = document.getElementById('form-error-msg');
+
+  // Character counter
+  messageInput.addEventListener('input', () => {
+    charCount.textContent = `${messageInput.value.length} / 5000`;
+  });
+
+  // Clear field errors on input
+  nameInput.addEventListener('input', () => document.getElementById('name-error').classList.add('hidden'));
+  emailInput.addEventListener('input', () => document.getElementById('email-error').classList.add('hidden'));
+  messageInput.addEventListener('input', () => document.getElementById('message-error').classList.add('hidden'));
+
+  function validate() {
+    let ok = true;
+    if (!nameInput.value.trim()) {
+      document.getElementById('name-error').classList.remove('hidden');
+      ok = false;
+    }
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(emailInput.value.trim())) {
+      document.getElementById('email-error').classList.remove('hidden');
+      ok = false;
+    }
+    if (!messageInput.value.trim()) {
+      document.getElementById('message-error').classList.remove('hidden');
+      ok = false;
+    }
+    return ok;
+  }
+
+  function setLoading(loading) {
+    submitBtn.disabled = loading;
+    btnLabel.textContent = loading ? 'Sending…' : 'Send message';
+    btnSpinner.classList.toggle('hidden', !loading);
+    btnIcon.classList.toggle('hidden', loading);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    formError.classList.add('hidden');
+
+    if (!validate()) return;
+
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${apiUrl}/api/v1/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          message: messageInput.value.trim(),
+        }),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.message ?? `Server error (${res.status})`);
+      }
+
+      formFields.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+    } catch (err) {
+      formErrorMsg.textContent = err?.message ?? 'Something went wrong. Please try again.';
+      formError.classList.remove('hidden');
+      setLoading(false);
+    }
+  });
+</script>
