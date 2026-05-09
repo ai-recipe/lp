@@ -1,0 +1,276 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Keto Diet: Complete Beginner's Guide to the Ketogenic Diet | SlayCal Blog"
+  description="The ketogenic diet shifts your body from burning carbs to burning fat. Here's how it works, who it's for, what to eat, and how to avoid the most common mistakes."
+  keywords="keto diet, ketogenic diet, keto diyeti, ketosis, low carb diet, keto food list, keto for beginners, keto side effects, keto weight loss"
+  lang="en"
+  canonicalPath="/blog/keto-diet"
+>
+  <Header t={t} lang="en" currentPath="/blog/keto-diet" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Keto Diet</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Nutrition</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          The Ketogenic Diet:<br/>A Complete Beginner's Guide
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Keto switches your primary fuel source from carbohydrates to fat. It works — for the right person, with the right expectations. Here's everything you need to know before you start.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 9 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> May 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            The ketogenic diet is a very high-fat, very low-carbohydrate eating pattern that forces your body into a metabolic state called ketosis. Instead of running on glucose from carbohydrates, your liver converts fatty acids into ketone bodies — an alternative fuel source your brain and muscles can use efficiently.
+          </p>
+
+          <!-- How ketosis works -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">How ketosis actually works</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Under normal conditions, your body runs primarily on glucose. When carbohydrate intake drops below roughly 20–50g per day and glycogen stores empty (usually within 24–72 hours), insulin levels fall sharply. This drop in insulin signals fat cells to release stored fatty acids into the bloodstream. Your liver then converts these fatty acids into three ketone bodies: beta-hydroxybutyrate (BHB), acetoacetate, and acetone.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Ketones cross the blood-brain barrier and can fuel up to 75% of the brain's energy needs — the rest requires a small amount of glucose, which the liver produces via gluconeogenesis from protein and glycerol even without dietary carbohydrates.
+          </p>
+
+          <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5 mb-8 flex gap-4">
+            <span class="material-symbols-outlined text-amber-500 text-2xl shrink-0 mt-0.5">local_fire_department</span>
+            <div>
+              <p class="text-sm font-bold text-slate-900 mb-1">The standard keto macro split</p>
+              <p class="text-xs text-slate-600 leading-relaxed">Fat: 70–75% of calories · Protein: 20–25% · Carbohydrates: 5% or less (typically 20–50g net carbs/day). Net carbs = total carbs minus fiber.</p>
+            </div>
+          </div>
+
+          <!-- Keto variants -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Types of ketogenic diet</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { type: 'Standard Ketogenic Diet (SKD)', desc: 'The classic version. Consistently very low carb, high fat, moderate protein. Best for weight loss, metabolic health, and most beginners.' },
+              { type: 'Targeted Ketogenic Diet (TKD)', desc: 'Adds 25–50g fast-digesting carbs around workouts only. For athletes who need glucose for high-intensity training but want to remain keto the rest of the day.' },
+              { type: 'Cyclical Ketogenic Diet (CKD)', desc: '5 days of strict keto followed by 2 high-carb "refeed" days. Used by bodybuilders to replenish glycogen for training volume. Harder to manage.' },
+              { type: 'High-Protein Ketogenic Diet', desc: 'Similar to SKD but protein is raised to 30–35% — useful for preserving muscle during fat loss. Can partially inhibit ketosis at very high protein intakes.' },
+            ].map(({ type, desc }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{type}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- What to eat -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to eat on keto</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-8">
+            {[
+              { category: 'Proteins', color: 'blue', items: ['Beef, lamb, pork, poultry', 'Fatty fish (salmon, mackerel, sardines)', 'Eggs (whole)', 'Bacon (unprocessed)', 'Shellfish'] },
+              { category: 'Fats & oils', color: 'amber', items: ['Butter & ghee', 'Olive oil, avocado oil, coconut oil', 'Avocado', 'Nuts (macadamia, pecan, walnut)', 'Cream & full-fat cheese'] },
+              { category: 'Low-carb vegetables', color: 'green', items: ['Leafy greens (spinach, kale, arugula)', 'Broccoli, cauliflower, zucchini', 'Bell peppers, asparagus, mushrooms', 'Cucumber, celery', 'Olives'] },
+              { category: 'Drinks', color: 'slate', items: ['Water (still & sparkling)', 'Black coffee', 'Tea (unsweetened)', 'Bone broth', 'Cream in coffee (small amount)'] },
+            ].map(({ category, color, items }) => (
+              <div class={`rounded-2xl border p-5 border-${color}-100 bg-${color}-50`}>
+                <p class={`text-xs font-bold uppercase tracking-wider text-${color}-600 mb-3`}>{category}</p>
+                <ul class="space-y-1">
+                  {items.map(item => (
+                    <li class="text-xs text-slate-600 flex gap-2">
+                      <span class="material-symbols-outlined text-emerald-500 text-sm shrink-0">check</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <!-- What to avoid -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to avoid</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { food: 'Grains & starches', examples: 'Bread, pasta, rice, oats, cereals, crackers — all will kick you out of ketosis' },
+              { food: 'Sugars', examples: 'Candy, chocolate, honey, syrup, soft drinks, juice, most condiments (ketchup, BBQ sauce)' },
+              { food: 'Most fruit', examples: 'Bananas, apples, grapes, mangoes — high sugar content breaks ketosis. Berries in small amounts are acceptable.' },
+              { food: 'Root vegetables', examples: 'Potatoes, sweet potatoes, carrots, parsnips — high starch content' },
+              { food: 'Legumes', examples: 'Lentils, chickpeas, kidney beans — high carb despite their fiber content' },
+              { food: 'Low-fat dairy', examples: 'Skim milk, low-fat yogurt — higher carb percentage; full-fat versions are preferred' },
+            ].map(({ food, examples }) => (
+              <div class="rounded-2xl border border-red-100 bg-red-50 p-4 flex gap-3">
+                <span class="material-symbols-outlined text-rose-500 text-base shrink-0 mt-0.5">block</span>
+                <div>
+                  <p class="text-sm font-bold text-slate-900 mb-0.5">{food}</p>
+                  <p class="text-xs text-slate-500">{examples}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Keto flu -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">Keto flu: what it is and how to avoid it</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            During the first 1–2 weeks of keto, many people experience fatigue, headaches, brain fog, irritability, nausea, and muscle cramps. This is "keto flu" — not an actual flu, but the result of electrolyte loss. As insulin drops and glycogen depletes, kidneys excrete far more sodium, which pulls potassium and magnesium with it.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { electrolyte: 'Sodium', target: '3,000–5,000 mg/day', source: 'Salt food generously; add a pinch to water; bone broth' },
+              { electrolyte: 'Potassium', target: '3,500–4,700 mg/day', source: 'Avocado, leafy greens, salmon, mushrooms' },
+              { electrolyte: 'Magnesium', target: '300–500 mg/day', source: 'Supplement magnesium glycinate or citrate; dark chocolate, nuts' },
+            ].map(({ electrolyte, target, source }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-bold text-slate-900 mb-1">{electrolyte} — {target}</p>
+                <p class="text-xs text-slate-500">{source}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-500 text-xs mb-8">Most keto flu symptoms resolve within 1–2 weeks as your body adapts. Adequate electrolytes, hydration, and patience are the solution.</p>
+
+          <!-- Benefits -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Documented benefits</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { benefit: 'Fat loss', evidence: 'Strong. Keto consistently produces fat loss, partly from reduced calorie intake (fat and protein are highly satiating) and partly from metabolic shifts. The advantage over balanced diets at matched calories is modest.' },
+              { benefit: 'Blood sugar & insulin control', evidence: 'Very strong. Keto is one of the most effective dietary interventions for type 2 diabetes management. Reducing carbohydrates directly reduces blood glucose and insulin response.' },
+              { benefit: 'Appetite suppression', evidence: 'Strong. Ketones suppress ghrelin (the hunger hormone). Most people find they eat significantly less without deliberate restriction.' },
+              { benefit: 'Epilepsy management', evidence: 'Very strong. The medical ketogenic diet has 90+ years of evidence for reducing seizure frequency in drug-resistant epilepsy. This is where keto originated clinically.' },
+              { benefit: 'Cognitive clarity', evidence: 'Moderate, anecdotal. Many people report improved mental clarity and steady energy. The mechanism (stable blood glucose vs. glucose spikes) is plausible but long-term cognitive data is limited.' },
+            ].map(({ benefit, evidence }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{benefit}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{evidence}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Who keto is NOT for -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Who should be cautious</h2>
+          <div class="rounded-2xl border border-red-100 bg-red-50 p-5 mb-8">
+            <ul class="space-y-2">
+              {[
+                'People with pancreatitis or liver conditions — high fat intake may worsen these',
+                'Those with fat metabolism disorders or carnitine deficiency',
+                'Pregnant or breastfeeding women — consult a doctor first',
+                'People on insulin or diabetes medication — keto dramatically reduces blood sugar; medication must be adjusted',
+                'Anyone with a history of disordered eating — the restriction can be triggering',
+              ].map(item => (
+                <li class="flex gap-2 text-xs text-slate-600">
+                  <span class="material-symbols-outlined text-rose-500 text-base shrink-0 mt-0.5">warning</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Keto works for fat loss, appetite control, and blood sugar management. The evidence is real. The restriction is also real — 20–50g of carbs per day is a significant lifestyle change that doesn't suit everyone. If you're consistent and manage electrolytes properly, most people adapt well within 2–3 weeks. If you can't maintain it long-term, the results don't stick. Choose the diet you can actually follow.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-amber-50 border border-amber-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100">
+            <span class="material-symbols-outlined text-amber-600 text-xl">pie_chart</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Calculate your keto macros</p>
+            <p class="text-xs text-slate-500 mb-3">Find your exact fat, protein, and carb targets for the ketogenic diet based on your body weight and goal.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track your keto macros automatically.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal shows your carb total in real time — scan a meal and see if it fits your keto limit instantly.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_keto_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_keto_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/paleo-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-orange-600 text-xl">set_meal</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Paleo Diet: What It Is and Whether It Works</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/dieta-hipocalorica" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50">
+              <span class="material-symbols-outlined text-green-600 text-xl">trending_down</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Low-Calorie Diet: The Right Way to Cut</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/how-many-calories-should-i-eat" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">calculate</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How Many Calories Should I Eat?</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+              <span class="material-symbols-outlined text-emerald-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

@@ -10,7 +10,8 @@
       "WebFetch(domain:llmstxt.org)",
       "Bash(npx astro *)",
       "Read(//Users/sahin/Desktop/slaycallapp/new/express-backend/src/routes/**)",
-      "Bash(xargs -I{} basename {})"
+      "Bash(xargs -I{} basename {})",
+      "Bash(grep -E \"\\\\.astro$\")"
     ]
   }
 }

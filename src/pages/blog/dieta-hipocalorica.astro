@@ -1,0 +1,296 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Low-Calorie Diet (Dieta Hipocalórica): Complete Guide to Calorie Deficit Done Right | SlayCal Blog"
+  description="A low-calorie diet creates the deficit your body needs to burn fat — but cut too deep and you lose muscle and stall. Here's how to do it correctly."
+  keywords="low calorie diet, dieta hipocalorica, calorie deficit, hypocaloric diet, how to eat less, fat loss diet, calorie restriction, weight loss diet plan"
+  lang="en"
+  canonicalPath="/blog/dieta-hipocalorica"
+>
+  <Header t={t} lang="en" currentPath="/blog/dieta-hipocalorica" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Low-Calorie Diet</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-green-600">Nutrition</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          Low-Calorie Diet:<br/>The Right Way to Cut
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          A calorie deficit is the only proven mechanism for fat loss. The question isn't whether to eat less — it's how much less, which foods to keep, and how to avoid losing muscle in the process.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> May 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            A low-calorie (hypocaloric) diet is any eating pattern where your daily calorie intake is below what your body burns. That gap — the deficit — forces your body to draw energy from stored fat. The concept is simple. The execution is where most people go wrong.
+          </p>
+
+          <!-- What it is -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What exactly is a low-calorie diet?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            "Low-calorie" doesn't have an official clinical cutoff, but in practice it means eating 500–1,000 kcal below your Total Daily Energy Expenditure (TDEE). Very low-calorie diets (VLCDs) go below 800 kcal/day — these are medically supervised tools for clinical obesity, not something to apply casually.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            For most people, a moderate deficit of 400–600 kcal/day produces 0.4–0.5 kg of fat loss per week without the side effects of aggressive restriction.
+          </p>
+
+          <div class="rounded-2xl border border-green-100 bg-green-50 p-5 mb-8 flex gap-4">
+            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0 mt-0.5">info</span>
+            <div>
+              <p class="text-sm font-bold text-slate-900 mb-1">Fat loss rate math</p>
+              <p class="text-xs text-slate-600 leading-relaxed">1 kg of body fat stores roughly 7,700 kcal. A 500 kcal/day deficit = 3,500 kcal/week = ~0.45 kg fat loss per week. This is the real number behind the popular "1 lb/week" rule.</p>
+            </div>
+          </div>
+
+          <!-- Finding your deficit -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Step 1: Find your maintenance calories</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Before cutting, you need to know what you're cutting from. Your maintenance calories are your TDEE — the total you burn each day factoring in activity. Eating below this creates the deficit.
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-6">
+            {[
+              { level: 'Sedentary (desk job, no exercise)', multiplier: '×1.2' },
+              { level: 'Lightly active (1–3 workouts/week)', multiplier: '×1.375' },
+              { level: 'Moderately active (3–5 workouts/week)', multiplier: '×1.55' },
+              { level: 'Very active (6–7 workouts/week)', multiplier: '×1.725' },
+              { level: 'Extra active (physical job + daily training)', multiplier: '×1.9' },
+            ].map(({ level, multiplier }, i) => (
+              <div class={`px-5 py-4 flex justify-between ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm text-slate-700">{level}</p>
+                <p class="text-sm font-bold text-green-600">{multiplier}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            Multiply your Basal Metabolic Rate (BMR) by the relevant activity factor above to get your TDEE. Then subtract 400–600 kcal to set your daily target. Use the <a href="/calorie-calculator" class="text-primary font-semibold hover:underline">SlayCal Calorie Calculator</a> to get your number in seconds.
+          </p>
+
+          <!-- The protein priority -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Step 2: Protect muscle with protein</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The biggest risk of cutting calories is losing muscle alongside fat. Your body, under energy stress, will break down protein from muscle tissue for fuel if dietary protein is insufficient. Higher protein intake on a deficit preserves lean mass, keeps you fuller per calorie, and has the highest thermic effect of any macronutrient (meaning your body burns more calories digesting it).
+          </p>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 my-6">
+            {[
+              { label: 'Minimum protein', value: '1.6 g/kg', sub: 'Per kg of bodyweight per day on a deficit' },
+              { label: 'Optimal range', value: '1.8–2.2 g/kg', sub: 'For lifters or anyone training regularly' },
+              { label: 'Thermic effect', value: '20–30%', sub: 'Calories burned digesting protein vs. 5–10% for carbs/fat' },
+            ].map(({ label, value, sub }) => (
+              <div class="rounded-2xl border border-green-100 bg-green-50 p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-green-600 mb-1">{label}</p>
+                <p class="text-lg font-bold text-slate-900">{value}</p>
+                <p class="text-xs text-slate-500 mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Best foods -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Best foods for a low-calorie diet</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Volume eating is the strategy: prioritize foods with low calorie density but high nutrient density. You eat more food, feel more full, and still stay in your deficit.
+          </p>
+          <div class="space-y-3 mb-8">
+            {[
+              { category: 'Lean proteins', examples: 'Chicken breast, white fish, egg whites, Greek yogurt (0%), cottage cheese, turkey mince', why: 'High satiety, high thermic effect, muscle sparing' },
+              { category: 'Non-starchy vegetables', examples: 'Spinach, broccoli, zucchini, cucumber, peppers, mushrooms, cauliflower', why: 'Very low calorie density, high fiber, high micronutrient content' },
+              { category: 'Legumes', examples: 'Lentils, chickpeas, black beans, edamame', why: 'Good protein + fiber combination, slow-digesting carbs' },
+              { category: 'Whole fruits', examples: 'Berries, apple, orange, grapefruit', why: 'Naturally sweet, fiber slows sugar absorption, keeps you full' },
+              { category: 'Complex carbs (controlled)', examples: 'Oats, sweet potato, quinoa, brown rice', why: 'Sustained energy, fiber; portion control is key' },
+            ].map(({ category, examples, why }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{category}</p>
+                <p class="text-xs text-slate-500 mb-1">{examples}</p>
+                <p class="text-xs text-green-700 font-medium">{why}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- What to limit -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to limit (not eliminate)</h2>
+          <div class="space-y-4 mb-8">
+            <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+              <p class="font-bold text-amber-700 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">warning</span>High-fat foods
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Fat is 9 kcal/g — more than double carbs or protein. Healthy fats like olive oil and avocado are nutritious but calorie-dense. A single tablespoon of oil is 120 kcal. Don't eliminate fat, but measure it.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+              <p class="font-bold text-amber-700 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">warning</span>Ultra-processed foods
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Biscuits, crisps, pastries, and fast food are engineered to override your satiety signals. They pack maximum calories into minimum volume and make staying in your deficit very hard — not because they're "bad" but because they don't keep you full.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-amber-100 bg-amber-50 p-5">
+              <p class="font-bold text-amber-700 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">warning</span>Liquid calories
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Juice, sodas, alcohol, and specialty coffees can easily add 300–600 kcal without triggering any real feeling of fullness. Water, black coffee, and tea are essentially calorie-free.
+              </p>
+            </div>
+          </div>
+
+          <!-- Common mistakes -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">5 common low-calorie diet mistakes</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { n: '1', mistake: 'Cutting too aggressively', fix: 'A 1,000+ kcal deficit causes muscle loss, extreme hunger, metabolic adaptation, and is almost impossible to sustain. 400–600 kcal is the sustainable range.' },
+              { n: '2', mistake: 'Ignoring protein', fix: 'On a deficit, protein requirements go UP — not down. Eating too little protein while restricting calories is the fastest way to lose muscle instead of fat.' },
+              { n: '3', mistake: 'Not adjusting as weight drops', fix: 'As you lose weight, your TDEE decreases. What was a 500 kcal deficit at 90 kg may only be a 200 kcal deficit at 80 kg. Recalculate every 4–6 weeks.' },
+              { n: '4', mistake: 'Weekday cutting, weekend overeating', fix: 'Research shows most people are in a slight deficit Monday–Friday and erase it Saturday–Sunday. Consistency across the week matters more than perfection on any single day.' },
+              { n: '5', mistake: 'Relying on exercise to compensate', fix: 'You cannot out-train a bad diet. A 30-minute run burns roughly 250–350 kcal — easily undone by one untracked snack. Diet does 80% of the work.' },
+            ].map(({ n, mistake, fix }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5 flex gap-4">
+                <span class="flex h-7 w-7 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold shrink-0">{n}</span>
+                <div>
+                  <p class="text-sm font-bold text-slate-900 mb-1">{mistake}</p>
+                  <p class="text-xs text-slate-500 leading-relaxed">{fix}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Diet breaks -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Diet breaks and refeed days</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Extended calorie restriction causes metabolic adaptation — your body down-regulates energy expenditure to conserve fuel. Planned maintenance-calorie periods (diet breaks of 1–2 weeks) or weekly refeed days at maintenance reset leptin levels, improve adherence, and preserve metabolic rate without undoing fat loss progress.
+          </p>
+          <div class="rounded-2xl border border-slate-100 bg-background-light p-5 mb-8">
+            <p class="text-sm font-bold text-slate-900 mb-3">Practical approach</p>
+            <ul class="space-y-2">
+              {[
+                'Cut for 8–12 weeks, then take a 1–2 week diet break at maintenance',
+                'On refeed days, increase carbohydrates to maintenance — not fat',
+                'Use diet breaks strategically before vacations or high-stress periods',
+                'Do not mistake a diet break for a cheat week — quantities still matter',
+              ].map(item => (
+                <li class="flex gap-2 text-xs text-slate-600">
+                  <span class="material-symbols-outlined text-green-600 text-base shrink-0 mt-0.5">check_circle</span>{item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            A low-calorie diet works. The evidence is overwhelming and the mechanism is straightforward. What distinguishes successful fat loss from failed dieting is a moderate deficit (not a crash), sufficient protein, and consistency over weeks — not perfection over days. Track your calories, protect your protein, and adjust your targets as your weight changes.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-green-50 border border-green-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-100">
+            <span class="material-symbols-outlined text-green-600 text-xl">calculate</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Calculate your calorie target</p>
+            <p class="text-xs text-slate-500 mb-3">Find your TDEE and the right deficit for your goal — weight, height, age, and activity level in, calorie target out.</p>
+            <a href="/calorie-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:underline">
+              Open Calorie Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Track every calorie without the manual work.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal scans your meals instantly — point, tap, logged. Stay in your deficit effortlessly.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_hipocalorica_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_hipocalorica_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/how-many-calories-should-i-eat" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">calculate</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How Many Calories Should I Eat?</p>
+              <p class="text-xs text-slate-400 mt-0.5">6 min read</p>
+            </div>
+          </a>
+          <a href="/blog/keto-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
+              <span class="material-symbols-outlined text-amber-600 text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Keto Diet: Complete Beginner's Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">9 min read</p>
+            </div>
+          </a>
+          <a href="/blog/how-to-lose-weight-without-counting-calories" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50">
+              <span class="material-symbols-outlined text-green-600 text-xl">trending_down</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How to Lose Weight Without Counting Calories</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/paleo-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-orange-600 text-xl">set_meal</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Paleo Diet: What It Is and Whether It Works</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

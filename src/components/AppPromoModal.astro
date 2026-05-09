@@ -1,0 +1,115 @@
+<!-- App Promo Modal — appears 3s after page load -->
+<div
+  id="app-promo-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="promo-modal-title"
+  class="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300"
+>
+  <!-- Backdrop -->
+  <div
+    id="promo-modal-backdrop"
+    class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Card -->
+  <div class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl translate-y-8 sm:translate-y-0 sm:scale-95 transition-all duration-300" id="promo-modal-card">
+    <!-- Gradient header -->
+    <div class="relative bg-gradient-to-br from-primary via-accent to-amber-400 px-6 pt-8 pb-16">
+      <!-- Close button -->
+      <button
+        id="promo-modal-close"
+        aria-label="Close"
+        class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- Logo + name -->
+      <div class="flex flex-col items-center gap-3 text-center">
+        <img src="/logo.svg" alt="SlayCal" class="w-16 h-16 rounded-2xl shadow-lg bg-white p-1" />
+        <div>
+          <p class="text-white/70 text-xs font-semibold uppercase tracking-widest">Your AI Coach</p>
+          <h2 id="promo-modal-title" class="text-2xl font-bold text-white mt-0.5">SlayCal</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- White body that overlaps the gradient -->
+    <div class="relative bg-white dark:bg-slate-900 -mt-8 rounded-t-3xl px-6 pb-7 pt-6">
+      <p class="text-center text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+        Track calories, scan meals & get AI-powered recipes — all in one sleek app.
+      </p>
+
+      <!-- Primary CTA -->
+      <a
+        href="https://apps.apple.com/us/app/slaycal-ai-calorie-tracker/id6762659988"
+        target="_blank"
+        rel="noopener"
+        data-analytics-store="ios"
+        data-analytics-placement="promo_modal_cta"
+        class="block w-full py-4 rounded-2xl bg-gradient-to-r from-primary to-accent text-white font-bold text-center text-base shadow-lg hover:opacity-90 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        Launch Your Fitness Journey ✦
+      </a>
+
+      <p class="text-center text-slate-400 text-xs mt-4">Free to download &middot; iOS &amp; Android</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const STORAGE_KEY = 'slaycal_promo_dismissed';
+    const COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 h
+
+    function shouldShow() {
+      try {
+        const ts = localStorage.getItem(STORAGE_KEY);
+        if (!ts) return true;
+        return Date.now() - Number(ts) > COOLDOWN_MS;
+      } catch {
+        return true;
+      }
+    }
+
+    function dismiss() {
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch {}
+      const modal = document.getElementById('app-promo-modal');
+      const card  = document.getElementById('promo-modal-card');
+      if (!modal || !card) return;
+      modal.classList.remove('opacity-100', 'pointer-events-auto');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      card.classList.remove('translate-y-0', 'scale-100');
+      card.classList.add('translate-y-8', 'sm:scale-95');
+    }
+
+    function open() {
+      const modal = document.getElementById('app-promo-modal');
+      const card  = document.getElementById('promo-modal-card');
+      if (!modal || !card) return;
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      card.classList.remove('translate-y-8', 'sm:scale-95');
+      card.classList.add('translate-y-0', 'scale-100');
+    }
+
+    if (shouldShow()) {
+      setTimeout(open, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const closeBtn  = document.getElementById('promo-modal-close');
+      const backdrop  = document.getElementById('promo-modal-backdrop');
+      if (closeBtn)  closeBtn.addEventListener('click', dismiss);
+      if (backdrop)  backdrop.addEventListener('click', dismiss);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') dismiss();
+      });
+    });
+  })();
+</script>

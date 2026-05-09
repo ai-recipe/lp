@@ -962,6 +962,300 @@ The Epley formula is most accurate for sets of 2–10 reps. Estimates become les
 
 ---
 
+## Page: Low-Calorie Diet (Dieta Hipocalórica)
+
+URL: https://slaycal.com/blog/dieta-hipocalorica
+
+Category: Nutrition | 8 min read | May 2025
+
+A low-calorie diet creates the deficit your body needs to burn fat — but cut too deep and you lose muscle and stall. Here's how to do it correctly.
+
+### What is a low-calorie diet?
+
+A hypocaloric diet is any eating pattern where daily calorie intake falls below Total Daily Energy Expenditure (TDEE). The gap — the deficit — forces the body to draw energy from stored fat. A moderate deficit of 400–600 kcal/day produces 0.4–0.5 kg of fat loss per week. Very low-calorie diets (VLCDs, under 800 kcal/day) are medically supervised tools, not general use strategies.
+
+### Finding your maintenance calories
+
+TDEE = BMR × activity multiplier:
+- Sedentary: ×1.2
+- Lightly active: ×1.375
+- Moderately active: ×1.55
+- Very active: ×1.725
+- Extra active: ×1.9
+
+Subtract 400–600 kcal from TDEE to set the daily calorie target.
+
+### Protein priority on a deficit
+
+Higher protein intake preserves lean mass, increases satiety, and has the highest thermic effect (20–30% of calories burned digesting it). Minimum 1.6 g/kg bodyweight; optimal 1.8–2.2 g/kg for people training regularly.
+
+### Best foods for a low-calorie diet
+
+- Lean proteins: chicken breast, white fish, egg whites, Greek yogurt, cottage cheese
+- Non-starchy vegetables: spinach, broccoli, zucchini, cucumber, peppers
+- Legumes: lentils, chickpeas, black beans (protein + fiber combination)
+- Whole fruits: berries, apple, orange (fiber slows sugar absorption)
+- Complex carbs (controlled portions): oats, sweet potato, quinoa
+
+### What to limit
+
+- High-fat foods: 9 kcal/g — measure olive oil and avocado rather than eliminate
+- Ultra-processed foods: engineered to override satiety signals
+- Liquid calories: juice, alcohol, specialty coffees — no satiety effect
+
+### 5 common mistakes
+
+1. Cutting too aggressively — a 1,000+ kcal deficit causes muscle loss and is unsustainable
+2. Ignoring protein — requirements increase on a deficit
+3. Not adjusting targets as weight drops — TDEE decreases with weight loss
+4. Weekday deficit erased by weekend overeating
+5. Over-relying on exercise — diet does 80% of the work
+
+### Diet breaks and refeed days
+
+Extended restriction causes metabolic adaptation. Planned maintenance-calorie periods (1–2 week diet breaks) or weekly refeed days (carbohydrates to maintenance level) reset leptin and preserve metabolic rate.
+
+---
+
+## Page: Sirtfood Diet
+
+URL: https://slaycal.com/blog/sirtfood-diet
+
+Category: Nutrition | 8 min read | May 2025
+
+The Sirtfood Diet claims certain foods activate sirtuin proteins to accelerate fat burning. The science behind sirtuins is real; the claims about dietary doses are significantly overstated.
+
+### What are sirtuins?
+
+Sirtuins (SIRT1–7) are proteins that regulate metabolism, aging, inflammation, and stress response. SIRT1 is activated by calorie restriction and exercise, promoting fat oxidation and improving insulin sensitivity. The sirtfood diet claims polyphenol-rich foods activate this pathway at dietary intake levels — a leap the clinical evidence does not currently support.
+
+### The sirtfood protocol
+
+Phase 1 (Days 1–7): 1,000 kcal/day (Days 1–3: three green juices + one meal), then 1,500 kcal/day (Days 4–7: two juices + two meals). Phase 2 (Weeks 2–3): Three sirtfood-rich meals + one green juice per day at a moderate calorie level.
+
+### The top 20 sirtfoods
+
+Kale, red wine, dark chocolate (85%+), olive oil, matcha green tea, buckwheat, turmeric, walnuts, rocket (arugula), bird's eye chilli, lovage, medjool dates, red onion, parsley, strawberries, capers, coffee, blueberries, citrus fruit, soy.
+
+### Why people lose weight on it
+
+1. Severe calorie restriction (1,000 kcal/day Phase 1) — the primary driver
+2. Glycogen depletion — carbohydrate restriction empties glycogen + associated water weight
+3. Food quality improvement — eliminating processed food is beneficial regardless of sirtuin effects
+
+### What the individual sirtfoods actually do
+
+- EGCG (matcha): modest thermogenic effect (~80 kcal/day additional burn) — strongest real evidence
+- Quercetin (capers, onion): anti-inflammatory; no direct fat loss data in humans
+- Resveratrol (red wine): activates SIRT1 in cell culture; human effects at dietary doses inconsistent
+- Curcumin (turmeric): anti-inflammatory; poor bioavailability without black pepper
+
+### Verdict
+
+The food list is genuinely excellent. The 1,000 kcal crash phase is a severe restriction with no advantage over a moderate deficit. Use the sirtfood framework as a food quality guide; skip the crash phase.
+
+---
+
+## Page: Keto Diet
+
+URL: https://slaycal.com/blog/keto-diet
+
+Category: Nutrition | 9 min read | May 2025
+
+The ketogenic diet shifts the body from burning carbohydrates to burning fat. It works — for the right person, with the right expectations.
+
+### How ketosis works
+
+Dropping carbohydrates below 20–50g/day depletes glycogen within 24–72 hours. Falling insulin signals fat cells to release fatty acids. The liver converts these into ketone bodies (BHB, acetoacetate, acetone). Ketones fuel the brain and muscles in place of glucose.
+
+### Standard keto macro split
+
+Fat: 70–75% · Protein: 20–25% · Carbohydrates: 5% (20–50g net carbs/day). Net carbs = total carbs minus fiber.
+
+### Types of ketogenic diet
+
+- Standard (SKD): consistently very low carb, high fat — best for most people
+- Targeted (TKD): adds carbs around workouts only — for athletes
+- Cyclical (CKD): 5 keto days + 2 high-carb refeed days — used by bodybuilders
+- High-protein keto: protein raised to 30–35% — better muscle preservation
+
+### What to eat on keto
+
+Proteins: beef, lamb, pork, poultry, fatty fish, eggs, shellfish. Fats: butter, ghee, olive oil, avocado, nuts, cream, full-fat cheese. Vegetables: leafy greens, broccoli, cauliflower, zucchini, mushrooms, peppers, olives.
+
+### What to avoid
+
+Grains, sugar, most fruit, root vegetables, legumes, low-fat dairy, processed foods.
+
+### Keto flu prevention
+
+Electrolyte loss during adaptation causes fatigue, headaches, muscle cramps:
+- Sodium: 3,000–5,000 mg/day (salt food generously, bone broth)
+- Potassium: 3,500–4,700 mg/day (avocado, leafy greens, salmon)
+- Magnesium: 300–500 mg/day (supplement magnesium glycinate or citrate)
+
+Most symptoms resolve within 1–2 weeks.
+
+### Documented benefits
+
+- Fat loss: consistent; advantage over matched-calorie balanced diets is modest
+- Blood sugar/insulin control: very strong evidence — one of the best dietary interventions for type 2 diabetes
+- Appetite suppression: strong — ketones suppress ghrelin
+- Epilepsy management: 90+ years of evidence for drug-resistant epilepsy
+
+### Who should be cautious
+
+People with pancreatitis, liver conditions, fat metabolism disorders, pregnant/breastfeeding women, those on insulin or diabetes medication (dose adjustment required), history of disordered eating.
+
+---
+
+## Page: Paleo Diet
+
+URL: https://slaycal.com/blog/paleo-diet
+
+Category: Nutrition | 8 min read | May 2025
+
+The Paleo diet eliminates grains, dairy, legumes, and processed foods and focuses on whole foods. The evolutionary rationale is debated; the food quality improvement is real.
+
+### Core premise
+
+The diet argues our genetics are mismatched with agricultural foods introduced ~10,000 years ago. The strict version of this claim is scientifically contested. What is less controversial: eliminating ultra-processed food, refined sugar, and industrial seed oils produces measurable health improvements regardless of framing.
+
+### What paleo includes
+
+- Proteins: grass-fed beef, lamb, wild fish, free-range eggs, poultry, organ meats
+- Vegetables: all non-starchy vegetables, root vegetables, leafy greens, cruciferous veg
+- Fruits and nuts: all whole fruits, berries, avocado, coconut, almonds, walnuts, seeds
+- Fats: olive oil, avocado oil, coconut oil, ghee (often accepted), animal fats
+
+### What paleo excludes
+
+- Grains (wheat, rice, oats, corn): anti-nutrient concern; critics note cooking neutralizes most
+- Dairy: lactase persistence is recent; counter: full-fat dairy has good health data
+- Legumes: lectin concern; counter: legumes are among the strongest longevity predictors in global research
+- Refined sugar, processed foods, industrial seed oils
+
+### What the research shows
+
+- Weight loss: moderate — primarily from eliminating processed food and increased protein
+- Blood glucose and insulin: good — several RCTs show improvement vs. standard dietary guidelines
+- LDL cholesterol: mixed — saturated fat raises LDL, but pattern shifts toward larger less-atherogenic particles
+- Inflammation: positive trend — CRP and IL-6 improve with increased vegetables and omega-3
+
+### Paleo vs. Keto
+
+Paleo allows fruit and moderate carbs from sweet potato; keto restricts to 20–50g carbs/day. Paleo excludes dairy; keto allows full-fat dairy. Both exclude grains and legumes. Paleo is easier to follow long-term for most people.
+
+### The bottom line
+
+Take the food quality principles — whole foods, minimal processing, lean proteins, vegetables, healthy fats. Don't stress the strict exclusion of legumes and whole grains, which have their own strong evidence base.
+
+---
+
+## Page: Chia Seeds Diet
+
+URL: https://slaycal.com/blog/chia-diet
+
+Category: Nutrition | 7 min read | May 2025
+
+Chia seeds are genuinely nutritious — high fiber, omega-3, calcium, and complete protein. Here's what they actually do and how to use them effectively.
+
+### Nutrition per 28g (2 tablespoons)
+
+Calories: 138 kcal · Protein: 4.7g (complete amino acid profile) · Fat: 8.7g (5g ALA omega-3) · Carbohydrates: 12g total (10g fiber, 2g net carbs) · Calcium: 179mg (18% DV) · Magnesium: 95mg (23% DV) · Phosphorus: 265mg (27% DV).
+
+### Why the fiber content matters
+
+Chia seeds are 36% fiber by weight; 80% is soluble fiber. When hydrated, soluble fiber forms a gel that:
+- Increases satiety and slows gastric emptying
+- Moderates post-meal blood sugar spikes
+- Feeds beneficial gut bacteria (prebiotic effect)
+- Modestly reduces LDL cholesterol
+
+### The omega-3 distinction
+
+Chia seeds are the richest plant source of ALA omega-3. However, ALA converts to EPA at ~5–10% efficiency and DHA at less than 1%. Chia seeds cannot replace fatty fish or algae-based EPA/DHA supplements. Vegetarians needing EPA/DHA should use algae oil.
+
+### Do chia seeds cause weight loss?
+
+Direct fat loss evidence is modest. Indirect mechanisms exist:
+- Appetite reduction: the gel effect increases fullness, potentially reducing total daily intake
+- Calorie displacement: high fiber, low net calories per serving
+
+No evidence for direct fat oxidation increase, metabolism boost, or body water loss from "absorbing water."
+
+### How to use chia seeds
+
+- Chia pudding: 3–4 tbsp + 240ml milk, refrigerate overnight — gels into pudding texture
+- Added to oats or yogurt: 1–2 tbsp, pre-soaking optional, texture improves digestion
+- Smoothies: blend directly — undetectable in flavor, adds fiber
+- Egg substitute (baking): 1 tbsp + 3 tbsp water, rest 5 min = 1 egg for binding
+- Water before exercise: soaked chia for sustained energy (limited performance evidence)
+
+### Dosage
+
+Start: 1 tbsp/day (14g). Optimal: 2–4 tbsp/day (28–56g). Always drink extra water — chia expands significantly and needs adequate hydration. Build up gradually to avoid bloating.
+
+---
+
+## Page: Personal Trainer Studio
+
+URL: https://slaycal.com/blog/personal-trainer-studio
+
+Category: Fitness | 10 min read | May 2025
+
+How professional personal trainers structure client programs, track progress, and build the accountability systems that get consistent results.
+
+### Initial client assessment
+
+- Health screening: PAR-Q, contraindications, medications
+- Body composition: weight, body fat %, circumference measurements (waist, hip, chest, arm, thigh)
+- Movement assessment: overhead squat, single-leg balance, push-up quality, hip hinge
+- Strength baseline: submaximal lifts to gauge relative strength
+- Cardiovascular baseline: 3-minute step test, resting/recovery heart rate
+- Goals and lifestyle: training days available, sleep, stress, dietary habits, training history
+
+### Program design principles
+
+Using FITT-VP framework (Frequency, Intensity, Time, Type, Volume, Progression):
+- Progressive overload: stimulus must increase to drive ongoing adaptation
+- Specificity: program for the client's actual goal
+- Recovery matching: volume and intensity matched to client's recovery capacity
+- Movement balance: push/pull ratios, anterior/posterior chain balance, unilateral work
+- Periodization: foundation → strength → hypertrophy → power phases
+
+### Session structure (60-minute PT session)
+
+0–5 min: check-in and readiness assessment · 5–15 min: warm-up and activation · 15–45 min: primary training block (2–4 compound exercises) · 45–55 min: accessory and core work · 55–60 min: cool-down and debrief.
+
+### Nutrition guidance scope
+
+Trainers provide general nutrition education (not medical nutrition therapy):
+- Calorie awareness: TDEE explanation, approximate daily targets
+- Protein education: 1.6–2.2 g/kg/day for active clients — most clients are under-proteined
+- Meal timing: pre-workout carbs for performance, post-workout protein for recovery
+- Tracking support: recommend frictionless apps — SlayCal's meal scanning removes the manual logging barrier
+- Referral threshold: eating disorders, medical nutrition needs → registered dietitian
+
+### Progress tracking
+
+- Body weight: weekly, same conditions, track 4-week rolling average
+- Body measurements: every 4 weeks (circumference)
+- Performance metrics: every 4–6 weeks (strength on key lifts, cardiovascular benchmarks)
+- Progress photos: every 4 weeks (same lighting, angle, time of day)
+- Energy and sleep: weekly 0–10 subjective scale (early overtraining detection)
+- Nutrition adherence: weekly review to identify weekend overconsumption, low protein days
+
+### Client retention factors
+
+- Visible early progress: first 4 weeks are critical for habit formation and motivation
+- Accountability systems: check-ins between sessions, not just during
+- Education over instruction: clients who understand why comply better and self-correct
+- Program evolution: stale programs lose clients — change structure and acknowledge progress explicitly
+- Goal re-evaluation: goals shift as confidence and fitness develop; revisit regularly
+
+---
+
 ## Page: Free Nutrition Calculators
 
 URL: https://slaycal.com/calculators

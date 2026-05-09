@@ -13,7 +13,7 @@ Description: AI-powered nutrition tracking and recipe generation app for iOS and
 Contact: support@slaycal.com
 
 # Content topics
-Topics: nutrition, calorie tracking, macro tracking, meal scanning, recipe generation, supplements, workout programs, fitness, weight loss, muscle gain, BMI, body fat, one rep max
+Topics: nutrition, calorie tracking, macro tracking, meal scanning, recipe generation, supplements, workout programs, fitness, weight loss, muscle gain, BMI, body fat, one rep max, low calorie diet, hypocaloric diet, dieta hipocalorica, sirtfood diet, sirtuins, keto diet, ketogenic diet, keto diyeti, paleo diet, paleo dieta, chia seeds, chia diet, personal trainer, personal training studio, fitness coaching
 
 # App availability
 iOS: https://apps.apple.com/app/slaycal

@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Paleo Diet: What It Is, What to Eat, and Whether It Works | SlayCal Blog"
+  description="The Paleo diet cuts processed foods and grains and focuses on whole foods our ancestors ate. Here's what the evidence says about its benefits, limitations, and who it suits."
+  keywords="paleo diet, paleo dieta, paleolithic diet, what is paleo, paleo food list, paleo vs keto, paleo diet benefits, paleo diet meal plan"
+  lang="en"
+  canonicalPath="/blog/paleo-diet"
+>
+  <Header t={t} lang="en" currentPath="/blog/paleo-diet" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Paleo Diet</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-orange-600">Nutrition</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          The Paleo Diet:<br/>What It Is and Whether It Works
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Eat like your ancestors — meat, fish, vegetables, fruit, nuts, seeds. Cut grains, dairy, legumes, and processed food. The idea is simple. The evidence is more nuanced.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> May 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            The Paleolithic diet — paleo for short — is based on the premise that our bodies are genetically mismatched with modern diets introduced by agriculture roughly 10,000 years ago. Grains, dairy, legumes, refined sugar, and processed oils are excluded. What remains is a whole-food diet that is high in protein, moderate in fat, and lower in carbohydrates than a typical Western diet.
+          </p>
+
+          <!-- Core principle -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The core premise</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The evolutionary mismatch argument is controversial in nutrition science. Critics point out that Paleolithic humans ate widely varying diets depending on geography and season — there was no single ancestral diet. Some groups ate primarily meat, others relied on tubers, and many ate grains long before the agricultural revolution.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            What is less controversial: eliminating ultra-processed foods, refined sugar, industrial seed oils, and excess refined carbohydrates produces measurable health improvements — regardless of whether you frame it as "paleo" or simply "eating whole foods."
+          </p>
+
+          <div class="rounded-2xl border border-orange-100 bg-orange-50 p-5 mb-8 flex gap-4">
+            <span class="material-symbols-outlined text-orange-500 text-2xl shrink-0 mt-0.5">info</span>
+            <div>
+              <p class="text-sm font-bold text-slate-900 mb-1">The real benefit of paleo</p>
+              <p class="text-xs text-slate-600 leading-relaxed">Most benefits documented in paleo research likely come from the removal of ultra-processed foods and refined carbohydrates, not from the specific exclusion of grains or dairy per se. The framework is useful as a food quality heuristic even if the evolutionary rationale is debated.</p>
+            </div>
+          </div>
+
+          <!-- What to eat -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What to eat on paleo</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-8">
+            {[
+              { category: 'Proteins', emoji: '🥩', items: ['Grass-fed beef, lamb, pork, venison', 'Wild-caught fish and seafood', 'Free-range eggs and poultry', 'Organ meats (liver, kidney)'] },
+              { category: 'Vegetables', emoji: '🥦', items: ['All non-starchy vegetables', 'Root vegetables (sweet potato, beets, carrots)', 'Leafy greens (spinach, kale, arugula)', 'Cruciferous veg (broccoli, cauliflower)'] },
+              { category: 'Fruits & nuts', emoji: '🍎', items: ['All whole fruits', 'Berries, avocado, coconut', 'Almonds, walnuts, macadamia, pecans', 'Chia seeds, flaxseeds, pumpkin seeds'] },
+              { category: 'Fats & oils', emoji: '🫒', items: ['Olive oil, avocado oil, coconut oil', 'Ghee (often accepted in modern paleo)', 'Animal fats (lard, tallow)', 'Nut butters (no added sugar)'] },
+            ].map(({ category, emoji, items }) => (
+              <div class="rounded-2xl border border-orange-100 bg-orange-50 p-5">
+                <p class="text-xs font-bold uppercase tracking-wider text-orange-600 mb-3">{category}</p>
+                <ul class="space-y-1">
+                  {items.map(item => (
+                    <li class="text-xs text-slate-600 flex gap-2">
+                      <span class="material-symbols-outlined text-orange-500 text-sm shrink-0">check</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <!-- What to avoid -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What paleo excludes</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { excluded: 'Grains', reason: 'Wheat, rice, oats, corn, barley, rye — all excluded. The rationale is anti-nutrients (phytates, lectins) and glucose spikes. Counter-argument: cooking neutralizes most anti-nutrients, and whole grains have documented health benefits.' },
+              { excluded: 'Dairy', reason: 'Milk, cheese, yogurt, butter — typically excluded (modern paleo often allows ghee and full-fat dairy). Rationale: lactase persistence is a relatively recent genetic adaptation and many adults are lactose intolerant.' },
+              { excluded: 'Legumes', reason: 'Beans, lentils, peanuts, chickpeas — excluded due to lectins and phytates. Counter-argument: legumes are among the most consistent dietary predictors of longevity across global research.' },
+              { excluded: 'Refined sugar', reason: 'All added sugars, sweeteners, and artificial sweeteners excluded. This one has the strongest nutritional consensus behind it.' },
+              { excluded: 'Processed foods', reason: 'Packaged, industrial, and ultra-processed foods excluded entirely. This is the most impactful elimination in terms of health outcomes.' },
+              { excluded: 'Industrial seed oils', reason: 'Canola, soybean, sunflower, corn oil — high in omega-6, potentially pro-inflammatory at high intake. The evidence for harm at moderate consumption is less clear.' },
+            ].map(({ excluded, reason }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{excluded}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{reason}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Evidence -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-4">What the research shows</h2>
+          <div class="space-y-3 mb-8">
+            {[
+              { outcome: 'Weight loss', evidence: 'Moderate. Paleo produces weight loss primarily through reduced calorie intake from eliminating processed food, increased protein satiety, and lower overall food palatability. No clear advantage over other whole-food diets at matched calories.' },
+              { outcome: 'Blood glucose & insulin', evidence: 'Good. Several RCTs show paleo improves fasting glucose and insulin sensitivity compared to standard dietary guidelines, particularly in people with metabolic syndrome or type 2 diabetes.' },
+              { outcome: 'LDL cholesterol', evidence: 'Mixed. Some studies show increases in LDL due to saturated fat intake. The pattern of LDL particles (large fluffy vs. small dense) matters, and paleo tends to shift toward larger particles which are considered less atherogenic.' },
+              { outcome: 'Inflammation markers', evidence: 'Positive trend. Several markers of chronic inflammation (CRP, IL-6) improve on paleo, likely from increased vegetable and omega-3 intake and reduction in ultra-processed food.' },
+              { outcome: 'Athletic performance', evidence: 'Neutral to slightly negative in early adaptation due to reduced carbohydrate availability. Athletes doing high-intensity training may find paleo suboptimal without carbohydrate modifications.' },
+            ].map(({ outcome, evidence }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{outcome}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{evidence}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Paleo vs keto -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Paleo vs. keto: the key difference</h2>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            <div class="grid grid-cols-3 bg-slate-50 px-5 py-3">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Factor</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-orange-500">Paleo</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-amber-500">Keto</p>
+            </div>
+            {[
+              ['Carbs', 'Moderate (from fruit, sweet potato)', 'Very low (20–50g/day)'],
+              ['Fruit', 'Unlimited', 'Minimal (berries only)'],
+              ['Legumes', 'Excluded', 'Excluded'],
+              ['Dairy', 'Mostly excluded', 'Full-fat dairy allowed'],
+              ['Grains', 'Excluded', 'Excluded'],
+              ['Primary goal', 'Food quality / anti-inflammatory', 'Ketosis / fat oxidation'],
+              ['Ease of following', 'Moderate', 'Harder (carb counting required)'],
+            ].map(([factor, paleo, keto], i) => (
+              <div class={`grid grid-cols-3 px-5 py-3 border-t border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-background-light'}`}>
+                <p class="text-xs font-medium text-slate-600">{factor}</p>
+                <p class="text-xs text-slate-600">{paleo}</p>
+                <p class="text-xs text-slate-600">{keto}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The Paleo diet is a solid whole-food framework that will improve health for most people who adopt it — primarily by eliminating ultra-processed foods. The strict exclusion of legumes, grains, and dairy is not well-supported by outcome data and eliminates some of the most nutritious foods available. A practical approach: take the food quality principles (whole foods, minimal processing, lean proteins, vegetables, healthy fats), apply them consistently, and don't stress over whether ancient humans ate quinoa.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-orange-50 border border-orange-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100">
+            <span class="material-symbols-outlined text-orange-600 text-xl">calculate</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Find your macro targets</p>
+            <p class="text-xs text-slate-500 mb-3">Calculate the right protein, carb, and fat split for your goal — whatever diet framework you're following.</p>
+            <a href="/macro-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-700 hover:underline">
+              Open Macro Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Scan any paleo meal instantly.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal identifies your food and logs macros in under 3 seconds — no manual searches, no barcode hunting.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_paleo_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_paleo_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/keto-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
+              <span class="material-symbols-outlined text-amber-600 text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Keto Diet: Complete Beginner's Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">9 min read</p>
+            </div>
+          </a>
+          <a href="/blog/dieta-hipocalorica" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50">
+              <span class="material-symbols-outlined text-green-600 text-xl">trending_down</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Low-Calorie Diet: The Right Way to Cut</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/best-foods-for-muscle-gain" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Best Foods for Muscle Gain</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+          <a href="/blog/chia-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50">
+              <span class="material-symbols-outlined text-teal-600 text-xl">grass</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Chia Seeds Diet: Benefits and How to Use Them</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>

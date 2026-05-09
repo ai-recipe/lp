@@ -1,4 +1,5 @@
 ---
+import AppPromoModal from '../components/AppPromoModal.astro';
 const SITE_URL = 'https://slaycal.com';
 
 interface Props {
@@ -271,6 +272,7 @@ const blogJsonLd = isBlogPost ? JSON.stringify({
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <slot />
+    <AppPromoModal />
 
     <script is:inline define:vars={{ lang }}>
       // Pass server-side props to client-side bundled scripts

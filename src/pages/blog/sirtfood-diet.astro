@@ -1,0 +1,261 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { en } from '../../i18n/en';
+import '../../styles/global.css';
+
+const t = en;
+---
+
+<Layout
+  title="Sirtfood Diet: What the Science Actually Says | SlayCal Blog"
+  description="The Sirtfood Diet went viral after celebrity endorsements. But does activating sirtuins really accelerate fat loss? Here's what the research says — and what it doesn't."
+  keywords="sirtfood diet, sirtfoods, sirtuin diet, SIRT1, dark chocolate diet, red wine diet, celebrity diet, sirtfood diet plan, sirtfood diet food list"
+  lang="en"
+  canonicalPath="/blog/sirtfood-diet"
+>
+  <Header t={t} lang="en" currentPath="/blog/sirtfood-diet" />
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-background-light px-6 pt-20 pb-10 lg:px-20 lg:pt-28 lg:pb-12">
+      <div class="blob-bg absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl">
+        <nav class="flex items-center gap-2 text-xs text-slate-400 mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">SlayCal</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a href="/blog" class="hover:text-primary transition-colors">Blog</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-slate-600 font-medium">Sirtfood Diet</span>
+        </nav>
+
+        <span class="text-xs font-bold uppercase tracking-wider text-purple-600">Nutrition</span>
+        <h1 class="mt-2 text-4xl font-bold text-slate-900 lg:text-5xl leading-tight tracking-tight">
+          The Sirtfood Diet:<br/>Evidence vs. Hype
+        </h1>
+        <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+          Dark chocolate, red wine, and kale — the Sirtfood Diet claims these "sirtuin-activating" foods unlock a fat-burning gene pathway. The reality is more nuanced.
+        </p>
+        <div class="mt-6 flex items-center gap-4 text-xs text-slate-400">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> May 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLE ────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20" aria-label="Article content">
+      <div class="mx-auto max-w-3xl">
+        <div class="prose prose-slate max-w-none">
+
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            The Sirtfood Diet was created by nutritionists Aidan Goggins and Glen Matten and popularized by celebrity endorsements claiming 3.2 kg of weight loss in 7 days. The idea: certain plant compounds activate sirtuin proteins (SIRT1–7), enzymes linked to metabolism, longevity, and fat oxidation — your body's version of an exercise and fasting mimetic.
+          </p>
+
+          <!-- What are sirtuins -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What are sirtuins?</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Sirtuins are a family of seven proteins that regulate cellular processes related to aging, metabolism, inflammation, and stress response. SIRT1 specifically is activated by calorie restriction and exercise — it promotes fat oxidation, improves insulin sensitivity, and reduces inflammation. This is the legitimate science the Sirtfood Diet is built on.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The jump from "certain plant compounds weakly activate SIRT1 in cell culture" to "eating dark chocolate accelerates fat loss in humans" is enormous — and not supported by clinical evidence.
+          </p>
+
+          <div class="rounded-2xl border border-purple-100 bg-purple-50 p-5 mb-8 flex gap-4">
+            <span class="material-symbols-outlined text-purple-500 text-2xl shrink-0 mt-0.5">science</span>
+            <div>
+              <p class="text-sm font-bold text-slate-900 mb-1">The evidence gap</p>
+              <p class="text-xs text-slate-600 leading-relaxed">The only human trial cited by the diet's creators involved 39 participants with no control group, run at a private gym with financial interest in the outcome. It has not been replicated in independent peer-reviewed research.</p>
+            </div>
+          </div>
+
+          <!-- The diet protocol -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What the Sirtfood Diet actually looks like</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The diet has two phases:
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="rounded-2xl border border-purple-100 bg-purple-50 p-5">
+              <p class="font-bold text-purple-700 text-sm mb-2">Phase 1 — Days 1–7</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                Days 1–3: 1,000 kcal/day — three green juices and one sirtfood-rich meal. Days 4–7: 1,500 kcal/day — two green juices and two sirtfood meals. This is an aggressive calorie restriction phase.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+              <p class="font-bold text-slate-800 text-sm mb-2">Phase 2 — Weeks 2–3 (Maintenance)</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Three balanced meals from the sirtfood list plus one green juice per day. No strict calorie target, but the food quality guidance keeps most people in a moderate deficit.
+              </p>
+            </div>
+          </div>
+
+          <!-- The sirtfood list -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The top 20 sirtfoods</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            These foods are high in polyphenols, flavonoids, or resveratrol — the compounds claimed to activate sirtuins:
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-8 sm:grid-cols-4">
+            {[
+              'Kale', 'Red wine', 'Dark chocolate (85%+)', 'Olive oil',
+              'Matcha green tea', 'Buckwheat', 'Turmeric', 'Walnuts',
+              'Rocket (arugula)', 'Bird\'s eye chilli', 'Lovage', 'Medjool dates',
+              'Red onion', 'Parsley', 'Strawberries', 'Capers',
+              'Coffee', 'Blueberries', 'Citrus fruit', 'Soy',
+            ].map(food => (
+              <div class="rounded-xl border border-purple-100 bg-purple-50 px-3 py-2 text-center">
+                <p class="text-xs font-medium text-slate-700">{food}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Why it works (when it does) -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Why people do lose weight on it</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The rapid 7-day weight loss is real — but the mechanism isn't primarily sirtuin activation. Three factors explain it:
+          </p>
+          <div class="space-y-3 mb-8">
+            {[
+              { reason: 'Severe calorie restriction', detail: '1,000 kcal/day in Phase 1 is a very large deficit for most people. Any diet this restrictive produces rapid initial weight loss — most of it water and glycogen, not fat.' },
+              { reason: 'Glycogen depletion', detail: 'When you drop carbohydrates this low, liver and muscle glycogen stores empty. Each gram of glycogen is stored with ~3g of water. Losing glycogen means rapid "weight" loss that returns when carbs resume.' },
+              { reason: 'Food quality improvement', detail: 'The sirtfood list is genuinely nutritious. For anyone coming from a standard Western diet, simply switching to these foods while cutting processed food produces real benefits regardless of sirtuin activity.' },
+            ].map(({ reason, detail }) => (
+              <div class="rounded-2xl border border-slate-100 bg-background-light p-5">
+                <p class="text-sm font-bold text-slate-900 mb-1">{reason}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- What the research actually shows -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">What the science actually supports</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Some individual sirtfoods have genuine evidence for specific benefits:
+          </p>
+          <div class="rounded-2xl border border-slate-100 overflow-hidden mb-8">
+            {[
+              { food: 'Resveratrol (red wine)', evidence: 'Activates SIRT1 in cell culture; effects in humans at dietary doses are unclear and inconsistent' },
+              { food: 'Quercetin (capers, onion)', evidence: 'Anti-inflammatory effects well documented; fat loss effect in humans not established' },
+              { food: 'EGCG (matcha, green tea)', evidence: 'Modest thermogenic effect (~80 kcal/day additional burn); the strongest real-world sirtfood evidence' },
+              { food: 'Curcumin (turmeric)', evidence: 'Potent anti-inflammatory; poor bioavailability without black pepper; no direct fat loss evidence' },
+              { food: 'Dark chocolate (flavanols)', evidence: 'Cardiovascular benefits documented; does not cause fat loss independently' },
+            ].map(({ food, evidence }, i) => (
+              <div class={`px-5 py-4 ${i % 2 === 0 ? 'bg-background-light' : 'bg-white'}`}>
+                <p class="text-sm font-bold text-slate-900 mb-1">{food}</p>
+                <p class="text-xs text-slate-500">{evidence}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Verdict -->
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">Verdict: worth trying?</h2>
+          <div class="space-y-4 mb-8">
+            <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+              <p class="font-bold text-emerald-700 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">check</span>What works
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                The food list is excellent — high-quality, anti-inflammatory, nutrient-dense whole foods. Using it as a framework for better food choices (without the 1,000 kcal/day restriction) is a solid strategy for long-term health.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-red-100 bg-red-50 p-5">
+              <p class="font-bold text-rose-600 text-sm mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">close</span>What doesn't
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                The 7-day protocol is essentially a crash diet disguised with a scientific-sounding mechanism. The weight loss from Phase 1 is mostly water and glycogen. The "sirtuin activation" claim has no meaningful human clinical support at dietary doses.
+              </p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            The Sirtfood Diet gets more right than many fad diets — the food list is genuinely healthy, and the emphasis on polyphenol-rich whole foods aligns with solid nutritional science. But the mechanism is overstated, the initial weight loss is mostly water, and 1,000 kcal/day is not a sustainable approach. Use the food list. Skip the crash phase. Pair it with a realistic calorie target for sustainable results.
+          </p>
+
+        </div>
+
+        <div class="mt-10 rounded-2xl bg-purple-50 border border-purple-100 p-6 flex items-start gap-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-100">
+            <span class="material-symbols-outlined text-purple-600 text-xl">monitor_weight</span>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900 text-sm mb-1">Find your sustainable calorie target</p>
+            <p class="text-xs text-slate-500 mb-3">Skip the 1,000 kcal crash. Calculate the deficit that actually works long-term.</p>
+            <a href="/calorie-calculator" class="inline-flex items-center gap-1.5 text-sm font-semibold text-purple-700 hover:underline">
+              Open Calorie Calculator <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DOWNLOAD CTA ───────────────────────────────────────────── -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-amber-400 px-6 py-16 lg:px-20">
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl">Log sirtfoods in seconds.</h2>
+        <p class="mt-3 text-white/80 max-w-md mx-auto text-sm leading-relaxed">SlayCal identifies your meals instantly — point your camera, get macros. No guesswork, no manual logging.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-50 transition-all shadow-lg" data-analytics-store="ios" data-analytics-placement="blog_sirtfood_cta">
+            <svg class="w-5 h-5 fill-slate-900 shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on iOS
+          </a>
+          <a href="#" class="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/15 border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all" data-analytics-store="android" data-analytics-placement="blog_sirtfood_cta">
+            <svg class="w-5 h-5 fill-white shrink-0" viewBox="0 0 24 24"><path d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.76zm15.49-8.58L16.07 13.5 3.64.05l.88-.05 14.15 7.87a2 2 0 0 1 0 3.31zM3.64 23.95 16.07 10.5l2.6 1.55-14.15 7.87z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RELATED ─────────────────────────────────────────────────── -->
+    <section class="bg-white px-6 py-12 lg:px-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-xl font-bold text-slate-900 mb-6">Related articles</h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <a href="/blog/dieta-hipocalorica" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50">
+              <span class="material-symbols-outlined text-green-600 text-xl">trending_down</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Low-Calorie Diet: The Right Way to Cut</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/paleo-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+              <span class="material-symbols-outlined text-orange-600 text-xl">set_meal</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Paleo Diet: What It Is and Whether It Works</p>
+              <p class="text-xs text-slate-400 mt-0.5">8 min read</p>
+            </div>
+          </a>
+          <a href="/blog/keto-diet" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
+              <span class="material-symbols-outlined text-amber-600 text-xl">local_fire_department</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">Keto Diet: Complete Beginner's Guide</p>
+              <p class="text-xs text-slate-400 mt-0.5">9 min read</p>
+            </div>
+          </a>
+          <a href="/blog/how-to-lose-weight-without-counting-calories" class="flex gap-4 p-4 rounded-2xl border border-slate-100 hover:border-primary/30 hover:bg-primary/5 transition-all group">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+              <span class="material-symbols-outlined text-blue-600 text-xl">restaurant</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-800 group-hover:text-primary transition-colors">How to Lose Weight Without Counting Calories</p>
+              <p class="text-xs text-slate-400 mt-0.5">7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer t={t} lang="en" />
+</Layout>
